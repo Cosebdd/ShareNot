@@ -116,7 +116,7 @@ namespace ShareNot
             }
         }
 
-        public static bool Dev { get; } = false;
+        public static bool Dev { get; } = true;
         public static bool MultiInstance { get; private set; }
         public static bool Portable { get; private set; }
         public static bool SilentRun { get; private set; }

@@ -796,7 +796,7 @@
     <value>171, 22</value>
   </data>
   <data name="tsmiTestImageUpload.Text" xml:space="preserve">
-    <value>Test image upload</value>
+    <value>Test image capture</value>
   </data>
   <data name="tsmiTestTextUpload.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 22</value>
