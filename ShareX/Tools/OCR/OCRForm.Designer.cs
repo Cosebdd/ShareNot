@@ -22,11 +22,7 @@
             this.txtResult = new System.Windows.Forms.TextBox();
             this.lblScaleFactor = new System.Windows.Forms.Label();
             this.nudScaleFactor = new System.Windows.Forms.NumericUpDown();
-            this.cbServices = new System.Windows.Forms.ComboBox();
-            this.btnOpenServiceLink = new System.Windows.Forms.Button();
-            this.cbEditServices = new System.Windows.Forms.Button();
             this.btnOpenOCRHelp = new System.Windows.Forms.Button();
-            this.lblService = new System.Windows.Forms.Label();
             this.btnSelectRegion = new System.Windows.Forms.Button();
             this.cbSingleLine = new System.Windows.Forms.CheckBox();
             this.btnCopyAll = new System.Windows.Forms.Button();
@@ -89,29 +85,6 @@
             0});
             this.nudScaleFactor.ValueChanged += new System.EventHandler(this.nudScaleFactor_ValueChanged);
             //
-            // cbServices
-            //
-            this.cbServices.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.cbServices, "cbServices");
-            this.cbServices.FormattingEnabled = true;
-            this.cbServices.Name = "cbServices";
-            this.cbServices.SelectedIndexChanged += new System.EventHandler(this.cbServices_SelectedIndexChanged);
-            //
-            // btnOpenServiceLink
-            //
-            resources.ApplyResources(this.btnOpenServiceLink, "btnOpenServiceLink");
-            this.btnOpenServiceLink.Name = "btnOpenServiceLink";
-            this.btnOpenServiceLink.UseVisualStyleBackColor = true;
-            this.btnOpenServiceLink.Click += new System.EventHandler(this.btnOpenServiceLink_Click);
-            //
-            // cbEditServices
-            //
-            this.cbEditServices.Image = global::ShareNot.Properties.Resources.gear;
-            resources.ApplyResources(this.cbEditServices, "cbEditServices");
-            this.cbEditServices.Name = "cbEditServices";
-            this.cbEditServices.UseVisualStyleBackColor = true;
-            this.cbEditServices.Click += new System.EventHandler(this.cbEditServices_Click);
-            //
             // btnOpenOCRHelp
             //
             resources.ApplyResources(this.btnOpenOCRHelp, "btnOpenOCRHelp");
@@ -119,11 +92,6 @@
             this.btnOpenOCRHelp.Name = "btnOpenOCRHelp";
             this.btnOpenOCRHelp.UseVisualStyleBackColor = true;
             this.btnOpenOCRHelp.Click += new System.EventHandler(this.btnOpenOCRHelp_Click);
-            //
-            // lblService
-            //
-            resources.ApplyResources(this.lblService, "lblService");
-            this.lblService.Name = "lblService";
             //
             // btnSelectRegion
             //
@@ -152,12 +120,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnCopyAll);
             this.Controls.Add(this.cbSingleLine);
-            this.Controls.Add(this.lblService);
             this.Controls.Add(this.btnOpenOCRHelp);
             this.Controls.Add(this.btnSelectRegion);
-            this.Controls.Add(this.cbEditServices);
-            this.Controls.Add(this.btnOpenServiceLink);
-            this.Controls.Add(this.cbServices);
             this.Controls.Add(this.nudScaleFactor);
             this.Controls.Add(this.lblScaleFactor);
             this.Controls.Add(this.txtResult);
@@ -181,11 +145,7 @@
         private System.Windows.Forms.TextBox txtResult;
         private System.Windows.Forms.Label lblScaleFactor;
         private System.Windows.Forms.NumericUpDown nudScaleFactor;
-        private System.Windows.Forms.ComboBox cbServices;
-        private System.Windows.Forms.Button btnOpenServiceLink;
-        private System.Windows.Forms.Button cbEditServices;
         private System.Windows.Forms.Button btnOpenOCRHelp;
-        private System.Windows.Forms.Label lblService;
         private System.Windows.Forms.Button btnSelectRegion;
         private System.Windows.Forms.CheckBox cbSingleLine;
         private System.Windows.Forms.Button btnCopyAll;

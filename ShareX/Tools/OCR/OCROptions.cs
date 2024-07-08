@@ -34,18 +34,6 @@ namespace ShareNot.Tools.OCR
         public bool SingleLine { get; set; } = false;
         public bool Silent { get; set; } = false;
         public bool AutoCopy { get; set; } = false;
-        public List<ServiceLink> ServiceLinks { get; set; } = DefaultServiceLinks;
         public bool CloseWindowAfterOpeningServiceLink { get; set; } = false;
-        public int SelectedServiceLink { get; set; } = 0;
-
-        public static List<ServiceLink> DefaultServiceLinks => new List<ServiceLink>()
-        {
-            new ServiceLink("Google Translate", "https://translate.google.com/?sl=auto&tl=en&text={0}&op=translate"),
-            new ServiceLink("Google Search", "https://www.google.com/search?q={0}"),
-            new ServiceLink("Google Images", "https://www.google.com/search?q={0}&tbm=isch"),
-            new ServiceLink("Bing", "https://www.bing.com/search?q={0}"),
-            new ServiceLink("DuckDuckGo", "https://duckduckgo.com/?q={0}"),
-            new ServiceLink("DeepL", "https://www.deepl.com/translator#auto/en/{0}")
-        };
     }
 }

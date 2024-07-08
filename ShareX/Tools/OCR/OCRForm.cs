@@ -86,21 +86,6 @@ namespace ShareNot.Tools.OCR
             nudScaleFactor.SetValue((decimal)Options.ScaleFactor);
             cbSingleLine.Checked = Options.SingleLine;
 
-            if (Helpers.IsDefaultSettings(Options.ServiceLinks, OCROptions.DefaultServiceLinks, (x, y) => x.Name == y.Name))
-            {
-                Options.ServiceLinks = OCROptions.DefaultServiceLinks;
-            }
-
-            if (Options.ServiceLinks.Count > 0)
-            {
-                cbServices.Items.AddRange(Options.ServiceLinks.ToArray());
-                cbServices.SelectedIndex = Options.SelectedServiceLink;
-            }
-            else
-            {
-                cbServices.Enabled = false;
-            }
-
             txtResult.SupportSelectAll();
             UpdateControls();
 
@@ -225,43 +210,6 @@ namespace ShareNot.Tools.OCR
             }
         }
 
-        private void cbServices_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Options.SelectedServiceLink = cbServices.SelectedIndex;
-        }
-
-        private void btnOpenServiceLink_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(Result) && cbServices.SelectedItem is ServiceLink serviceLink)
-            {
-                serviceLink.OpenLink(Result);
-
-                if (Options.CloseWindowAfterOpeningServiceLink)
-                {
-                    Close();
-                }
-            }
-        }
-
-        private void cbEditServices_Click(object sender, EventArgs e)
-        {
-            using (ServiceLinksForm form = new ServiceLinksForm(Options.ServiceLinks))
-            {
-                form.ShowDialog();
-
-                cbServices.Items.Clear();
-
-                if (Options.ServiceLinks.Count > 0)
-                {
-                    cbServices.Items.AddRange(Options.ServiceLinks.ToArray());
-                    cbServices.SelectedIndex = 0;
-                    Options.SelectedServiceLink = 0;
-                }
-
-                cbServices.Enabled = cbServices.Items.Count > 0;
-            }
-        }
-
         private void btnCopyAll_Click(object sender, EventArgs e)
         {
             ClipboardHelpers.CopyText(txtResult.Text);
@@ -270,7 +218,6 @@ namespace ShareNot.Tools.OCR
         private void txtResult_TextChanged(object sender, EventArgs e)
         {
             Result = txtResult.Text.Trim();
-            btnOpenServiceLink.Enabled = btnCopyAll.Enabled = !string.IsNullOrEmpty(Result);
         }
     }
 }
