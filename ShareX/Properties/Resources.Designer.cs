@@ -640,7 +640,7 @@ namespace ShareNot.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Run ShareX when Windows starts.
+        ///   Looks up a localized string similar to Run ShareNot when Windows starts.
         /// </summary>
         internal static string ApplicationSettingsForm_cbStartWithWindows_Text {
             get {

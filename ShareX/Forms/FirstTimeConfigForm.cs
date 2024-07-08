@@ -42,15 +42,6 @@ namespace ShareNot.Forms
             cbRunStartup.Checked = state == StartupState.Enabled || state == StartupState.EnabledByPolicy;
             cbRunStartup.Enabled = state != StartupState.DisabledByUser && state != StartupState.DisabledByPolicy && state != StartupState.EnabledByPolicy;
 
-            cbShellContextMenuButton.Checked = IntegrationHelpers.CheckShellContextMenuButton();
-            cbSendToMenu.Checked = IntegrationHelpers.CheckSendToMenuButton();
-
-#if STEAM
-            cbSteamInApp.Checked = IntegrationHelpers.CheckSteamShowInApp();
-#else
-            cbSteamInApp.Visible = false;
-#endif
-
             loaded = true;
         }
 
@@ -64,30 +55,6 @@ namespace ShareNot.Forms
             if (loaded)
             {
                 StartupManager.State = cbRunStartup.Checked ? StartupState.Enabled : StartupState.Disabled;
-            }
-        }
-
-        private void cbShellContextMenuButton_CheckedChanged(object sender, EventArgs e)
-        {
-            if (loaded)
-            {
-                IntegrationHelpers.CreateShellContextMenuButton(cbShellContextMenuButton.Checked);
-            }
-        }
-
-        private void cbSendToMenu_CheckedChanged(object sender, EventArgs e)
-        {
-            if (loaded)
-            {
-                IntegrationHelpers.CreateSendToMenuButton(cbSendToMenu.Checked);
-            }
-        }
-
-        private void cbSteamInApp_CheckedChanged(object sender, EventArgs e)
-        {
-            if (loaded)
-            {
-                IntegrationHelpers.SteamShowInApp(cbSteamInApp.Checked);
             }
         }
     }

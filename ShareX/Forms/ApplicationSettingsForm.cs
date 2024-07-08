@@ -151,29 +151,6 @@ namespace ShareNot.Forms
             pgTheme.SelectedObject = Program.Settings.Themes[Program.Settings.SelectedTheme];
             UpdateThemeControls();
 
-            // Integration
-#if MicrosoftStore
-            cbShellContextMenu.Visible = false;
-            cbEditWithShareX.Visible = false;
-            cbSendToMenu.Visible = false;
-            gbChrome.Visible = false;
-            gbFirefox.Visible = false;
-#else
-            cbShellContextMenu.Checked = IntegrationHelpers.CheckShellContextMenuButton();
-            cbEditWithShareX.Checked = IntegrationHelpers.CheckEditShellContextMenuButton();
-            cbSendToMenu.Checked = IntegrationHelpers.CheckSendToMenuButton();
-            cbChromeExtensionSupport.Checked = IntegrationHelpers.CheckChromeExtensionSupport();
-            btnChromeOpenExtensionPage.Enabled = cbChromeExtensionSupport.Checked;
-            cbFirefoxAddonSupport.Checked = IntegrationHelpers.CheckFirefoxAddonSupport();
-            btnFirefoxOpenAddonPage.Enabled = cbFirefoxAddonSupport.Checked;
-#endif
-
-#if STEAM
-            cbSteamShowInApp.Checked = IntegrationHelpers.CheckSteamShowInApp();
-#else
-            gbSteam.Visible = false;
-#endif
-
             // Paths
             lastPersonalPath = Program.ReadPersonalPathConfig();
             txtPersonalFolderPath.Text = lastPersonalPath;
@@ -579,66 +556,6 @@ namespace ShareNot.Forms
                 {
                     ex.ShowError();
                 }
-            }
-        }
-
-        private void cbShellContextMenu_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ready)
-            {
-                IntegrationHelpers.CreateShellContextMenuButton(cbShellContextMenu.Checked);
-            }
-        }
-
-        private void cbEditWithShareX_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ready)
-            {
-                IntegrationHelpers.CreateEditShellContextMenuButton(cbEditWithShareX.Checked);
-            }
-        }
-
-        private void cbSendToMenu_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ready)
-            {
-                IntegrationHelpers.CreateSendToMenuButton(cbSendToMenu.Checked);
-            }
-        }
-
-        private void cbChromeExtensionSupport_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ready)
-            {
-                IntegrationHelpers.CreateChromeExtensionSupport(cbChromeExtensionSupport.Checked);
-                btnChromeOpenExtensionPage.Enabled = cbChromeExtensionSupport.Checked;
-            }
-        }
-
-        private void btnChromeOpenExtensionPage_Click(object sender, EventArgs e)
-        {
-            URLHelpers.OpenURL("https://chrome.google.com/webstore/detail/sharex/nlkoigbdolhchiicbonbihbphgamnaoc");
-        }
-
-        private void cbFirefoxAddonSupport_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ready)
-            {
-                IntegrationHelpers.CreateFirefoxAddonSupport(cbFirefoxAddonSupport.Checked);
-                btnFirefoxOpenAddonPage.Enabled = cbFirefoxAddonSupport.Checked;
-            }
-        }
-
-        private void btnFirefoxOpenAddonPage_Click(object sender, EventArgs e)
-        {
-            URLHelpers.OpenURL("https://addons.mozilla.org/en-US/firefox/addon/sharex/");
-        }
-
-        private void cbSteamShowInApp_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ready)
-            {
-                IntegrationHelpers.SteamShowInApp(cbSteamShowInApp.Checked);
             }
         }
 

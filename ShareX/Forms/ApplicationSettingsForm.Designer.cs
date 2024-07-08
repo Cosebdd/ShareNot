@@ -64,19 +64,8 @@ namespace ShareNot.Forms
             this.cbUseCustomTheme = new System.Windows.Forms.CheckBox();
             this.eiTheme = new ExportImportControl();
             this.tpIntegration = new System.Windows.Forms.TabPage();
-            this.gbFirefox = new System.Windows.Forms.GroupBox();
-            this.cbFirefoxAddonSupport = new System.Windows.Forms.CheckBox();
-            this.btnFirefoxOpenAddonPage = new System.Windows.Forms.Button();
-            this.gbSteam = new System.Windows.Forms.GroupBox();
-            this.cbSteamShowInApp = new System.Windows.Forms.CheckBox();
-            this.gbChrome = new System.Windows.Forms.GroupBox();
-            this.cbChromeExtensionSupport = new System.Windows.Forms.CheckBox();
-            this.btnChromeOpenExtensionPage = new System.Windows.Forms.Button();
             this.gbWindows = new System.Windows.Forms.GroupBox();
-            this.cbEditWithShareX = new System.Windows.Forms.CheckBox();
             this.cbStartWithWindows = new System.Windows.Forms.CheckBox();
-            this.cbSendToMenu = new System.Windows.Forms.CheckBox();
-            this.cbShellContextMenu = new System.Windows.Forms.CheckBox();
             this.tpPaths = new System.Windows.Forms.TabPage();
             this.txtSaveImageSubFolderPatternWindow = new System.Windows.Forms.TextBox();
             this.lblSaveImageSubFolderPatternWindow = new System.Windows.Forms.Label();
@@ -169,9 +158,6 @@ namespace ShareNot.Forms
             this.tpGeneral.SuspendLayout();
             this.tpTheme.SuspendLayout();
             this.tpIntegration.SuspendLayout();
-            this.gbFirefox.SuspendLayout();
-            this.gbSteam.SuspendLayout();
-            this.gbChrome.SuspendLayout();
             this.gbWindows.SuspendLayout();
             this.tpPaths.SuspendLayout();
             this.tpSettings.SuspendLayout();
@@ -445,87 +431,16 @@ namespace ShareNot.Forms
             // tpIntegration
             //
             this.tpIntegration.BackColor = System.Drawing.SystemColors.Window;
-            this.tpIntegration.Controls.Add(this.gbFirefox);
-            this.tpIntegration.Controls.Add(this.gbSteam);
-            this.tpIntegration.Controls.Add(this.gbChrome);
             this.tpIntegration.Controls.Add(this.gbWindows);
             resources.ApplyResources(this.tpIntegration, "tpIntegration");
             this.tpIntegration.Name = "tpIntegration";
             //
-            // gbFirefox
-            //
-            this.gbFirefox.Controls.Add(this.cbFirefoxAddonSupport);
-            this.gbFirefox.Controls.Add(this.btnFirefoxOpenAddonPage);
-            resources.ApplyResources(this.gbFirefox, "gbFirefox");
-            this.gbFirefox.Name = "gbFirefox";
-            this.gbFirefox.TabStop = false;
-            //
-            // cbFirefoxAddonSupport
-            //
-            resources.ApplyResources(this.cbFirefoxAddonSupport, "cbFirefoxAddonSupport");
-            this.cbFirefoxAddonSupport.Name = "cbFirefoxAddonSupport";
-            this.cbFirefoxAddonSupport.UseVisualStyleBackColor = true;
-            this.cbFirefoxAddonSupport.CheckedChanged += new System.EventHandler(this.cbFirefoxAddonSupport_CheckedChanged);
-            //
-            // btnFirefoxOpenAddonPage
-            //
-            resources.ApplyResources(this.btnFirefoxOpenAddonPage, "btnFirefoxOpenAddonPage");
-            this.btnFirefoxOpenAddonPage.Name = "btnFirefoxOpenAddonPage";
-            this.btnFirefoxOpenAddonPage.UseVisualStyleBackColor = true;
-            this.btnFirefoxOpenAddonPage.Click += new System.EventHandler(this.btnFirefoxOpenAddonPage_Click);
-            //
-            // gbSteam
-            //
-            this.gbSteam.Controls.Add(this.cbSteamShowInApp);
-            resources.ApplyResources(this.gbSteam, "gbSteam");
-            this.gbSteam.Name = "gbSteam";
-            this.gbSteam.TabStop = false;
-            //
-            // cbSteamShowInApp
-            //
-            resources.ApplyResources(this.cbSteamShowInApp, "cbSteamShowInApp");
-            this.cbSteamShowInApp.Name = "cbSteamShowInApp";
-            this.cbSteamShowInApp.UseVisualStyleBackColor = true;
-            this.cbSteamShowInApp.CheckedChanged += new System.EventHandler(this.cbSteamShowInApp_CheckedChanged);
-            //
-            // gbChrome
-            //
-            this.gbChrome.Controls.Add(this.cbChromeExtensionSupport);
-            this.gbChrome.Controls.Add(this.btnChromeOpenExtensionPage);
-            resources.ApplyResources(this.gbChrome, "gbChrome");
-            this.gbChrome.Name = "gbChrome";
-            this.gbChrome.TabStop = false;
-            //
-            // cbChromeExtensionSupport
-            //
-            resources.ApplyResources(this.cbChromeExtensionSupport, "cbChromeExtensionSupport");
-            this.cbChromeExtensionSupport.Name = "cbChromeExtensionSupport";
-            this.cbChromeExtensionSupport.UseVisualStyleBackColor = true;
-            this.cbChromeExtensionSupport.CheckedChanged += new System.EventHandler(this.cbChromeExtensionSupport_CheckedChanged);
-            //
-            // btnChromeOpenExtensionPage
-            //
-            resources.ApplyResources(this.btnChromeOpenExtensionPage, "btnChromeOpenExtensionPage");
-            this.btnChromeOpenExtensionPage.Name = "btnChromeOpenExtensionPage";
-            this.btnChromeOpenExtensionPage.UseVisualStyleBackColor = true;
-            this.btnChromeOpenExtensionPage.Click += new System.EventHandler(this.btnChromeOpenExtensionPage_Click);
-            //
             // gbWindows
             //
-            this.gbWindows.Controls.Add(this.cbEditWithShareX);
             this.gbWindows.Controls.Add(this.cbStartWithWindows);
-            this.gbWindows.Controls.Add(this.cbSendToMenu);
-            this.gbWindows.Controls.Add(this.cbShellContextMenu);
             resources.ApplyResources(this.gbWindows, "gbWindows");
             this.gbWindows.Name = "gbWindows";
             this.gbWindows.TabStop = false;
-            //
-            // cbEditWithShareX
-            //
-            resources.ApplyResources(this.cbEditWithShareX, "cbEditWithShareX");
-            this.cbEditWithShareX.Name = "cbEditWithShareX";
-            this.cbEditWithShareX.UseVisualStyleBackColor = true;
-            this.cbEditWithShareX.CheckedChanged += new System.EventHandler(this.cbEditWithShareX_CheckedChanged);
             //
             // cbStartWithWindows
             //
@@ -533,20 +448,6 @@ namespace ShareNot.Forms
             this.cbStartWithWindows.Name = "cbStartWithWindows";
             this.cbStartWithWindows.UseVisualStyleBackColor = true;
             this.cbStartWithWindows.CheckedChanged += new System.EventHandler(this.cbStartWithWindows_CheckedChanged);
-            //
-            // cbSendToMenu
-            //
-            resources.ApplyResources(this.cbSendToMenu, "cbSendToMenu");
-            this.cbSendToMenu.Name = "cbSendToMenu";
-            this.cbSendToMenu.UseVisualStyleBackColor = true;
-            this.cbSendToMenu.CheckedChanged += new System.EventHandler(this.cbSendToMenu_CheckedChanged);
-            //
-            // cbShellContextMenu
-            //
-            resources.ApplyResources(this.cbShellContextMenu, "cbShellContextMenu");
-            this.cbShellContextMenu.Name = "cbShellContextMenu";
-            this.cbShellContextMenu.UseVisualStyleBackColor = true;
-            this.cbShellContextMenu.CheckedChanged += new System.EventHandler(this.cbShellContextMenu_CheckedChanged);
             //
             // tpPaths
             //
@@ -1261,12 +1162,6 @@ namespace ShareNot.Forms
             this.tpTheme.ResumeLayout(false);
             this.tpTheme.PerformLayout();
             this.tpIntegration.ResumeLayout(false);
-            this.gbFirefox.ResumeLayout(false);
-            this.gbFirefox.PerformLayout();
-            this.gbSteam.ResumeLayout(false);
-            this.gbSteam.PerformLayout();
-            this.gbChrome.ResumeLayout(false);
-            this.gbChrome.PerformLayout();
             this.gbWindows.ResumeLayout(false);
             this.gbWindows.PerformLayout();
             this.tpPaths.ResumeLayout(false);
@@ -1308,7 +1203,6 @@ namespace ShareNot.Forms
         private System.Windows.Forms.TabControl tcSettings;
         private System.Windows.Forms.TabPage tpGeneral;
         private System.Windows.Forms.TabPage tpProxy;
-        private System.Windows.Forms.CheckBox cbSendToMenu;
         private System.Windows.Forms.Button btnOpenPersonalFolderPath;
         private System.Windows.Forms.CheckBox cbShowTray;
         private System.Windows.Forms.CheckBox cbStartWithWindows;
@@ -1327,7 +1221,6 @@ namespace ShareNot.Forms
         private System.Windows.Forms.TextBox txtProxyPassword;
         private System.Windows.Forms.Label lblProxyUsername;
         private System.Windows.Forms.TextBox txtProxyUsername;
-        private System.Windows.Forms.CheckBox cbShellContextMenu;
         private System.Windows.Forms.ComboBox cbProxyMethod;
         private System.Windows.Forms.Label lblProxyMethod;
         private System.Windows.Forms.Button btnClipboardFormatRemove;
@@ -1357,10 +1250,7 @@ namespace ShareNot.Forms
         private MenuButton btnLanguages;
         private System.Windows.Forms.ContextMenuStrip cmsLanguages;
         private System.Windows.Forms.GroupBox gbWindows;
-        private System.Windows.Forms.GroupBox gbChrome;
-        private System.Windows.Forms.CheckBox cbSteamShowInApp;
         private System.Windows.Forms.TabPage tpIntegration;
-        private System.Windows.Forms.GroupBox gbSteam;
         private System.Windows.Forms.TabPage tpSettings;
         private System.Windows.Forms.Button btnImport;
         private System.Windows.Forms.Button btnExport;
@@ -1382,13 +1272,7 @@ namespace ShareNot.Forms
         private System.Windows.Forms.ComboBox cbTrayMiddleClickAction;
         private System.Windows.Forms.ComboBox cbTrayLeftDoubleClickAction;
         private System.Windows.Forms.ComboBox cbTrayLeftClickAction;
-        private System.Windows.Forms.Button btnChromeOpenExtensionPage;
-        private System.Windows.Forms.GroupBox gbFirefox;
-        private System.Windows.Forms.Button btnFirefoxOpenAddonPage;
-        private System.Windows.Forms.CheckBox cbChromeExtensionSupport;
-        private System.Windows.Forms.CheckBox cbFirefoxAddonSupport;
         private System.Windows.Forms.Button btnResetSettings;
-        private System.Windows.Forms.CheckBox cbEditWithShareX;
         private System.Windows.Forms.Button btnCheckDevBuild;
         private System.Windows.Forms.Button btnPersonalFolderPathApply;
         private System.Windows.Forms.CheckBox cbUseCustomTheme;

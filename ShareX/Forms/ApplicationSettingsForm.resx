@@ -1258,7 +1258,7 @@
     <value>8, 8</value>
   </data>
   <data name="gbWindows.Size" type="System.Drawing.Size, System.Drawing">
-    <value>536, 128</value>
+    <value>536, 50</value>
   </data>
   <data name="gbWindows.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>

@@ -289,7 +289,7 @@ Would you like to restart ShareX?</value>
     <value>Select a hotkey...</value>
   </data>
   <data name="ApplicationSettingsForm_cbStartWithWindows_Text" xml:space="preserve">
-    <value>Run ShareX when Windows starts</value>
+    <value>Run ShareNot when Windows starts</value>
   </data>
   <data name="MainForm_UpdateToggleHotkeyButton_Disable_hotkeys" xml:space="preserve">
     <value>Disable hotkeys</value>
