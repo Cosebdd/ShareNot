@@ -39,11 +39,6 @@ namespace ShareNot.Forms
             this.scMain = new SplitContainerCustomSplitter();
             this.lvUploads = new MyListView();
             this.chFilename = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chProgress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chSpeed = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chElapsed = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chRemaining = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chURL = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pbPreview = new MyPictureBox();
             this.tsMain = new ToolStripBorderRight();
@@ -261,11 +256,6 @@ namespace ShareNot.Forms
             this.lvUploads.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lvUploads.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chFilename,
-            this.chStatus,
-            this.chProgress,
-            this.chSpeed,
-            this.chElapsed,
-            this.chRemaining,
             this.chURL});
             resources.ApplyResources(this.lvUploads, "lvUploads");
             this.lvUploads.FullRowSelect = true;
@@ -285,26 +275,6 @@ namespace ShareNot.Forms
             // chFilename
             //
             resources.ApplyResources(this.chFilename, "chFilename");
-            //
-            // chStatus
-            //
-            resources.ApplyResources(this.chStatus, "chStatus");
-            //
-            // chProgress
-            //
-            resources.ApplyResources(this.chProgress, "chProgress");
-            //
-            // chSpeed
-            //
-            resources.ApplyResources(this.chSpeed, "chSpeed");
-            //
-            // chElapsed
-            //
-            resources.ApplyResources(this.chElapsed, "chElapsed");
-            //
-            // chRemaining
-            //
-            resources.ApplyResources(this.chRemaining, "chRemaining");
             //
             // chURL
             //
@@ -1751,19 +1721,13 @@ namespace ShareNot.Forms
             this.pHotkeys.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion Windows Form Designer generated code
-        private System.Windows.Forms.ColumnHeader chStatus;
         private System.Windows.Forms.ColumnHeader chURL;
         private System.Windows.Forms.ColumnHeader chFilename;
-        private System.Windows.Forms.ColumnHeader chProgress;
         private ToolStripBorderRight tsMain;
         private System.Windows.Forms.ToolStripSeparator tssMain1;
-        private System.Windows.Forms.ColumnHeader chSpeed;
-        private System.Windows.Forms.ColumnHeader chRemaining;
-        private System.Windows.Forms.ColumnHeader chElapsed;
         private System.Windows.Forms.ToolStripButton tsbHistory;
         private System.Windows.Forms.ToolStripMenuItem tsmiTrayExit;
         private System.Windows.Forms.ToolStripSeparator tssTray1;

@@ -197,23 +197,11 @@ namespace ShareNot
         {
             if (task.Status == TaskStatus.Working)
             {
-                TaskInfo info = task.Info;
-
                 ListViewItem lvi = TaskListView.FindItem(task);
 
                 if (lvi != null)
                 {
-                    lvi.SubItems[1].Text = string.Format("{0:0.0}%", info.Progress.Percentage);
-                    lvi.SubItems[2].Text = string.Format("{0} / {1}", info.Progress.Position.ToSizeString(Program.Settings.BinaryUnits),
-                        info.Progress.Length.ToSizeString(Program.Settings.BinaryUnits));
-
-                    if (info.Progress.Speed > 0)
-                    {
-                        lvi.SubItems[3].Text = ((long)info.Progress.Speed).ToSizeString(Program.Settings.BinaryUnits) + "/s";
-                    }
-
-                    lvi.SubItems[4].Text = Helpers.ProperTimeSpan(info.Progress.Elapsed);
-                    lvi.SubItems[5].Text = Helpers.ProperTimeSpan(info.Progress.Remaining);
+                    lvi.SubItems[1].Text = "";
                 }
 
                 TaskThumbnailPanel panel = TaskThumbnailView.FindPanel(task);
@@ -302,8 +290,7 @@ namespace ShareNot
 
                             if (lvi != null)
                             {
-                                lvi.SubItems[1].Text = info.Status;
-                                lvi.SubItems[6].Text = "";
+                                lvi.SubItems[1].Text = "";
                                 lvi.ImageIndex = 1;
                             }
 
@@ -341,12 +328,10 @@ namespace ShareNot
                             if (lvi != null)
                             {
                                 lvi.Text = info.FileName;
-                                lvi.SubItems[1].Text = info.Status;
-                                lvi.ImageIndex = 2;
 
                                 if (!string.IsNullOrEmpty(result))
                                 {
-                                    lvi.SubItems[6].Text = result;
+                                    lvi.SubItems[1].Text = result;
                                 }
                             }
 
@@ -388,7 +373,7 @@ namespace ShareNot
                                             MiddleClickAction = info.TaskSettings.GeneralSettings.ToastWindowMiddleClickAction,
                                             FilePath = info.FilePath,
                                             Image = task.Image,
-                                            Title = "ShareX - " + Resources.TaskManager_task_UploadCompleted_ShareX___Task_completed,
+                                            Title = "ShareNot - " + Resources.TaskManager_task_UploadCompleted_ShareX___Task_completed,
                                             Text = result,
                                             URL = result
                                         };
