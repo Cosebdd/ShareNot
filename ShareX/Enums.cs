@@ -144,9 +144,8 @@ namespace ShareNot
         ShowInExplorer = 1 << 14,
         ScanQRCode = 1 << 15,
         DoOCR = 1 << 16,
-        ShowBeforeUploadWindow = 1 << 17,
-        UploadImageToHost = 1 << 18,
-        DeleteFile = 1 << 19
+        UploadImageToHost = 1 << 17,
+        DeleteFile = 1 << 18
     }
 
     [Flags]

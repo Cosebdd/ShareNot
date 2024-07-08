@@ -426,14 +426,6 @@ namespace ShareNot
 
                 bool cancelUpload = false;
 
-                if (Info.TaskSettings.AfterCaptureJob.HasFlag(AfterCaptureTasks.ShowBeforeUploadWindow))
-                {
-                    using (BeforeUploadForm form = new BeforeUploadForm(Info))
-                    {
-                        cancelUpload = form.ShowDialog() != DialogResult.OK;
-                    }
-                }
-
                 if (!cancelUpload)
                 {
                     OnUploadStarted();

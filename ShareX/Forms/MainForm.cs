@@ -54,7 +54,6 @@ namespace ShareNot.Forms
         private bool forceClose, trayMenuSaveSettings = true;
         private int trayClickCount = 0;
         private UploadInfoManager uim;
-        private ToolStripDropDownItem tsmiImageFileUploaders, tsmiTrayImageFileUploaders, tsmiTextFileUploaders, tsmiTrayTextFileUploaders;
         private ImageFilesCache actionsMenuIconCache = new ImageFilesCache();
 
         public MainForm()
@@ -99,74 +98,57 @@ namespace ShareNot.Forms
             tsmiTrayMonitor.HideImageMargin();
             tsmiOpen.HideImageMargin();
             tsmiCopy.HideImageMargin();
-            tsmiShortenSelectedURL.HideImageMargin();
-            tsmiShareSelectedURL.HideImageMargin();
             tsmiTrayRecentItems.HideImageMargin();
 
             AddMultiEnumItems<AfterCaptureTasks>(x => Program.DefaultTaskSettings.AfterCaptureJob = Program.DefaultTaskSettings.AfterCaptureJob.Swap(x),
                 tsddbAfterCaptureTasks, tsmiTrayAfterCaptureTasks);
             tsddbAfterCaptureTasks.DropDownOpening += TsddbAfterCaptureTasks_DropDownOpening;
             tsmiTrayAfterCaptureTasks.DropDownOpening += TsmiTrayAfterCaptureTasks_DropDownOpening;
-            AddMultiEnumItems<AfterUploadTasks>(x => Program.DefaultTaskSettings.AfterUploadJob = Program.DefaultTaskSettings.AfterUploadJob.Swap(x),
-                tsddbAfterUploadTasks, tsmiTrayAfterUploadTasks);
+            AddMultiEnumItems<AfterUploadTasks>(x => Program.DefaultTaskSettings.AfterUploadJob = Program.DefaultTaskSettings.AfterUploadJob.Swap(x));
             AddEnumItems<ImageDestination>(x =>
             {
                 Program.DefaultTaskSettings.ImageDestination = x;
 
                 if (x == ImageDestination.FileUploader)
                 {
-                    SetEnumChecked(Program.DefaultTaskSettings.ImageFileDestination, tsmiImageFileUploaders, tsmiTrayImageFileUploaders);
+                    SetEnumChecked(Program.DefaultTaskSettings.ImageFileDestination);
                 }
-                else
-                {
-                    Uncheck(tsmiImageFileUploaders, tsmiTrayImageFileUploaders);
-                }
-            }, tsmiImageUploaders, tsmiTrayImageUploaders);
-            tsmiImageFileUploaders = (ToolStripDropDownItem)tsmiImageUploaders.DropDownItems[tsmiImageUploaders.DropDownItems.Count - 1];
-            tsmiTrayImageFileUploaders = (ToolStripDropDownItem)tsmiTrayImageUploaders.DropDownItems[tsmiTrayImageUploaders.DropDownItems.Count - 1];
+            });
             AddEnumItems<FileDestination>(x =>
             {
                 Program.DefaultTaskSettings.ImageFileDestination = x;
-                tsmiImageFileUploaders.PerformClick();
-                tsmiTrayImageFileUploaders.PerformClick();
-            }, tsmiImageFileUploaders, tsmiTrayImageFileUploaders);
+            });
             AddEnumItems<TextDestination>(x =>
             {
                 Program.DefaultTaskSettings.TextDestination = x;
 
                 if (x == TextDestination.FileUploader)
                 {
-                    SetEnumChecked(Program.DefaultTaskSettings.TextFileDestination, tsmiTextFileUploaders, tsmiTrayTextFileUploaders);
+                    SetEnumChecked(Program.DefaultTaskSettings.TextFileDestination);
                 }
                 else
                 {
-                    Uncheck(tsmiTextFileUploaders, tsmiTrayTextFileUploaders);
+                    Uncheck();
                 }
-            }, tsmiTextUploaders, tsmiTrayTextUploaders);
-            tsmiTextFileUploaders = (ToolStripDropDownItem)tsmiTextUploaders.DropDownItems[tsmiTextUploaders.DropDownItems.Count - 1];
-            tsmiTrayTextFileUploaders = (ToolStripDropDownItem)tsmiTrayTextUploaders.DropDownItems[tsmiTrayTextUploaders.DropDownItems.Count - 1];
+            });
             AddEnumItems<FileDestination>(x =>
             {
                 Program.DefaultTaskSettings.TextFileDestination = x;
-                tsmiTextFileUploaders.PerformClick();
-                tsmiTrayTextFileUploaders.PerformClick();
-            }, tsmiTextFileUploaders, tsmiTrayTextFileUploaders);
-            AddEnumItems<FileDestination>(x => Program.DefaultTaskSettings.FileDestination = x, tsmiFileUploaders, tsmiTrayFileUploaders);
-            AddEnumItems<UrlShortenerType>(x => Program.DefaultTaskSettings.URLShortenerDestination = x, tsmiURLShorteners, tsmiTrayURLShorteners);
-            AddEnumItems<URLSharingServices>(x => Program.DefaultTaskSettings.URLSharingServiceDestination = x, tsmiURLSharingServices, tsmiTrayURLSharingServices);
+            });
+            AddEnumItems<FileDestination>(x => Program.DefaultTaskSettings.FileDestination = x);
+            AddEnumItems<UrlShortenerType>(x => Program.DefaultTaskSettings.URLShortenerDestination = x);
+            AddEnumItems<URLSharingServices>(x => Program.DefaultTaskSettings.URLSharingServiceDestination = x);
 
             foreach (UrlShortenerType urlShortener in Helpers.GetEnums<UrlShortenerType>())
             {
                 ToolStripMenuItem tsmi = new ToolStripMenuItem(urlShortener.GetLocalizedDescription());
                 tsmi.Click += (sender, e) => uim.ShortenURL(urlShortener);
-                tsmiShortenSelectedURL.DropDownItems.Add(tsmi);
             }
 
             foreach (URLSharingServices urlSharingService in Helpers.GetEnums<URLSharingServices>())
             {
                 ToolStripMenuItem tsmi = new ToolStripMenuItem(urlSharingService.GetLocalizedDescription());
                 tsmi.Click += (sender, e) => uim.ShareURL(urlSharingService);
-                tsmiShareSelectedURL.DropDownItems.Add(tsmi);
             }
 
             lvUploads.SupportCustomTheme();
@@ -186,10 +168,7 @@ namespace ShareNot.Forms
 
             foreach (ToolStripDropDownItem dropDownItem in new ToolStripDropDownItem[]
             {
-                tsddbAfterCaptureTasks, tsddbAfterUploadTasks, tsmiImageUploaders, tsmiImageFileUploaders, tsmiTextUploaders, tsmiTextFileUploaders, tsmiFileUploaders,
-                tsmiURLShorteners, tsmiURLSharingServices, tsmiTrayAfterCaptureTasks, tsmiTrayAfterUploadTasks, tsmiTrayImageUploaders, tsmiTrayImageFileUploaders,
-                tsmiTrayTextUploaders, tsmiTrayTextFileUploaders, tsmiTrayFileUploaders, tsmiTrayURLShorteners, tsmiTrayURLSharingServices, tsmiScreenshotDelay,
-                tsmiTrayScreenshotDelay
+                tsddbAfterCaptureTasks, tsmiTrayAfterCaptureTasks, tsmiScreenshotDelay, tsmiTrayScreenshotDelay
             })
             {
                 dropDownItem.DisableMenuCloseOnClick();
@@ -262,8 +241,6 @@ namespace ShareNot.Forms
             TaskbarManager.Enabled = Program.Settings.TaskbarProgressEnabled;
 
             UpdateCheckStates();
-            UpdateUploaderMenuNames();
-            UpdateDestinationStates();
             UpdateToggleHotkeyButton();
             AfterTaskSettingsJobs();
             AfterApplicationSettingsJobs();
@@ -428,20 +405,6 @@ namespace ShareNot.Forms
             return tsmi;
         }
 
-        private void UpdateDestinationStates()
-        {
-            if (Program.UploadersConfig != null)
-            {
-                EnableDisableToolStripMenuItems<ImageDestination>(tsmiImageUploaders, tsmiTrayImageUploaders);
-                EnableDisableToolStripMenuItems<FileDestination>(tsmiImageFileUploaders, tsmiTrayImageFileUploaders);
-                EnableDisableToolStripMenuItems<TextDestination>(tsmiTextUploaders, tsmiTrayTextUploaders);
-                EnableDisableToolStripMenuItems<FileDestination>(tsmiTextFileUploaders, tsmiTrayTextFileUploaders);
-                EnableDisableToolStripMenuItems<FileDestination>(tsmiFileUploaders, tsmiTrayFileUploaders);
-                EnableDisableToolStripMenuItems<UrlShortenerType>(tsmiURLShorteners, tsmiTrayURLShorteners);
-                EnableDisableToolStripMenuItems<URLSharingServices>(tsmiURLSharingServices, tsmiTrayURLSharingServices);
-            }
-        }
-
         private void AddEnumItems<T>(Action<T> selectedEnum, params ToolStripDropDownItem[] parents) where T : Enum
         {
             T[] enums = Helpers.GetEnums<T>();
@@ -467,8 +430,6 @@ namespace ShareNot.Forms
                         }
 
                         selectedEnum(currentEnum);
-
-                        UpdateUploaderMenuNames();
                     };
 
                     parent.DropDownItems.Add(tsmi);
@@ -525,8 +486,6 @@ namespace ShareNot.Forms
                         }
 
                         selectedEnum(currentEnum);
-
-                        UpdateUploaderMenuNames();
                     };
 
                     parent.DropDownItems.Add(tsmi);
@@ -607,7 +566,7 @@ namespace ShareNot.Forms
                 tsmiShowQRCode.Visible = tsmiOCRImage.Visible =
                 tsmiCombineImages.Visible = tsmiUploadSelectedFile.Visible = tsmiDownloadSelectedURL.Visible = tsmiEditSelectedFile.Visible =
                 tsmiBeautifyImage.Visible = tsmiAddImageEffects.Visible = tsmiPinSelectedFile.Visible = tsmiRunAction.Visible =
-                tsmiDeleteSelectedItem.Visible = tsmiDeleteSelectedFile.Visible = tsmiShortenSelectedURL.Visible = tsmiShareSelectedURL.Visible = false;
+                tsmiDeleteSelectedItem.Visible = tsmiDeleteSelectedFile.Visible = false;
 
             if (Program.Settings.TaskViewMode == TaskViewMode.ListView)
             {
@@ -720,8 +679,6 @@ namespace ShareNot.Forms
                     UpdateActionsMenu(uim.SelectedItem.Info.FilePath);
                     tsmiDeleteSelectedItem.Visible = true;
                     tsmiDeleteSelectedFile.Visible = uim.SelectedItem.IsFileExist;
-                    tsmiShortenSelectedURL.Visible = uim.SelectedItem.IsURLExist;
-                    tsmiShareSelectedURL.Visible = uim.SelectedItem.IsURLExist;
                     tsmiShowQRCode.Visible = uim.SelectedItem.IsURLExist;
                     tsmiOCRImage.Visible = uim.SelectedItem.IsImageFile;
                     tsmiCombineImages.Visible = uim.SelectedItems.Count(x => x.IsImageFile) > 1;
@@ -836,13 +793,6 @@ namespace ShareNot.Forms
             tsmiOCR.Image = TaskHelpers.FindMenuIcon(HotkeyType.OCR);
             tsmiTrayOCR.Image = TaskHelpers.FindMenuIcon(HotkeyType.OCR);
             tsmiOCRImage.Image = TaskHelpers.FindMenuIcon(HotkeyType.OCR);
-
-            tsmiShortenURL.Image = TaskHelpers.FindMenuIcon(HotkeyType.ShortenURL);
-            tsmiTrayShortenURL.Image = TaskHelpers.FindMenuIcon(HotkeyType.ShortenURL);
-            tsmiURLShorteners.Image = TaskHelpers.FindMenuIcon(HotkeyType.ShortenURL);
-            tsmiTrayURLShorteners.Image = TaskHelpers.FindMenuIcon(HotkeyType.ShortenURL);
-            tsmiTestURLShortener.Image = TaskHelpers.FindMenuIcon(HotkeyType.ShortenURL);
-            tsmiShortenSelectedURL.Image = TaskHelpers.FindMenuIcon(HotkeyType.ShortenURL);
 
             pbPreview.UpdateTheme();
             pbPreview.UpdateCheckers(true);
@@ -962,14 +912,13 @@ namespace ShareNot.Forms
         public void UpdateCheckStates()
         {
             SetMultiEnumChecked(Program.DefaultTaskSettings.AfterCaptureJob, tsddbAfterCaptureTasks, tsmiTrayAfterCaptureTasks);
-            SetMultiEnumChecked(Program.DefaultTaskSettings.AfterUploadJob, tsddbAfterUploadTasks, tsmiTrayAfterUploadTasks);
-            SetEnumChecked(Program.DefaultTaskSettings.ImageDestination, tsmiImageUploaders, tsmiTrayImageUploaders);
-            SetImageFileDestinationChecked(Program.DefaultTaskSettings.ImageDestination, Program.DefaultTaskSettings.ImageFileDestination, tsmiImageFileUploaders, tsmiTrayImageFileUploaders);
-            SetEnumChecked(Program.DefaultTaskSettings.TextDestination, tsmiTextUploaders, tsmiTrayTextUploaders);
-            SetTextFileDestinationChecked(Program.DefaultTaskSettings.TextDestination, Program.DefaultTaskSettings.TextFileDestination, tsmiTextFileUploaders, tsmiTrayTextFileUploaders);
-            SetEnumChecked(Program.DefaultTaskSettings.FileDestination, tsmiFileUploaders, tsmiTrayFileUploaders);
-            SetEnumChecked(Program.DefaultTaskSettings.URLShortenerDestination, tsmiURLShorteners, tsmiTrayURLShorteners);
-            SetEnumChecked(Program.DefaultTaskSettings.URLSharingServiceDestination, tsmiURLSharingServices, tsmiTrayURLSharingServices);
+            SetEnumChecked(Program.DefaultTaskSettings.ImageDestination);
+            SetImageFileDestinationChecked(Program.DefaultTaskSettings.ImageDestination, Program.DefaultTaskSettings.ImageFileDestination);
+            SetEnumChecked(Program.DefaultTaskSettings.TextDestination);
+            SetTextFileDestinationChecked(Program.DefaultTaskSettings.TextDestination, Program.DefaultTaskSettings.TextFileDestination);
+            SetEnumChecked(Program.DefaultTaskSettings.FileDestination);
+            SetEnumChecked(Program.DefaultTaskSettings.URLShortenerDestination);
+            SetEnumChecked(Program.DefaultTaskSettings.URLSharingServiceDestination);
         }
 
         public static void SetTextFileDestinationChecked(TextDestination textDestination, FileDestination textFileDestination, params ToolStripDropDownItem[] lists)
@@ -994,26 +943,6 @@ namespace ShareNot.Forms
             {
                 Uncheck(lists);
             }
-        }
-
-        public void UpdateUploaderMenuNames()
-        {
-            string imageUploader = Program.DefaultTaskSettings.ImageDestination == ImageDestination.FileUploader ?
-                Program.DefaultTaskSettings.ImageFileDestination.GetLocalizedDescription() : Program.DefaultTaskSettings.ImageDestination.GetLocalizedDescription();
-            tsmiImageUploaders.Text = tsmiTrayImageUploaders.Text = string.Format(Resources.TaskSettingsForm_UpdateUploaderMenuNames_Image_uploader___0_, imageUploader);
-
-            string textUploader = Program.DefaultTaskSettings.TextDestination == TextDestination.FileUploader ?
-                Program.DefaultTaskSettings.TextFileDestination.GetLocalizedDescription() : Program.DefaultTaskSettings.TextDestination.GetLocalizedDescription();
-            tsmiTextUploaders.Text = tsmiTrayTextUploaders.Text = string.Format(Resources.TaskSettingsForm_UpdateUploaderMenuNames_Text_uploader___0_, textUploader);
-
-            tsmiFileUploaders.Text = tsmiTrayFileUploaders.Text = string.Format(Resources.TaskSettingsForm_UpdateUploaderMenuNames_File_uploader___0_,
-                Program.DefaultTaskSettings.FileDestination.GetLocalizedDescription());
-
-            tsmiURLShorteners.Text = tsmiTrayURLShorteners.Text = string.Format(Resources.TaskSettingsForm_UpdateUploaderMenuNames_URL_shortener___0_,
-                Program.DefaultTaskSettings.URLShortenerDestination.GetLocalizedDescription());
-
-            tsmiURLSharingServices.Text = tsmiTrayURLSharingServices.Text = string.Format(Resources.TaskSettingsForm_UpdateUploaderMenuNames_URL_sharing_service___0_,
-                Program.DefaultTaskSettings.URLSharingServiceDestination.GetLocalizedDescription());
         }
 
         private WorkerTask[] GetSelectedTasks()
@@ -1779,16 +1708,6 @@ namespace ShareNot.Forms
         private void TsmiTrayAfterCaptureTasks_DropDownOpening(object sender, EventArgs e)
         {
             UpdateImageEffectsMenu(tsmiTrayAfterCaptureTasks);
-        }
-
-        private void tsddbDestinations_DropDownOpened(object sender, EventArgs e)
-        {
-            UpdateDestinationStates();
-        }
-
-        private void tsmiCustomUploaderSettings_Click(object sender, EventArgs e)
-        {
-            TaskHelpers.OpenCustomUploaderSettingsWindow();
         }
 
         private void tsbApplicationSettings_Click(object sender, EventArgs e)

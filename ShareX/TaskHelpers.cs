@@ -1671,7 +1671,6 @@ namespace ShareNot
                     case AfterCaptureTasks.ShowInExplorer: return Resources.folder_stand;
                     case AfterCaptureTasks.ScanQRCode: return ShareXResources.IsDarkTheme ? Resources.barcode_2d_white : Resources.barcode_2d;
                     case AfterCaptureTasks.DoOCR: return ShareXResources.IsDarkTheme ? Resources.edit_drop_cap_white : Resources.edit_drop_cap;
-                    case AfterCaptureTasks.ShowBeforeUploadWindow: return Resources.application__arrow;
                     case AfterCaptureTasks.UploadImageToHost: return Resources.upload_cloud;
                     case AfterCaptureTasks.DeleteFile: return Resources.bin;
                 }
@@ -1882,7 +1881,6 @@ namespace ShareNot
                             }
 
                             Program.MainForm.UpdateCheckStates();
-                            Program.MainForm.UpdateUploaderMenuNames();
                         }
 
                         if (CustomUploaderSettingsForm.IsInstanceActive)
