@@ -135,24 +135,6 @@ namespace ShareNot.Forms
             this.lvClipboardFormats = new MyListView();
             this.chDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chFormat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tpUpload = new System.Windows.Forms.TabPage();
-            this.gbSecondaryFileUploaders = new System.Windows.Forms.GroupBox();
-            this.lvSecondaryFileUploaders = new MyListView();
-            this.chSecondaryFileUploaders = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lblUploadLimit = new System.Windows.Forms.Label();
-            this.gbSecondaryImageUploaders = new System.Windows.Forms.GroupBox();
-            this.lvSecondaryImageUploaders = new MyListView();
-            this.chSecondaryImageUploaders = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.gbSecondaryTextUploaders = new System.Windows.Forms.GroupBox();
-            this.lvSecondaryTextUploaders = new MyListView();
-            this.chSecondaryTextUploaders = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.nudUploadLimit = new System.Windows.Forms.NumericUpDown();
-            this.cbUseSecondaryUploaders = new System.Windows.Forms.CheckBox();
-            this.lblUploadLimitHint = new System.Windows.Forms.Label();
-            this.cbIfUploadFailRetryOnce = new System.Windows.Forms.Label();
-            this.lblBufferSize = new System.Windows.Forms.Label();
-            this.nudRetryUpload = new System.Windows.Forms.NumericUpDown();
-            this.cbBufferSize = new System.Windows.Forms.ComboBox();
             this.tpHistory = new System.Windows.Forms.TabPage();
             this.gbHistory = new System.Windows.Forms.GroupBox();
             this.cbHistoryCheckURL = new System.Windows.Forms.CheckBox();
@@ -202,12 +184,6 @@ namespace ShareNot.Forms
             ((System.ComponentModel.ISupportInitialize)(this.nudThumbnailViewThumbnailSizeHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudThumbnailViewThumbnailSizeWidth)).BeginInit();
             this.tpClipboardFormats.SuspendLayout();
-            this.tpUpload.SuspendLayout();
-            this.gbSecondaryFileUploaders.SuspendLayout();
-            this.gbSecondaryImageUploaders.SuspendLayout();
-            this.gbSecondaryTextUploaders.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudUploadLimit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudRetryUpload)).BeginInit();
             this.tpHistory.SuspendLayout();
             this.gbHistory.SuspendLayout();
             this.gbRecentLinks.SuspendLayout();
@@ -228,7 +204,6 @@ namespace ShareNot.Forms
             this.tcSettings.Controls.Add(this.tpSettings);
             this.tcSettings.Controls.Add(this.tpMainWindow);
             this.tcSettings.Controls.Add(this.tpClipboardFormats);
-            this.tcSettings.Controls.Add(this.tpUpload);
             this.tcSettings.Controls.Add(this.tpHistory);
             this.tcSettings.Controls.Add(this.tpPrint);
             this.tcSettings.Controls.Add(this.tpProxy);
@@ -1039,160 +1014,6 @@ namespace ShareNot.Forms
             //
             resources.ApplyResources(this.chFormat, "chFormat");
             //
-            // tpUpload
-            //
-            this.tpUpload.BackColor = System.Drawing.SystemColors.Window;
-            this.tpUpload.Controls.Add(this.gbSecondaryFileUploaders);
-            this.tpUpload.Controls.Add(this.lblUploadLimit);
-            this.tpUpload.Controls.Add(this.gbSecondaryImageUploaders);
-            this.tpUpload.Controls.Add(this.gbSecondaryTextUploaders);
-            this.tpUpload.Controls.Add(this.nudUploadLimit);
-            this.tpUpload.Controls.Add(this.cbUseSecondaryUploaders);
-            this.tpUpload.Controls.Add(this.lblUploadLimitHint);
-            this.tpUpload.Controls.Add(this.cbIfUploadFailRetryOnce);
-            this.tpUpload.Controls.Add(this.lblBufferSize);
-            this.tpUpload.Controls.Add(this.nudRetryUpload);
-            this.tpUpload.Controls.Add(this.cbBufferSize);
-            resources.ApplyResources(this.tpUpload, "tpUpload");
-            this.tpUpload.Name = "tpUpload";
-            //
-            // gbSecondaryFileUploaders
-            //
-            this.gbSecondaryFileUploaders.Controls.Add(this.lvSecondaryFileUploaders);
-            resources.ApplyResources(this.gbSecondaryFileUploaders, "gbSecondaryFileUploaders");
-            this.gbSecondaryFileUploaders.Name = "gbSecondaryFileUploaders";
-            this.gbSecondaryFileUploaders.TabStop = false;
-            //
-            // lvSecondaryFileUploaders
-            //
-            this.lvSecondaryFileUploaders.AllowDrop = true;
-            this.lvSecondaryFileUploaders.AllowItemDrag = true;
-            this.lvSecondaryFileUploaders.AutoFillColumn = true;
-            this.lvSecondaryFileUploaders.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lvSecondaryFileUploaders.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.chSecondaryFileUploaders});
-            resources.ApplyResources(this.lvSecondaryFileUploaders, "lvSecondaryFileUploaders");
-            this.lvSecondaryFileUploaders.FullRowSelect = true;
-            this.lvSecondaryFileUploaders.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.lvSecondaryFileUploaders.HideSelection = false;
-            this.lvSecondaryFileUploaders.MultiSelect = false;
-            this.lvSecondaryFileUploaders.Name = "lvSecondaryFileUploaders";
-            this.lvSecondaryFileUploaders.UseCompatibleStateImageBehavior = false;
-            this.lvSecondaryFileUploaders.View = System.Windows.Forms.View.Details;
-            this.lvSecondaryFileUploaders.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lvSecondaryUploaders_MouseUp);
-            //
-            // lblUploadLimit
-            //
-            resources.ApplyResources(this.lblUploadLimit, "lblUploadLimit");
-            this.lblUploadLimit.Name = "lblUploadLimit";
-            //
-            // gbSecondaryImageUploaders
-            //
-            this.gbSecondaryImageUploaders.Controls.Add(this.lvSecondaryImageUploaders);
-            resources.ApplyResources(this.gbSecondaryImageUploaders, "gbSecondaryImageUploaders");
-            this.gbSecondaryImageUploaders.Name = "gbSecondaryImageUploaders";
-            this.gbSecondaryImageUploaders.TabStop = false;
-            //
-            // lvSecondaryImageUploaders
-            //
-            this.lvSecondaryImageUploaders.AllowDrop = true;
-            this.lvSecondaryImageUploaders.AllowItemDrag = true;
-            this.lvSecondaryImageUploaders.AutoFillColumn = true;
-            this.lvSecondaryImageUploaders.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lvSecondaryImageUploaders.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.chSecondaryImageUploaders});
-            resources.ApplyResources(this.lvSecondaryImageUploaders, "lvSecondaryImageUploaders");
-            this.lvSecondaryImageUploaders.FullRowSelect = true;
-            this.lvSecondaryImageUploaders.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.lvSecondaryImageUploaders.HideSelection = false;
-            this.lvSecondaryImageUploaders.MultiSelect = false;
-            this.lvSecondaryImageUploaders.Name = "lvSecondaryImageUploaders";
-            this.lvSecondaryImageUploaders.UseCompatibleStateImageBehavior = false;
-            this.lvSecondaryImageUploaders.View = System.Windows.Forms.View.Details;
-            this.lvSecondaryImageUploaders.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lvSecondaryUploaders_MouseUp);
-            //
-            // gbSecondaryTextUploaders
-            //
-            this.gbSecondaryTextUploaders.Controls.Add(this.lvSecondaryTextUploaders);
-            resources.ApplyResources(this.gbSecondaryTextUploaders, "gbSecondaryTextUploaders");
-            this.gbSecondaryTextUploaders.Name = "gbSecondaryTextUploaders";
-            this.gbSecondaryTextUploaders.TabStop = false;
-            //
-            // lvSecondaryTextUploaders
-            //
-            this.lvSecondaryTextUploaders.AllowDrop = true;
-            this.lvSecondaryTextUploaders.AllowItemDrag = true;
-            this.lvSecondaryTextUploaders.AutoFillColumn = true;
-            this.lvSecondaryTextUploaders.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lvSecondaryTextUploaders.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.chSecondaryTextUploaders});
-            resources.ApplyResources(this.lvSecondaryTextUploaders, "lvSecondaryTextUploaders");
-            this.lvSecondaryTextUploaders.FullRowSelect = true;
-            this.lvSecondaryTextUploaders.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.lvSecondaryTextUploaders.HideSelection = false;
-            this.lvSecondaryTextUploaders.MultiSelect = false;
-            this.lvSecondaryTextUploaders.Name = "lvSecondaryTextUploaders";
-            this.lvSecondaryTextUploaders.UseCompatibleStateImageBehavior = false;
-            this.lvSecondaryTextUploaders.View = System.Windows.Forms.View.Details;
-            this.lvSecondaryTextUploaders.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lvSecondaryUploaders_MouseUp);
-            //
-            // nudUploadLimit
-            //
-            resources.ApplyResources(this.nudUploadLimit, "nudUploadLimit");
-            this.nudUploadLimit.Maximum = new decimal(new int[] {
-            25,
-            0,
-            0,
-            0});
-            this.nudUploadLimit.Name = "nudUploadLimit";
-            this.nudUploadLimit.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.nudUploadLimit.ValueChanged += new System.EventHandler(this.nudUploadLimit_ValueChanged);
-            //
-            // cbUseSecondaryUploaders
-            //
-            resources.ApplyResources(this.cbUseSecondaryUploaders, "cbUseSecondaryUploaders");
-            this.cbUseSecondaryUploaders.Name = "cbUseSecondaryUploaders";
-            this.cbUseSecondaryUploaders.UseVisualStyleBackColor = true;
-            this.cbUseSecondaryUploaders.CheckedChanged += new System.EventHandler(this.cbUseSecondaryUploaders_CheckedChanged);
-            //
-            // lblUploadLimitHint
-            //
-            resources.ApplyResources(this.lblUploadLimitHint, "lblUploadLimitHint");
-            this.lblUploadLimitHint.Name = "lblUploadLimitHint";
-            //
-            // cbIfUploadFailRetryOnce
-            //
-            resources.ApplyResources(this.cbIfUploadFailRetryOnce, "cbIfUploadFailRetryOnce");
-            this.cbIfUploadFailRetryOnce.Name = "cbIfUploadFailRetryOnce";
-            //
-            // lblBufferSize
-            //
-            resources.ApplyResources(this.lblBufferSize, "lblBufferSize");
-            this.lblBufferSize.Name = "lblBufferSize";
-            //
-            // nudRetryUpload
-            //
-            resources.ApplyResources(this.nudRetryUpload, "nudRetryUpload");
-            this.nudRetryUpload.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.nudRetryUpload.Name = "nudRetryUpload";
-            this.nudRetryUpload.ValueChanged += new System.EventHandler(this.nudRetryUpload_ValueChanged);
-            //
-            // cbBufferSize
-            //
-            this.cbBufferSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbBufferSize.FormattingEnabled = true;
-            resources.ApplyResources(this.cbBufferSize, "cbBufferSize");
-            this.cbBufferSize.Name = "cbBufferSize";
-            this.cbBufferSize.SelectedIndexChanged += new System.EventHandler(this.cbBufferSize_SelectedIndexChanged);
-            //
             // tpHistory
             //
             this.tpHistory.BackColor = System.Drawing.SystemColors.Window;
@@ -1473,13 +1294,6 @@ namespace ShareNot.Forms
             ((System.ComponentModel.ISupportInitialize)(this.nudThumbnailViewThumbnailSizeWidth)).EndInit();
             this.tpClipboardFormats.ResumeLayout(false);
             this.tpClipboardFormats.PerformLayout();
-            this.tpUpload.ResumeLayout(false);
-            this.tpUpload.PerformLayout();
-            this.gbSecondaryFileUploaders.ResumeLayout(false);
-            this.gbSecondaryImageUploaders.ResumeLayout(false);
-            this.gbSecondaryTextUploaders.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nudUploadLimit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudRetryUpload)).EndInit();
             this.tpHistory.ResumeLayout(false);
             this.gbHistory.ResumeLayout(false);
             this.gbHistory.PerformLayout();
@@ -1525,13 +1339,6 @@ namespace ShareNot.Forms
         private System.Windows.Forms.CheckBox cbShellContextMenu;
         private System.Windows.Forms.ComboBox cbProxyMethod;
         private System.Windows.Forms.Label lblProxyMethod;
-        private System.Windows.Forms.TabPage tpUpload;
-        private System.Windows.Forms.Label cbIfUploadFailRetryOnce;
-        private System.Windows.Forms.Label lblUploadLimit;
-        private System.Windows.Forms.ComboBox cbBufferSize;
-        private System.Windows.Forms.Label lblUploadLimitHint;
-        private System.Windows.Forms.Label lblBufferSize;
-        private System.Windows.Forms.NumericUpDown nudUploadLimit;
         private System.Windows.Forms.Button btnClipboardFormatRemove;
         private System.Windows.Forms.Button btnClipboardFormatAdd;
         private MyListView lvClipboardFormats;
@@ -1552,17 +1359,6 @@ namespace ShareNot.Forms
         private System.Windows.Forms.TextBox txtPersonalFolderPath;
         private System.Windows.Forms.Button btnOpenScreenshotsFolder;
         private System.Windows.Forms.CheckBox cbSilentRun;
-        private System.Windows.Forms.NumericUpDown nudRetryUpload;
-        private System.Windows.Forms.GroupBox gbSecondaryImageUploaders;
-        private MyListView lvSecondaryImageUploaders;
-        private System.Windows.Forms.GroupBox gbSecondaryFileUploaders;
-        private MyListView lvSecondaryFileUploaders;
-        private System.Windows.Forms.GroupBox gbSecondaryTextUploaders;
-        private MyListView lvSecondaryTextUploaders;
-        private System.Windows.Forms.CheckBox cbUseSecondaryUploaders;
-        private System.Windows.Forms.ColumnHeader chSecondaryImageUploaders;
-        private System.Windows.Forms.ColumnHeader chSecondaryFileUploaders;
-        private System.Windows.Forms.ColumnHeader chSecondaryTextUploaders;
         private System.Windows.Forms.CheckBox cbPrintDontShowWindowsDialog;
         private System.Windows.Forms.CheckBox cbRememberMainFormPosition;
         private System.Windows.Forms.Label lblLanguage;

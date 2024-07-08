@@ -207,36 +207,6 @@ namespace ShareNot.Forms
                 AddClipboardFormat(cf);
             }
 
-            // Upload
-            nudUploadLimit.SetValue(Program.Settings.UploadLimit);
-
-            cbBufferSize.Items.Clear();
-            int maxBufferSizePower = 14;
-            for (int i = 0; i < maxBufferSizePower; i++)
-            {
-                string size = ((long)(Math.Pow(2, i) * 1024)).ToSizeString(Program.Settings.BinaryUnits, 0);
-                cbBufferSize.Items.Add(size);
-            }
-            cbBufferSize.SelectedIndex = Program.Settings.BufferSizePower.Clamp(0, maxBufferSizePower);
-
-            nudRetryUpload.SetValue(Program.Settings.MaxUploadFailRetry);
-            cbUseSecondaryUploaders.Checked = Program.Settings.UseSecondaryUploaders;
-
-            Program.Settings.SecondaryImageUploaders.AddRange(Helpers.GetEnums<ImageDestination>().Where(n => Program.Settings.SecondaryImageUploaders.All(e => e != n)));
-            Program.Settings.SecondaryTextUploaders.AddRange(Helpers.GetEnums<TextDestination>().Where(n => Program.Settings.SecondaryTextUploaders.All(e => e != n)));
-            Program.Settings.SecondaryFileUploaders.AddRange(Helpers.GetEnums<FileDestination>().Where(n => Program.Settings.SecondaryFileUploaders.All(e => e != n)));
-
-            Program.Settings.SecondaryImageUploaders.Where(n => Helpers.GetEnums<ImageDestination>().All(e => e != n)).ForEach(x => Program.Settings.SecondaryImageUploaders.Remove(x));
-            Program.Settings.SecondaryTextUploaders.Where(n => Helpers.GetEnums<TextDestination>().All(e => e != n)).ForEach(x => Program.Settings.SecondaryTextUploaders.Remove(x));
-            Program.Settings.SecondaryFileUploaders.Where(n => Helpers.GetEnums<FileDestination>().All(e => e != n)).ForEach(x => Program.Settings.SecondaryFileUploaders.Remove(x));
-
-            lvSecondaryImageUploaders.Items.Clear();
-            Program.Settings.SecondaryImageUploaders.ForEach<ImageDestination>(x => lvSecondaryImageUploaders.Items.Add(new ListViewItem(x.GetLocalizedDescription()) { Tag = x }));
-            lvSecondaryTextUploaders.Items.Clear();
-            Program.Settings.SecondaryTextUploaders.ForEach<TextDestination>(x => lvSecondaryTextUploaders.Items.Add(new ListViewItem(x.GetLocalizedDescription()) { Tag = x }));
-            lvSecondaryFileUploaders.Items.Clear();
-            Program.Settings.SecondaryFileUploaders.ForEach<FileDestination>(x => lvSecondaryFileUploaders.Items.Add(new ListViewItem(x.GetLocalizedDescription()) { Tag = x }));
-
             // History
             cbHistorySaveTasks.Checked = Program.Settings.HistorySaveTasks;
             cbHistoryCheckURL.Checked = Program.Settings.HistoryCheckURL;
@@ -1003,37 +973,6 @@ namespace ShareNot.Forms
         }
 
         #endregion
-
-        #region Upload
-
-        private void nudUploadLimit_ValueChanged(object sender, EventArgs e)
-        {
-            Program.Settings.UploadLimit = (int)nudUploadLimit.Value;
-        }
-
-        private void cbBufferSize_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Program.Settings.BufferSizePower = cbBufferSize.SelectedIndex;
-        }
-
-        private void nudRetryUpload_ValueChanged(object sender, EventArgs e)
-        {
-            Program.Settings.MaxUploadFailRetry = (int)nudRetryUpload.Value;
-        }
-
-        private void cbUseSecondaryUploaders_CheckedChanged(object sender, EventArgs e)
-        {
-            Program.Settings.UseSecondaryUploaders = cbUseSecondaryUploaders.Checked;
-        }
-
-        private void lvSecondaryUploaders_MouseUp(object sender, MouseEventArgs e)
-        {
-            Program.Settings.SecondaryImageUploaders = lvSecondaryImageUploaders.Items.Cast<ListViewItem>().Select(x => (ImageDestination)x.Tag).ToList();
-            Program.Settings.SecondaryTextUploaders = lvSecondaryTextUploaders.Items.Cast<ListViewItem>().Select(x => (TextDestination)x.Tag).ToList();
-            Program.Settings.SecondaryFileUploaders = lvSecondaryFileUploaders.Items.Cast<ListViewItem>().Select(x => (FileDestination)x.Tag).ToList();
-        }
-
-        #endregion Upload
 
         #region History
 

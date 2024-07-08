@@ -140,10 +140,6 @@ namespace ShareNot
         public List<ClipboardFormat> ClipboardContentFormats = new List<ClipboardFormat>();
 
         public int MaxUploadFailRetry = 1;
-        public bool UseSecondaryUploaders = false;
-        public List<ImageDestination> SecondaryImageUploaders = new List<ImageDestination>();
-        public List<TextDestination> SecondaryTextUploaders = new List<TextDestination>();
-        public List<FileDestination> SecondaryFileUploaders = new List<FileDestination>();
 
         #endregion Upload
 
