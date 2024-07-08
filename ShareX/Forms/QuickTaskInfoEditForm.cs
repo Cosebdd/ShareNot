@@ -45,9 +45,7 @@ namespace ShareNot.Forms
 
             txtName.Text = TaskInfo.Name;
             AddMultiEnumItemsContextMenu<AfterCaptureTasks>(x => TaskInfo.AfterCaptureTasks = TaskInfo.AfterCaptureTasks.Swap(x), cmsAfterCapture);
-            AddMultiEnumItemsContextMenu<AfterUploadTasks>(x => TaskInfo.AfterUploadTasks = TaskInfo.AfterUploadTasks.Swap(x), cmsAfterUpload);
             SetMultiEnumCheckedContextMenu(TaskInfo.AfterCaptureTasks, cmsAfterCapture);
-            SetMultiEnumCheckedContextMenu(TaskInfo.AfterUploadTasks, cmsAfterUpload);
             UpdateUploaderMenuNames();
         }
 
@@ -98,7 +96,6 @@ namespace ShareNot.Forms
         {
             txtName.SetWatermark(TaskInfo.ToString(), true);
             mbAfterCaptureTasks.Text = string.Join(", ", TaskInfo.AfterCaptureTasks.GetFlags().Select(x => x.GetLocalizedDescription()));
-            mbAfterUploadTasks.Text = string.Join(", ", TaskInfo.AfterUploadTasks.GetFlags().Select(x => x.GetLocalizedDescription()));
         }
 
         private void txtName_TextChanged(object sender, EventArgs e)

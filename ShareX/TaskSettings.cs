@@ -60,9 +60,6 @@ namespace ShareNot
         public bool UseDefaultAfterCaptureJob = true;
         public AfterCaptureTasks AfterCaptureJob = AfterCaptureTasks.CopyImageToClipboard | AfterCaptureTasks.SaveImageToFile;
 
-        public bool UseDefaultAfterUploadJob = true;
-        public AfterUploadTasks AfterUploadJob = AfterUploadTasks.None;
-
         public bool UseDefaultDestinations = true;
         public ImageDestination ImageDestination = ImageDestination.CustomImageUploader;
         public FileDestination ImageFileDestination = FileDestination.CustomFileUploader;
@@ -148,7 +145,7 @@ namespace ShareNot
         {
             get
             {
-                return UseDefaultAfterCaptureJob && UseDefaultAfterUploadJob && UseDefaultDestinations && !OverrideCustomUploader &&
+                return UseDefaultAfterCaptureJob && UseDefaultDestinations && !OverrideCustomUploader &&
                     !OverrideScreenshotsFolder && UseDefaultGeneralSettings && UseDefaultImageSettings && UseDefaultCaptureSettings && UseDefaultUploadSettings &&
                     UseDefaultActions && UseDefaultToolsSettings && UseDefaultAdvancedSettings;
             }
@@ -191,11 +188,6 @@ namespace ShareNot
                 if (UseDefaultAfterCaptureJob)
                 {
                     AfterCaptureJob = defaultTaskSettings.AfterCaptureJob;
-                }
-
-                if (UseDefaultAfterUploadJob)
-                {
-                    AfterUploadJob = defaultTaskSettings.AfterUploadJob;
                 }
 
                 if (UseDefaultDestinations)
@@ -439,15 +431,6 @@ namespace ShareNot
 
     public class TaskSettingsAdvanced
     {
-        [Category("General"), DefaultValue(false), Description("Allow after capture tasks for image files by loading them as bitmap when files are handled during file upload, clipboard file upload, drag && drop file upload, watch folder and other image file tasks.")]
-        public bool ProcessImagesDuringFileUpload { get; set; }
-
-        [Category("General"), DefaultValue(false), Description("Use after capture tasks for browser extension image uploads.")]
-        public bool ProcessImagesDuringExtensionUpload { get; set; }
-
-        [Category("General"), DefaultValue(true), Description("Allows file related after capture tasks (\"Perform actions\", \"Copy file to clipboard\" etc.) to be used when doing file upload.")]
-        public bool UseAfterCaptureTasksDuringFileUpload { get; set; }
-
         [Category("General"), DefaultValue(true), Description("Save text as file for tasks such as clipboard text upload, drag and drop text upload, index folder etc.")]
         public bool TextTaskSaveAsFile { get; set; }
 
@@ -462,21 +445,11 @@ namespace ShareNot
          Editor("System.Windows.Forms.Design.StringCollectionEditor,System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(UITypeEditor))]
         public List<string> TextExtensions { get; set; }
 
-        [Category("Text"), DefaultValue("txt"), Description("File extension when saving text to the local hard disk.")]
-        public string TextFileExtension { get; set; }
-
         [Category("Text"), DefaultValue("text"), Description("Text format e.g. csharp, cpp, etc.")]
         public string TextFormat { get; set; }
 
-        [Category("After upload"), DefaultValue("$result"),
-        Description("Clipboard content format after uploading. Supported variables: $result, $url, $shorturl, $thumbnailurl, $deletionurl, $filepath, $filename, $filenamenoext, $folderpath, $foldername, $uploadtime and other variables such as %y-%mo-%d etc.")]
-        public string ClipboardContentFormat { get; set; }
-
         [Category("After upload"), DefaultValue("$result"), Description("Balloon tip content format after uploading. Supported variables: $result, $url, $shorturl, $thumbnailurl, $deletionurl, $filepath, $filename, $filenamenoext, $folderpath, $foldername, $uploadtime and other variables such as %y-%mo-%d etc.")]
         public string BalloonTipContentFormat { get; set; }
-
-        [Category("After upload"), DefaultValue(false), Description("After upload form will be automatically closed after 60 seconds.")]
-        public bool AutoCloseAfterUploadForm { get; set; }
 
         [Category("Name pattern"), DefaultValue(100), Description("Maximum name pattern length for file name.")]
         public int NamePatternMaxLength { get; set; }

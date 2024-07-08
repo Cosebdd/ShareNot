@@ -55,7 +55,6 @@ namespace ShareNot.Forms
             ucBeforeUpload.InitCapture(TaskSettings);
 
             AddAfterCaptureItems(TaskSettings.AfterCaptureJob);
-            AddAfterUploadItems(TaskSettings.AfterUploadJob);
         }
 
         public AfterCaptureForm(TaskMetadata metadata, TaskSettings taskSettings) : this(taskSettings)
@@ -89,7 +88,6 @@ namespace ShareNot.Forms
         private void Continue()
         {
             TaskSettings.AfterCaptureJob = GetAfterCaptureTasks();
-            TaskSettings.AfterUploadJob = GetAfterUploadTasks();
             FileName = txtFileName.Text;
             DialogResult = DialogResult.OK;
             Close();
@@ -161,37 +159,6 @@ namespace ShareNot.Forms
                     CheckItem(lvi, !IsChecked(lvi));
                 }
             }
-        }
-
-        private void AddAfterUploadItems(AfterUploadTasks afterUploadTasks)
-        {
-            AfterUploadTasks[] ignore = new AfterUploadTasks[] { AfterUploadTasks.None };
-
-            foreach (AfterUploadTasks task in Helpers.GetEnums<AfterUploadTasks>())
-            {
-                if (ignore.Any(x => x == task)) continue;
-                ListViewItem lvi = new ListViewItem(task.GetLocalizedDescription());
-                CheckItem(lvi, afterUploadTasks.HasFlag(task));
-                lvi.Tag = task;
-                lvAfterUploadTasks.Items.Add(lvi);
-            }
-        }
-
-        private AfterUploadTasks GetAfterUploadTasks()
-        {
-            AfterUploadTasks afterUploadTasks = AfterUploadTasks.None;
-
-            for (int i = 0; i < lvAfterUploadTasks.Items.Count; i++)
-            {
-                ListViewItem lvi = lvAfterUploadTasks.Items[i];
-
-                if (IsChecked(lvi))
-                {
-                    afterUploadTasks = afterUploadTasks.Add((AfterUploadTasks)lvi.Tag);
-                }
-            }
-
-            return afterUploadTasks;
         }
 
         private void lvAfterUploadTasks_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)

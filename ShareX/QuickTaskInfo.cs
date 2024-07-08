@@ -34,7 +34,6 @@ namespace ShareNot
     {
         public string Name { get; set; }
         public AfterCaptureTasks AfterCaptureTasks { get; set; }
-        public AfterUploadTasks AfterUploadTasks { get; set; }
 
         public bool IsValid
         {
@@ -76,14 +75,13 @@ namespace ShareNot
         {
         }
 
-        public QuickTaskInfo(string name, AfterCaptureTasks afterCaptureTasks, AfterUploadTasks afterUploadTasks = AfterUploadTasks.None)
+        public QuickTaskInfo(string name, AfterCaptureTasks afterCaptureTasks)
         {
             Name = name;
             AfterCaptureTasks = afterCaptureTasks;
-            AfterUploadTasks = afterUploadTasks;
         }
 
-        public QuickTaskInfo(AfterCaptureTasks afterCaptureTasks, AfterUploadTasks afterUploadTasks = AfterUploadTasks.None) : this(null, afterCaptureTasks, afterUploadTasks)
+        public QuickTaskInfo(AfterCaptureTasks afterCaptureTasks) : this(null, afterCaptureTasks)
         {
         }
 

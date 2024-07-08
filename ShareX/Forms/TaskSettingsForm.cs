@@ -39,7 +39,6 @@ using ShareNot.ScreenCaptureLib.Helpers;
 using ShareNot.ScreenCaptureLib.ScreenRecording;
 using ShareNot.Tools.OCR;
 using ShareNot.UploadersLib;
-using ShareNot.UploadersLib.BaseServices;
 
 namespace ShareNot.Forms
 {
@@ -84,11 +83,6 @@ namespace ShareNot.Forms
                 btnAfterCapture.Enabled = !TaskSettings.UseDefaultAfterCaptureJob;
                 AddMultiEnumItemsContextMenu<AfterCaptureTasks>(x => TaskSettings.AfterCaptureJob = TaskSettings.AfterCaptureJob.Swap(x), cmsAfterCapture);
                 SetMultiEnumCheckedContextMenu(TaskSettings.AfterCaptureJob, cmsAfterCapture);
-
-                cbOverrideAfterUploadSettings.Checked = !TaskSettings.UseDefaultAfterUploadJob;
-                btnAfterUpload.Enabled = !TaskSettings.UseDefaultAfterUploadJob;
-                AddMultiEnumItemsContextMenu<AfterUploadTasks>(x => TaskSettings.AfterUploadJob = TaskSettings.AfterUploadJob.Swap(x), cmsAfterUpload);
-                SetMultiEnumCheckedContextMenu(TaskSettings.AfterUploadJob, cmsAfterUpload);
 
                 cbOverrideDestinationSettings.Checked = !TaskSettings.UseDefaultDestinations;
                 btnDestinations.Enabled = !TaskSettings.UseDefaultDestinations;
@@ -667,9 +661,6 @@ namespace ShareNot.Forms
             btnAfterCapture.Text = string.Format(Resources.TaskSettingsForm_UpdateUploaderMenuNames_After_capture___0_,
                 string.Join(", ", TaskSettings.AfterCaptureJob.GetFlags().Select(x => x.GetLocalizedDescription())));
 
-            btnAfterUpload.Text = string.Format(Resources.TaskSettingsForm_UpdateUploaderMenuNames_After_upload___0_,
-                string.Join(", ", TaskSettings.AfterUploadJob.GetFlags().Select(x => x.GetLocalizedDescription())));
-
             string imageUploader = TaskSettings.ImageDestination == ImageDestination.FileUploader ?
                 TaskSettings.ImageFileDestination.GetLocalizedDescription() : TaskSettings.ImageDestination.GetLocalizedDescription();
             tsmiImageUploaders.Text = string.Format(Resources.TaskSettingsForm_UpdateUploaderMenuNames_Image_uploader___0_, imageUploader);
@@ -691,12 +682,6 @@ namespace ShareNot.Forms
         {
             TaskSettings.UseDefaultAfterCaptureJob = !cbOverrideAfterCaptureSettings.Checked;
             btnAfterCapture.Enabled = !TaskSettings.UseDefaultAfterCaptureJob;
-        }
-
-        private void cbUseDefaultAfterUploadSettings_CheckedChanged(object sender, EventArgs e)
-        {
-            TaskSettings.UseDefaultAfterUploadJob = !cbOverrideAfterUploadSettings.Checked;
-            btnAfterUpload.Enabled = !TaskSettings.UseDefaultAfterUploadJob;
         }
 
         private void cbUseDefaultDestinationSettings_CheckedChanged(object sender, EventArgs e)

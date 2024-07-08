@@ -139,12 +139,6 @@ namespace ShareNot
         DoOCR = 1 << 16,
     }
 
-    [Flags]
-    public enum AfterUploadTasks // Localized
-    {
-        None = 0,
-    }
-
     public enum CaptureType
     {
         Fullscreen,

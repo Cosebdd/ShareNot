@@ -104,7 +104,6 @@ namespace ShareNot.Forms
                 tsddbAfterCaptureTasks, tsmiTrayAfterCaptureTasks);
             tsddbAfterCaptureTasks.DropDownOpening += TsddbAfterCaptureTasks_DropDownOpening;
             tsmiTrayAfterCaptureTasks.DropDownOpening += TsmiTrayAfterCaptureTasks_DropDownOpening;
-            AddMultiEnumItems<AfterUploadTasks>(x => Program.DefaultTaskSettings.AfterUploadJob = Program.DefaultTaskSettings.AfterUploadJob.Swap(x));
             AddEnumItems<ImageDestination>(x =>
             {
                 Program.DefaultTaskSettings.ImageDestination = x;

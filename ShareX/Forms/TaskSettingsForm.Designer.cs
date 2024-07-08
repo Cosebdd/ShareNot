@@ -35,7 +35,6 @@ namespace ShareNot.Forms
             this.cmsAfterCapture = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsAfterUpload = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cbOverrideAfterCaptureSettings = new System.Windows.Forms.CheckBox();
-            this.cbOverrideAfterUploadSettings = new System.Windows.Forms.CheckBox();
             this.cbOverrideDestinationSettings = new System.Windows.Forms.CheckBox();
             this.lblDescription = new System.Windows.Forms.Label();
             this.tbDescription = new System.Windows.Forms.TextBox();
@@ -49,7 +48,6 @@ namespace ShareNot.Forms
             this.cbCustomUploaders = new System.Windows.Forms.ComboBox();
             this.cbOverrideCustomUploader = new System.Windows.Forms.CheckBox();
             this.btnAfterCapture = new MenuButton();
-            this.btnAfterUpload = new MenuButton();
             this.btnDestinations = new MenuButton();
             this.cmsDestinations = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiImageUploaders = new System.Windows.Forms.ToolStripMenuItem();
@@ -340,13 +338,6 @@ namespace ShareNot.Forms
             this.cbOverrideAfterCaptureSettings.UseVisualStyleBackColor = true;
             this.cbOverrideAfterCaptureSettings.CheckedChanged += new System.EventHandler(this.cbUseDefaultAfterCaptureSettings_CheckedChanged);
             //
-            // cbOverrideAfterUploadSettings
-            //
-            resources.ApplyResources(this.cbOverrideAfterUploadSettings, "cbOverrideAfterUploadSettings");
-            this.cbOverrideAfterUploadSettings.Name = "cbOverrideAfterUploadSettings";
-            this.cbOverrideAfterUploadSettings.UseVisualStyleBackColor = true;
-            this.cbOverrideAfterUploadSettings.CheckedChanged += new System.EventHandler(this.cbUseDefaultAfterUploadSettings_CheckedChanged);
-            //
             // cbOverrideDestinationSettings
             //
             resources.ApplyResources(this.cbOverrideDestinationSettings, "cbOverrideDestinationSettings");
@@ -394,11 +385,9 @@ namespace ShareNot.Forms
             this.tpTask.Controls.Add(this.cbOverrideCustomUploader);
             this.tpTask.Controls.Add(this.tbDescription);
             this.tpTask.Controls.Add(this.btnAfterCapture);
-            this.tpTask.Controls.Add(this.btnAfterUpload);
             this.tpTask.Controls.Add(this.btnDestinations);
             this.tpTask.Controls.Add(this.cbOverrideAfterCaptureSettings);
             this.tpTask.Controls.Add(this.btnTask);
-            this.tpTask.Controls.Add(this.cbOverrideAfterUploadSettings);
             this.tpTask.Controls.Add(this.cbOverrideDestinationSettings);
             this.tpTask.Controls.Add(this.lblDescription);
             resources.ApplyResources(this.tpTask, "tpTask");
@@ -451,14 +440,6 @@ namespace ShareNot.Forms
             this.btnAfterCapture.Name = "btnAfterCapture";
             this.btnAfterCapture.UseMnemonic = false;
             this.btnAfterCapture.UseVisualStyleBackColor = true;
-            //
-            // btnAfterUpload
-            //
-            resources.ApplyResources(this.btnAfterUpload, "btnAfterUpload");
-            this.btnAfterUpload.Menu = this.cmsAfterUpload;
-            this.btnAfterUpload.Name = "btnAfterUpload";
-            this.btnAfterUpload.UseMnemonic = false;
-            this.btnAfterUpload.UseVisualStyleBackColor = true;
             //
             // btnDestinations
             //
@@ -2391,11 +2372,9 @@ namespace ShareNot.Forms
 
         private MenuButton btnAfterCapture;
         private System.Windows.Forms.ContextMenuStrip cmsAfterCapture;
-        private MenuButton btnAfterUpload;
         private MenuButton btnDestinations;
         private System.Windows.Forms.ContextMenuStrip cmsAfterUpload;
         private System.Windows.Forms.CheckBox cbOverrideAfterCaptureSettings;
-        private System.Windows.Forms.CheckBox cbOverrideAfterUploadSettings;
         private System.Windows.Forms.CheckBox cbOverrideDestinationSettings;
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.TextBox tbDescription;

@@ -1617,13 +1617,6 @@ namespace ShareNot
                     case AfterCaptureTasks.DoOCR: return ShareXResources.IsDarkTheme ? Resources.edit_drop_cap_white : Resources.edit_drop_cap;
                 }
             }
-            else if (value is AfterUploadTasks afterUploadTask)
-            {
-                switch (afterUploadTask)
-                {
-                    default: throw new Exception("Icon missing for after upload task: " + afterUploadTask);
-                }
-            }
             else if (value is HotkeyType hotkeyType)
             {
                 switch (hotkeyType)

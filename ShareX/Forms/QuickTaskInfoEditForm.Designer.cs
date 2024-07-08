@@ -34,10 +34,7 @@ namespace ShareNot.Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuickTaskInfoEditForm));
             this.mbAfterCaptureTasks = new MenuButton();
             this.cmsAfterCapture = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.mbAfterUploadTasks = new MenuButton();
-            this.cmsAfterUpload = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.lblAfterCaptureTasks = new System.Windows.Forms.Label();
-            this.lblAfterUploadTasks = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.btnOK = new System.Windows.Forms.Button();
@@ -55,27 +52,10 @@ namespace ShareNot.Forms
             this.cmsAfterCapture.Name = "cmsAfterCapture";
             resources.ApplyResources(this.cmsAfterCapture, "cmsAfterCapture");
             //
-            // mbAfterUploadTasks
-            //
-            resources.ApplyResources(this.mbAfterUploadTasks, "mbAfterUploadTasks");
-            this.mbAfterUploadTasks.Menu = this.cmsAfterUpload;
-            this.mbAfterUploadTasks.Name = "mbAfterUploadTasks";
-            this.mbAfterUploadTasks.UseVisualStyleBackColor = true;
-            //
-            // cmsAfterUpload
-            //
-            this.cmsAfterUpload.Name = "cmsAfterUpload";
-            resources.ApplyResources(this.cmsAfterUpload, "cmsAfterUpload");
-            //
             // lblAfterCaptureTasks
             //
             resources.ApplyResources(this.lblAfterCaptureTasks, "lblAfterCaptureTasks");
             this.lblAfterCaptureTasks.Name = "lblAfterCaptureTasks";
-            //
-            // lblAfterUploadTasks
-            //
-            resources.ApplyResources(this.lblAfterUploadTasks, "lblAfterUploadTasks");
-            this.lblAfterUploadTasks.Name = "lblAfterUploadTasks";
             //
             // lblName
             //
@@ -104,9 +84,7 @@ namespace ShareNot.Forms
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.lblAfterUploadTasks);
             this.Controls.Add(this.lblAfterCaptureTasks);
-            this.Controls.Add(this.mbAfterUploadTasks);
             this.Controls.Add(this.mbAfterCaptureTasks);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -119,11 +97,8 @@ namespace ShareNot.Forms
         #endregion
 
         private MenuButton mbAfterCaptureTasks;
-        private MenuButton mbAfterUploadTasks;
         private System.Windows.Forms.ContextMenuStrip cmsAfterCapture;
-        private System.Windows.Forms.ContextMenuStrip cmsAfterUpload;
         private System.Windows.Forms.Label lblAfterCaptureTasks;
-        private System.Windows.Forms.Label lblAfterUploadTasks;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button btnOK;

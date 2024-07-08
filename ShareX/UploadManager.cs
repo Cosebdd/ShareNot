@@ -150,7 +150,6 @@ namespace ShareNot
                         else if (taskInfo.IsValid)
                         {
                             taskSettings.AfterCaptureJob = taskInfo.AfterCaptureTasks;
-                            taskSettings.AfterUploadJob = taskInfo.AfterUploadTasks;
                             RunImageTask(metadata, taskSettings, true);
                         }
                     };
