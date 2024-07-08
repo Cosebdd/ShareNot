@@ -33,7 +33,7 @@ namespace ShareNot
     {
         private const string RegistryPath = @"SOFTWARE\ShareNot";
 
-        public static bool DisableUpdateCheck { get; private set; } = true;
+        public static bool DisableUpdateCheck { get; private set; }
         public static bool DisableUpload { get; private set; } = true;
         public static bool DisableLogging { get; private set; }
         public static string PersonalPath { get; private set; }
