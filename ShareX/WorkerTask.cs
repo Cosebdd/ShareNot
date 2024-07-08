@@ -111,12 +111,6 @@ namespace ShareNot
             task.Info.FilePath = filePath;
             task.Info.DataType = TaskHelpers.FindDataType(task.Info.FilePath, taskSettings);
 
-            if (task.Info.TaskSettings.UploadSettings.FileUploadUseNamePattern)
-            {
-                string ext = FileHelpers.GetFileNameExtension(task.Info.FilePath);
-                task.Info.FileName = TaskHelpers.GetFileName(task.Info.TaskSettings, ext);
-            }
-
             if (task.Info.TaskSettings.AdvancedSettings.ProcessImagesDuringFileUpload && task.Info.DataType == EDataType.Image)
             {
                 task.Info.Job = TaskJob.Job;
@@ -196,11 +190,6 @@ namespace ShareNot
                 string ext = FileHelpers.GetFileNameExtension(task.Info.FilePath);
                 task.Info.FileName = FileHelpers.AppendExtension(customFileName, ext);
             }
-            else if (task.Info.TaskSettings.UploadSettings.FileUploadUseNamePattern)
-            {
-                string ext = FileHelpers.GetFileNameExtension(task.Info.FilePath);
-                task.Info.FileName = TaskHelpers.GetFileName(task.Info.TaskSettings, ext);
-            }
 
             task.Info.Metadata = metadata;
             task.Info.Job = TaskJob.Job;
@@ -221,12 +210,6 @@ namespace ShareNot
             string fileName = URLHelpers.URLDecode(url, 10);
             fileName = URLHelpers.GetFileName(fileName);
             fileName = FileHelpers.SanitizeFileName(fileName);
-
-            if (task.Info.TaskSettings.UploadSettings.FileUploadUseNamePattern)
-            {
-                string ext = FileHelpers.GetFileNameExtension(fileName);
-                fileName = TaskHelpers.GetFileName(task.Info.TaskSettings, ext);
-            }
 
             if (string.IsNullOrEmpty(fileName))
             {
@@ -469,22 +452,6 @@ namespace ShareNot
                 if (HelpersOptions.AcceptInvalidSSLCertificates)
                 {
                     sslBypassHelper = new SSLBypassHelper();
-                }
-
-                if (!CheckUploadFilters(data, fileName))
-                {
-                    switch (Info.UploadDestination)
-                    {
-                        case EDataType.Image:
-                            Info.Result = UploadImage(data, fileName);
-                            break;
-                        case EDataType.Text:
-                            Info.Result = UploadText(data, fileName);
-                            break;
-                        case EDataType.File:
-                            Info.Result = UploadFile(data, fileName);
-                            break;
-                    }
                 }
 
                 StopRequested |= taskReferenceHelper.StopRequested;
@@ -827,12 +794,6 @@ namespace ShareNot
         {
             try
             {
-                if (Info.TaskSettings.UploadSettings.URLRegexReplace)
-                {
-                    Info.Result.URL = Regex.Replace(Info.Result.URL, Info.TaskSettings.UploadSettings.URLRegexReplacePattern,
-                        Info.TaskSettings.UploadSettings.URLRegexReplaceReplacement);
-                }
-
                 if (Info.TaskSettings.AdvancedSettings.ResultForceHTTPS)
                 {
                     Info.Result.ForceHTTPS();
@@ -938,11 +899,6 @@ namespace ShareNot
 
                 fileName = URLHelpers.RemoveBidiControlCharacters(fileName);
 
-                if (Info.TaskSettings.UploadSettings.FileUploadReplaceProblematicCharacters)
-                {
-                    fileName = URLHelpers.ReplaceReservedCharacters(fileName, "_");
-                }
-
                 Info.UploadDuration = Stopwatch.StartNew();
 
                 UploadResult result = uploader.Upload(stream, fileName);
@@ -953,28 +909,6 @@ namespace ShareNot
             }
 
             return null;
-        }
-
-        private bool CheckUploadFilters(Stream stream, string fileName)
-        {
-            if (Info.TaskSettings.UploadSettings.UploaderFilters != null && !string.IsNullOrEmpty(fileName) && stream != null)
-            {
-                UploaderFilter filter = Info.TaskSettings.UploadSettings.UploaderFilters.FirstOrDefault(x => x.IsValidFilter(fileName));
-
-                if (filter != null)
-                {
-                    IGenericUploaderService service = filter.GetUploaderService();
-
-                    if (service != null)
-                    {
-                        Info.Result = UploadData(service, stream, fileName);
-
-                        return true;
-                    }
-                }
-            }
-
-            return false;
         }
 
         public UploadResult UploadImage(Stream stream, string fileName)
@@ -1055,23 +989,6 @@ namespace ShareNot
         {
             string url = Info.Result.URL.Trim();
             Info.Result.URL = "";
-
-            if (!Info.TaskSettings.UploadSettings.FileUploadUseNamePattern)
-            {
-                try
-                {
-                    string fileName = WebHelpers.GetFileNameFromWebServerAsync(url).GetAwaiter().GetResult();
-
-                    if (!string.IsNullOrEmpty(fileName))
-                    {
-                        Info.FileName = FileHelpers.SanitizeFileName(fileName);
-                    }
-                }
-                catch (Exception e)
-                {
-                    DebugHelper.WriteException(e);
-                }
-            }
 
             string screenshotsFolder = TaskHelpers.GetScreenshotsFolder(Info.TaskSettings);
             Info.FilePath = TaskHelpers.HandleExistsFile(screenshotsFolder, Info.FileName, Info.TaskSettings);

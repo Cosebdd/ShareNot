@@ -5515,7 +5515,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnAutoIncrementNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 176</value>
+    <value>104, 206</value>
   </data>
   <data name="btnAutoIncrementNumber.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 23</value>
@@ -5545,7 +5545,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblAutoIncrementNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 160</value>
+    <value>5, 188</value>
   </data>
   <data name="lblAutoIncrementNumber.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 13</value>
@@ -5569,7 +5569,7 @@
     <value>6</value>
   </data>
   <data name="nudAutoIncrementNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 177</value>
+    <value>8, 207</value>
   </data>
   <data name="nudAutoIncrementNumber.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 20</value>
@@ -5629,7 +5629,7 @@
     <value>NoControl</value>
   </data>
   <data name="cbNameFormatCustomTimeZone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 208</value>
+    <value>8, 136</value>
   </data>
   <data name="cbNameFormatCustomTimeZone.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 17</value>
@@ -5743,7 +5743,7 @@
     <value>12</value>
   </data>
   <data name="cbNameFormatTimeZone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 232</value>
+    <value>8, 156</value>
   </data>
   <data name="cbNameFormatTimeZone.Size" type="System.Drawing.Size, System.Drawing">
     <value>288, 21</value>

@@ -117,7 +117,7 @@ namespace ShareNot
         }
 
         public bool UseDefaultUploadSettings = true;
-        public TaskSettingsUpload UploadSettings = new TaskSettingsUpload();
+        public TaskSettingsFileNaming FileNamingSettings = new TaskSettingsFileNaming();
 
         public bool UseDefaultActions = true;
         public List<ExternalProgram> ExternalPrograms = new List<ExternalProgram>();
@@ -232,7 +232,7 @@ namespace ShareNot
 
                 if (UseDefaultUploadSettings)
                 {
-                    UploadSettings = defaultTaskSettings.UploadSettings;
+                    FileNamingSettings = defaultTaskSettings.FileNamingSettings;
                 }
 
                 if (UseDefaultActions)
@@ -271,7 +271,7 @@ namespace ShareNot
 
             if (UseDefaultUploadSettings)
             {
-                UploadSettings = null;
+                FileNamingSettings = null;
             }
 
             if (UseDefaultActions)
@@ -419,36 +419,16 @@ namespace ShareNot
         #endregion Capture / OCR
     }
 
-    public class TaskSettingsUpload
+    public class TaskSettingsFileNaming
     {
-        #region Upload / File naming
+        #region File naming
 
         public bool UseCustomTimeZone = false;
         public TimeZoneInfo CustomTimeZone = TimeZoneInfo.Utc;
         public string NameFormatPattern = "%ra{10}";
         public string NameFormatPatternActiveWindow = "%pn_%ra{10}";
-        public bool FileUploadUseNamePattern = false;
-        public bool FileUploadReplaceProblematicCharacters = false;
-        public bool URLRegexReplace = false;
-        public string URLRegexReplacePattern = "^https?://(.+)$";
-        public string URLRegexReplaceReplacement = "https://$1";
 
-        #endregion Upload / File naming
-
-        #region Upload / Clipboard upload
-
-        public bool ClipboardUploadURLContents = false;
-        public bool ClipboardUploadShortenURL = false;
-        public bool ClipboardUploadShareURL = false;
-        public bool ClipboardUploadAutoIndexFolder = false;
-
-        #endregion Upload / Clipboard upload
-
-        #region Upload / Uploader filters
-
-        public List<UploaderFilter> UploaderFilters = new List<UploaderFilter>();
-
-        #endregion Upload / Uploader filters
+        #endregion File naming
     }
 
     public class TaskSettingsTools

@@ -475,7 +475,7 @@ namespace ShareNot
                 AutoIncrementNumber = Program.Settings.NameParserAutoIncrementNumber,
                 MaxNameLength = taskSettings.AdvancedSettings.NamePatternMaxLength,
                 MaxTitleLength = taskSettings.AdvancedSettings.NamePatternMaxTitleLength,
-                CustomTimeZone = taskSettings.UploadSettings.UseCustomTimeZone ? taskSettings.UploadSettings.CustomTimeZone : null
+                CustomTimeZone = taskSettings.FileNamingSettings.UseCustomTimeZone ? taskSettings.FileNamingSettings.CustomTimeZone : null
             };
 
             if (metadata != null)
@@ -490,13 +490,13 @@ namespace ShareNot
                 nameParser.ProcessName = metadata.ProcessName;
             }
 
-            if (!string.IsNullOrEmpty(taskSettings.UploadSettings.NameFormatPatternActiveWindow) && !string.IsNullOrEmpty(nameParser.WindowText))
+            if (!string.IsNullOrEmpty(taskSettings.FileNamingSettings.NameFormatPatternActiveWindow) && !string.IsNullOrEmpty(nameParser.WindowText))
             {
-                fileName = nameParser.Parse(taskSettings.UploadSettings.NameFormatPatternActiveWindow);
+                fileName = nameParser.Parse(taskSettings.FileNamingSettings.NameFormatPatternActiveWindow);
             }
             else
             {
-                fileName = nameParser.Parse(taskSettings.UploadSettings.NameFormatPattern);
+                fileName = nameParser.Parse(taskSettings.FileNamingSettings.NameFormatPattern);
             }
 
             Program.Settings.NameParserAutoIncrementNumber = nameParser.AutoIncrementNumber;

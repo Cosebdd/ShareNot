@@ -169,35 +169,7 @@ namespace ShareNot
             {
                 string url = text.Trim();
 
-                if (URLHelpers.IsValidURL(url))
-                {
-                    if (taskSettings.UploadSettings.ClipboardUploadURLContents)
-                    {
-                        DownloadAndUploadFile(url, taskSettings);
-                        return;
-                    }
-
-                    if (taskSettings.UploadSettings.ClipboardUploadShortenURL)
-                    {
-                        ShortenURL(url, taskSettings);
-                        return;
-                    }
-
-                    if (taskSettings.UploadSettings.ClipboardUploadShareURL)
-                    {
-                        ShareURL(url, taskSettings);
-                        return;
-                    }
-                }
-
-                if (taskSettings.UploadSettings.ClipboardUploadAutoIndexFolder && text.Length <= 260 && Directory.Exists(text))
-                {
-                    IndexFolder(text, taskSettings);
-                }
-                else
-                {
-                    UploadText(text, taskSettings, true);
-                }
+                UploadText(text, taskSettings, true);
             }
         }
 
