@@ -109,7 +109,6 @@ namespace ShareNot.HistoryLib.Forms
         private void ResetFilters()
         {
             txtFilenameFilter.ResetText();
-            txtURLFilter.ResetText();
             cbDateFilter.Checked = false;
             dtpFilterFrom.ResetText();
             dtpFilterTo.ResetText();
@@ -119,7 +118,6 @@ namespace ShareNot.HistoryLib.Forms
                 cbTypeFilterSelection.SelectedIndex = 0;
             }
             cbHostFilter.Checked = false;
-            cbHostFilterSelection.ResetText();
         }
 
         private async Task RefreshHistoryItems(bool mockData = false)
@@ -127,14 +125,12 @@ namespace ShareNot.HistoryLib.Forms
             allHistoryItems = await GetHistoryItems(mockData);
 
             cbTypeFilterSelection.Items.Clear();
-            cbHostFilterSelection.Items.Clear();
             tstbSearch.AutoCompleteCustomSource.Clear();
 
             if (allHistoryItems.Length > 0)
             {
                 allTypeNames = allHistoryItems.Select(x => x.Type).Where(x => !string.IsNullOrWhiteSpace(x)).Distinct().ToArray();
                 cbTypeFilterSelection.Items.AddRange(allTypeNames.Select(x => typeNamesLocaleLookup.TryGetValue(x, out string value) ? value : x).ToArray());
-                cbHostFilterSelection.Items.AddRange(allHistoryItems.Select(x => x.Host).Where(x => !string.IsNullOrWhiteSpace(x)).Distinct().ToArray());
                 tstbSearch.AutoCompleteCustomSource.AddRange(allHistoryItems.Select(x => x.TagsProcessName).Where(x => !string.IsNullOrWhiteSpace(x)).Distinct().ToArray());
             }
 
@@ -213,12 +209,9 @@ namespace ShareNot.HistoryLib.Forms
             HistoryFilter filter = new HistoryFilter()
             {
                 Filename = txtFilenameFilter.Text,
-                URL = txtURLFilter.Text,
                 FilterDate = cbDateFilter.Checked,
                 FromDate = dtpFilterFrom.Value.Date,
                 ToDate = dtpFilterTo.Value.Date,
-                FilterHost = cbHostFilter.Checked,
-                Host = cbHostFilterSelection.Text
             };
 
             if (cbTypeFilter.Checked && allTypeNames.IsValidIndex(cbTypeFilterSelection.SelectedIndex))
@@ -255,7 +248,6 @@ namespace ShareNot.HistoryLib.Forms
 
             lvi.SubItems.Add(hi.DateTime.ToString());
             lvi.SubItems.Add(hi.FileName);
-            lvi.SubItems.Add(hi.URL);
 
             return lvi;
         }
@@ -320,10 +312,6 @@ namespace ShareNot.HistoryLib.Forms
                 {
                     pbThumbnail.LoadImageFromFileAsync(him.HistoryItem.FilePath);
                 }
-                else if (him.IsImageURL)
-                {
-                    pbThumbnail.LoadImageFromURLAsync(him.HistoryItem.URL);
-                }
             }
         }
 
@@ -364,16 +352,6 @@ namespace ShareNot.HistoryLib.Forms
                 Select(x => string.Format("[{0}] {1}", x.Count(), x.Key));
 
             sb.AppendLine(string.Join(Environment.NewLine, fileExtensions));
-
-            sb.AppendLine();
-            sb.AppendLine(Resources.HistoryStats_Hosts);
-
-            IEnumerable<string> hosts = historyItems.
-                GroupBy(x => string.IsNullOrWhiteSpace(x.Host) ? empty : x.Host).
-                OrderByDescending(x => x.Count()).
-                Select(x => string.Format("[{0}] {1}", x.Count(), x.Key));
-
-            sb.AppendLine(string.Join(Environment.NewLine, hosts));
 
             sb.AppendLine();
             sb.AppendLine(Resources.ProcessNames);

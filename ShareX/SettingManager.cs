@@ -175,7 +175,6 @@ namespace ShareNot
             UploadersConfig.CreateBackup = true;
             UploadersConfig.CreateWeeklyBackup = true;
             UploadersConfig.SupportDPAPIEncryption = true;
-            UploadersConfigBackwardCompatibilityTasks();
         }
 
         public static void LoadHotkeysConfig(bool fallbackSupport = true)
@@ -268,17 +267,6 @@ namespace ShareNot
                 }
 
                 FileHelpers.MoveFile(Program.HistoryFilePathOld, BackupFolder);
-            }
-        }
-
-        private static void UploadersConfigBackwardCompatibilityTasks()
-        {
-            if (UploadersConfig.CustomUploadersList != null)
-            {
-                foreach (CustomUploaderItem cui in UploadersConfig.CustomUploadersList)
-                {
-                    cui.CheckBackwardCompatibility();
-                }
             }
         }
 

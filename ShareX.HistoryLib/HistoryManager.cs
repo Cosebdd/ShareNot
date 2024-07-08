@@ -91,7 +91,7 @@ namespace ShareNot.HistoryLib
         private bool IsValidHistoryItem(HistoryItem historyItem)
         {
             return historyItem != null && !string.IsNullOrEmpty(historyItem.FileName) && historyItem.DateTime != DateTime.MinValue &&
-                (!string.IsNullOrEmpty(historyItem.URL) || !string.IsNullOrEmpty(historyItem.FilePath));
+                !string.IsNullOrEmpty(historyItem.FilePath);
         }
 
         protected List<HistoryItem> Load()
@@ -137,11 +137,6 @@ namespace ShareNot.HistoryLib
                 FilePath = @"C:\ShareX\Screenshots\Example.png",
                 DateTime = DateTime.Now,
                 Type = "Image",
-                Host = "Imgur",
-                URL = "https://example.com/Example.png",
-                ThumbnailURL = "https://example.com/Example.png",
-                DeletionURL = "https://example.com/Example.png",
-                ShortenedURL = "https://example.com/Example.png"
             };
 
             HistoryItem[] historyItems = new HistoryItem[itemCount];

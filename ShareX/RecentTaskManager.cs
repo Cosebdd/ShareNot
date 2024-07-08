@@ -92,10 +92,6 @@ namespace ShareNot
                 RecentTask recentItem = new RecentTask()
                 {
                     FilePath = task.Info.FilePath,
-                    URL = task.Info.Result.URL,
-                    ThumbnailURL = task.Info.Result.ThumbnailURL,
-                    DeletionURL = task.Info.Result.DeletionURL,
-                    ShortenedURL = task.Info.Result.ShortenedURL
                 };
 
                 Add(recentItem);

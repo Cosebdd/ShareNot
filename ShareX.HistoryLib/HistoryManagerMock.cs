@@ -61,11 +61,6 @@ namespace ShareNot.HistoryLib
                 FilePath = @"..\..\..\ShareX.HelpersLib\Resources\ShareX_Logo.png",
                 DateTime = DateTime.Now.AddSeconds(-RandomFast.Next(0, 1000000)),
                 Type = "Image",
-                Host = "Amazon S3",
-                URL = "https://i.example.com/" + fileName,
-                ThumbnailURL = "https://t.example.com/" + fileName,
-                DeletionURL = "https://d.example.com/" + fileName,
-                ShortenedURL = "https://s.example.com/" + fileName
             };
 
             return historyItem;

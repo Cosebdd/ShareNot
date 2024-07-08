@@ -58,10 +58,6 @@ namespace ShareNot
                     }
 
                     pattern = pattern.Replace("$result", result ?? "");
-                    pattern = pattern.Replace("$url", info.Result.URL ?? "");
-                    pattern = pattern.Replace("$shorturl", info.Result.ShortenedURL ?? "");
-                    pattern = pattern.Replace("$thumbnailurl", info.Result.ThumbnailURL ?? "");
-                    pattern = pattern.Replace("$deletionurl", info.Result.DeletionURL ?? "");
                 }
 
                 pattern = pattern.Replace("$filenamenoext", !string.IsNullOrEmpty(info.FileName) ? Path.GetFileNameWithoutExtension(info.FileName) : "");

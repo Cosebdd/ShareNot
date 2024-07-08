@@ -352,8 +352,7 @@ namespace ShareNot
 
                             if (!task.StopRequested && !string.IsNullOrEmpty(result))
                             {
-                                if (Program.Settings.HistorySaveTasks && (!Program.Settings.HistoryCheckURL ||
-                                   (!string.IsNullOrEmpty(info.Result.URL) || !string.IsNullOrEmpty(info.Result.ShortenedURL))))
+                                if (Program.Settings.HistorySaveTasks)
                                 {
                                     HistoryItem historyItem = info.GetHistoryItem();
                                     AppendHistoryItemAsync(historyItem);

@@ -137,7 +137,6 @@ namespace ShareNot.Forms
             this.chFormat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tpHistory = new System.Windows.Forms.TabPage();
             this.gbHistory = new System.Windows.Forms.GroupBox();
-            this.cbHistoryCheckURL = new System.Windows.Forms.CheckBox();
             this.cbHistorySaveTasks = new System.Windows.Forms.CheckBox();
             this.gbRecentLinks = new System.Windows.Forms.GroupBox();
             this.cbRecentTasksTrayMenuMostRecentFirst = new System.Windows.Forms.CheckBox();
@@ -1024,18 +1023,10 @@ namespace ShareNot.Forms
             //
             // gbHistory
             //
-            this.gbHistory.Controls.Add(this.cbHistoryCheckURL);
             this.gbHistory.Controls.Add(this.cbHistorySaveTasks);
             resources.ApplyResources(this.gbHistory, "gbHistory");
             this.gbHistory.Name = "gbHistory";
             this.gbHistory.TabStop = false;
-            //
-            // cbHistoryCheckURL
-            //
-            resources.ApplyResources(this.cbHistoryCheckURL, "cbHistoryCheckURL");
-            this.cbHistoryCheckURL.Name = "cbHistoryCheckURL";
-            this.cbHistoryCheckURL.UseVisualStyleBackColor = true;
-            this.cbHistoryCheckURL.CheckedChanged += new System.EventHandler(this.cbHistoryCheckURL_CheckedChanged);
             //
             // cbHistorySaveTasks
             //
@@ -1385,7 +1376,6 @@ namespace ShareNot.Forms
         private System.Windows.Forms.CheckBox cbRecentTasksTrayMenuMostRecentFirst;
         private System.Windows.Forms.GroupBox gbHistory;
         private System.Windows.Forms.CheckBox cbHistorySaveTasks;
-        private System.Windows.Forms.CheckBox cbHistoryCheckURL;
         private System.Windows.Forms.Label lblTrayMiddleClickAction;
         private System.Windows.Forms.Label lblTrayLeftDoubleClickAction;
         private System.Windows.Forms.Label lblTrayLeftClickAction;

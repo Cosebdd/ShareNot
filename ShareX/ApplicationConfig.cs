@@ -146,7 +146,6 @@ namespace ShareNot
         #region History
 
         public bool HistorySaveTasks = true;
-        public bool HistoryCheckURL = false;
 
         public RecentTask[] RecentTasks = null;
         public bool RecentTasksSave = false;

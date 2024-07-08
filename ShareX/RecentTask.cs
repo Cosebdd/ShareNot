@@ -43,19 +43,11 @@ namespace ShareNot
                 {
                     text = FilePath;
                 }
-                else if (!string.IsNullOrEmpty(URL))
-                {
-                    text = URL;
-                }
 
                 return FileHelpers.GetFileNameSafe(text);
             }
         }
 
-        public string URL { get; set; }
-        public string ThumbnailURL { get; set; }
-        public string DeletionURL { get; set; }
-        public string ShortenedURL { get; set; }
 
         public DateTime Time { get; set; }
 
@@ -78,15 +70,7 @@ namespace ShareNot
         {
             string text = "";
 
-            if (!string.IsNullOrEmpty(ShortenedURL))
-            {
-                text = ShortenedURL;
-            }
-            else if (!string.IsNullOrEmpty(URL))
-            {
-                text = URL;
-            }
-            else if (!string.IsNullOrEmpty(FilePath))
+            if (!string.IsNullOrEmpty(FilePath))
             {
                 text = FilePath;
             }

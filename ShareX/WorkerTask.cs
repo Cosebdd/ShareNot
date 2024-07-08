@@ -62,7 +62,6 @@ namespace ShareNot
         public bool IsWorking => Status == TaskStatus.Preparing || Status == TaskStatus.Working || Status == TaskStatus.Stopping;
         public bool StopRequested { get; private set; }
         public bool RequestSettingUpdate { get; private set; }
-        public bool EarlyURLCopied { get; private set; }
         public Stream Data { get; private set; }
         public Bitmap Image { get; private set; }
         public bool KeepImage { get; set; }
@@ -86,10 +85,6 @@ namespace ShareNot
             task.Status = TaskStatus.History;
             task.Info.FilePath = recentTask.FilePath;
             task.Info.FileName = recentTask.FileName;
-            task.Info.Result.URL = recentTask.URL;
-            task.Info.Result.ThumbnailURL = recentTask.ThumbnailURL;
-            task.Info.Result.DeletionURL = recentTask.DeletionURL;
-            task.Info.Result.ShortenedURL = recentTask.ShortenedURL;
             task.Info.TaskEndTime = recentTask.Time;
 
             return task;
@@ -210,30 +205,12 @@ namespace ShareNot
                 StopRequested = !DoThreadJob();
 
                 OnImageReady();
-
-                if (!StopRequested)
-                {
-                    Info.Result.IsURLExpected = false;
-                }
             }
             finally
             {
                 KeepImage = Image != null && Info.TaskSettings.GeneralSettings.ShowToastNotificationAfterTaskCompleted;
 
                 Dispose();
-
-                if (EarlyURLCopied && (StopRequested || Info.Result == null || string.IsNullOrEmpty(Info.Result.URL)) && ClipboardHelpers.ContainsText())
-                {
-                    ClipboardHelpers.Clear();
-                }
-            }
-
-            if (!StopRequested && Info.Result != null && Info.Result.IsURLExpected && !Info.Result.IsError)
-            {
-                if (string.IsNullOrEmpty(Info.Result.URL))
-                {
-                    AddErrorMessage(Resources.UploadTask_ThreadDoWork_URL_is_empty_);
-                }
             }
         }
 
@@ -254,7 +231,6 @@ namespace ShareNot
             {
                 Program.Settings.ShowUploadWarning = false;
 
-                Info.Result.IsURLExpected = false;
                 RequestSettingUpdate = true;
 
                 return;
@@ -305,10 +281,6 @@ namespace ShareNot
                     {
                         OnUploadCompleted();
                     }
-                }
-                else
-                {
-                    Info.Result.IsURLExpected = false;
                 }
             }
         }
@@ -694,40 +666,6 @@ namespace ShareNot
             ur.Errors.Add(message);
 
             return ur;
-        }
-
-        private bool DownloadFromURL(bool upload)
-        {
-            string url = Info.Result.URL.Trim();
-            Info.Result.URL = "";
-
-            string screenshotsFolder = TaskHelpers.GetScreenshotsFolder(Info.TaskSettings);
-            Info.FilePath = TaskHelpers.HandleExistsFile(screenshotsFolder, Info.FileName, Info.TaskSettings);
-
-            if (!string.IsNullOrEmpty(Info.FilePath))
-            {
-                Info.Status = Resources.UploadTask_DownloadAndUpload_Downloading;
-                OnStatusChanged();
-
-                try
-                {
-                    WebHelpers.DownloadFileAsync(url, Info.FilePath).GetAwaiter().GetResult();
-
-                    if (upload)
-                    {
-                        LoadFileStream();
-                    }
-
-                    return true;
-                }
-                catch (Exception e)
-                {
-                    DebugHelper.WriteException(e);
-                    MessageBox.Show(string.Format(Resources.UploadManager_DownloadAndUploadFile_Download_failed, e), "ShareX", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-
-            return false;
         }
 
         private void DoOCR()

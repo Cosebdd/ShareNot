@@ -24,18 +24,12 @@
 #endregion License Information (GPL v3)
 
 using System.Text;
-using ShareNot.HelpersLib.Helpers;
 using ShareNot.UploadersLib.Helpers;
 
 namespace ShareNot.UploadersLib
 {
     public class UploadResult
     {
-        public string URL { get; set; }
-        public string ThumbnailURL { get; set; }
-        public string DeletionURL { get; set; }
-        public string ShortenedURL { get; set; }
-
         private bool isSuccess;
 
         public bool IsSuccess
@@ -52,13 +46,12 @@ namespace ShareNot.UploadersLib
 
         public string Response { get; set; }
         public UploaderErrorManager Errors { get; set; }
-        public bool IsURLExpected { get; set; }
 
         public bool IsError
         {
             get
             {
-                return Errors != null && Errors.Count > 0 && (!IsURLExpected || string.IsNullOrEmpty(URL));
+                return Errors != null && Errors.Count > 0;
             }
         }
 
@@ -67,27 +60,15 @@ namespace ShareNot.UploadersLib
         public UploadResult()
         {
             Errors = new UploaderErrorManager();
-            IsURLExpected = true;
         }
 
         public UploadResult(string source, string url = null) : this()
         {
             Response = source;
-            URL = url;
         }
 
         public override string ToString()
         {
-            if (!string.IsNullOrEmpty(ShortenedURL))
-            {
-                return ShortenedURL;
-            }
-
-            if (!string.IsNullOrEmpty(URL))
-            {
-                return URL;
-            }
-
             return "";
         }
 
@@ -104,10 +85,6 @@ namespace ShareNot.UploadersLib
         public string ToSummaryString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("URL: " + URL);
-            sb.AppendLine("Thumbnail URL: " + ThumbnailURL);
-            sb.AppendLine("Shortened URL: " + ShortenedURL);
-            sb.AppendLine("Deletion URL: " + DeletionURL);
             return sb.ToString();
         }
     }

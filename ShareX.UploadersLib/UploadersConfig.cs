@@ -39,8 +39,6 @@ namespace ShareNot.UploadersLib
         public int CustomImageUploaderSelected { get; set; } = 0;
         public int CustomTextUploaderSelected { get; set; } = 0;
         public int CustomFileUploaderSelected { get; set; } = 0;
-        public int CustomURLShortenerSelected { get; set; } = 0;
-        public int CustomURLSharingServiceSelected { get; set; } = 0;
 
         #endregion Custom uploaders
 

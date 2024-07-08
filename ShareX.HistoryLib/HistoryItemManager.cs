@@ -42,12 +42,6 @@ namespace ShareNot.HistoryLib
 
         public HistoryItem HistoryItem { get; private set; }
 
-        public bool IsURLExist { get; private set; }
-        public bool IsShortenedURLExist { get; private set; }
-        public bool IsThumbnailURLExist { get; private set; }
-        public bool IsDeletionURLExist { get; private set; }
-        public bool IsImageURL { get; private set; }
-        public bool IsTextURL { get; private set; }
         public bool IsFilePathValid { get; private set; }
         public bool IsFileExist { get; private set; }
         public bool IsImageFile { get; private set; }
@@ -84,12 +78,6 @@ namespace ShareNot.HistoryLib
 
             if (HistoryItem != null)
             {
-                IsURLExist = !string.IsNullOrEmpty(HistoryItem.URL);
-                IsShortenedURLExist = !string.IsNullOrEmpty(HistoryItem.ShortenedURL);
-                IsThumbnailURLExist = !string.IsNullOrEmpty(HistoryItem.ThumbnailURL);
-                IsDeletionURLExist = !string.IsNullOrEmpty(HistoryItem.DeletionURL);
-                IsImageURL = IsURLExist && FileHelpers.IsImageFile(HistoryItem.URL);
-                IsTextURL = IsURLExist && FileHelpers.IsTextFile(HistoryItem.URL);
                 IsFilePathValid = !string.IsNullOrEmpty(HistoryItem.FilePath) && Path.HasExtension(HistoryItem.FilePath);
                 IsFileExist = IsFilePathValid && File.Exists(HistoryItem.FilePath);
                 IsImageFile = IsFileExist && FileHelpers.IsImageFile(HistoryItem.FilePath);
@@ -130,9 +118,6 @@ namespace ShareNot.HistoryLib
                 case Keys.Shift | Keys.Enter:
                     OpenFolder();
                     break;
-                case Keys.Control | Keys.C:
-                    CopyURL();
-                    break;
                 case Keys.Shift | Keys.C:
                     CopyFile();
                     break;
@@ -153,26 +138,6 @@ namespace ShareNot.HistoryLib
             return true;
         }
 
-        public void OpenURL()
-        {
-            if (HistoryItem != null && IsURLExist) URLHelpers.OpenURL(HistoryItem.URL);
-        }
-
-        public void OpenShortenedURL()
-        {
-            if (HistoryItem != null && IsShortenedURLExist) URLHelpers.OpenURL(HistoryItem.ShortenedURL);
-        }
-
-        public void OpenThumbnailURL()
-        {
-            if (HistoryItem != null && IsThumbnailURLExist) URLHelpers.OpenURL(HistoryItem.ThumbnailURL);
-        }
-
-        public void OpenDeletionURL()
-        {
-            if (HistoryItem != null && IsDeletionURLExist) URLHelpers.OpenURL(HistoryItem.DeletionURL);
-        }
-
         public void OpenFile()
         {
             if (HistoryItem != null && IsFileExist) FileHelpers.OpenFile(HistoryItem.FilePath);
@@ -187,93 +152,9 @@ namespace ShareNot.HistoryLib
         {
             if (HistoryItem != null)
             {
-                if (IsShortenedURLExist)
-                {
-                    URLHelpers.OpenURL(HistoryItem.ShortenedURL);
-                }
-                else if (IsURLExist)
-                {
-                    URLHelpers.OpenURL(HistoryItem.URL);
-                }
-                else if (IsFileExist)
+                if (IsFileExist)
                 {
                     FileHelpers.OpenFile(HistoryItem.FilePath);
-                }
-            }
-        }
-
-        public void CopyURL()
-        {
-            HistoryItem[] historyItems = OnGetHistoryItems();
-            if (historyItems != null)
-            {
-                string[] array = historyItems.Where(x => x != null && !string.IsNullOrEmpty(x.URL)).Select(x => x.URL).ToArray();
-
-                if (array != null && array.Length > 0)
-                {
-                    string urls = string.Join("\r\n", array);
-
-                    if (!string.IsNullOrEmpty(urls))
-                    {
-                        ClipboardHelpers.CopyText(urls);
-                    }
-                }
-            }
-        }
-
-        public void CopyShortenedURL()
-        {
-            HistoryItem[] historyItems = OnGetHistoryItems();
-            if (historyItems != null)
-            {
-                string[] array = historyItems.Where(x => x != null && !string.IsNullOrEmpty(x.ShortenedURL)).Select(x => x.ShortenedURL).ToArray();
-
-                if (array != null && array.Length > 0)
-                {
-                    string shortenedURLs = string.Join("\r\n", array);
-
-                    if (!string.IsNullOrEmpty(shortenedURLs))
-                    {
-                        ClipboardHelpers.CopyText(shortenedURLs);
-                    }
-                }
-            }
-        }
-
-        public void CopyThumbnailURL()
-        {
-            HistoryItem[] historyItems = OnGetHistoryItems();
-            if (historyItems != null)
-            {
-                string[] array = historyItems.Where(x => x != null && !string.IsNullOrEmpty(x.ThumbnailURL)).Select(x => x.ThumbnailURL).ToArray();
-
-                if (array != null && array.Length > 0)
-                {
-                    string thumbnailURLs = string.Join("\r\n", array);
-
-                    if (!string.IsNullOrEmpty(thumbnailURLs))
-                    {
-                        ClipboardHelpers.CopyText(thumbnailURLs);
-                    }
-                }
-            }
-        }
-
-        public void CopyDeletionURL()
-        {
-            HistoryItem[] historyItems = OnGetHistoryItems();
-            if (historyItems != null)
-            {
-                string[] array = historyItems.Where(x => x != null && !string.IsNullOrEmpty(x.DeletionURL)).Select(x => x.DeletionURL).ToArray();
-
-                if (array != null && array.Length > 0)
-                {
-                    string deletionURLs = string.Join("\r\n", array);
-
-                    if (!string.IsNullOrEmpty(deletionURLs))
-                    {
-                        ClipboardHelpers.CopyText(deletionURLs);
-                    }
                 }
             }
         }
@@ -301,185 +182,6 @@ namespace ShareNot.HistoryLib
         public void CopyText()
         {
             if (HistoryItem != null && IsTextFile) ClipboardHelpers.CopyTextFromFile(HistoryItem.FilePath);
-        }
-
-        public void CopyHTMLLink()
-        {
-            HistoryItem[] historyItems = OnGetHistoryItems();
-            if (historyItems != null)
-            {
-                string[] array = historyItems.Where(x => x != null && !string.IsNullOrEmpty(x.URL)).
-                    Select(x => string.Format("<a href=\"{0}\">{0}</a>", x.URL)).ToArray();
-
-                if (array != null && array.Length > 0)
-                {
-                    string htmlLinks = string.Join("\r\n", array);
-
-                    if (!string.IsNullOrEmpty(htmlLinks))
-                    {
-                        ClipboardHelpers.CopyText(htmlLinks);
-                    }
-                }
-            }
-        }
-
-        public void CopyHTMLImage()
-        {
-            HistoryItem[] historyItems = OnGetHistoryItems();
-            if (historyItems != null)
-            {
-                string[] array = historyItems.Where(x => x != null && !string.IsNullOrEmpty(x.URL) && FileHelpers.IsImageFile(x.URL)).
-                    Select(x => string.Format("<img src=\"{0}\"/>", x.URL)).ToArray();
-
-                if (array != null && array.Length > 0)
-                {
-                    string htmlImages = string.Join("\r\n", array);
-
-                    if (!string.IsNullOrEmpty(htmlImages))
-                    {
-                        ClipboardHelpers.CopyText(htmlImages);
-                    }
-                }
-            }
-        }
-
-        public void CopyHTMLLinkedImage()
-        {
-            HistoryItem[] historyItems = OnGetHistoryItems();
-            if (historyItems != null)
-            {
-                string[] array = historyItems.Where(x => x != null && !string.IsNullOrEmpty(x.URL) && FileHelpers.IsImageFile(x.URL) &&
-                    !string.IsNullOrEmpty(x.ThumbnailURL)).Select(x => string.Format("<a href=\"{0}\"><img src=\"{1}\"/></a>", x.URL, x.ThumbnailURL)).ToArray();
-
-                if (array != null && array.Length > 0)
-                {
-                    string htmlLinkedImages = string.Join("\r\n", array);
-
-                    if (!string.IsNullOrEmpty(htmlLinkedImages))
-                    {
-                        ClipboardHelpers.CopyText(htmlLinkedImages);
-                    }
-                }
-            }
-        }
-
-        public void CopyForumLink()
-        {
-            HistoryItem[] historyItems = OnGetHistoryItems();
-            if (historyItems != null)
-            {
-                string[] array = historyItems.Where(x => x != null && !string.IsNullOrEmpty(x.URL)).Select(x => string.Format("[url]{0}[/url]", x.URL)).ToArray();
-
-                if (array != null && array.Length > 0)
-                {
-                    string forumLinks = string.Join("\r\n", array);
-
-                    if (!string.IsNullOrEmpty(forumLinks))
-                    {
-                        ClipboardHelpers.CopyText(forumLinks);
-                    }
-                }
-            }
-        }
-
-        public void CopyForumImage()
-        {
-            HistoryItem[] historyItems = OnGetHistoryItems();
-            if (historyItems != null)
-            {
-                string[] array = historyItems.Where(x => x != null && !string.IsNullOrEmpty(x.URL) && FileHelpers.IsImageFile(x.URL)).
-                    Select(x => string.Format("[img]{0}[/img]", x.URL)).ToArray();
-
-                if (array != null && array.Length > 0)
-                {
-                    string forumImages = string.Join("\r\n", array);
-
-                    if (!string.IsNullOrEmpty(forumImages))
-                    {
-                        ClipboardHelpers.CopyText(forumImages);
-                    }
-                }
-            }
-        }
-
-        public void CopyForumLinkedImage()
-        {
-            HistoryItem[] historyItems = OnGetHistoryItems();
-            if (historyItems != null)
-            {
-                string[] array = historyItems.Where(x => x != null && !string.IsNullOrEmpty(x.URL) && FileHelpers.IsImageFile(x.URL) &&
-                    !string.IsNullOrEmpty(x.ThumbnailURL)).Select(x => string.Format("[url={0}][img]{1}[/img][/url]", x.URL, x.ThumbnailURL)).ToArray();
-
-                if (array != null && array.Length > 0)
-                {
-                    string forumLinkedImages = string.Join("\r\n", array);
-
-                    if (!string.IsNullOrEmpty(forumLinkedImages))
-                    {
-                        ClipboardHelpers.CopyText(forumLinkedImages);
-                    }
-                }
-            }
-        }
-
-        public void CopyMarkdownLink()
-        {
-            HistoryItem[] historyItems = OnGetHistoryItems();
-            if (historyItems != null)
-            {
-                string[] array = historyItems.Where(x => x != null && !string.IsNullOrEmpty(x.URL)).
-                    Select(x => string.Format("[{0}]({1})", x.FileName, x.URL)).ToArray();
-
-                if (array != null && array.Length > 0)
-                {
-                    string markdownLinks = string.Join("\r\n", array);
-
-                    if (!string.IsNullOrEmpty(markdownLinks))
-                    {
-                        ClipboardHelpers.CopyText(markdownLinks);
-                    }
-                }
-            }
-        }
-
-        public void CopyMarkdownImage()
-        {
-            HistoryItem[] historyItems = OnGetHistoryItems();
-            if (historyItems != null)
-            {
-                string[] array = historyItems.Where(x => x != null && !string.IsNullOrEmpty(x.URL) && FileHelpers.IsImageFile(x.URL)).
-                    Select(x => string.Format("![{0}]({1})", x.FileName, x.URL)).ToArray();
-
-                if (array != null && array.Length > 0)
-                {
-                    string markdownImages = string.Join("\r\n", array);
-
-                    if (!string.IsNullOrEmpty(markdownImages))
-                    {
-                        ClipboardHelpers.CopyText(markdownImages);
-                    }
-                }
-            }
-        }
-
-        public void CopyMarkdownLinkedImage()
-        {
-            HistoryItem[] historyItems = OnGetHistoryItems();
-            if (historyItems != null)
-            {
-                string[] array = historyItems.Where(x => x != null && !string.IsNullOrEmpty(x.URL) && FileHelpers.IsImageFile(x.URL) &&
-                    !string.IsNullOrEmpty(x.ThumbnailURL)).Select(x => string.Format("[![{0}]({1})]({2})", x.FileName, x.ThumbnailURL, x.URL)).ToArray();
-
-                if (array != null && array.Length > 0)
-                {
-                    string markdownLinkedImages = string.Join("\r\n", array);
-
-                    if (!string.IsNullOrEmpty(markdownLinkedImages))
-                    {
-                        ClipboardHelpers.CopyText(markdownLinkedImages);
-                    }
-                }
-            }
         }
 
         public void CopyFilePath()

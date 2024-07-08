@@ -45,7 +45,7 @@ namespace ShareNot
 
             if (task.Status != TaskStatus.History)
             {
-                DebugHelper.WriteLine("Task in queue. Job: {0}, Type: {1}, Host: {2}", info.Job, info.UploadDestination, info.UploaderHost);
+                DebugHelper.WriteLine("Task in queue. Job: {0}, Type: {1}", info.Job, info.UploadDestination);
             }
 
             ListViewItem lvi = new ListViewItem();

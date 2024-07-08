@@ -536,8 +536,8 @@ namespace ShareNot.Forms
         {
             cmsTaskInfo.SuspendLayout();
 
-            tsmiStopUpload.Visible = tsmiOpen.Visible = tsmiCopy.Visible = tsmiShowErrors.Visible = tsmiShowResponse.Visible =
-                tsmiShowQRCode.Visible = tsmiOCRImage.Visible =
+            tsmiStopUpload.Visible = tsmiOpen.Visible = tsmiCopy.Visible = tsmiShowErrors.Visible =
+                tsmiOCRImage.Visible =
                 tsmiCombineImages.Visible = tsmiEditSelectedFile.Visible =
                 tsmiBeautifyImage.Visible = tsmiAddImageEffects.Visible = tsmiPinSelectedFile.Visible = tsmiRunAction.Visible =
                 tsmiDeleteSelectedItem.Visible = tsmiDeleteSelectedFile.Visible = false;
@@ -556,7 +556,7 @@ namespace ShareNot.Forms
                         scMain.Panel2Collapsed = true;
                         break;
                     case ImagePreviewVisibility.Automatic:
-                        scMain.Panel2Collapsed = !uim.IsItemSelected || (!uim.SelectedItem.IsImageFile && !uim.SelectedItem.IsImageURL);
+                        scMain.Panel2Collapsed = !uim.IsItemSelected || !uim.SelectedItem.IsImageFile;
                         break;
                 }
 
@@ -580,11 +580,6 @@ namespace ShareNot.Forms
                 // Open
                 tsmiOpen.Visible = true;
 
-                tsmiOpenURL.Enabled = uim.SelectedItem.IsURLExist;
-                tsmiOpenShortenedURL.Enabled = uim.SelectedItem.IsShortenedURLExist;
-                tsmiOpenThumbnailURL.Enabled = uim.SelectedItem.IsThumbnailURLExist;
-                tsmiOpenDeletionURL.Enabled = uim.SelectedItem.IsDeletionURLExist;
-
                 tsmiOpenFile.Enabled = uim.SelectedItem.IsFileExist;
                 tsmiOpenFolder.Enabled = uim.SelectedItem.IsFileExist;
                 tsmiOpenThumbnailFile.Enabled = uim.SelectedItem.IsThumbnailFileExist;
@@ -600,29 +595,12 @@ namespace ShareNot.Forms
                     // Copy
                     tsmiCopy.Visible = true;
 
-                    tsmiCopyURL.Enabled = uim.SelectedItems.Any(x => x.IsURLExist);
-                    tsmiCopyShortenedURL.Enabled = uim.SelectedItems.Any(x => x.IsShortenedURLExist);
-                    tsmiCopyThumbnailURL.Enabled = uim.SelectedItems.Any(x => x.IsThumbnailURLExist);
-                    tsmiCopyDeletionURL.Enabled = uim.SelectedItems.Any(x => x.IsDeletionURLExist);
-
                     tsmiCopyFile.Enabled = uim.SelectedItem.IsFileExist;
                     tsmiCopyImage.Enabled = uim.SelectedItem.IsImageFile;
                     tsmiCopyImageDimensions.Enabled = uim.SelectedItem.IsImageFile;
                     tsmiCopyText.Enabled = uim.SelectedItem.IsTextFile;
                     tsmiCopyThumbnailFile.Enabled = uim.SelectedItem.IsThumbnailFileExist;
                     tsmiCopyThumbnailImage.Enabled = uim.SelectedItem.IsThumbnailFileExist;
-
-                    tsmiCopyHTMLLink.Enabled = uim.SelectedItems.Any(x => x.IsURLExist);
-                    tsmiCopyHTMLImage.Enabled = uim.SelectedItems.Any(x => x.IsImageURL);
-                    tsmiCopyHTMLLinkedImage.Enabled = uim.SelectedItems.Any(x => x.IsImageURL && x.IsThumbnailURLExist);
-
-                    tsmiCopyForumLink.Enabled = uim.SelectedItems.Any(x => x.IsURLExist);
-                    tsmiCopyForumImage.Enabled = uim.SelectedItems.Any(x => x.IsImageURL && x.IsURLExist);
-                    tsmiCopyForumLinkedImage.Enabled = uim.SelectedItems.Any(x => x.IsImageURL && x.IsThumbnailURLExist);
-
-                    tsmiCopyMarkdownLink.Enabled = uim.SelectedItems.Any(x => x.IsURLExist);
-                    tsmiCopyMarkdownImage.Enabled = uim.SelectedItems.Any(x => x.IsImageURL);
-                    tsmiCopyMarkdownLinkedImage.Enabled = uim.SelectedItems.Any(x => x.IsImageURL && x.IsThumbnailURLExist);
 
                     tsmiCopyFilePath.Enabled = uim.SelectedItems.Any(x => x.IsFilePathValid);
                     tsmiCopyFileName.Enabled = uim.SelectedItems.Any(x => x.IsFilePathValid);
@@ -634,14 +612,6 @@ namespace ShareNot.Forms
                     if (Program.Settings.ClipboardContentFormats != null && Program.Settings.ClipboardContentFormats.Count > 0)
                     {
                         tssCopy6.Visible = true;
-
-                        foreach (ClipboardFormat cf in Program.Settings.ClipboardContentFormats)
-                        {
-                            ToolStripMenuItem tsmiClipboardFormat = new ToolStripMenuItem(cf.Description);
-                            tsmiClipboardFormat.Tag = cf;
-                            tsmiClipboardFormat.Click += tsmiClipboardFormat_Click;
-                            tsmiCopy.DropDownItems.Add(tsmiClipboardFormat);
-                        }
                     }
 
                     tsmiEditSelectedFile.Visible = uim.SelectedItem.IsImageFile;
@@ -651,10 +621,8 @@ namespace ShareNot.Forms
                     UpdateActionsMenu(uim.SelectedItem.Info.FilePath);
                     tsmiDeleteSelectedItem.Visible = true;
                     tsmiDeleteSelectedFile.Visible = uim.SelectedItem.IsFileExist;
-                    tsmiShowQRCode.Visible = uim.SelectedItem.IsURLExist;
                     tsmiOCRImage.Visible = uim.SelectedItem.IsImageFile;
                     tsmiCombineImages.Visible = uim.SelectedItems.Count(x => x.IsImageFile) > 1;
-                    tsmiShowResponse.Visible = !string.IsNullOrEmpty(uim.SelectedItem.Info.Result.Response);
                 }
 
                 if (Program.Settings.TaskViewMode == TaskViewMode.ListView)
@@ -664,10 +632,6 @@ namespace ShareNot.Forms
                         if (uim.SelectedItem.IsImageFile)
                         {
                             pbPreview.LoadImageFromFileAsync(uim.SelectedItem.Info.FilePath);
-                        }
-                        else if (uim.SelectedItem.IsImageURL)
-                        {
-                            pbPreview.LoadImageFromURLAsync(uim.SelectedItem.Info.Result.URL);
                         }
                     }
                 }
@@ -760,7 +724,6 @@ namespace ShareNot.Forms
 
             tsmiQRCode.Image = TaskHelpers.FindMenuIcon(HotkeyType.QRCode);
             tsmiTrayQRCode.Image = TaskHelpers.FindMenuIcon(HotkeyType.QRCode);
-            tsmiShowQRCode.Image = TaskHelpers.FindMenuIcon(HotkeyType.QRCode);
 
             tsmiOCR.Image = TaskHelpers.FindMenuIcon(HotkeyType.OCR);
             tsmiTrayOCR.Image = TaskHelpers.FindMenuIcon(HotkeyType.OCR);
@@ -1930,26 +1893,6 @@ namespace ShareNot.Forms
             uim.StopUpload();
         }
 
-        private void tsmiOpenURL_Click(object sender, EventArgs e)
-        {
-            uim.OpenURL();
-        }
-
-        private void tsmiOpenShortenedURL_Click(object sender, EventArgs e)
-        {
-            uim.OpenShortenedURL();
-        }
-
-        private void tsmiOpenThumbnailURL_Click(object sender, EventArgs e)
-        {
-            uim.OpenThumbnailURL();
-        }
-
-        private void tsmiOpenDeletionURL_Click(object sender, EventArgs e)
-        {
-            uim.OpenDeletionURL();
-        }
-
         private void tsmiOpenFile_Click(object sender, EventArgs e)
         {
             uim.OpenFile();
@@ -1963,26 +1906,6 @@ namespace ShareNot.Forms
         private void tsmiOpenFolder_Click(object sender, EventArgs e)
         {
             uim.OpenFolder();
-        }
-
-        private void tsmiCopyURL_Click(object sender, EventArgs e)
-        {
-            uim.CopyURL();
-        }
-
-        private void tsmiCopyShortenedURL_Click(object sender, EventArgs e)
-        {
-            uim.CopyShortenedURL();
-        }
-
-        private void tsmiCopyThumbnailURL_Click(object sender, EventArgs e)
-        {
-            uim.CopyThumbnailURL();
-        }
-
-        private void tsmiCopyDeletionURL_Click(object sender, EventArgs e)
-        {
-            uim.CopyDeletionURL();
         }
 
         private void tsmiCopyFile_Click(object sender, EventArgs e)
@@ -2015,51 +1938,6 @@ namespace ShareNot.Forms
             uim.CopyThumbnailImage();
         }
 
-        private void tsmiCopyHTMLLink_Click(object sender, EventArgs e)
-        {
-            uim.CopyHTMLLink();
-        }
-
-        private void tsmiCopyHTMLImage_Click(object sender, EventArgs e)
-        {
-            uim.CopyHTMLImage();
-        }
-
-        private void tsmiCopyHTMLLinkedImage_Click(object sender, EventArgs e)
-        {
-            uim.CopyHTMLLinkedImage();
-        }
-
-        private void tsmiCopyForumLink_Click(object sender, EventArgs e)
-        {
-            uim.CopyForumLink();
-        }
-
-        private void tsmiCopyForumImage_Click(object sender, EventArgs e)
-        {
-            uim.CopyForumImage();
-        }
-
-        private void tsmiCopyForumLinkedImage_Click(object sender, EventArgs e)
-        {
-            uim.CopyForumLinkedImage();
-        }
-
-        private void tsmiCopyMarkdownLink_Click(object sender, EventArgs e)
-        {
-            uim.CopyMarkdownLink();
-        }
-
-        private void tsmiCopyMarkdownImage_Click(object sender, EventArgs e)
-        {
-            uim.CopyMarkdownImage();
-        }
-
-        private void tsmiCopyMarkdownLinkedImage_Click(object sender, EventArgs e)
-        {
-            uim.CopyMarkdownLinkedImage();
-        }
-
         private void tsmiCopyFilePath_Click(object sender, EventArgs e)
         {
             uim.CopyFilePath();
@@ -2078,13 +1956,6 @@ namespace ShareNot.Forms
         private void tsmiCopyFolder_Click(object sender, EventArgs e)
         {
             uim.CopyFolder();
-        }
-
-        private void tsmiClipboardFormat_Click(object sender, EventArgs e)
-        {
-            ToolStripMenuItem tsmiClipboardFormat = sender as ToolStripMenuItem;
-            ClipboardFormat cf = tsmiClipboardFormat.Tag as ClipboardFormat;
-            uim.CopyCustomFormat(cf.Format);
         }
 
         private void tsmiDeleteSelectedItem_Click(object sender, EventArgs e)
@@ -2122,11 +1993,6 @@ namespace ShareNot.Forms
             uim.PinToScreen();
         }
 
-        private void tsmiShowQRCode_Click(object sender, EventArgs e)
-        {
-            uim.ShowQRCode();
-        }
-
         private async void tsmiOCRImage_Click(object sender, EventArgs e)
         {
             await uim.OCRImage();
@@ -2145,11 +2011,6 @@ namespace ShareNot.Forms
         private void tsmiCombineImagesVertically_Click(object sender, EventArgs e)
         {
             uim.CombineImages(Orientation.Vertical);
-        }
-
-        private void tsmiShowResponse_Click(object sender, EventArgs e)
-        {
-            uim.ShowResponse();
         }
 
         private void tsmiClearList_Click(object sender, EventArgs e)

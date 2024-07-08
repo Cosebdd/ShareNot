@@ -1572,25 +1572,6 @@ namespace ShareNot
             }
         }
 
-        public static void OpenCustomUploaderSettingsWindow()
-        {
-            SettingManager.WaitUploadersConfig();
-
-            bool firstInstance = !CustomUploaderSettingsForm.IsInstanceActive;
-
-            CustomUploaderSettingsForm form = CustomUploaderSettingsForm.GetFormInstance(Program.UploadersConfig);
-
-            if (firstInstance)
-            {
-                form.FormClosed += (sender, e) => SettingManager.SaveUploadersConfigAsync();
-                form.Show();
-            }
-            else
-            {
-                form.ForceActivate();
-            }
-        }
-
         public static Image FindMenuIcon<T>(T value) where T : Enum
         {
             if (value is AfterCaptureTasks afterCaptureTask)
@@ -1760,7 +1741,6 @@ namespace ShareNot
                             }
                         }
 
-                        cui.CheckBackwardCompatibility();
                         Program.UploadersConfig.CustomUploadersList.Add(cui);
 
                         if (activate)
@@ -1786,11 +1766,6 @@ namespace ShareNot
                             }
 
                             Program.MainForm.UpdateCheckStates();
-                        }
-
-                        if (CustomUploaderSettingsForm.IsInstanceActive)
-                        {
-                            CustomUploaderSettingsForm.CustomUploaderUpdateTab();
                         }
                     }
                 }

@@ -109,21 +109,6 @@ namespace ShareNot.HistoryLib
                     case "Type":
                         hi.Type = child.Value;
                         break;
-                    case "Host":
-                        hi.Host = child.Value;
-                        break;
-                    case "URL":
-                        hi.URL = child.Value;
-                        break;
-                    case "ThumbnailURL":
-                        hi.ThumbnailURL = child.Value;
-                        break;
-                    case "DeletionURL":
-                        hi.DeletionURL = child.Value;
-                        break;
-                    case "ShortenedURL":
-                        hi.ShortenedURL = child.Value;
-                        break;
                 }
             }
 
@@ -151,11 +136,6 @@ namespace ShareNot.HistoryLib
                             writer.WriteElementIfNotEmpty("Filepath", historyItem.FilePath);
                             writer.WriteElementIfNotEmpty("DateTimeUtc", historyItem.DateTime.ToString("o"));
                             writer.WriteElementIfNotEmpty("Type", historyItem.Type);
-                            writer.WriteElementIfNotEmpty("Host", historyItem.Host);
-                            writer.WriteElementIfNotEmpty("URL", historyItem.URL);
-                            writer.WriteElementIfNotEmpty("ThumbnailURL", historyItem.ThumbnailURL);
-                            writer.WriteElementIfNotEmpty("DeletionURL", historyItem.DeletionURL);
-                            writer.WriteElementIfNotEmpty("ShortenedURL", historyItem.ShortenedURL);
                             writer.WriteEndElement();
                         }
 

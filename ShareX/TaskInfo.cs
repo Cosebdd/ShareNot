@@ -86,14 +86,6 @@ namespace ShareNot
             }
         }
 
-        public string UploaderHost
-        {
-            get
-            {
-                return "";
-            }
-        }
-
         public DateTime TaskStartTime { get; set; }
         public DateTime TaskEndTime { get; set; }
 
@@ -160,11 +152,6 @@ namespace ShareNot
                 FilePath = FilePath,
                 DateTime = TaskEndTime,
                 Type = DataType.ToString(),
-                Host = UploaderHost,
-                URL = Result.URL,
-                ThumbnailURL = Result.ThumbnailURL,
-                DeletionURL = Result.DeletionURL,
-                ShortenedURL = Result.ShortenedURL,
                 Tags = GetTags()
             };
         }

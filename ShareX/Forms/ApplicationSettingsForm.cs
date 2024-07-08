@@ -209,7 +209,6 @@ namespace ShareNot.Forms
 
             // History
             cbHistorySaveTasks.Checked = Program.Settings.HistorySaveTasks;
-            cbHistoryCheckURL.Checked = Program.Settings.HistoryCheckURL;
 
             cbRecentTasksSave.Checked = Program.Settings.RecentTasksSave;
             nudRecentTasksMaxCount.SetValue(Program.Settings.RecentTasksMaxCount);
@@ -979,11 +978,6 @@ namespace ShareNot.Forms
         private void cbHistorySaveTasks_CheckedChanged(object sender, EventArgs e)
         {
             Program.Settings.HistorySaveTasks = cbHistorySaveTasks.Checked;
-        }
-
-        private void cbHistoryCheckURL_CheckedChanged(object sender, EventArgs e)
-        {
-            Program.Settings.HistoryCheckURL = cbHistoryCheckURL.Checked;
         }
 
         private void cbRecentTasksSave_CheckedChanged(object sender, EventArgs e)

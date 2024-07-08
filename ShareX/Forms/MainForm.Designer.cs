@@ -116,19 +116,11 @@ namespace ShareNot.Forms
             this.tsmiShowErrors = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiStopUpload = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiOpen = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiOpenURL = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiOpenShortenedURL = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiOpenThumbnailURL = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiOpenDeletionURL = new System.Windows.Forms.ToolStripMenuItem();
             this.tssOpen1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiOpenFile = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiOpenFolder = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiOpenThumbnailFile = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCopy = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiCopyURL = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiCopyShortenedURL = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiCopyThumbnailURL = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiCopyDeletionURL = new System.Windows.Forms.ToolStripMenuItem();
             this.tssCopy1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiCopyFile = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCopyImage = new System.Windows.Forms.ToolStripMenuItem();
@@ -137,18 +129,6 @@ namespace ShareNot.Forms
             this.tsmiCopyThumbnailFile = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCopyThumbnailImage = new System.Windows.Forms.ToolStripMenuItem();
             this.tssCopy2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmiCopyHTMLLink = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiCopyHTMLImage = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiCopyHTMLLinkedImage = new System.Windows.Forms.ToolStripMenuItem();
-            this.tssCopy3 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmiCopyForumLink = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiCopyForumImage = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiCopyForumLinkedImage = new System.Windows.Forms.ToolStripMenuItem();
-            this.tssCopy4 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmiCopyMarkdownLink = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiCopyMarkdownImage = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiCopyMarkdownLinkedImage = new System.Windows.Forms.ToolStripMenuItem();
-            this.tssCopy5 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiCopyFilePath = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCopyFileName = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCopyFileNameWithExtension = new System.Windows.Forms.ToolStripMenuItem();
@@ -161,12 +141,10 @@ namespace ShareNot.Forms
             this.tsmiRunAction = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDeleteSelectedItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDeleteSelectedFile = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiShowQRCode = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiOCRImage = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCombineImages = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCombineImagesHorizontally = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCombineImagesVertically = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiShowResponse = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiClearList = new System.Windows.Forms.ToolStripMenuItem();
             this.tssUploadInfo1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiSwitchTaskViewMode = new System.Windows.Forms.ToolStripMenuItem();
@@ -869,10 +847,8 @@ namespace ShareNot.Forms
             this.tsmiRunAction,
             this.tsmiDeleteSelectedItem,
             this.tsmiDeleteSelectedFile,
-            this.tsmiShowQRCode,
             this.tsmiOCRImage,
             this.tsmiCombineImages,
-            this.tsmiShowResponse,
             this.tsmiClearList,
             this.tssUploadInfo1,
             this.tsmiSwitchTaskViewMode});
@@ -898,10 +874,6 @@ namespace ShareNot.Forms
             // tsmiOpen
             //
             this.tsmiOpen.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiOpenURL,
-            this.tsmiOpenShortenedURL,
-            this.tsmiOpenThumbnailURL,
-            this.tsmiOpenDeletionURL,
             this.tssOpen1,
             this.tsmiOpenFile,
             this.tsmiOpenFolder,
@@ -909,30 +881,6 @@ namespace ShareNot.Forms
             this.tsmiOpen.Image = global::ShareNot.Properties.Resources.folder_open_document;
             this.tsmiOpen.Name = "tsmiOpen";
             resources.ApplyResources(this.tsmiOpen, "tsmiOpen");
-            //
-            // tsmiOpenURL
-            //
-            this.tsmiOpenURL.Name = "tsmiOpenURL";
-            resources.ApplyResources(this.tsmiOpenURL, "tsmiOpenURL");
-            this.tsmiOpenURL.Click += new System.EventHandler(this.tsmiOpenURL_Click);
-            //
-            // tsmiOpenShortenedURL
-            //
-            this.tsmiOpenShortenedURL.Name = "tsmiOpenShortenedURL";
-            resources.ApplyResources(this.tsmiOpenShortenedURL, "tsmiOpenShortenedURL");
-            this.tsmiOpenShortenedURL.Click += new System.EventHandler(this.tsmiOpenShortenedURL_Click);
-            //
-            // tsmiOpenThumbnailURL
-            //
-            this.tsmiOpenThumbnailURL.Name = "tsmiOpenThumbnailURL";
-            resources.ApplyResources(this.tsmiOpenThumbnailURL, "tsmiOpenThumbnailURL");
-            this.tsmiOpenThumbnailURL.Click += new System.EventHandler(this.tsmiOpenThumbnailURL_Click);
-            //
-            // tsmiOpenDeletionURL
-            //
-            this.tsmiOpenDeletionURL.Name = "tsmiOpenDeletionURL";
-            resources.ApplyResources(this.tsmiOpenDeletionURL, "tsmiOpenDeletionURL");
-            this.tsmiOpenDeletionURL.Click += new System.EventHandler(this.tsmiOpenDeletionURL_Click);
             //
             // tssOpen1
             //
@@ -960,10 +908,6 @@ namespace ShareNot.Forms
             // tsmiCopy
             //
             this.tsmiCopy.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiCopyURL,
-            this.tsmiCopyShortenedURL,
-            this.tsmiCopyThumbnailURL,
-            this.tsmiCopyDeletionURL,
             this.tssCopy1,
             this.tsmiCopyFile,
             this.tsmiCopyImage,
@@ -972,18 +916,6 @@ namespace ShareNot.Forms
             this.tsmiCopyThumbnailFile,
             this.tsmiCopyThumbnailImage,
             this.tssCopy2,
-            this.tsmiCopyHTMLLink,
-            this.tsmiCopyHTMLImage,
-            this.tsmiCopyHTMLLinkedImage,
-            this.tssCopy3,
-            this.tsmiCopyForumLink,
-            this.tsmiCopyForumImage,
-            this.tsmiCopyForumLinkedImage,
-            this.tssCopy4,
-            this.tsmiCopyMarkdownLink,
-            this.tsmiCopyMarkdownImage,
-            this.tsmiCopyMarkdownLinkedImage,
-            this.tssCopy5,
             this.tsmiCopyFilePath,
             this.tsmiCopyFileName,
             this.tsmiCopyFileNameWithExtension,
@@ -992,30 +924,6 @@ namespace ShareNot.Forms
             this.tsmiCopy.Image = global::ShareNot.Properties.Resources.document_copy;
             this.tsmiCopy.Name = "tsmiCopy";
             resources.ApplyResources(this.tsmiCopy, "tsmiCopy");
-            //
-            // tsmiCopyURL
-            //
-            this.tsmiCopyURL.Name = "tsmiCopyURL";
-            resources.ApplyResources(this.tsmiCopyURL, "tsmiCopyURL");
-            this.tsmiCopyURL.Click += new System.EventHandler(this.tsmiCopyURL_Click);
-            //
-            // tsmiCopyShortenedURL
-            //
-            this.tsmiCopyShortenedURL.Name = "tsmiCopyShortenedURL";
-            resources.ApplyResources(this.tsmiCopyShortenedURL, "tsmiCopyShortenedURL");
-            this.tsmiCopyShortenedURL.Click += new System.EventHandler(this.tsmiCopyShortenedURL_Click);
-            //
-            // tsmiCopyThumbnailURL
-            //
-            this.tsmiCopyThumbnailURL.Name = "tsmiCopyThumbnailURL";
-            resources.ApplyResources(this.tsmiCopyThumbnailURL, "tsmiCopyThumbnailURL");
-            this.tsmiCopyThumbnailURL.Click += new System.EventHandler(this.tsmiCopyThumbnailURL_Click);
-            //
-            // tsmiCopyDeletionURL
-            //
-            this.tsmiCopyDeletionURL.Name = "tsmiCopyDeletionURL";
-            resources.ApplyResources(this.tsmiCopyDeletionURL, "tsmiCopyDeletionURL");
-            this.tsmiCopyDeletionURL.Click += new System.EventHandler(this.tsmiCopyDeletionURL_Click);
             //
             // tssCopy1
             //
@@ -1062,75 +970,6 @@ namespace ShareNot.Forms
             //
             this.tssCopy2.Name = "tssCopy2";
             resources.ApplyResources(this.tssCopy2, "tssCopy2");
-            //
-            // tsmiCopyHTMLLink
-            //
-            this.tsmiCopyHTMLLink.Name = "tsmiCopyHTMLLink";
-            resources.ApplyResources(this.tsmiCopyHTMLLink, "tsmiCopyHTMLLink");
-            this.tsmiCopyHTMLLink.Click += new System.EventHandler(this.tsmiCopyHTMLLink_Click);
-            //
-            // tsmiCopyHTMLImage
-            //
-            this.tsmiCopyHTMLImage.Name = "tsmiCopyHTMLImage";
-            resources.ApplyResources(this.tsmiCopyHTMLImage, "tsmiCopyHTMLImage");
-            this.tsmiCopyHTMLImage.Click += new System.EventHandler(this.tsmiCopyHTMLImage_Click);
-            //
-            // tsmiCopyHTMLLinkedImage
-            //
-            this.tsmiCopyHTMLLinkedImage.Name = "tsmiCopyHTMLLinkedImage";
-            resources.ApplyResources(this.tsmiCopyHTMLLinkedImage, "tsmiCopyHTMLLinkedImage");
-            this.tsmiCopyHTMLLinkedImage.Click += new System.EventHandler(this.tsmiCopyHTMLLinkedImage_Click);
-            //
-            // tssCopy3
-            //
-            this.tssCopy3.Name = "tssCopy3";
-            resources.ApplyResources(this.tssCopy3, "tssCopy3");
-            //
-            // tsmiCopyForumLink
-            //
-            this.tsmiCopyForumLink.Name = "tsmiCopyForumLink";
-            resources.ApplyResources(this.tsmiCopyForumLink, "tsmiCopyForumLink");
-            this.tsmiCopyForumLink.Click += new System.EventHandler(this.tsmiCopyForumLink_Click);
-            //
-            // tsmiCopyForumImage
-            //
-            this.tsmiCopyForumImage.Name = "tsmiCopyForumImage";
-            resources.ApplyResources(this.tsmiCopyForumImage, "tsmiCopyForumImage");
-            this.tsmiCopyForumImage.Click += new System.EventHandler(this.tsmiCopyForumImage_Click);
-            //
-            // tsmiCopyForumLinkedImage
-            //
-            this.tsmiCopyForumLinkedImage.Name = "tsmiCopyForumLinkedImage";
-            resources.ApplyResources(this.tsmiCopyForumLinkedImage, "tsmiCopyForumLinkedImage");
-            this.tsmiCopyForumLinkedImage.Click += new System.EventHandler(this.tsmiCopyForumLinkedImage_Click);
-            //
-            // tssCopy4
-            //
-            this.tssCopy4.Name = "tssCopy4";
-            resources.ApplyResources(this.tssCopy4, "tssCopy4");
-            //
-            // tsmiCopyMarkdownLink
-            //
-            this.tsmiCopyMarkdownLink.Name = "tsmiCopyMarkdownLink";
-            resources.ApplyResources(this.tsmiCopyMarkdownLink, "tsmiCopyMarkdownLink");
-            this.tsmiCopyMarkdownLink.Click += new System.EventHandler(this.tsmiCopyMarkdownLink_Click);
-            //
-            // tsmiCopyMarkdownImage
-            //
-            this.tsmiCopyMarkdownImage.Name = "tsmiCopyMarkdownImage";
-            resources.ApplyResources(this.tsmiCopyMarkdownImage, "tsmiCopyMarkdownImage");
-            this.tsmiCopyMarkdownImage.Click += new System.EventHandler(this.tsmiCopyMarkdownImage_Click);
-            //
-            // tsmiCopyMarkdownLinkedImage
-            //
-            this.tsmiCopyMarkdownLinkedImage.Name = "tsmiCopyMarkdownLinkedImage";
-            resources.ApplyResources(this.tsmiCopyMarkdownLinkedImage, "tsmiCopyMarkdownLinkedImage");
-            this.tsmiCopyMarkdownLinkedImage.Click += new System.EventHandler(this.tsmiCopyMarkdownLinkedImage_Click);
-            //
-            // tssCopy5
-            //
-            this.tssCopy5.Name = "tssCopy5";
-            resources.ApplyResources(this.tssCopy5, "tssCopy5");
             //
             // tsmiCopyFilePath
             //
@@ -1209,13 +1048,6 @@ namespace ShareNot.Forms
             resources.ApplyResources(this.tsmiDeleteSelectedFile, "tsmiDeleteSelectedFile");
             this.tsmiDeleteSelectedFile.Click += new System.EventHandler(this.tsmiDeleteSelectedFile_Click);
             //
-            // tsmiShowQRCode
-            //
-            this.tsmiShowQRCode.Image = global::ShareNot.Properties.Resources.barcode_2d;
-            this.tsmiShowQRCode.Name = "tsmiShowQRCode";
-            resources.ApplyResources(this.tsmiShowQRCode, "tsmiShowQRCode");
-            this.tsmiShowQRCode.Click += new System.EventHandler(this.tsmiShowQRCode_Click);
-            //
             // tsmiOCRImage
             //
             this.tsmiOCRImage.Image = global::ShareNot.Properties.Resources.edit_drop_cap;
@@ -1246,13 +1078,6 @@ namespace ShareNot.Forms
             this.tsmiCombineImagesVertically.Name = "tsmiCombineImagesVertically";
             resources.ApplyResources(this.tsmiCombineImagesVertically, "tsmiCombineImagesVertically");
             this.tsmiCombineImagesVertically.Click += new System.EventHandler(this.tsmiCombineImagesVertically_Click);
-            //
-            // tsmiShowResponse
-            //
-            this.tsmiShowResponse.Image = global::ShareNot.Properties.Resources.application_browser;
-            this.tsmiShowResponse.Name = "tsmiShowResponse";
-            resources.ApplyResources(this.tsmiShowResponse, "tsmiShowResponse");
-            this.tsmiShowResponse.Click += new System.EventHandler(this.tsmiShowResponse_Click);
             //
             // tsmiClearList
             //
@@ -1958,31 +1783,15 @@ namespace ShareNot.Forms
         private SplitContainerCustomSplitter scMain;
         private System.Windows.Forms.ContextMenuStrip cmsTaskInfo;
         private System.Windows.Forms.ToolStripMenuItem tsmiOpen;
-        private System.Windows.Forms.ToolStripMenuItem tsmiOpenURL;
-        private System.Windows.Forms.ToolStripMenuItem tsmiOpenShortenedURL;
-        private System.Windows.Forms.ToolStripMenuItem tsmiOpenThumbnailURL;
-        private System.Windows.Forms.ToolStripMenuItem tsmiOpenDeletionURL;
         private System.Windows.Forms.ToolStripSeparator tssOpen1;
         private System.Windows.Forms.ToolStripMenuItem tsmiOpenFile;
         private System.Windows.Forms.ToolStripMenuItem tsmiOpenFolder;
         private System.Windows.Forms.ToolStripMenuItem tsmiCopy;
-        private System.Windows.Forms.ToolStripMenuItem tsmiCopyURL;
-        private System.Windows.Forms.ToolStripMenuItem tsmiCopyShortenedURL;
-        private System.Windows.Forms.ToolStripMenuItem tsmiCopyThumbnailURL;
-        private System.Windows.Forms.ToolStripMenuItem tsmiCopyDeletionURL;
         private System.Windows.Forms.ToolStripSeparator tssCopy1;
         private System.Windows.Forms.ToolStripMenuItem tsmiCopyFile;
         private System.Windows.Forms.ToolStripMenuItem tsmiCopyImage;
         private System.Windows.Forms.ToolStripMenuItem tsmiCopyText;
         private System.Windows.Forms.ToolStripSeparator tssCopy2;
-        private System.Windows.Forms.ToolStripMenuItem tsmiCopyHTMLLink;
-        private System.Windows.Forms.ToolStripMenuItem tsmiCopyHTMLImage;
-        private System.Windows.Forms.ToolStripMenuItem tsmiCopyHTMLLinkedImage;
-        private System.Windows.Forms.ToolStripSeparator tssCopy3;
-        private System.Windows.Forms.ToolStripMenuItem tsmiCopyForumLink;
-        private System.Windows.Forms.ToolStripMenuItem tsmiCopyForumImage;
-        private System.Windows.Forms.ToolStripMenuItem tsmiCopyForumLinkedImage;
-        private System.Windows.Forms.ToolStripSeparator tssCopy4;
         private System.Windows.Forms.ToolStripMenuItem tsmiCopyFilePath;
         private System.Windows.Forms.ToolStripMenuItem tsmiCopyFileName;
         private System.Windows.Forms.ToolStripMenuItem tsmiCopyFileNameWithExtension;
@@ -1990,7 +1799,6 @@ namespace ShareNot.Forms
         private System.Windows.Forms.ToolStripMenuItem tsmiStopUpload;
         private MyPictureBox pbPreview;
         private System.Windows.Forms.ToolStripMenuItem tsmiShowErrors;
-        private System.Windows.Forms.ToolStripMenuItem tsmiShowResponse;
         private System.Windows.Forms.ToolStripMenuItem tsmiScreenshotsFolder;
         private System.Windows.Forms.ToolStripDropDownButton tsddbAfterCaptureTasks;
         private System.Windows.Forms.ToolStripMenuItem tsmiTrayAfterCaptureTasks;
@@ -2013,7 +1821,6 @@ namespace ShareNot.Forms
         private System.Windows.Forms.ToolStripMenuItem tsmiTrayAutoCapture;
         private System.Windows.Forms.ToolStripDropDownButton tsddbDebug;
         private System.Windows.Forms.ToolStripMenuItem tsmiTestImageUpload;
-        private System.Windows.Forms.ToolStripSeparator tssCopy5;
         private System.Windows.Forms.ToolStripMenuItem tsmiShowDebugLog;
         private System.Windows.Forms.ToolStripButton tsbApplicationSettings;
         private System.Windows.Forms.ToolStripButton tsbTaskSettings;
@@ -2042,7 +1849,6 @@ namespace ShareNot.Forms
         private System.Windows.Forms.ToolStripMenuItem tsmiTrayImageEditor;
         private System.Windows.Forms.ToolStripDropDownButton tsddbWorkflows;
         private System.Windows.Forms.ToolStripMenuItem tsmiTrayWorkflows;
-        private System.Windows.Forms.ToolStripMenuItem tsmiShowQRCode;
         private System.Windows.Forms.ToolStripMenuItem tsmiQRCode;
         private System.Windows.Forms.ToolStripMenuItem tsmiTrayQRCode;
         private System.Windows.Forms.ToolStripMenuItem tsmiRectangleLight;
@@ -2071,9 +1877,6 @@ namespace ShareNot.Forms
         private System.Windows.Forms.ToolStripMenuItem tsmiDeleteSelectedItem;
         private System.Windows.Forms.ToolStripMenuItem tsmiImageThumbnailer;
         private System.Windows.Forms.ToolStripMenuItem tsmiTrayImageThumbnailer;
-        private System.Windows.Forms.ToolStripMenuItem tsmiCopyMarkdownLink;
-        private System.Windows.Forms.ToolStripMenuItem tsmiCopyMarkdownImage;
-        private System.Windows.Forms.ToolStripMenuItem tsmiCopyMarkdownLinkedImage;
         private System.Windows.Forms.ToolStripSeparator tssCopy6;
         private System.Windows.Forms.ToolStripSeparator tssCapture1;
         private System.Windows.Forms.ToolStripMenuItem tsmiShowCursor;
