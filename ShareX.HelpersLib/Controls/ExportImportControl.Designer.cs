@@ -33,7 +33,6 @@
             this.cmsExport = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiExportClipboard = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiExportFile = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiExportUpload = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsImport = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiImportClipboard = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiImportFile = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,8 +47,7 @@
             //
             this.cmsExport.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiExportClipboard,
-            this.tsmiExportFile,
-            this.tsmiExportUpload});
+            this.tsmiExportFile});
             this.cmsExport.Name = "cmsExport";
             this.cmsExport.ShowImageMargin = false;
             resources.ApplyResources(this.cmsExport, "cmsExport");
@@ -65,12 +63,6 @@
             this.tsmiExportFile.Name = "tsmiExportFile";
             resources.ApplyResources(this.tsmiExportFile, "tsmiExportFile");
             this.tsmiExportFile.Click += new System.EventHandler(this.tsmiExportFile_Click);
-            //
-            // tsmiExportUpload
-            //
-            this.tsmiExportUpload.Name = "tsmiExportUpload";
-            resources.ApplyResources(this.tsmiExportUpload, "tsmiExportUpload");
-            this.tsmiExportUpload.Click += new System.EventHandler(this.tsmiExportUpload_Click);
             //
             // cmsImport
             //
@@ -137,7 +129,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiImportFile;
         private MenuButton btnExport;
         private MenuButton btnImport;
-        private System.Windows.Forms.ToolStripMenuItem tsmiExportUpload;
         private System.Windows.Forms.ToolStripMenuItem tsmiImportURL;
     }
 }

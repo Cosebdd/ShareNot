@@ -43,7 +43,6 @@ namespace ShareNot.UploadersLib.Forms
             this.btnTextUploaderTest = new System.Windows.Forms.Button();
             this.lblURLShortener = new System.Windows.Forms.Label();
             this.cbTextUploader = new System.Windows.Forms.ComboBox();
-            this.btnURLShortenerTest = new System.Windows.Forms.Button();
             this.lblTextUploader = new System.Windows.Forms.Label();
             this.mbHelp = new MenuButton();
             this.cmsHelp = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -56,7 +55,6 @@ namespace ShareNot.UploadersLib.Forms
             this.eiCustomUploaders = new ExportImportControl();
             this.lbCustomUploaderList = new System.Windows.Forms.ListBox();
             this.btnRemove = new System.Windows.Forms.Button();
-            this.cbURLShortener = new System.Windows.Forms.ComboBox();
             this.cbFileUploader = new System.Windows.Forms.ComboBox();
             this.btnImageUploaderTest = new System.Windows.Forms.Button();
             this.lblFileUploader = new System.Windows.Forms.Label();
@@ -106,8 +104,6 @@ namespace ShareNot.UploadersLib.Forms
             this.cmsDestinationType = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblURLSharingService = new System.Windows.Forms.Label();
-            this.cbURLSharingService = new System.Windows.Forms.ComboBox();
-            this.btnURLSharingServiceTest = new System.Windows.Forms.Button();
             this.ttHelpTip = new System.Windows.Forms.ToolTip(this.components);
             this.lblUploaders = new System.Windows.Forms.Label();
             this.pMain = new System.Windows.Forms.Panel();
@@ -154,13 +150,6 @@ namespace ShareNot.UploadersLib.Forms
             resources.ApplyResources(this.cbTextUploader, "cbTextUploader");
             this.cbTextUploader.Name = "cbTextUploader";
             this.cbTextUploader.SelectedIndexChanged += new System.EventHandler(this.cbCustomUploaderTextUploader_SelectedIndexChanged);
-            //
-            // btnURLShortenerTest
-            //
-            resources.ApplyResources(this.btnURLShortenerTest, "btnURLShortenerTest");
-            this.btnURLShortenerTest.Name = "btnURLShortenerTest";
-            this.btnURLShortenerTest.UseVisualStyleBackColor = true;
-            this.btnURLShortenerTest.Click += new System.EventHandler(this.btnCustomUploaderURLShortenerTest_Click);
             //
             // lblTextUploader
             //
@@ -251,14 +240,6 @@ namespace ShareNot.UploadersLib.Forms
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnCustomUploaderRemove_Click);
-            //
-            // cbURLShortener
-            //
-            this.cbURLShortener.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbURLShortener.FormattingEnabled = true;
-            resources.ApplyResources(this.cbURLShortener, "cbURLShortener");
-            this.cbURLShortener.Name = "cbURLShortener";
-            this.cbURLShortener.SelectedIndexChanged += new System.EventHandler(this.cbCustomUploaderURLShortener_SelectedIndexChanged);
             //
             // cbFileUploader
             //
@@ -672,21 +653,6 @@ namespace ShareNot.UploadersLib.Forms
             resources.ApplyResources(this.lblURLSharingService, "lblURLSharingService");
             this.lblURLSharingService.Name = "lblURLSharingService";
             //
-            // cbURLSharingService
-            //
-            this.cbURLSharingService.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbURLSharingService.FormattingEnabled = true;
-            resources.ApplyResources(this.cbURLSharingService, "cbURLSharingService");
-            this.cbURLSharingService.Name = "cbURLSharingService";
-            this.cbURLSharingService.SelectedIndexChanged += new System.EventHandler(this.cbCustomUploaderURLSharingService_SelectedIndexChanged);
-            //
-            // btnURLSharingServiceTest
-            //
-            resources.ApplyResources(this.btnURLSharingServiceTest, "btnURLSharingServiceTest");
-            this.btnURLSharingServiceTest.Name = "btnURLSharingServiceTest";
-            this.btnURLSharingServiceTest.UseVisualStyleBackColor = true;
-            this.btnURLSharingServiceTest.Click += new System.EventHandler(this.btnCustomUploaderURLSharingServiceTest_Click);
-            //
             // ttHelpTip
             //
             this.ttHelpTip.AutomaticDelay = 0;
@@ -753,8 +719,6 @@ namespace ShareNot.UploadersLib.Forms
             this.Controls.Add(this.eiCustomUploaders);
             this.Controls.Add(this.lbCustomUploaderList);
             this.Controls.Add(this.btnRemove);
-            this.Controls.Add(this.btnURLSharingServiceTest);
-            this.Controls.Add(this.cbURLSharingService);
             this.Controls.Add(this.lblURLSharingService);
             this.Controls.Add(this.cbImageUploader);
             this.Controls.Add(this.btnTextUploaderTest);
@@ -763,11 +727,9 @@ namespace ShareNot.UploadersLib.Forms
             this.Controls.Add(this.btnFileUploaderTest);
             this.Controls.Add(this.cbTextUploader);
             this.Controls.Add(this.lblFileUploader);
-            this.Controls.Add(this.btnURLShortenerTest);
             this.Controls.Add(this.btnImageUploaderTest);
             this.Controls.Add(this.lblTextUploader);
             this.Controls.Add(this.cbFileUploader);
-            this.Controls.Add(this.cbURLShortener);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "CustomUploaderSettingsForm";
@@ -799,14 +761,12 @@ namespace ShareNot.UploadersLib.Forms
         private System.Windows.Forms.Button btnTextUploaderTest;
         private System.Windows.Forms.Label lblURLShortener;
         private System.Windows.Forms.ComboBox cbTextUploader;
-        private System.Windows.Forms.Button btnURLShortenerTest;
         private System.Windows.Forms.Label lblTextUploader;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnDuplicate;
         private ExportImportControl eiCustomUploaders;
         private System.Windows.Forms.ListBox lbCustomUploaderList;
         private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.ComboBox cbURLShortener;
         private System.Windows.Forms.ComboBox cbFileUploader;
         private System.Windows.Forms.Button btnImageUploaderTest;
         private System.Windows.Forms.Label lblFileUploader;
@@ -845,8 +805,6 @@ namespace ShareNot.UploadersLib.Forms
         private System.Windows.Forms.ToolTip ttHelpTip;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblURLSharingService;
-        private System.Windows.Forms.ComboBox cbURLSharingService;
-        private System.Windows.Forms.Button btnURLSharingServiceTest;
         private System.Windows.Forms.ContextMenuStrip cmsHelp;
         private System.Windows.Forms.ToolStripMenuItem tsmiCustomUploaderGuide;
         private System.Windows.Forms.ToolStripMenuItem tsmiExportAll;

@@ -32,7 +32,6 @@
             this.txtFolderPath = new System.Windows.Forms.TextBox();
             this.btnBrowseFolder = new System.Windows.Forms.Button();
             this.btnIndexFolder = new System.Windows.Forms.Button();
-            this.btnUpload = new System.Windows.Forms.Button();
             this.tcMain = new System.Windows.Forms.TabControl();
             this.tpPreview = new System.Windows.Forms.TabPage();
             this.txtPreview = new System.Windows.Forms.TextBox();
@@ -64,13 +63,6 @@
             this.btnIndexFolder.Name = "btnIndexFolder";
             this.btnIndexFolder.UseVisualStyleBackColor = true;
             this.btnIndexFolder.Click += new System.EventHandler(this.btnIndexFolder_Click);
-            //
-            // btnUpload
-            //
-            resources.ApplyResources(this.btnUpload, "btnUpload");
-            this.btnUpload.Name = "btnUpload";
-            this.btnUpload.UseVisualStyleBackColor = true;
-            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             //
             // tcMain
             //
@@ -128,7 +120,6 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.Controls.Add(this.btnSaveAs);
             this.Controls.Add(this.tcMain);
-            this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.btnIndexFolder);
             this.Controls.Add(this.btnBrowseFolder);
             this.Controls.Add(this.txtFolderPath);
@@ -149,7 +140,6 @@
         private System.Windows.Forms.TextBox txtFolderPath;
         private System.Windows.Forms.Button btnBrowseFolder;
         private System.Windows.Forms.Button btnIndexFolder;
-        private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.TabControl tcMain;
         private System.Windows.Forms.TabPage tpSettings;
         private System.Windows.Forms.PropertyGrid pgSettings;

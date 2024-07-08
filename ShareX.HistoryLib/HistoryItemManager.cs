@@ -53,11 +53,10 @@ namespace ShareNot.HistoryLib
         public bool IsImageFile { get; private set; }
         public bool IsTextFile { get; private set; }
 
-        private Action<string> uploadFile, editImage, pinToScreen;
+        private Action<string> editImage, pinToScreen;
 
-        public HistoryItemManager(Action<string> uploadFile, Action<string> editImage, Action<string> pinToScreen, bool hideShowMoreInfoButton = false)
+        public HistoryItemManager(Action<string> editImage, Action<string> pinToScreen, bool hideShowMoreInfoButton = false)
         {
-            this.uploadFile = uploadFile;
             this.editImage = editImage;
             this.pinToScreen = pinToScreen;
 
@@ -65,7 +64,6 @@ namespace ShareNot.HistoryLib
 
             tsmiOpen.HideImageMargin();
             tsmiCopy.HideImageMargin();
-            tsmiUploadFile.Visible = uploadFile != null;
             tsmiEditImage.Visible = editImage != null;
             tsmiPinToScreen.Visible = pinToScreen != null;
             tsmiShowMoreInfo.Visible = !hideShowMoreInfoButton;
@@ -143,9 +141,6 @@ namespace ShareNot.HistoryLib
                     break;
                 case Keys.Control | Keys.Shift | Keys.C:
                     CopyFilePath();
-                    break;
-                case Keys.Control | Keys.U:
-                    UploadFile();
                     break;
                 case Keys.Control | Keys.E:
                     EditImage();
@@ -570,11 +565,6 @@ namespace ShareNot.HistoryLib
         public void ShowImagePreview()
         {
             if (HistoryItem != null && IsImageFile) ImageViewer.ShowImage(HistoryItem.FilePath);
-        }
-
-        public void UploadFile()
-        {
-            if (uploadFile != null && HistoryItem != null && IsFileExist) uploadFile(HistoryItem.FilePath);
         }
 
         public void EditImage()

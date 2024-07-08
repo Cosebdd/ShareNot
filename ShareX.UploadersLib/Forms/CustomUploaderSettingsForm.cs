@@ -40,9 +40,7 @@ using ShareNot.UploadersLib.CustomUploader;
 using ShareNot.UploadersLib.FileUploaders;
 using ShareNot.UploadersLib.ImageUploaders;
 using ShareNot.UploadersLib.Properties;
-using ShareNot.UploadersLib.SharingServices;
 using ShareNot.UploadersLib.TextUploaders;
-using ShareNot.UploadersLib.URLShorteners;
 
 namespace ShareNot.UploadersLib.Forms
 {
@@ -224,8 +222,7 @@ namespace ShareNot.UploadersLib.Forms
 
             tsmiExportAll.Enabled = tsmiClearUploaders.Enabled = cbImageUploader.Enabled =
                 btnImageUploaderTest.Enabled = cbTextUploader.Enabled = btnTextUploaderTest.Enabled =
-                cbFileUploader.Enabled = btnFileUploaderTest.Enabled = cbURLShortener.Enabled =
-                btnURLShortenerTest.Enabled = cbURLSharingService.Enabled = btnURLSharingServiceTest.Enabled =
+                cbFileUploader.Enabled = btnFileUploaderTest.Enabled =
                 lbCustomUploaderList.Items.Count > 0;
 
             CustomUploaderUpdateBodyState();
@@ -257,8 +254,6 @@ namespace ShareNot.UploadersLib.Forms
                 cbImageUploader.Items[index] = cbImageUploader.Items[index];
                 cbTextUploader.Items[index] = cbTextUploader.Items[index];
                 cbFileUploader.Items[index] = cbFileUploader.Items[index];
-                cbURLShortener.Items[index] = cbURLShortener.Items[index];
-                cbURLSharingService.Items[index] = cbURLSharingService.Items[index];
 
                 customUploaderPauseLoad = false;
             }
@@ -582,8 +577,6 @@ namespace ShareNot.UploadersLib.Forms
             cbImageUploader.Items.Clear();
             cbTextUploader.Items.Clear();
             cbFileUploader.Items.Clear();
-            cbURLShortener.Items.Clear();
-            cbURLSharingService.Items.Clear();
 
             if (Config.CustomUploadersList.Count > 0)
             {
@@ -592,15 +585,11 @@ namespace ShareNot.UploadersLib.Forms
                     cbImageUploader.Items.Add(item);
                     cbTextUploader.Items.Add(item);
                     cbFileUploader.Items.Add(item);
-                    cbURLShortener.Items.Add(item);
-                    cbURLSharingService.Items.Add(item);
                 }
 
                 cbImageUploader.SelectedIndex = Config.CustomImageUploaderSelected.Clamp(0, Config.CustomUploadersList.Count - 1);
                 cbTextUploader.SelectedIndex = Config.CustomTextUploaderSelected.Clamp(0, Config.CustomUploadersList.Count - 1);
                 cbFileUploader.SelectedIndex = Config.CustomFileUploaderSelected.Clamp(0, Config.CustomUploadersList.Count - 1);
-                cbURLShortener.SelectedIndex = Config.CustomURLShortenerSelected.Clamp(0, Config.CustomUploadersList.Count - 1);
-                cbURLSharingService.SelectedIndex = Config.CustomURLSharingServiceSelected.Clamp(0, Config.CustomUploadersList.Count - 1);
             }
         }
 
@@ -611,8 +600,7 @@ namespace ShareNot.UploadersLib.Forms
                 return;
             }
 
-            btnImageUploaderTest.Enabled = btnTextUploaderTest.Enabled = btnFileUploaderTest.Enabled =
-                btnURLShortenerTest.Enabled = btnURLSharingServiceTest.Enabled = false;
+            btnImageUploaderTest.Enabled = btnTextUploaderTest.Enabled = btnFileUploaderTest.Enabled = false;
             lbCustomUploaderList.SelectedIndex = index;
 
             CustomUploaderItem item = Config.CustomUploadersList[index];
@@ -656,16 +644,6 @@ namespace ShareNot.UploadersLib.Forms
                                 result.Errors.Add(fileUploader.Errors);
                             }
                             break;
-                        case CustomUploaderDestinationType.URLShortener:
-                            CustomURLShortener urlShortener = new CustomURLShortener(item);
-                            result = urlShortener.ShortenURL(Links.Website);
-                            result.Errors.Add(urlShortener.Errors);
-                            break;
-                        case CustomUploaderDestinationType.URLSharingService:
-                            CustomURLSharer urlSharer = new CustomURLSharer(item);
-                            result = urlSharer.ShareURL(Links.Website);
-                            result.Errors.Add(urlSharer.Errors);
-                            break;
                     }
                 }
                 catch (Exception e)
@@ -684,8 +662,7 @@ namespace ShareNot.UploadersLib.Forms
                     ResponseForm.ShowInstance(result);
                 }
 
-                btnImageUploaderTest.Enabled = btnTextUploaderTest.Enabled = btnFileUploaderTest.Enabled =
-                    btnURLShortenerTest.Enabled = btnURLSharingServiceTest.Enabled = true;
+                btnImageUploaderTest.Enabled = btnTextUploaderTest.Enabled = btnFileUploaderTest.Enabled = true;
             }
         }
 
@@ -1101,26 +1078,6 @@ namespace ShareNot.UploadersLib.Forms
         private async void btnCustomUploaderFileUploaderTest_Click(object sender, EventArgs e)
         {
             await TestCustomUploader(CustomUploaderDestinationType.FileUploader, Config.CustomFileUploaderSelected);
-        }
-
-        private void cbCustomUploaderURLShortener_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Config.CustomURLShortenerSelected = cbURLShortener.SelectedIndex;
-        }
-
-        private async void btnCustomUploaderURLShortenerTest_Click(object sender, EventArgs e)
-        {
-            await TestCustomUploader(CustomUploaderDestinationType.URLShortener, Config.CustomURLShortenerSelected);
-        }
-
-        private void cbCustomUploaderURLSharingService_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Config.CustomURLSharingServiceSelected = cbURLSharingService.SelectedIndex;
-        }
-
-        private async void btnCustomUploaderURLSharingServiceTest_Click(object sender, EventArgs e)
-        {
-            await TestCustomUploader(CustomUploaderDestinationType.URLSharingService, Config.CustomURLSharingServiceSelected);
         }
 
         #endregion Form events

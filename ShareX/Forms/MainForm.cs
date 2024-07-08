@@ -136,20 +136,6 @@ namespace ShareNot.Forms
                 Program.DefaultTaskSettings.TextFileDestination = x;
             });
             AddEnumItems<FileDestination>(x => Program.DefaultTaskSettings.FileDestination = x);
-            AddEnumItems<UrlShortenerType>(x => Program.DefaultTaskSettings.URLShortenerDestination = x);
-            AddEnumItems<URLSharingServices>(x => Program.DefaultTaskSettings.URLSharingServiceDestination = x);
-
-            foreach (UrlShortenerType urlShortener in Helpers.GetEnums<UrlShortenerType>())
-            {
-                ToolStripMenuItem tsmi = new ToolStripMenuItem(urlShortener.GetLocalizedDescription());
-                tsmi.Click += (sender, e) => uim.ShortenURL(urlShortener);
-            }
-
-            foreach (URLSharingServices urlSharingService in Helpers.GetEnums<URLSharingServices>())
-            {
-                ToolStripMenuItem tsmi = new ToolStripMenuItem(urlSharingService.GetLocalizedDescription());
-                tsmi.Click += (sender, e) => uim.ShareURL(urlSharingService);
-            }
 
             lvUploads.SupportCustomTheme();
 
@@ -173,8 +159,6 @@ namespace ShareNot.Forms
             {
                 dropDownItem.DisableMenuCloseOnClick();
             }
-
-            ExportImportControl.UploadRequested += json => UploadManager.UploadText(json);
 
 #if MicrosoftStore
             tsmiDNSChanger.Visible = false;
@@ -564,7 +548,7 @@ namespace ShareNot.Forms
 
             tsmiStopUpload.Visible = tsmiOpen.Visible = tsmiCopy.Visible = tsmiShowErrors.Visible = tsmiShowResponse.Visible =
                 tsmiShowQRCode.Visible = tsmiOCRImage.Visible =
-                tsmiCombineImages.Visible = tsmiUploadSelectedFile.Visible = tsmiDownloadSelectedURL.Visible = tsmiEditSelectedFile.Visible =
+                tsmiCombineImages.Visible = tsmiEditSelectedFile.Visible =
                 tsmiBeautifyImage.Visible = tsmiAddImageEffects.Visible = tsmiPinSelectedFile.Visible = tsmiRunAction.Visible =
                 tsmiDeleteSelectedItem.Visible = tsmiDeleteSelectedFile.Visible = false;
 
@@ -670,8 +654,6 @@ namespace ShareNot.Forms
                         }
                     }
 
-                    tsmiUploadSelectedFile.Visible = uim.SelectedItem.IsFileExist;
-                    tsmiDownloadSelectedURL.Visible = uim.SelectedItem.IsFileURL;
                     tsmiEditSelectedFile.Visible = uim.SelectedItem.IsImageFile;
                     tsmiBeautifyImage.Visible = uim.SelectedItem.IsImageFile;
                     tsmiAddImageEffects.Visible = uim.SelectedItem.IsImageFile;
@@ -917,8 +899,6 @@ namespace ShareNot.Forms
             SetEnumChecked(Program.DefaultTaskSettings.TextDestination);
             SetTextFileDestinationChecked(Program.DefaultTaskSettings.TextDestination, Program.DefaultTaskSettings.TextFileDestination);
             SetEnumChecked(Program.DefaultTaskSettings.FileDestination);
-            SetEnumChecked(Program.DefaultTaskSettings.URLShortenerDestination);
-            SetEnumChecked(Program.DefaultTaskSettings.URLSharingServiceDestination);
         }
 
         public static void SetTextFileDestinationChecked(TextDestination textDestination, FileDestination textFileDestination, params ToolStripDropDownItem[] lists)
@@ -1317,12 +1297,6 @@ namespace ShareNot.Forms
                 case Keys.Control | Keys.V:
                     UploadManager.ClipboardUploadMainWindow();
                     break;
-                case Keys.Control | Keys.U:
-                    uim.Upload();
-                    break;
-                case Keys.Control | Keys.D:
-                    uim.Download();
-                    break;
                 case Keys.Control | Keys.E:
                     uim.EditImage();
                     break;
@@ -1541,39 +1515,14 @@ namespace ShareNot.Forms
             SetScreenshotDelay(5);
         }
 
-        private void tsbFileUpload_Click(object sender, EventArgs e)
-        {
-            UploadManager.UploadFile();
-        }
-
-        private void tsmiUploadFolder_Click(object sender, EventArgs e)
-        {
-            UploadManager.UploadFolder();
-        }
-
         private void tsbClipboardUpload_Click(object sender, EventArgs e)
         {
             UploadManager.ClipboardUploadMainWindow();
         }
 
-        private void tsmiUploadText_Click(object sender, EventArgs e)
-        {
-            UploadManager.ShowTextUploadDialog();
-        }
-
-        private void tsmiUploadURL_Click(object sender, EventArgs e)
-        {
-            UploadManager.UploadURL();
-        }
-
         private void tsbDragDropUpload_Click(object sender, EventArgs e)
         {
             TaskHelpers.OpenDropWindow();
-        }
-
-        private void tsmiShortenURL_Click(object sender, EventArgs e)
-        {
-            UploadManager.ShowShortenURLDialog();
         }
 
         private void tsmiColorPicker_Click(object sender, EventArgs e)
@@ -1779,26 +1728,6 @@ namespace ShareNot.Forms
         private void tsmiTestImageUpload_Click(object sender, EventArgs e)
         {
             UploadManager.UploadImage(ShareXResources.Logo);
-        }
-
-        private void tsmiTestTextUpload_Click(object sender, EventArgs e)
-        {
-            UploadManager.UploadText(Resources.MainForm_tsmiTestTextUpload_Click_Text_upload_test);
-        }
-
-        private void tsmiTestFileUpload_Click(object sender, EventArgs e)
-        {
-            UploadManager.UploadImage(ShareXResources.Logo, ImageDestination.FileUploader, Program.DefaultTaskSettings.FileDestination);
-        }
-
-        private void tsmiTestURLShortener_Click(object sender, EventArgs e)
-        {
-            UploadManager.ShortenURL(Links.Website);
-        }
-
-        private void tsmiTestURLSharing_Click(object sender, EventArgs e)
-        {
-            UploadManager.ShareURL(Links.Website);
         }
 
         private void tsbDonate_Click(object sender, EventArgs e)
@@ -2166,16 +2095,6 @@ namespace ShareNot.Forms
             ToolStripMenuItem tsmiClipboardFormat = sender as ToolStripMenuItem;
             ClipboardFormat cf = tsmiClipboardFormat.Tag as ClipboardFormat;
             uim.CopyCustomFormat(cf.Format);
-        }
-
-        private void tsmiUploadSelectedFile_Click(object sender, EventArgs e)
-        {
-            uim.Upload();
-        }
-
-        private void tsmiDownloadSelectedURL_Click(object sender, EventArgs e)
-        {
-            uim.Download();
         }
 
         private void tsmiDeleteSelectedItem_Click(object sender, EventArgs e)

@@ -118,12 +118,6 @@ namespace ShareNot.Forms
                         KeepClipboardContent = true;
                         UploadManager.ProcessImageUpload(bmp, taskSettings);
                         break;
-                    case string text:
-                        UploadManager.ProcessTextUpload(text, taskSettings);
-                        break;
-                    case string[] files:
-                        UploadManager.ProcessFilesUpload(files, taskSettings);
-                        break;
                 }
             }
         }

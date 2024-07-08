@@ -371,12 +371,6 @@ namespace ShareNot.Forms
                         ClipboardHelpers.CopyText(Config.FilePath);
                     }
                     break;
-                case ToastClickAction.CopyUrl:
-                    if (!string.IsNullOrEmpty(Config.URL))
-                    {
-                        ClipboardHelpers.CopyText(Config.URL);
-                    }
-                    break;
                 case ToastClickAction.OpenFile:
                     if (!string.IsNullOrEmpty(Config.FilePath))
                     {
@@ -387,18 +381,6 @@ namespace ShareNot.Forms
                     if (!string.IsNullOrEmpty(Config.FilePath))
                     {
                         FileHelpers.OpenFolderWithFile(Config.FilePath);
-                    }
-                    break;
-                case ToastClickAction.OpenUrl:
-                    if (!string.IsNullOrEmpty(Config.URL))
-                    {
-                        URLHelpers.OpenURL(Config.URL);
-                    }
-                    break;
-                case ToastClickAction.Upload:
-                    if (!string.IsNullOrEmpty(Config.FilePath))
-                    {
-                        UploadManager.UploadFile(Config.FilePath);
                     }
                     break;
                 case ToastClickAction.PinToScreen:

@@ -36,7 +36,6 @@
             this.llRunningFrom = new System.Windows.Forms.LinkLabel();
             this.flpRunningFrom = new System.Windows.Forms.FlowLayoutPanel();
             this.lblRunningFrom = new System.Windows.Forms.Label();
-            this.btnUploadLog = new System.Windows.Forms.Button();
             this.flpRunningFrom.SuspendLayout();
             this.SuspendLayout();
             //
@@ -88,20 +87,12 @@
             resources.ApplyResources(this.lblRunningFrom, "lblRunningFrom");
             this.lblRunningFrom.Name = "lblRunningFrom";
             //
-            // btnUploadLog
-            //
-            resources.ApplyResources(this.btnUploadLog, "btnUploadLog");
-            this.btnUploadLog.Name = "btnUploadLog";
-            this.btnUploadLog.UseVisualStyleBackColor = true;
-            this.btnUploadLog.Click += new System.EventHandler(this.btnUploadLog_Click);
-            //
             // DebugForm
             //
             resources.ApplyResources(this, "$this");
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.Controls.Add(this.btnUploadLog);
             this.Controls.Add(this.flpRunningFrom);
             this.Controls.Add(this.btnOpenLogFile);
             this.Controls.Add(this.rtbDebug);
@@ -123,6 +114,5 @@
         private System.Windows.Forms.LinkLabel llRunningFrom;
         private System.Windows.Forms.FlowLayoutPanel flpRunningFrom;
         private System.Windows.Forms.Label lblRunningFrom;
-        private System.Windows.Forms.Button btnUploadLog;
     }
 }

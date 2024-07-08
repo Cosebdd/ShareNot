@@ -56,21 +56,11 @@ namespace ShareNot
 
                     if (command.IsCommand)
                     {
-                        if (CheckCustomUploader(command) || CheckImageEffect(command) || await CheckCLIHotkey(command) || await CheckCLIWorkflow(command) ||
-                            await CheckNativeMessagingInput(command))
+                        if (CheckCustomUploader(command) || CheckImageEffect(command) || await CheckCLIHotkey(command) || await CheckCLIWorkflow(command))
                         {
                         }
 
                         continue;
-                    }
-
-                    if (URLHelpers.IsValidURL(command.Command))
-                    {
-                        UploadManager.DownloadAndUploadFile(command.Command, taskSettings);
-                    }
-                    else
-                    {
-                        UploadManager.UploadFile(command.Command, taskSettings);
                     }
                 }
             }
@@ -158,21 +148,6 @@ namespace ShareNot
                         }
                     }
                 }
-            }
-
-            return false;
-        }
-
-        private async Task<bool> CheckNativeMessagingInput(CLICommand command)
-        {
-            if (command.Command.Equals("NativeMessagingInput", StringComparison.OrdinalIgnoreCase))
-            {
-                if (!string.IsNullOrEmpty(command.Parameter) && command.Parameter.EndsWith(".json", StringComparison.OrdinalIgnoreCase))
-                {
-                    await TaskHelpers.HandleNativeMessagingInput(command.Parameter);
-                }
-
-                return true;
             }
 
             return false;

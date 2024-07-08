@@ -102,13 +102,6 @@ namespace ShareNot
     public enum TaskJob
     {
         Job,
-        DataUpload,
-        FileUpload,
-        TextUpload,
-        ShortenURL,
-        ShareURL,
-        Download,
-        DownloadUpload
     }
 
     public enum TaskStatus
@@ -144,20 +137,12 @@ namespace ShareNot
         ShowInExplorer = 1 << 14,
         ScanQRCode = 1 << 15,
         DoOCR = 1 << 16,
-        UploadImageToHost = 1 << 17,
-        DeleteFile = 1 << 18
     }
 
     [Flags]
     public enum AfterUploadTasks // Localized
     {
         None = 0,
-        ShowAfterUploadWindow = 1,
-        UseURLShortener = 1 << 1,
-        ShareURL = 1 << 2,
-        CopyURLToClipboard = 1 << 3,
-        OpenURL = 1 << 4,
-        ShowQRCode = 1 << 5
     }
 
     public enum CaptureType
@@ -183,25 +168,6 @@ namespace ShareNot
     public enum HotkeyType // Localized
     {
         None,
-        // Upload
-        [Category(EnumExtensions.HotkeyType_Category_Upload)]
-        FileUpload,
-        [Category(EnumExtensions.HotkeyType_Category_Upload)]
-        FolderUpload,
-        [Category(EnumExtensions.HotkeyType_Category_Upload)]
-        ClipboardUpload,
-        [Category(EnumExtensions.HotkeyType_Category_Upload)]
-        ClipboardUploadWithContentViewer,
-        [Category(EnumExtensions.HotkeyType_Category_Upload)]
-        UploadText,
-        [Category(EnumExtensions.HotkeyType_Category_Upload)]
-        UploadURL,
-        [Category(EnumExtensions.HotkeyType_Category_Upload)]
-        DragDropUpload,
-        [Category(EnumExtensions.HotkeyType_Category_Upload)]
-        ShortenURL,
-        [Category(EnumExtensions.HotkeyType_Category_Upload)]
-        StopUploads,
         // Screen capture
         [Category(EnumExtensions.HotkeyType_Category_ScreenCapture)]
         PrintScreen,
@@ -335,11 +301,8 @@ namespace ShareNot
         CopyImageToClipboard,
         CopyFile,
         CopyFilePath,
-        CopyUrl,
         OpenFile,
         OpenFolder,
-        OpenUrl,
-        Upload,
         PinToScreen
     }
 
@@ -350,7 +313,6 @@ namespace ShareNot
         OpenImageViewer,
         OpenFile,
         OpenFolder,
-        OpenURL,
         EditImage
     }
 
@@ -417,11 +379,6 @@ namespace ShareNot
 
     public enum NativeMessagingAction
     {
-        None,
-        UploadImage,
-        UploadVideo,
-        UploadAudio,
-        UploadText,
-        ShortenURL
+        None
     }
 }

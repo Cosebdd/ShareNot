@@ -28,7 +28,5 @@ namespace ShareNot
     public class NativeMessagingInput
     {
         public NativeMessagingAction Action { get; set; }
-        public string URL { get; set; }
-        public string Text { get; set; }
     }
 }

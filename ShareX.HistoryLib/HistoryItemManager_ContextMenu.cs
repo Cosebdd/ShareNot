@@ -71,7 +71,6 @@ namespace ShareNot.HistoryLib
         private ToolStripMenuItem tsmiCopyFolder;
 
         private ToolStripMenuItem tsmiShowImagePreview;
-        private ToolStripMenuItem tsmiUploadFile;
         private ToolStripMenuItem tsmiEditImage;
         private ToolStripMenuItem tsmiPinToScreen;
         private ToolStripMenuItem tsmiShowMoreInfo;
@@ -117,7 +116,6 @@ namespace ShareNot.HistoryLib
             tsmiCopyFolder = new ToolStripMenuItem();
 
             tsmiShowImagePreview = new ToolStripMenuItem();
-            tsmiUploadFile = new ToolStripMenuItem();
             tsmiEditImage = new ToolStripMenuItem();
             tsmiPinToScreen = new ToolStripMenuItem();
             tsmiShowMoreInfo = new ToolStripMenuItem();
@@ -132,7 +130,6 @@ namespace ShareNot.HistoryLib
                 tsmiOpen,
                 tsmiCopy,
                 tsmiShowImagePreview,
-                tsmiUploadFile,
                 tsmiEditImage,
                 tsmiPinToScreen,
                 tsmiShowMoreInfo
@@ -418,14 +415,6 @@ namespace ShareNot.HistoryLib
             tsmiShowImagePreview.Text = Resources.HistoryItemManager_InitializeComponent_Image_preview;
             tsmiShowImagePreview.Click += tsmiShowImagePreview_Click;
             //
-            // tsmiUploadFile
-            //
-            tsmiUploadFile.Name = "tsmiUploadFile";
-            tsmiUploadFile.ShortcutKeyDisplayString = "Ctrl+U";
-            tsmiUploadFile.Size = new Size(127, 22);
-            tsmiUploadFile.Text = Resources.HistoryItemManager_InitializeComponent_UploadFile;
-            tsmiUploadFile.Click += tsmiUploadFile_Click;
-            //
             // tsmiEditImage
             //
             tsmiEditImage.Name = "tsmiEditImage";
@@ -517,7 +506,6 @@ namespace ShareNot.HistoryLib
 
                 // Other
                 tsmiShowImagePreview.Enabled = false;
-                tsmiUploadFile.Enabled = false;
                 tsmiEditImage.Enabled = false;
                 tsmiPinToScreen.Enabled = false;
                 tsmiShowMoreInfo.Enabled = false;
@@ -582,7 +570,6 @@ namespace ShareNot.HistoryLib
 
                 // Other
                 tsmiShowImagePreview.Enabled = IsImageFile;
-                tsmiUploadFile.Enabled = uploadFile != null && IsFileExist;
                 tsmiEditImage.Enabled = editImage != null && IsImageFile;
                 tsmiPinToScreen.Enabled = pinToScreen != null && IsImageFile;
                 tsmiShowMoreInfo.Enabled = true;
@@ -724,11 +711,6 @@ namespace ShareNot.HistoryLib
         private void tsmiShowImagePreview_Click(object sender, EventArgs e)
         {
             ShowImagePreview();
-        }
-
-        private void tsmiUploadFile_Click(object sender, EventArgs e)
-        {
-            UploadFile();
         }
 
         private void tsmiEditImage_Click(object sender, EventArgs e)

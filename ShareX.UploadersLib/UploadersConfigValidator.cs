@@ -41,10 +41,6 @@ namespace ShareNot.UploadersLib
                     return Validate(textDestination, config);
                 case FileDestination fileDestination:
                     return Validate(fileDestination, config);
-                case UrlShortenerType urlShortenerType:
-                    return Validate(urlShortenerType, config);
-                case URLSharingServices urlSharingServices:
-                    return Validate(urlSharingServices, config);
             }
 
             return true;
@@ -65,16 +61,6 @@ namespace ShareNot.UploadersLib
         public static bool Validate(FileDestination destination, UploadersConfig config)
         {
             return UploaderFactory.FileUploaderServices[destination].CheckConfig(config);
-        }
-
-        public static bool Validate(UrlShortenerType destination, UploadersConfig config)
-        {
-            return UploaderFactory.URLShortenerServices[destination].CheckConfig(config);
-        }
-
-        public static bool Validate(URLSharingServices destination, UploadersConfig config)
-        {
-            return UploaderFactory.URLSharingServices[destination].CheckConfig(config);
         }
     }
 }

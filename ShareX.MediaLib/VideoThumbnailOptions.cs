@@ -51,9 +51,6 @@ namespace ShareNot.MediaLib
         [Category("Thumbnails"), DefaultValue(false), Description("Choose random frame each time a media file is processed.")]
         public bool RandomFrame { get; set; }
 
-        [Category("Thumbnails"), DefaultValue(true), Description("Upload thumbnails.")]
-        public bool UploadThumbnails { get; set; }
-
         [Category("Thumbnails"), DefaultValue(false), Description("After combine thumbnails keep single image files.")]
         public bool KeepScreenshots { get; set; }
 

@@ -48,18 +48,6 @@ namespace ShareNot.UploadersLib
         CustomFileUploader // Localized
     }
 
-    [Description("URL shorteners"), DefaultValue(CustomURLShortener)]
-    public enum UrlShortenerType
-    {
-        CustomURLShortener // Localized
-    }
-
-    [Description("URL sharing services"), DefaultValue(CustomURLSharingService)]
-    public enum URLSharingServices
-    {
-        CustomURLSharingService // Localized
-    }
-
     public enum HttpMethod
     {
         GET,
@@ -165,8 +153,6 @@ namespace ShareNot.UploadersLib
         ImageUploader = 1, // Localized
         TextUploader = 1 << 1, // Localized
         FileUploader = 1 << 2, // Localized
-        URLShortener = 1 << 3, // Localized
-        URLSharingService = 1 << 4 // Localized
     }
 
     public enum FTPSEncryption

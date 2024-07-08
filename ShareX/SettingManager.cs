@@ -195,11 +195,6 @@ namespace ShareNot
 
         private static void ApplicationConfigBackwardCompatibilityTasks()
         {
-            if (Settings.IsFirstTimeRun && SystemOptions.DisableUpload)
-            {
-                DefaultTaskSettings.AfterCaptureJob = DefaultTaskSettings.AfterCaptureJob.Remove(AfterCaptureTasks.UploadImageToHost);
-            }
-
             if (Settings.IsUpgradeFrom("14.1.1"))
             {
                 if (Helpers.IsDefaultSettings(Settings.Themes, ShareXTheme.GetDefaultThemes(), (x, y) => x.Name == y.Name))

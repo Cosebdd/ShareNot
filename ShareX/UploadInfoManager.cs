@@ -330,16 +330,6 @@ namespace ShareNot
             }
         }
 
-        public void Upload()
-        {
-            if (IsItemSelected && SelectedItem.IsFileExist) UploadManager.UploadFile(SelectedItem.Info.FilePath);
-        }
-
-        public void Download()
-        {
-            if (IsItemSelected && SelectedItem.IsFileURL) UploadManager.DownloadFile(SelectedItem.Info.Result.URL);
-        }
-
         public void EditImage()
         {
             if (IsItemSelected && SelectedItem.IsImageFile) TaskHelpers.AnnotateImageFromFile(SelectedItem.Info.FilePath);
@@ -369,16 +359,6 @@ namespace ShareNot
                     FileHelpers.DeleteFile(filePath, true);
                 }
             }
-        }
-
-        public void ShortenURL(UrlShortenerType urlShortener)
-        {
-            if (IsItemSelected && SelectedItem.IsURLExist) UploadManager.ShortenURL(SelectedItem.Info.Result.ToString(), urlShortener);
-        }
-
-        public void ShareURL(URLSharingServices urlSharingService)
-        {
-            if (IsItemSelected && SelectedItem.IsURLExist) UploadManager.ShareURL(SelectedItem.Info.Result.ToString(), urlSharingService);
         }
 
         public void ShowQRCode()

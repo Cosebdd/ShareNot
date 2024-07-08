@@ -56,8 +56,6 @@ namespace ShareNot.Forms
             InitializeComponent();
             ShareXResources.ApplyTheme(this, true);
 
-            tsmiURLShorteners.Image = ShareXResources.IsDarkTheme ? Resources.edit_scale_white : Resources.edit_scale;
-
             TaskSettings = hotkeySetting;
             IsDefault = isDefault;
 
@@ -138,10 +136,6 @@ namespace ShareNot.Forms
                 MainForm.SetTextFileDestinationChecked(TaskSettings.TextDestination, TaskSettings.TextFileDestination, tsmiTextFileUploaders);
                 AddEnumItems<FileDestination>(x => TaskSettings.FileDestination = x, tsmiFileUploaders);
                 SetEnumChecked(TaskSettings.FileDestination, tsmiFileUploaders);
-                AddEnumItems<UrlShortenerType>(x => TaskSettings.URLShortenerDestination = x, tsmiURLShorteners);
-                SetEnumChecked(TaskSettings.URLShortenerDestination, tsmiURLShorteners);
-                AddEnumItems<URLSharingServices>(x => TaskSettings.URLSharingServiceDestination = x, tsmiURLSharingServices);
-                SetEnumChecked(TaskSettings.URLSharingServiceDestination, tsmiURLSharingServices);
                 UpdateDestinationStates();
 
                 if (Program.UploadersConfig != null)
@@ -512,8 +506,6 @@ namespace ShareNot.Forms
                 EnableDisableToolStripMenuItems<TextDestination>(tsmiTextUploaders);
                 EnableDisableToolStripMenuItems<FileDestination>(tsmiTextFileUploaders);
                 EnableDisableToolStripMenuItems<FileDestination>(tsmiFileUploaders);
-                EnableDisableToolStripMenuItems<UrlShortenerType>(tsmiURLShorteners);
-                EnableDisableToolStripMenuItems<URLSharingServices>(tsmiURLSharingServices);
             }
         }
 
@@ -705,10 +697,6 @@ namespace ShareNot.Forms
             tsmiTextUploaders.Text = string.Format(Resources.TaskSettingsForm_UpdateUploaderMenuNames_Text_uploader___0_, textUploader);
 
             tsmiFileUploaders.Text = string.Format(Resources.TaskSettingsForm_UpdateUploaderMenuNames_File_uploader___0_, TaskSettings.FileDestination.GetLocalizedDescription());
-
-            tsmiURLShorteners.Text = string.Format(Resources.TaskSettingsForm_UpdateUploaderMenuNames_URL_shortener___0_, TaskSettings.URLShortenerDestination.GetLocalizedDescription());
-
-            tsmiURLSharingServices.Text = string.Format(Resources.TaskSettingsForm_UpdateUploaderMenuNames_URL_sharing_service___0_, TaskSettings.URLSharingServiceDestination.GetLocalizedDescription());
         }
 
         private void tbDescription_TextChanged(object sender, EventArgs e)

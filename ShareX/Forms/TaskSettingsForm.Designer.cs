@@ -55,8 +55,6 @@ namespace ShareNot.Forms
             this.tsmiImageUploaders = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiTextUploaders = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiFileUploaders = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiURLShorteners = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiURLSharingServices = new System.Windows.Forms.ToolStripMenuItem();
             this.btnTask = new MenuButton();
             this.tpGeneral = new System.Windows.Forms.TabPage();
             this.tcGeneral = new System.Windows.Forms.TabControl();
@@ -486,9 +484,7 @@ namespace ShareNot.Forms
             this.cmsDestinations.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiImageUploaders,
             this.tsmiTextUploaders,
-            this.tsmiFileUploaders,
-            this.tsmiURLShorteners,
-            this.tsmiURLSharingServices});
+            this.tsmiFileUploaders});
             this.cmsDestinations.Name = "cmsDestinations";
             resources.ApplyResources(this.cmsDestinations, "cmsDestinations");
             //
@@ -509,18 +505,6 @@ namespace ShareNot.Forms
             this.tsmiFileUploaders.Image = global::ShareNot.Properties.Resources.application_block;
             this.tsmiFileUploaders.Name = "tsmiFileUploaders";
             resources.ApplyResources(this.tsmiFileUploaders, "tsmiFileUploaders");
-            //
-            // tsmiURLShorteners
-            //
-            this.tsmiURLShorteners.Image = global::ShareNot.Properties.Resources.edit_scale;
-            this.tsmiURLShorteners.Name = "tsmiURLShorteners";
-            resources.ApplyResources(this.tsmiURLShorteners, "tsmiURLShorteners");
-            //
-            // tsmiURLSharingServices
-            //
-            this.tsmiURLSharingServices.Image = global::ShareNot.Properties.Resources.globe_share;
-            this.tsmiURLSharingServices.Name = "tsmiURLSharingServices";
-            resources.ApplyResources(this.tsmiURLSharingServices, "tsmiURLSharingServices");
             //
             // btnTask
             //
@@ -2570,8 +2554,6 @@ namespace ShareNot.Forms
         private System.Windows.Forms.ToolStripMenuItem tsmiImageUploaders;
         private System.Windows.Forms.ToolStripMenuItem tsmiTextUploaders;
         private System.Windows.Forms.ToolStripMenuItem tsmiFileUploaders;
-        private System.Windows.Forms.ToolStripMenuItem tsmiURLShorteners;
-        private System.Windows.Forms.ToolStripMenuItem tsmiURLSharingServices;
         private System.Windows.Forms.ComboBox cbImageFileExist;
         private System.Windows.Forms.Label lblImageFileExist;
         private System.Windows.Forms.TabPage tpThumbnail;

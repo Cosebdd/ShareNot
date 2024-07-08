@@ -35,9 +35,6 @@ namespace ShareNot.IndexerLib.Forms
 {
     public partial class DirectoryIndexerForm : Form
     {
-        public delegate void UploadRequestedEventHandler(string source);
-        public event UploadRequestedEventHandler UploadRequested;
-
         public IndexerSettings Settings { get; set; }
         public string Source { get; private set; }
 
@@ -85,7 +82,6 @@ namespace ShareNot.IndexerLib.Forms
             if (!string.IsNullOrEmpty(folderPath) && Directory.Exists(folderPath))
             {
                 btnIndexFolder.Enabled = false;
-                btnUpload.Enabled = false;
                 btnSaveAs.Enabled = false;
 
                 await Task.Run(() =>
@@ -111,28 +107,12 @@ namespace ShareNot.IndexerLib.Forms
                             txtPreview.Visible = true;
                             txtPreview.Text = Source;
                         }
-
-                        btnUpload.Enabled = true;
                     }
 
                     btnIndexFolder.Enabled = true;
                     btnSaveAs.Enabled = true;
                 }
             }
-        }
-
-        private void btnUpload_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(Source))
-            {
-                OnUploadRequested(Source);
-                Close();
-            }
-        }
-
-        protected void OnUploadRequested(string source)
-        {
-            UploadRequested?.Invoke(source);
         }
 
         private void btnSaveAs_Click(object sender, EventArgs e)

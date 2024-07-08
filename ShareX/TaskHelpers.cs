@@ -92,34 +92,6 @@ namespace ShareNot
 
             switch (job)
             {
-                // Upload
-                case HotkeyType.FileUpload:
-                    UploadManager.UploadFile(safeTaskSettings);
-                    break;
-                case HotkeyType.FolderUpload:
-                    UploadManager.UploadFolder(safeTaskSettings);
-                    break;
-                case HotkeyType.ClipboardUpload:
-                    UploadManager.ClipboardUpload(safeTaskSettings);
-                    break;
-                case HotkeyType.ClipboardUploadWithContentViewer:
-                    UploadManager.ClipboardUploadWithContentViewer(safeTaskSettings);
-                    break;
-                case HotkeyType.UploadText:
-                    UploadManager.ShowTextUploadDialog(safeTaskSettings);
-                    break;
-                case HotkeyType.UploadURL:
-                    UploadManager.UploadURL(safeTaskSettings);
-                    break;
-                case HotkeyType.DragDropUpload:
-                    OpenDropWindow(safeTaskSettings);
-                    break;
-                case HotkeyType.ShortenURL:
-                    UploadManager.ShowShortenURLDialog(safeTaskSettings);
-                    break;
-                case HotkeyType.StopUploads:
-                    TaskManager.StopAllTasks();
-                    break;
                 // Screen capture
                 case HotkeyType.PrintScreen:
                     new CaptureFullscreen().Capture(safeTaskSettings);
@@ -786,7 +758,6 @@ namespace ShareNot
         public static void OpenHistory()
         {
             HistoryForm historyForm = new HistoryForm(Program.HistoryFilePath, Program.Settings.HistorySettings,
-                filePath => UploadManager.UploadFile(filePath),
                 filePath => AnnotateImageFromFile(filePath),
                 filePath => PinToScreen(filePath));
 
@@ -796,7 +767,6 @@ namespace ShareNot
         public static void OpenImageHistory()
         {
             ImageHistoryForm imageHistoryForm = new ImageHistoryForm(Program.HistoryFilePath, Program.Settings.ImageHistorySettings,
-                filePath => UploadManager.UploadFile(filePath),
                 filePath => AnnotateImageFromFile(filePath),
                 filePath => PinToScreen(filePath));
 
@@ -806,17 +776,6 @@ namespace ShareNot
         public static void OpenDebugLog()
         {
             DebugForm form = DebugForm.GetFormInstance(DebugHelper.Logger);
-
-            if (!form.HasUploadRequested)
-            {
-                form.UploadRequested += text =>
-                {
-                    if (MessageBox.Show(form, Resources.MainForm_UploadDebugLogWarning, "ShareNot", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                    {
-                        UploadManager.UploadText(text);
-                    }
-                };
-            }
 
             form.ForceActivate();
         }
@@ -877,12 +836,6 @@ namespace ShareNot
             IndexerSettings indexerSettings = taskSettings.ToolsSettingsReference.IndexerSettings;
             indexerSettings.BinaryUnits = Program.Settings.BinaryUnits;
             DirectoryIndexerForm form = new DirectoryIndexerForm(indexerSettings);
-            form.UploadRequested += source =>
-            {
-                WorkerTask task = WorkerTask.CreateTextUploaderTask(source, taskSettings);
-                task.Info.FileName = Path.ChangeExtension(task.Info.FileName, indexerSettings.Output.ToString().ToLowerInvariant());
-                TaskManager.Start(task);
-            };
             form.Show();
         }
 
@@ -947,16 +900,7 @@ namespace ShareNot
             taskSettings.ToolsSettingsReference.VideoThumbnailOptions.DefaultOutputDirectory = GetScreenshotsFolder(taskSettings);
             VideoThumbnailerForm thumbnailerForm = new VideoThumbnailerForm(taskSettings.CaptureSettings.FFmpegOptions.FFmpegPath,
                 taskSettings.ToolsSettingsReference.VideoThumbnailOptions);
-            thumbnailerForm.ThumbnailsTaken += thumbnails =>
-            {
-                if (taskSettings.ToolsSettingsReference.VideoThumbnailOptions.UploadThumbnails)
-                {
-                    foreach (VideoThumbnailInfo thumbnailInfo in thumbnails)
-                    {
-                        UploadManager.UploadFile(thumbnailInfo.FilePath, taskSettings);
-                    }
-                }
-            };
+
             thumbnailerForm.Show();
         }
 
@@ -1671,8 +1615,6 @@ namespace ShareNot
                     case AfterCaptureTasks.ShowInExplorer: return Resources.folder_stand;
                     case AfterCaptureTasks.ScanQRCode: return ShareXResources.IsDarkTheme ? Resources.barcode_2d_white : Resources.barcode_2d;
                     case AfterCaptureTasks.DoOCR: return ShareXResources.IsDarkTheme ? Resources.edit_drop_cap_white : Resources.edit_drop_cap;
-                    case AfterCaptureTasks.UploadImageToHost: return Resources.upload_cloud;
-                    case AfterCaptureTasks.DeleteFile: return Resources.bin;
                 }
             }
             else if (value is AfterUploadTasks afterUploadTask)
@@ -1680,12 +1622,6 @@ namespace ShareNot
                 switch (afterUploadTask)
                 {
                     default: throw new Exception("Icon missing for after upload task: " + afterUploadTask);
-                    case AfterUploadTasks.ShowAfterUploadWindow: return Resources.application_browser;
-                    case AfterUploadTasks.UseURLShortener: return ShareXResources.IsDarkTheme ? Resources.edit_scale_white : Resources.edit_scale;
-                    case AfterUploadTasks.ShareURL: return Resources.globe_share;
-                    case AfterUploadTasks.CopyURLToClipboard: return Resources.clipboard_paste_document_text;
-                    case AfterUploadTasks.OpenURL: return Resources.globe__arrow;
-                    case AfterUploadTasks.ShowQRCode: return ShareXResources.IsDarkTheme ? Resources.barcode_2d_white : Resources.barcode_2d;
                 }
             }
             else if (value is HotkeyType hotkeyType)
@@ -1694,16 +1630,6 @@ namespace ShareNot
                 {
                     default: throw new Exception("Icon missing for hotkey type: " + hotkeyType);
                     case HotkeyType.None: return null;
-                    // Upload
-                    case HotkeyType.FileUpload: return Resources.folder_open_document;
-                    case HotkeyType.FolderUpload: return Resources.folder;
-                    case HotkeyType.ClipboardUpload: return Resources.clipboard;
-                    case HotkeyType.ClipboardUploadWithContentViewer: return Resources.clipboard_task;
-                    case HotkeyType.UploadText: return Resources.notebook;
-                    case HotkeyType.UploadURL: return Resources.drive;
-                    case HotkeyType.DragDropUpload: return Resources.inbox;
-                    case HotkeyType.ShortenURL: return ShareXResources.IsDarkTheme ? Resources.edit_scale_white : Resources.edit_scale;
-                    case HotkeyType.StopUploads: return Resources.cross_button;
                     // Screen capture
                     case HotkeyType.PrintScreen: return Resources.layer_fullscreen;
                     case HotkeyType.ActiveWindow: return Resources.application_blue;
@@ -1825,8 +1751,6 @@ namespace ShareNot
                             if (cui.DestinationType.HasFlag(CustomUploaderDestinationType.ImageUploader)) destinations.Add("images");
                             if (cui.DestinationType.HasFlag(CustomUploaderDestinationType.TextUploader)) destinations.Add("texts");
                             if (cui.DestinationType.HasFlag(CustomUploaderDestinationType.FileUploader)) destinations.Add("files");
-                            if (cui.DestinationType.HasFlag(CustomUploaderDestinationType.URLShortener) ||
-                                cui.DestinationType.HasFlag(CustomUploaderDestinationType.URLSharingService)) destinations.Add("urls");
 
                             string destinationsText = string.Join("/", destinations);
 
@@ -1866,18 +1790,6 @@ namespace ShareNot
                             {
                                 Program.UploadersConfig.CustomFileUploaderSelected = index;
                                 Program.DefaultTaskSettings.FileDestination = FileDestination.CustomFileUploader;
-                            }
-
-                            if (cui.DestinationType.HasFlag(CustomUploaderDestinationType.URLShortener))
-                            {
-                                Program.UploadersConfig.CustomURLShortenerSelected = index;
-                                Program.DefaultTaskSettings.URLShortenerDestination = UrlShortenerType.CustomURLShortener;
-                            }
-
-                            if (cui.DestinationType.HasFlag(CustomUploaderDestinationType.URLSharingService))
-                            {
-                                Program.UploadersConfig.CustomURLSharingServiceSelected = index;
-                                Program.DefaultTaskSettings.URLSharingServiceDestination = URLSharingServices.CustomURLSharingService;
                             }
 
                             Program.MainForm.UpdateCheckStates();
@@ -1925,94 +1837,6 @@ namespace ShareNot
                 {
                     Program.DefaultTaskSettings.AfterCaptureJob = Program.DefaultTaskSettings.AfterCaptureJob.Add(AfterCaptureTasks.AddImageEffects);
                     Program.MainForm.UpdateCheckStates();
-                }
-            }
-        }
-
-        public static async Task HandleNativeMessagingInput(string filePath, TaskSettings taskSettings = null)
-        {
-            if (!string.IsNullOrEmpty(filePath) && File.Exists(filePath))
-            {
-                NativeMessagingInput nativeMessagingInput = null;
-
-                try
-                {
-                    nativeMessagingInput = JsonHelpers.DeserializeFromFile<NativeMessagingInput>(filePath);
-                }
-                catch (Exception e)
-                {
-                    DebugHelper.WriteException(e);
-                }
-                finally
-                {
-                    File.Delete(filePath);
-                }
-
-                if (nativeMessagingInput != null)
-                {
-                    if (taskSettings == null) taskSettings = TaskSettings.GetDefaultTaskSettings();
-
-                    PlayPopSound(taskSettings);
-
-                    switch (nativeMessagingInput.Action)
-                    {
-                        // TEMP: For backward compatibility
-                        default:
-                            if (!string.IsNullOrEmpty(nativeMessagingInput.URL))
-                            {
-                                UploadManager.DownloadAndUploadFile(nativeMessagingInput.URL, taskSettings);
-                            }
-                            else if (!string.IsNullOrEmpty(nativeMessagingInput.Text))
-                            {
-                                UploadManager.UploadText(nativeMessagingInput.Text, taskSettings);
-                            }
-                            break;
-                        case NativeMessagingAction.UploadImage:
-                            if (!string.IsNullOrEmpty(nativeMessagingInput.URL))
-                            {
-                                Bitmap bmp = WebHelpers.DataURLToImage(nativeMessagingInput.URL);
-
-                                if (bmp == null && taskSettings.AdvancedSettings.ProcessImagesDuringExtensionUpload)
-                                {
-                                    try
-                                    {
-                                        bmp = await WebHelpers.DownloadImageAsync(nativeMessagingInput.URL);
-                                    }
-                                    catch
-                                    {
-                                    }
-                                }
-
-                                if (bmp != null)
-                                {
-                                    UploadManager.RunImageTask(bmp, taskSettings);
-                                }
-                                else
-                                {
-                                    UploadManager.DownloadAndUploadFile(nativeMessagingInput.URL, taskSettings);
-                                }
-                            }
-                            break;
-                        case NativeMessagingAction.UploadVideo:
-                        case NativeMessagingAction.UploadAudio:
-                            if (!string.IsNullOrEmpty(nativeMessagingInput.URL))
-                            {
-                                UploadManager.DownloadAndUploadFile(nativeMessagingInput.URL, taskSettings);
-                            }
-                            break;
-                        case NativeMessagingAction.UploadText:
-                            if (!string.IsNullOrEmpty(nativeMessagingInput.Text))
-                            {
-                                UploadManager.UploadText(nativeMessagingInput.Text, taskSettings);
-                            }
-                            break;
-                        case NativeMessagingAction.ShortenURL:
-                            if (!string.IsNullOrEmpty(nativeMessagingInput.URL))
-                            {
-                                UploadManager.ShortenURL(nativeMessagingInput.URL, taskSettings);
-                            }
-                            break;
-                    }
                 }
             }
         }

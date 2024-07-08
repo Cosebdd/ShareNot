@@ -94,8 +94,6 @@ namespace ShareNot
                         FileHelpers.CreateDirectoryFromFilePath(destPath);
                         File.Move(origPath, destPath);
                     }
-
-                    UploadManager.UploadFile(destPath, taskSettingsCopy);
                 };
 
                 WatchFolders.Add(watchFolder);

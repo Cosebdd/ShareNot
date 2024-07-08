@@ -110,25 +110,6 @@ namespace ShareNot.Controls
                         x.Checked = x.Tag is FileDestination fileDestination && fileDestination == info.TaskSettings.FileDestination;
                     });
                     break;
-                case EDataType.URL:
-                    Helpers.GetEnums<UrlShortenerType>().ForEach(x =>
-                    {
-                        string overrideText = null;
-
-                        if (x == UrlShortenerType.CustomURLShortener)
-                        {
-                            overrideText = GetCustomUploaderName(Program.UploadersConfig.CustomURLShortenerSelected, info.TaskSettings);
-                        }
-
-                        AddDestination<UrlShortenerType>((int)x, EDataType.URL, info.TaskSettings, overrideText);
-                    });
-
-                    flp.Controls.OfType<RadioButton>().ForEach(x =>
-                    {
-                        x.Checked = x.Tag is UrlShortenerType urlShortenerType && urlShortenerType == info.TaskSettings.URLShortenerDestination;
-                    });
-
-                    break;
             }
 
             OnInitCompleted();
@@ -241,12 +222,6 @@ namespace ShareNot.Controls
                         taskSettings.ImageDestination = ImageDestination.FileUploader;
                         taskSettings.TextDestination = TextDestination.FileUploader;
                         taskSettings.ImageFileDestination = taskSettings.TextFileDestination = taskSettings.FileDestination = fileDestination;
-                    }
-                    break;
-                case EDataType.URL:
-                    if (destination is UrlShortenerType urlShortenerDestination)
-                    {
-                        taskSettings.URLShortenerDestination = urlShortenerDestination;
                     }
                     break;
             }

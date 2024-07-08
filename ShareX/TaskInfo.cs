@@ -42,27 +42,6 @@ namespace ShareNot
         public string Status { get; set; }
         public TaskJob Job { get; set; }
 
-        public bool IsUploadJob
-        {
-            get
-            {
-                switch (Job)
-                {
-                    case TaskJob.Job:
-                        return TaskSettings.AfterCaptureJob.HasFlag(AfterCaptureTasks.UploadImageToHost);
-                    case TaskJob.DataUpload:
-                    case TaskJob.FileUpload:
-                    case TaskJob.TextUpload:
-                    case TaskJob.ShortenURL:
-                    case TaskJob.ShareURL:
-                    case TaskJob.DownloadUpload:
-                        return true;
-                }
-
-                return false;
-            }
-        }
-
         public ProgressManager Progress { get; set; }
 
         private string filePath;
@@ -111,35 +90,6 @@ namespace ShareNot
         {
             get
             {
-                if (IsUploadJob)
-                {
-                    switch (UploadDestination)
-                    {
-                        case EDataType.Image:
-                            return TaskSettings.ImageDestination.GetLocalizedDescription();
-                        case EDataType.Text:
-                            return TaskSettings.TextDestination.GetLocalizedDescription();
-                        case EDataType.File:
-                            switch (DataType)
-                            {
-                                case EDataType.Image:
-                                    return TaskSettings.ImageFileDestination.GetLocalizedDescription();
-                                case EDataType.Text:
-                                    return TaskSettings.TextFileDestination.GetLocalizedDescription();
-                                default:
-                                case EDataType.File:
-                                    return TaskSettings.FileDestination.GetLocalizedDescription();
-                            }
-                        case EDataType.URL:
-                            if (Job == TaskJob.ShareURL)
-                            {
-                                return TaskSettings.URLSharingServiceDestination.GetLocalizedDescription();
-                            }
-
-                            return TaskSettings.URLShortenerDestination.GetLocalizedDescription();
-                    }
-                }
-
                 return "";
             }
         }

@@ -361,7 +361,7 @@ namespace ShareNot
 
                                 RecentManager.Add(task);
 
-                                if (!info.TaskSettings.GeneralSettings.DisableNotifications && info.Job != TaskJob.ShareURL)
+                                if (!info.TaskSettings.GeneralSettings.DisableNotifications)
                                 {
                                     if (info.TaskSettings.GeneralSettings.PlaySoundAfterUpload)
                                     {
@@ -395,12 +395,6 @@ namespace ShareNot
                                         };
 
                                         NotificationForm.Show(toastConfig);
-
-                                        if (info.TaskSettings.AfterUploadJob.HasFlag(AfterUploadTasks.ShowAfterUploadWindow) && info.IsUploadJob)
-                                        {
-                                            AfterUploadForm dlg = new AfterUploadForm(info);
-                                            NativeMethods.ShowWindow(dlg.Handle, (int)WindowShowStyle.ShowNoActivate);
-                                        }
                                     }
                                 }
                             }

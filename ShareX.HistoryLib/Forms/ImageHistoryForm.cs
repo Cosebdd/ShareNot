@@ -51,7 +51,7 @@ namespace ShareNot.HistoryLib.Forms
         private string defaultTitle;
         private List<HistoryItem> allHistoryItems;
 
-        public ImageHistoryForm(string historyPath, ImageHistorySettings settings, Action<string> uploadFile = null, Action<string> editImage = null, Action<string> pinToScreen = null)
+        public ImageHistoryForm(string historyPath, ImageHistorySettings settings, Action<string> editImage = null, Action<string> pinToScreen = null)
         {
             InitializeComponent();
             tsMain.Renderer = new ToolStripRoundedEdgeRenderer();
@@ -67,7 +67,7 @@ namespace ShareNot.HistoryLib.Forms
                 ilvImages.BorderStyle = BorderStyle.None;
             }
 
-            him = new HistoryItemManager(uploadFile, editImage, pinToScreen);
+            him = new HistoryItemManager( editImage, pinToScreen);
             him.GetHistoryItems += him_GetHistoryItems;
             ilvImages.ContextMenuStrip = him.cmsHistory;
 

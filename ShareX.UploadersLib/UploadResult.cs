@@ -76,14 +76,6 @@ namespace ShareNot.UploadersLib
             URL = url;
         }
 
-        public void ForceHTTPS()
-        {
-            URL = URLHelpers.ForcePrefix(URL);
-            ThumbnailURL = URLHelpers.ForcePrefix(ThumbnailURL);
-            DeletionURL = URLHelpers.ForcePrefix(DeletionURL);
-            ShortenedURL = URLHelpers.ForcePrefix(ShortenedURL);
-        }
-
         public override string ToString()
         {
             if (!string.IsNullOrEmpty(ShortenedURL))
