@@ -811,7 +811,7 @@ namespace ShareNot
             {
                 form.UploadRequested += text =>
                 {
-                    if (MessageBox.Show(form, Resources.MainForm_UploadDebugLogWarning, "ShareX", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    if (MessageBox.Show(form, Resources.MainForm_UploadDebugLogWarning, "ShareNot", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
                         UploadManager.UploadText(text);
                     }
@@ -859,7 +859,7 @@ namespace ShareNot
                     if (!taskSettings.GeneralSettings.DisableNotifications && taskSettings.GeneralSettings.ShowToastNotificationAfterTaskCompleted)
                     {
                         ShowNotificationTip(string.Format(Resources.TaskHelpers_OpenQuickScreenColorPicker_Copied_to_clipboard___0_, text),
-                            "ShareX - " + Resources.ScreenColorPicker);
+                            "ShareNot - " + Resources.ScreenColorPicker);
                     }
                 }
             }
@@ -1049,7 +1049,7 @@ namespace ShareNot
             }
             else
             {
-                MessageBox.Show("File does not exist:" + Environment.NewLine + filePath, "ShareX", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("File does not exist:" + Environment.NewLine + filePath, "ShareNot", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -1296,7 +1296,7 @@ namespace ShareNot
         public static void OpenDNSChanger()
         {
 #if MicrosoftStore
-            MessageBox.Show("Not supported in Microsoft Store build.", "ShareX", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Not supported in Microsoft Store build.", "ShareNot", MessageBoxButtons.OK, MessageBoxIcon.Information);
 #else
             if (Helpers.IsAdministrator())
             {
@@ -1501,7 +1501,7 @@ namespace ShareNot
             }
             else
             {
-                MessageBox.Show(Resources.ClipboardDoesNotContainAnImage, "ShareX - " + Resources.PinToScreen, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Resources.ClipboardDoesNotContainAnImage, "ShareNot - " + Resources.PinToScreen, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -1558,7 +1558,7 @@ namespace ShareNot
             if (!Environment.Is64BitOperatingSystem && !taskSettings.CaptureSettings.FFmpegOptions.OverrideCLIPath)
             {
                 MessageBox.Show(Resources.FFmpegOnlySupports64BitOperatingSystems,
-                    "ShareX - " + Resources.FFmpegIsMissing, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    "ShareNot - " + Resources.FFmpegIsMissing, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 return false;
             }
@@ -1568,7 +1568,7 @@ namespace ShareNot
             if (!File.Exists(ffmpegPath))
             {
                 MessageBox.Show(Resources.FFmpegDoesNotExistAtTheFollowingPath + "\r\n" + ffmpegPath,
-                    "ShareX - " + Resources.FFmpegIsMissing, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    "ShareNot - " + Resources.FFmpegIsMissing, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 return false;
             }
@@ -1813,7 +1813,7 @@ namespace ShareNot
                         if (cui.DestinationType == CustomUploaderDestinationType.None)
                         {
                             DialogResult result = MessageBox.Show($"Would you like to add \"{cui}\" custom uploader?",
-                                "ShareX - Custom uploader confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                                "ShareNot - Custom uploader confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
 
                             if (result == DialogResult.No)
                             {
@@ -1832,7 +1832,7 @@ namespace ShareNot
                             string destinationsText = string.Join("/", destinations);
 
                             DialogResult result = MessageBox.Show($"Would you like to set \"{cui}\" as the active custom uploader for {destinationsText}?",
-                                "ShareX - Custom uploader confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                                "ShareNot - Custom uploader confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
 
                             if (result == DialogResult.Yes)
                             {
@@ -1923,7 +1923,7 @@ namespace ShareNot
 
                 if (!Program.DefaultTaskSettings.AfterCaptureJob.HasFlag(AfterCaptureTasks.AddImageEffects) &&
                     MessageBox.Show(Resources.WouldYouLikeToEnableImageEffects,
-                    "ShareX", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    "ShareNot", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     Program.DefaultTaskSettings.AfterCaptureJob = Program.DefaultTaskSettings.AfterCaptureJob.Add(AfterCaptureTasks.AddImageEffects);
                     Program.MainForm.UpdateCheckStates();
@@ -2038,7 +2038,7 @@ namespace ShareNot
 
         public static async Task DownloadDevBuild()
         {
-            GitHubUpdateChecker updateChecker = new GitHubUpdateChecker("ShareX", "DevBuilds")
+            GitHubUpdateChecker updateChecker = new GitHubUpdateChecker("ShareNot", "DevBuilds")
             {
                 IsDev = true,
                 IsPortable = Program.Portable
@@ -2052,7 +2052,7 @@ namespace ShareNot
             }
             else if (updateChecker.Status == UpdateStatus.UpToDate)
             {
-                MessageBox.Show(Resources.ShareXIsUpToDate, "ShareX", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Resources.ShareNotIsUpToDate, "ShareNot", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -2141,7 +2141,7 @@ namespace ShareNot
             return !string.IsNullOrEmpty(content) && Encoding.UTF8.GetByteCount(content) <= 2952;
         }
 
-        public static void ShowBalloonTip(string text, ToolTipIcon icon, int timeout, string title = "ShareX", BalloonTipAction clickAction = null)
+        public static void ShowBalloonTip(string text, ToolTipIcon icon, int timeout, string title = "ShareNot", BalloonTipAction clickAction = null)
         {
             if (Program.MainForm != null && !Program.MainForm.IsDisposed && Program.MainForm.niTray != null && Program.MainForm.niTray.Visible)
             {
@@ -2150,7 +2150,7 @@ namespace ShareNot
             }
         }
 
-        public static void ShowNotificationTip(string text, string title = "ShareX", int duration = -1)
+        public static void ShowNotificationTip(string text, string title = "ShareNot", int duration = -1)
         {
             if (duration < 0)
             {
@@ -2195,14 +2195,14 @@ namespace ShareNot
         {
             if (SystemOptions.DisableUpload)
             {
-                MessageBox.Show(Resources.YourSystemAdminDisabledTheUploadFeature, "ShareX", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Resources.YourSystemAdminDisabledTheUploadFeature, "ShareNot", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 return false;
             }
 
             if (Program.Settings.DisableUpload)
             {
-                MessageBox.Show(Resources.ThisFeatureWillNotWorkWhenDisableUploadOptionIsEnabled, "ShareX", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Resources.ThisFeatureWillNotWorkWhenDisableUploadOptionIsEnabled, "ShareNot", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 return false;
             }

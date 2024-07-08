@@ -141,7 +141,7 @@
             this.MinimumSize = new System.Drawing.Size(700, 500);
             this.Name = "ScrollingCaptureForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ShareX - Scrolling capture";
+            this.Text = "ShareNot - Scrolling capture";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Activated += new System.EventHandler(this.ScrollingCaptureForm_Activated);
             this.Load += new System.EventHandler(this.ScrollingCaptureForm_Load);

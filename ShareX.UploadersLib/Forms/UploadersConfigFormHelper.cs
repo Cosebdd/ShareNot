@@ -106,12 +106,12 @@ namespace ShareNot.UploadersLib.Forms
             if (result)
             {
                 oauth2.Status = OAuthLoginStatus.LoginSuccessful;
-                MessageBox.Show(Resources.UploadersConfigForm_Login_successful, "ShareX", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Resources.UploadersConfigForm_Login_successful, "ShareNot", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 oauth2.Status = OAuthLoginStatus.LoginFailed;
-                MessageBox.Show(Resources.UploadersConfigForm_Login_failed, "ShareX", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Resources.UploadersConfigForm_Login_failed, "ShareNot", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

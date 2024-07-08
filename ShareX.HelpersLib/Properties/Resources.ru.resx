@@ -1193,7 +1193,7 @@
     <value>Просмотр изображений</value>
   </data>
   <data name="ShareXImageViewer" xml:space="preserve">
-    <value>ShareX - Просмотр изображений</value>
+    <value>ShareNot - Просмотр изображений</value>
   </data>
   <data name="AfterCaptureTasks_PinToScreen" xml:space="preserve">
     <value>Закрепить на экране</value>

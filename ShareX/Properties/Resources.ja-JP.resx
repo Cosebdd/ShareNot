@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
-    Microsoft ResX Schema 
-    
+  <!--
+    Microsoft ResX Schema
+
     Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
     associated with the data types.
-    
+
     Example:
-    
+
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
@@ -26,36 +26,36 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-                
-    There are any number of "resheader" rows that contain simple 
+
+    There are any number of "resheader" rows that contain simple
     name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
     mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
     extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
     read any of the formats listed below.
-    
+
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-    
+
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
+    value   : The object must be serialized into a byte array
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -140,7 +140,7 @@
     <value>カスタム</value>
   </data>
   <data name="ActionsToolbar_OpenAtShareXStartup" xml:space="preserve">
-    <value>ShareX 起動時に開く</value>
+    <value>ShareNot 起動時に開く</value>
   </data>
   <data name="UploadTask_DownloadAndUpload_Downloading" xml:space="preserve">
     <value>ダウンロード中</value>
@@ -173,7 +173,7 @@
     <value>URLを入力してください。</value>
   </data>
   <data name="ApplicationSettingsForm_btnBrowsePersonalFolderPath_Click_Choose_ShareX_personal_folder_path" xml:space="preserve">
-    <value>ShareX  個人フォルダー パスの選択</value>
+    <value>ShareNot  個人フォルダー パスの選択</value>
   </data>
   <data name="HotkeyManager_ShowFailedHotkeys_Unable_to_register_hotkey" xml:space="preserve">
     <value>{0} を登録できません:
@@ -368,7 +368,7 @@ ShareX を再起動しますか？</value>
     <value>テキスト アップローダー: {0}</value>
   </data>
   <data name="IntegrationHelpers_UploadWithShareX" xml:space="preserve">
-    <value>ShareX でアップロード</value>
+    <value>ShareNot でアップロード</value>
   </data>
   <data name="UploadTask_Prepare_Preparing" xml:space="preserve">
     <value>準備中</value>
@@ -424,7 +424,7 @@ ShareX を再起動しますか？</value>
     <value>スペイン語</value>
   </data>
   <data name="IntegrationHelpers_EditWithShareX" xml:space="preserve">
-    <value>ShareX で画像編集</value>
+    <value>ShareNot で画像編集</value>
   </data>
   <data name="SwitchToListView" xml:space="preserve">
     <value>リスト表示に切り替え</value>
@@ -442,7 +442,7 @@ ShareX を再起動しますか？</value>
     <value>スタートアップの設定は組織によって無効にされています</value>
   </data>
   <data name="ApplicationSettingsForm_btnResetSettings_Click_WouldYouLikeToResetShareXSettings" xml:space="preserve">
-    <value>ShareX の設定を初期化しますか？</value>
+    <value>ShareNot の設定を初期化しますか？</value>
   </data>
   <data name="AboutForm_AboutForm_Language_fa_IR" xml:space="preserve">
     <value>ペルシア語</value>
@@ -529,10 +529,10 @@ ShareX を再起動しますか？</value>
     <value>スクリーン カラーピッカー</value>
   </data>
   <data name="ShareXConfirmation" xml:space="preserve">
-    <value>ShareX - 確認</value>
+    <value>ShareNot - 確認</value>
   </data>
   <data name="ShareXIsMinimizedToTheSystemTray" xml:space="preserve">
-    <value>ShareX はシステムトレイに最小化されています。</value>
+    <value>ShareNot はシステムトレイに最小化されています。</value>
   </data>
   <data name="WouldYouLikeToEnableImageEffects" xml:space="preserve">
     <value>インストールした画像エフェクトを有効にしますか？
@@ -540,7 +540,7 @@ ShareX を再起動しますか？</value>
 後で「キャプチャー後のタスク」から無効化もできます。</value>
   </data>
   <data name="ShareXNeedsToBeRestartedForThePersonalFolderChangesToApply" xml:space="preserve">
-    <value>ShareX の再起動が必要です。
+    <value>ShareNot の再起動が必要です。
 
 再起動しますか？</value>
   </data>
@@ -596,7 +596,7 @@ ShareX を再起動しますか？</value>
     <value>FFmpeg の映像とオーディオ両方を同時に None にはできません。</value>
   </data>
   <data name="FFmpegOnlySupports64BitOperatingSystems" xml:space="preserve">
-    <value>ShareX の用意する FFmpeg は、64ビットOSにしか対応していません。</value>
+    <value>ShareNot の用意する FFmpeg は、64ビットOSにしか対応していません。</value>
   </data>
   <data name="ImageData_Write_Error_Message" xml:space="preserve">
     <value>次のパスへ画像を書き込めません:</value>

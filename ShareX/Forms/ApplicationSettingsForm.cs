@@ -575,7 +575,7 @@ namespace ShareNot.Forms
 
         private void BtnThemeReset_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(Resources.WouldYouLikeToResetThemes, "ShareX - " + Resources.Confirmation, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            if (MessageBox.Show(Resources.WouldYouLikeToResetThemes, "ShareNot - " + Resources.Confirmation, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
                 Program.Settings.Themes = ShareXTheme.GetDefaultThemes();
                 Program.Settings.SelectedTheme = 0;
@@ -768,8 +768,8 @@ namespace ShareNot.Forms
                 using (SaveFileDialog sfd = new SaveFileDialog())
                 {
                     sfd.DefaultExt = "sxb";
-                    sfd.FileName = $"ShareX-{Helpers.GetApplicationVersion()}-backup.sxb";
-                    sfd.Filter = "ShareX backup (*.sxb)|*.sxb|All files (*.*)|*.*";
+                    sfd.FileName = $"ShareNot-{Helpers.GetApplicationVersion()}-backup.sxb";
+                    sfd.Filter = "ShareNot backup (*.sxb)|*.sxb|All files (*.*)|*.*";
 
                     if (sfd.ShowDialog() == DialogResult.OK)
                     {
@@ -805,7 +805,7 @@ namespace ShareNot.Forms
         {
             using (OpenFileDialog ofd = new OpenFileDialog())
             {
-                ofd.Filter = "ShareX backup (*.sxb)|*.sxb|All files (*.*)|*.*";
+                ofd.Filter = "ShareNot backup (*.sxb)|*.sxb|All files (*.*)|*.*";
 
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
@@ -844,7 +844,7 @@ namespace ShareNot.Forms
 
         private async void btnResetSettings_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(Resources.ApplicationSettingsForm_btnResetSettings_Click_WouldYouLikeToResetShareXSettings, "ShareX - " + Resources.Confirmation,
+            if (MessageBox.Show(Resources.ApplicationSettingsForm_btnResetSettings_Click_WouldYouLikeToResetShareXSettings, "ShareNot - " + Resources.Confirmation,
                 MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
                 SettingManager.ResetSettings();

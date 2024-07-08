@@ -166,7 +166,7 @@ namespace ShareNot
                 message = e.Message;
             }
 
-            TaskHelpers.ShowNotificationTip(message, "ShareX - " + Resources.FailedToSaveSettings, 5000);
+            TaskHelpers.ShowNotificationTip(message, "ShareNot - " + Resources.FailedToSaveSettings, 5000);
         }
 
         public static void LoadUploadersConfig(bool fallbackSupport = true)
@@ -404,7 +404,7 @@ namespace ShareNot
             catch (Exception e)
             {
                 DebugHelper.WriteException(e);
-                MessageBox.Show("Error while exporting backup:\r\n" + e, "ShareX - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error while exporting backup:\r\n" + e, "ShareNot - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -430,7 +430,7 @@ namespace ShareNot
             catch (Exception e)
             {
                 DebugHelper.WriteException(e);
-                MessageBox.Show("Error while importing backup:\r\n" + e, "ShareX - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error while importing backup:\r\n" + e, "ShareNot - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             return false;

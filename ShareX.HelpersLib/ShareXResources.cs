@@ -36,7 +36,7 @@ namespace ShareNot.HelpersLib
 {
     public static class ShareXResources
     {
-        public static string Name { get; set; } = "ShareX";
+        public static string Name { get; set; } = "ShareNot";
 
         public static string UserAgent
         {

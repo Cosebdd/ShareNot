@@ -35,7 +35,7 @@ namespace ShareNot
         {
             if (UpdateChannel == UpdateChannel.Dev)
             {
-                return new GitHubUpdateChecker("ShareX", "DevBuilds")
+                return new GitHubUpdateChecker("Cosebdd", "ShareNot")
                 {
                     IsDev = true,
                     IsPortable = Program.Portable,
@@ -44,7 +44,7 @@ namespace ShareNot
             }
             else
             {
-                return new GitHubUpdateChecker("ShareX", "ShareX")
+                return new GitHubUpdateChecker("Cosebdd", "ShareNot")
                 {
                     IsPortable = Program.Portable,
                     IncludePreRelease = UpdateChannel == UpdateChannel.PreRelease,

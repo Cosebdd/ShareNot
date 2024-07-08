@@ -1,6 +1,6 @@
 ﻿{
   "name": "com.getsharex.sharex",
-  "description": "ShareX",
+  "description": "ShareNot",
   "path": "ShareX_NativeMessagingHost.exe",
   "type": "stdio",
   "allowed_origins": [

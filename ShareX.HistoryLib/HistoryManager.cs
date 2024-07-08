@@ -58,7 +58,7 @@ namespace ShareNot.HistoryLib
                 DebugHelper.WriteException(e);
 
                 MessageBox.Show(Resources.ErrorOccuredWhileReadingHistoryFile + " " + FilePath + "\r\n\r\n" + e,
-                    "ShareX - " + Resources.HistoryManager_GetHistoryItems_Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    "ShareNot - " + Resources.HistoryManager_GetHistoryItems_Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             return new List<HistoryItem>();

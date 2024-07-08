@@ -49,8 +49,8 @@ namespace ShareNot
 {
     internal static class Program
     {
-        public const string AppName = "ShareX";
-        public const string MutexName = "82E6AC09-0FEF-4390-AD9F-0DD3F5561EFC";
+        public const string AppName = "ShareNot";
+        public const string MutexName = "6C3DCC70-3D1D-11EF-9A9C-0800200C9A66";
         public static readonly string PipeName = $"{Environment.MachineName}-{Environment.UserName}-{AppName}";
 
         public const ShareXBuild Build =
@@ -220,7 +220,7 @@ namespace ShareNot
                     return null;
                 }
 
-                string fileName = string.Format("ShareX-Log-{0:yyyy-MM}.txt", DateTime.Now);
+                string fileName = string.Format("ShareNot-Log-{0:yyyy-MM}.txt", DateTime.Now);
                 return Path.Combine(LogsFolder, fileName);
             }
         }
@@ -303,7 +303,7 @@ namespace ShareNot
 
                     if (restartRequested)
                     {
-                        DebugHelper.WriteLine("ShareX restarting.");
+                        DebugHelper.WriteLine("ShareNot restarting.");
 
                         if (restartAsAdmin)
                         {
@@ -325,7 +325,7 @@ namespace ShareNot
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            DebugHelper.WriteLine("ShareX starting.");
+            DebugHelper.WriteLine("ShareNot starting.");
             DebugHelper.WriteLine("Version: " + VersionText);
             DebugHelper.WriteLine("Build: " + Build);
             DebugHelper.WriteLine("Command line: " + Environment.CommandLine);
@@ -377,12 +377,12 @@ namespace ShareNot
             {
                 closeSequenceStarted = true;
 
-                DebugHelper.WriteLine("ShareX closing.");
+                DebugHelper.WriteLine("ShareNot closing.");
 
                 WatchFolderManager?.Dispose();
                 SettingManager.SaveAllSettings();
 
-                DebugHelper.WriteLine("ShareX closed.");
+                DebugHelper.WriteLine("ShareNot closed.");
             }
         }
 
@@ -514,7 +514,7 @@ namespace ShareNot
                         sb.AppendLine();
                         sb.Append(e);
 
-                        MessageBox.Show(sb.ToString(), "ShareX - " + Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(sb.ToString(), "ShareNot - " + Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         CustomPersonalPath = "";
                     }
                 }
@@ -552,7 +552,7 @@ namespace ShareNot
         public static void UpdateHelpersSpecialFolders()
         {
             Dictionary<string, string> specialFolders = new Dictionary<string, string>();
-            specialFolders.Add("ShareXImageEffects", ImageEffectsFolder);
+            specialFolders.Add("ShareNotImageEffects", ImageEffectsFolder);
             HelpersOptions.ShareXSpecialFolders = specialFolders;
         }
 
@@ -617,7 +617,7 @@ namespace ShareNot
                     {
                         DebugHelper.WriteException(e);
                         MessageBox.Show(string.Format(Resources.Program_WritePersonalPathConfig_Cant_access_to_file, PersonalPathConfigFilePath),
-                            "ShareX", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            "ShareNot", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     catch (Exception e)
                     {

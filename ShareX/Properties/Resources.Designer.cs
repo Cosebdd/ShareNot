@@ -8,6 +8,9 @@
 //------------------------------------------------------------------------------
 
 namespace ShareNot.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -19,15 +22,15 @@ namespace ShareNot.Properties {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
-
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -41,7 +44,7 @@ namespace ShareNot.Properties {
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
@@ -55,7 +58,7 @@ namespace ShareNot.Properties {
                 resourceCulture = value;
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Changelog.
         /// </summary>
@@ -64,7 +67,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Changelog", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Credits.
         /// </summary>
@@ -73,7 +76,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Credits", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to German.
         /// </summary>
@@ -82,7 +85,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Language_de", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Spanish.
         /// </summary>
@@ -91,7 +94,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Language_es", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Mexican Spanish.
         /// </summary>
@@ -100,7 +103,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Language_es_MX", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Persian.
         /// </summary>
@@ -109,7 +112,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Language_fa_IR", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to French.
         /// </summary>
@@ -118,7 +121,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Language_fr", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Hebrew.
         /// </summary>
@@ -127,7 +130,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Language_he-IL", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Hungarian.
         /// </summary>
@@ -136,7 +139,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Language_hu", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Indonesian.
         /// </summary>
@@ -145,7 +148,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Language_id_ID", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Italian.
         /// </summary>
@@ -154,7 +157,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Language_it_IT", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Japanese.
         /// </summary>
@@ -163,7 +166,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Language_ja_JP", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Korean.
         /// </summary>
@@ -172,7 +175,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Language_ko_KR", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Dutch.
         /// </summary>
@@ -181,7 +184,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Language_nl_NL", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Polish.
         /// </summary>
@@ -190,7 +193,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Language_pl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Portuguese (Brazil).
         /// </summary>
@@ -199,7 +202,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Language_pt_BR", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Portuguese.
         /// </summary>
@@ -208,7 +211,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Language_pt_PT", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Romanian.
         /// </summary>
@@ -217,7 +220,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Language_ro", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Russian.
         /// </summary>
@@ -226,7 +229,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Language_ru", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Turkish.
         /// </summary>
@@ -235,7 +238,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Language_tr", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Ukrainian.
         /// </summary>
@@ -244,7 +247,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Language_uk", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Vietnamese.
         /// </summary>
@@ -253,7 +256,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Language_vi_VN", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Simplified Chinese.
         /// </summary>
@@ -262,7 +265,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Language_zh_CH", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Traditional Chinese.
         /// </summary>
@@ -271,7 +274,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Language_zh_TW", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Links.
         /// </summary>
@@ -280,7 +283,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Links", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Privacy policy.
         /// </summary>
@@ -289,7 +292,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Privacy_policy", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Project page.
         /// </summary>
@@ -298,7 +301,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Project_page", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Team.
         /// </summary>
@@ -307,7 +310,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Team", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Translators.
         /// </summary>
@@ -316,7 +319,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Translators", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Website.
         /// </summary>
@@ -325,7 +328,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AboutForm_AboutForm_Website", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to File path can&apos;t be empty..
         /// </summary>
@@ -334,7 +337,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ActionsForm_btnOK_Click_File_path_can_t_be_empty_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Name can&apos;t be empty..
         /// </summary>
@@ -343,7 +346,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ActionsForm_btnOK_Click_Name_can_t_be_empty_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Lock position.
         /// </summary>
@@ -352,7 +355,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ActionsToolbar__LockPosition", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Close.
         /// </summary>
@@ -361,7 +364,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ActionsToolbar_Close", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Edit....
         /// </summary>
@@ -370,7 +373,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ActionsToolbar_Edit", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Open at ShareX startup.
         /// </summary>
@@ -379,7 +382,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ActionsToolbar_OpenAtShareXStartup", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Stay top most.
         /// </summary>
@@ -388,7 +391,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ActionsToolbar_StayTopMost", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Hold left down to drag
         ///Right click to open menu
@@ -399,7 +402,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ActionsToolbar_Tip", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Separator.
         /// </summary>
@@ -408,7 +411,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ActionsToolbarEditForm_Separator", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -418,7 +421,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -428,7 +431,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -438,7 +441,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -448,7 +451,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -458,7 +461,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -468,7 +471,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -478,7 +481,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -488,7 +491,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -498,7 +501,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -508,7 +511,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -518,7 +521,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -528,7 +531,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -538,7 +541,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -548,7 +551,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -558,7 +561,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -568,7 +571,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Choose screenshots folder path.
         /// </summary>
@@ -578,7 +581,7 @@ namespace ShareNot.Properties {
                         "older_path", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Choose ShareX personal folder path.
         /// </summary>
@@ -588,7 +591,7 @@ namespace ShareNot.Properties {
                         "folder_path", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Would you like to reset ShareX settings?.
         /// </summary>
@@ -597,9 +600,9 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ApplicationSettingsForm_btnResetSettings_Click_WouldYouLikeToResetShareXSettings", resourceCulture);
             }
         }
-
+        
         /// <summary>
-        ///   Looks up a localized string similar to ShareX needs to be restarted for the language changes to apply.
+        ///   Looks up a localized string similar to ShareNot needs to be restarted for the language changes to apply.
         ///
         ///Would you like to restart ShareX?.
         /// </summary>
@@ -608,7 +611,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ApplicationSettingsForm_cbLanguage_SelectedIndexChanged_Language_Restart", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Startup has been disabled by your organization.
         /// </summary>
@@ -617,7 +620,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ApplicationSettingsForm_cbStartWithWindows_DisabledByPolicy_Text", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Startup has been disabled in Task Manager.
         /// </summary>
@@ -626,7 +629,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ApplicationSettingsForm_cbStartWithWindows_DisabledByUser_Text", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Startup has been enabled by your organization.
         /// </summary>
@@ -635,7 +638,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ApplicationSettingsForm_cbStartWithWindows_EnabledByPolicy_Text", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Run ShareX when Windows starts.
         /// </summary>
@@ -644,7 +647,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ApplicationSettingsForm_cbStartWithWindows_Text", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to For settings to take effect ShareX needs to be reopened from Steam..
         /// </summary>
@@ -654,7 +657,7 @@ namespace ShareNot.Properties {
                         "ct_ShareX_needs_to_be_reopened_from_Steam_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -664,7 +667,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -674,7 +677,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Start.
         /// </summary>
@@ -683,7 +686,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AutoCaptureForm_Execute_Start", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Stop.
         /// </summary>
@@ -692,7 +695,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AutoCaptureForm_Execute_Stop", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to X: {0}, Y: {1}, Width: {2}, Height: {3}.
         /// </summary>
@@ -701,7 +704,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AutoCaptureForm_UpdateRegion_X___0___Y___1___Width___2___Height___3_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Timeleft: {0}s ({1}%) Total: {2}.
         /// </summary>
@@ -710,7 +713,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("AutoCaptureForm_UpdateStatus_Timeleft___0_s___1____Total___2_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -720,7 +723,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -730,7 +733,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -740,7 +743,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Custom.
         /// </summary>
@@ -749,7 +752,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("BeforeUploadControl_AddDestination_Custom", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to {0} is about to be uploaded to {1}. You may choose a different destination..
         /// </summary>
@@ -759,7 +762,7 @@ namespace ShareNot.Properties {
                         "ose_a_different_destination_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Please choose a destination..
         /// </summary>
@@ -768,7 +771,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("BeforeUploadForm_BeforeUploadForm_Please_choose_a_destination_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -778,7 +781,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -788,7 +791,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -798,7 +801,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -808,7 +811,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -818,7 +821,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -828,7 +831,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -838,7 +841,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -848,7 +851,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -858,7 +861,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
@@ -867,7 +870,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetStream("CaptureSound", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -877,7 +880,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -887,7 +890,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -897,7 +900,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Chrome support enabled..
         /// </summary>
@@ -906,7 +909,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ChromeForm_btnRegister_Click_Chrome_support_enabled_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Chrome support disabled..
         /// </summary>
@@ -915,7 +918,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ChromeForm_btnUnregister_Click_Chrome_support_disabled_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -925,7 +928,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -935,7 +938,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -945,7 +948,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -955,7 +958,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -965,7 +968,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -975,7 +978,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Clipboard content: File (Count: {0}).
         /// </summary>
@@ -985,7 +988,7 @@ namespace ShareNot.Properties {
                         "___0__", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Clipboard content: Image (Size: {0}x{1}).
         /// </summary>
@@ -995,7 +998,7 @@ namespace ShareNot.Properties {
                         "___0_x_1__", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Clipboard content: Text (Length: {0}).
         /// </summary>
@@ -1005,7 +1008,7 @@ namespace ShareNot.Properties {
                         "h___0__", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Clipboard is empty or contains unknown data..
         /// </summary>
@@ -1015,7 +1018,7 @@ namespace ShareNot.Properties {
                         "_unknown_data_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Clipboard does not contain an image..
         /// </summary>
@@ -1024,7 +1027,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ClipboardDoesNotContainAnImage", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Supported variables: {0} and other variables such as {1} etc..
         /// </summary>
@@ -1034,7 +1037,7 @@ namespace ShareNot.Properties {
                         "les_such_as__1__etc_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Clipboard upload.
         /// </summary>
@@ -1043,7 +1046,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ClipboardUpload", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1053,7 +1056,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1063,7 +1066,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1073,7 +1076,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
@@ -1083,7 +1086,7 @@ namespace ShareNot.Properties {
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1093,7 +1096,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1103,7 +1106,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Confirmation.
         /// </summary>
@@ -1112,7 +1115,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("Confirmation", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1122,7 +1125,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1132,7 +1135,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1142,7 +1145,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1152,7 +1155,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1162,7 +1165,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1172,7 +1175,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1182,7 +1185,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1192,7 +1195,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1202,7 +1205,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1212,7 +1215,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1222,7 +1225,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1232,7 +1235,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1242,7 +1245,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1252,7 +1255,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1262,7 +1265,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1272,7 +1275,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1282,7 +1285,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1292,7 +1295,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Drop
         ///here.
@@ -1302,7 +1305,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("DropForm_DrawDropImage_Drop_here", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1312,7 +1315,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1322,7 +1325,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1332,7 +1335,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1342,7 +1345,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1352,7 +1355,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
@@ -1361,7 +1364,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("Error", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
@@ -1370,7 +1373,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetStream("ErrorSound", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1380,7 +1383,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1390,7 +1393,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1400,7 +1403,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1410,7 +1413,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Failed to save settings.
         /// </summary>
@@ -1419,7 +1422,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("FailedToSaveSettings", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to FFmpeg error.
         /// </summary>
@@ -1428,7 +1431,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("FFmpeg_FFmpeg_error", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to FFmpeg video and audio source can&apos;t both be &quot;None&quot;..
         /// </summary>
@@ -1437,7 +1440,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("FFmpeg_FFmpeg_video_and_audio_source_both_can_t_be__None__", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to FFmpeg does not exist at the following path:.
         /// </summary>
@@ -1446,7 +1449,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("FFmpegDoesNotExistAtTheFollowingPath", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to FFmpeg is missing.
         /// </summary>
@@ -1455,7 +1458,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("FFmpegIsMissing", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to FFmpeg that comes with ShareX only supports 64-bit operating systems..
         /// </summary>
@@ -1464,7 +1467,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("FFmpegOnlySupports64BitOperatingSystems", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Use new name: .
         /// </summary>
@@ -1473,7 +1476,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("FileExistForm_txtNewName_TextChanged_Use_new_name__", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1483,7 +1486,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1493,7 +1496,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1503,7 +1506,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1513,7 +1516,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1523,7 +1526,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1533,7 +1536,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1543,7 +1546,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1553,7 +1556,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1563,7 +1566,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1573,7 +1576,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1583,7 +1586,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1593,7 +1596,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1603,7 +1606,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1613,7 +1616,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1623,7 +1626,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to hotkey.
         /// </summary>
@@ -1632,7 +1635,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("HotkeyManager_ShowFailedHotkeys_hotkey", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Hotkey registration failed.
         /// </summary>
@@ -1641,7 +1644,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("HotkeyManager_ShowFailedHotkeys_Hotkey_registration_failed", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to hotkeys.
         /// </summary>
@@ -1650,7 +1653,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("HotkeyManager_ShowFailedHotkeys_hotkeys", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Unable to register {0}:
         ///
@@ -1663,7 +1666,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("HotkeyManager_ShowFailedHotkeys_Unable_to_register_hotkey", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Select a hotkey....
         /// </summary>
@@ -1672,7 +1675,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("HotkeySelectionControl_StartEditing_Select_a_hotkey___", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Reset all hotkeys to defaults?.
         /// </summary>
@@ -1681,7 +1684,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("HotkeySettingsForm_Reset_all_hotkeys_to_defaults_Confirmation", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1691,7 +1694,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1701,7 +1704,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1711,7 +1714,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1721,7 +1724,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1731,7 +1734,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1741,7 +1744,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1751,7 +1754,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1761,7 +1764,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1771,7 +1774,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Could not write image to path:.
         /// </summary>
@@ -1780,7 +1783,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ImageData_Write_Error_Message", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1790,7 +1793,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1800,7 +1803,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1810,7 +1813,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1820,7 +1823,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Class name.
         /// </summary>
@@ -1829,7 +1832,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("InspectWindow_ClassName", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Client rectangle.
         /// </summary>
@@ -1838,7 +1841,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("InspectWindow_ClientRectangle", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Extended window styles.
         /// </summary>
@@ -1847,7 +1850,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("InspectWindow_ExtendedWindowStyles", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Process file name.
         /// </summary>
@@ -1856,7 +1859,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("InspectWindow_ProcessFileName", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Process identifier.
         /// </summary>
@@ -1865,7 +1868,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("InspectWindow_ProcessIdentifier", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Process name.
         /// </summary>
@@ -1874,7 +1877,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("InspectWindow_ProcessName", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Window handle.
         /// </summary>
@@ -1883,7 +1886,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("InspectWindow_WindowHandle", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Window rectangle.
         /// </summary>
@@ -1892,7 +1895,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("InspectWindow_WindowRectangle", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Window styles.
         /// </summary>
@@ -1901,7 +1904,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("InspectWindow_WindowStyles", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Window title.
         /// </summary>
@@ -1910,7 +1913,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("InspectWindow_WindowTitle", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Edit with ShareX.
         /// </summary>
@@ -1919,7 +1922,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("IntegrationHelpers_EditWithShareX", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Upload with ShareX.
         /// </summary>
@@ -1928,7 +1931,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("IntegrationHelpers_UploadWithShareX", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1938,7 +1941,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1948,7 +1951,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1958,7 +1961,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1968,7 +1971,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1978,7 +1981,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1988,7 +1991,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1998,7 +2001,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2008,7 +2011,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2018,7 +2021,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2028,7 +2031,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2038,7 +2041,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2048,7 +2051,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Do you really want to delete this file?.
         /// </summary>
@@ -2057,7 +2060,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("MainForm_tsmiDeleteSelectedFile_Click_Do_you_really_want_to_delete_this_file_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to File delete confirmation.
         /// </summary>
@@ -2066,7 +2069,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("MainForm_tsmiDeleteSelectedFile_Click_File_delete_confirmation", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Text upload test.
         /// </summary>
@@ -2075,7 +2078,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("MainForm_tsmiTestTextUpload_Click_Text_upload_test", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Disable hotkeys.
         /// </summary>
@@ -2084,7 +2087,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("MainForm_UpdateToggleHotkeyButton_Disable_hotkeys", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Enable hotkeys.
         /// </summary>
@@ -2093,7 +2096,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("MainForm_UpdateToggleHotkeyButton_Enable_hotkeys", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to You can add workflows from hotkey settings....
         /// </summary>
@@ -2102,7 +2105,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("MainForm_UpdateWorkflowsMenu_You_can_add_workflows_from_hotkey_settings___", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to The debug log can contain sensitive information. Are you sure you want to proceed?.
         /// </summary>
@@ -2111,7 +2114,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("MainForm_UploadDebugLogWarning", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2121,7 +2124,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2131,7 +2134,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2141,7 +2144,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2151,7 +2154,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2161,7 +2164,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2171,7 +2174,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2181,7 +2184,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2191,7 +2194,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2201,7 +2204,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to The OCR output has been copied to your clipboard..
         /// </summary>
@@ -2210,7 +2213,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("OCRForm_AutoComplete", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Error occurred during OCR processing, or no text was returned..
         /// </summary>
@@ -2219,7 +2222,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("OCRForm_AutoCompleteFail", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to OCR is processing..
         /// </summary>
@@ -2228,7 +2231,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("OCRForm_AutoProcessing", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
@@ -2238,7 +2241,7 @@ namespace ShareNot.Properties {
                 return ((byte[])(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Optical character recognition feature is only available with Windows version {0} or newer..
         /// </summary>
@@ -2247,7 +2250,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("OpticalCharacterRecognitionFeatureIsOnlyAvailableWithWindowsVersion0OrNewer", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2257,7 +2260,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2267,7 +2270,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2277,7 +2280,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2287,7 +2290,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Pin to screen.
         /// </summary>
@@ -2296,7 +2299,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("PinToScreen", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2306,7 +2309,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2316,7 +2319,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
@@ -2325,7 +2328,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetStream("PopSound", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2335,7 +2338,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Unable to create folder:.
         /// </summary>
@@ -2344,7 +2347,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("Program_Run_Unable_to_create_folder_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Can&apos;t access to &quot;{0}&quot; file.
         ///Please run ShareX as administrator to change personal folder path..
@@ -2354,7 +2357,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("Program_WritePersonalPathConfig_Cant_access_to_file", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2364,7 +2367,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Input text to encode.
         /// </summary>
@@ -2373,7 +2376,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("QRCodeForm_InputTextToEncode", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2383,7 +2386,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
@@ -2392,7 +2395,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("QuickTaskMenu_ShowMenu_Cancel", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Continue.
         /// </summary>
@@ -2401,7 +2404,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("QuickTaskMenu_ShowMenu_Continue", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Edit this menu....
         /// </summary>
@@ -2410,7 +2413,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("QuickTaskMenu_ShowMenu_Edit_this_menu___", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Reset all quick tasks to defaults?.
         /// </summary>
@@ -2419,7 +2422,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("QuickTaskMenuEditorForm_Reset_all_quick_tasks_to_defaults_Confirmation", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Left click to copy URL to clipboard. Right click to open URL..
         /// </summary>
@@ -2429,7 +2432,7 @@ namespace ShareNot.Properties {
                         "o_open_URL_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2439,7 +2442,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2449,7 +2452,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2459,7 +2462,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2469,7 +2472,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Screen color picker.
         /// </summary>
@@ -2478,7 +2481,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ScreenColorPicker", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Screenshot delay: {0}s.
         /// </summary>
@@ -2487,7 +2490,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ScreenshotDelay0S", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2497,9 +2500,18 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
-        ///   Looks up a localized string similar to ShareX cannot be closed while screen recording is active.
+        ///   Looks up a localized string similar to ShareNot is up to date!.
+        /// </summary>
+        internal static string ShareNotIsUpToDate {
+            get {
+                return ResourceManager.GetString("ShareNotIsUpToDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ShareNot cannot be closed while screen recording is active.
         ///
         ///Do you want to abort the active screen recording?.
         /// </summary>
@@ -2508,36 +2520,27 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ShareXCannotBeClosedWhileScreenRecordingIsActive", resourceCulture);
             }
         }
-
+        
         /// <summary>
-        ///   Looks up a localized string similar to ShareX - Confirmation.
+        ///   Looks up a localized string similar to ShareNot - Confirmation.
         /// </summary>
         internal static string ShareXConfirmation {
             get {
                 return ResourceManager.GetString("ShareXConfirmation", resourceCulture);
             }
         }
-
+        
         /// <summary>
-        ///   Looks up a localized string similar to ShareX is minimized to the system tray..
+        ///   Looks up a localized string similar to ShareNot is minimized to the system tray..
         /// </summary>
         internal static string ShareXIsMinimizedToTheSystemTray {
             get {
                 return ResourceManager.GetString("ShareXIsMinimizedToTheSystemTray", resourceCulture);
             }
         }
-
+        
         /// <summary>
-        ///   Looks up a localized string similar to ShareX is up to date!.
-        /// </summary>
-        internal static string ShareXIsUpToDate {
-            get {
-                return ResourceManager.GetString("ShareXIsUpToDate", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to ShareX needs to be restarted for the personal folder changes to apply.
+        ///   Looks up a localized string similar to ShareNot needs to be restarted for the personal folder changes to apply.
         ///
         ///Would you like to restart ShareX?.
         /// </summary>
@@ -2546,7 +2549,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ShareXNeedsToBeRestartedForThePersonalFolderChangesToApply", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2556,7 +2559,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2566,7 +2569,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2576,7 +2579,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Switch to list view.
         /// </summary>
@@ -2585,7 +2588,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("SwitchToListView", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Switch to thumbnail view.
         /// </summary>
@@ -2594,7 +2597,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("SwitchToThumbnailView", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
@@ -2603,7 +2606,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetStream("TaskCompletedSound", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Copied to clipboard: {0}.
         /// </summary>
@@ -2612,7 +2615,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("TaskHelpers_OpenQuickScreenColorPicker_Copied_to_clipboard___0_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Hotkeys disabled..
         /// </summary>
@@ -2621,7 +2624,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("TaskHelpers_ToggleHotkeys_Hotkeys_disabled_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Hotkeys enabled..
         /// </summary>
@@ -2630,7 +2633,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("TaskHelpers_ToggleHotkeys_Hotkeys_enabled_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Tweet successfully sent..
         /// </summary>
@@ -2639,7 +2642,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("TaskHelpers_TweetMessage_Tweet_successfully_sent_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Unable to find a valid Twitter account..
         /// </summary>
@@ -2648,7 +2651,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("TaskHelpers_TweetMessage_Unable_to_find_valid_Twitter_account_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to History.
         /// </summary>
@@ -2657,7 +2660,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("TaskManager_CreateListViewItem_History", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to In queue.
         /// </summary>
@@ -2666,7 +2669,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("TaskManager_CreateListViewItem_In_queue", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
@@ -2675,7 +2678,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("TaskManager_task_UploadCompleted_Error", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Task completed.
         /// </summary>
@@ -2684,7 +2687,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("TaskManager_task_UploadCompleted_ShareX___Task_completed", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Preview:.
         /// </summary>
@@ -2693,7 +2696,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("TaskSettingsForm_txtNameFormatPatternActiveWindow_TextChanged_Preview_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to After capture: {0}.
         /// </summary>
@@ -2702,7 +2705,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("TaskSettingsForm_UpdateUploaderMenuNames_After_capture___0_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to After upload: {0}.
         /// </summary>
@@ -2711,7 +2714,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("TaskSettingsForm_UpdateUploaderMenuNames_After_upload___0_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to File uploader: {0}.
         /// </summary>
@@ -2720,7 +2723,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("TaskSettingsForm_UpdateUploaderMenuNames_File_uploader___0_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Image uploader: {0}.
         /// </summary>
@@ -2729,7 +2732,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("TaskSettingsForm_UpdateUploaderMenuNames_Image_uploader___0_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Text uploader: {0}.
         /// </summary>
@@ -2738,7 +2741,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("TaskSettingsForm_UpdateUploaderMenuNames_Text_uploader___0_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to URL sharing service: {0}.
         /// </summary>
@@ -2747,7 +2750,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("TaskSettingsForm_UpdateUploaderMenuNames_URL_sharing_service___0_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to URL shortener: {0}.
         /// </summary>
@@ -2756,7 +2759,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("TaskSettingsForm_UpdateUploaderMenuNames_URL_shortener___0_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Task settings.
         /// </summary>
@@ -2765,7 +2768,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("TaskSettingsForm_UpdateWindowTitle_Task_settings", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Task settings for {0}.
         /// </summary>
@@ -2774,7 +2777,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("TaskSettingsForm_UpdateWindowTitle_Task_settings_for__0_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to This feature will not work when &quot;DisableUpload&quot; option is enabled!.
         /// </summary>
@@ -2783,7 +2786,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("ThisFeatureWillNotWorkWhenDisableUploadOptionIsEnabled", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2793,7 +2796,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2803,7 +2806,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2813,7 +2816,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2823,7 +2826,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2833,7 +2836,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2843,7 +2846,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2853,7 +2856,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2863,7 +2866,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2873,7 +2876,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2883,7 +2886,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2893,7 +2896,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Unable to find a window with specified window title..
         /// </summary>
@@ -2902,7 +2905,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UnableToFindAWindowWithSpecifiedWindowTitle", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2912,7 +2915,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Upload errors.
         /// </summary>
@@ -2921,7 +2924,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UploadInfoManager_ShowErrors_Upload_errors", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Download failed:
         ///{0}.
@@ -2931,7 +2934,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UploadManager_DownloadAndUploadFile_Download_failed", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Are you sure you want to upload {0} files?.
         /// </summary>
@@ -2940,7 +2943,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UploadManager_IsUploadConfirmed_Are_you_sure_you_want_to_upload__0__files_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Don&apos;t show this message again..
         /// </summary>
@@ -2949,7 +2952,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UploadManager_IsUploadConfirmed_Don_t_show_this_message_again_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Upload files.
         /// </summary>
@@ -2958,7 +2961,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UploadManager_IsUploadConfirmed_Upload_files", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Shorten.
         /// </summary>
@@ -2967,7 +2970,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UploadManager_ShowShortenURLDialog_Shorten", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Shorten URL.
         /// </summary>
@@ -2976,7 +2979,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UploadManager_ShowShortenURLDialog_ShortenURL", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to File upload.
         /// </summary>
@@ -2985,7 +2988,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UploadManager_UploadFile_File_upload", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Folder upload.
         /// </summary>
@@ -2994,7 +2997,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UploadManager_UploadFolder_Folder_upload", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to URL to download and upload.
         /// </summary>
@@ -3003,7 +3006,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UploadManager_UploadURL_URL_to_download_from_and_upload", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Share URL ({0}).
         /// </summary>
@@ -3012,7 +3015,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UploadTask_CreateShareURLTask_Share_URL___0__", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Shorten URL ({0}).
         /// </summary>
@@ -3021,7 +3024,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UploadTask_CreateURLShortenerTask_Shorten_URL___0__", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Choose a folder to save.
         /// </summary>
@@ -3030,7 +3033,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UploadTask_DoAfterCaptureJobs_Choose_a_folder_to_save", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to First time upload warning.
         /// </summary>
@@ -3039,7 +3042,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UploadTask_DoUploadJob_First_time_upload_warning", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Are you sure you want to upload this screenshot?
         ///Press &apos;No&apos; to cancel the current upload and disable screenshot auto uploading..
@@ -3049,7 +3052,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UploadTask_DoUploadJob_First_time_upload_warning_text", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Uploading.
         /// </summary>
@@ -3058,7 +3061,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UploadTask_DoUploadJob_Uploading", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to You are attempting to upload a large file.
         ///Are you sure you want to continue?.
@@ -3068,7 +3071,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UploadTask_DoUploadJob_You_are_attempting_to_upload_a_large_file", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Downloading.
         /// </summary>
@@ -3077,7 +3080,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UploadTask_DownloadAndUpload_Downloading", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Done.
         /// </summary>
@@ -3086,7 +3089,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UploadTask_OnUploadCompleted_Done", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Stopped.
         /// </summary>
@@ -3095,7 +3098,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UploadTask_OnUploadCompleted_Stopped", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Preparing.
         /// </summary>
@@ -3104,7 +3107,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UploadTask_Prepare_Preparing", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Starting.
         /// </summary>
@@ -3113,7 +3116,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UploadTask_Prepare_Starting", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Stopping.
         /// </summary>
@@ -3122,7 +3125,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UploadTask_Stop_Stopping", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to URL is empty..
         /// </summary>
@@ -3131,7 +3134,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("UploadTask_ThreadDoWork_URL_is_empty_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -3141,7 +3144,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -3151,7 +3154,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to {0} configuration is invalid or missing. Please check &quot;Destination settings&quot; window to configure it..
         /// </summary>
@@ -3161,7 +3164,7 @@ namespace ShareNot.Properties {
                         "_check__Destination_settings__window_to_configure_it_", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Would you like to enable image effects?
         ///
@@ -3172,7 +3175,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("WouldYouLikeToEnableImageEffects", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Would you like to reset themes?.
         /// </summary>
@@ -3181,7 +3184,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("WouldYouLikeToResetThemes", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Would you like to retry clipboard upload?.
         /// </summary>
@@ -3190,7 +3193,7 @@ namespace ShareNot.Properties {
                 return ResourceManager.GetString("WouldYouLikeToRetryClipboardUpload", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -3200,7 +3203,7 @@ namespace ShareNot.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Your anti-virus software or the controlled folder access feature in Windows could be blocking ShareX..
         /// </summary>
@@ -3210,7 +3213,7 @@ namespace ShareNot.Properties {
                         "areX", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Your system admin disabled the upload feature..
         /// </summary>

@@ -114,7 +114,6 @@ namespace ShareNot.Forms
             this.tsmiURLShorteners = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiURLSharingServices = new System.Windows.Forms.ToolStripMenuItem();
             this.tssDestinations1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmiDestinationSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCustomUploaderSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.tsbApplicationSettings = new System.Windows.Forms.ToolStripButton();
             this.tsbTaskSettings = new System.Windows.Forms.ToolStripButton();
@@ -883,7 +882,6 @@ namespace ShareNot.Forms
             this.tsmiURLShorteners,
             this.tsmiURLSharingServices,
             this.tssDestinations1,
-            this.tsmiDestinationSettings,
             this.tsmiCustomUploaderSettings});
             this.tsddbDestinations.Image = global::ShareNot.Properties.Resources.drive_globe;
             resources.ApplyResources(this.tsddbDestinations, "tsddbDestinations");
@@ -2439,7 +2437,6 @@ namespace ShareNot.Forms
         private System.Windows.Forms.ToolStripMenuItem tsmiUploadURL;
         private System.Windows.Forms.ToolStripMenuItem tsmiUploadDragDrop;
         private System.Windows.Forms.ToolStripSeparator tssDestinations1;
-        private System.Windows.Forms.ToolStripMenuItem tsmiDestinationSettings;
         private System.Windows.Forms.ToolStripMenuItem tsmiTrayUpload;
         private System.Windows.Forms.ToolStripMenuItem tsmiTrayUploadFile;
         private System.Windows.Forms.ToolStripMenuItem tsmiTrayUploadClipboard;

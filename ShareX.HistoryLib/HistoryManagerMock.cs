@@ -53,7 +53,7 @@ namespace ShareNot.HistoryLib
 
         private HistoryItem CreateMockHistoryItem()
         {
-            string fileName = $"ShareX_{Helpers.GetRandomAlphanumeric(10)}.png";
+            string fileName = $"ShareNot_{Helpers.GetRandomAlphanumeric(10)}.png";
 
             HistoryItem historyItem = new HistoryItem()
             {

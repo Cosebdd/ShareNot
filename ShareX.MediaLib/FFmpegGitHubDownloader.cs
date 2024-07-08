@@ -36,7 +36,7 @@ namespace ShareNot.MediaLib
     {
         public static async Task<DialogResult> DownloadFFmpeg(bool async, DownloaderForm.DownloaderInstallEventHandler installRequested)
         {
-            FFmpegUpdateChecker updateChecker = new FFmpegUpdateChecker("ShareX", "FFmpeg");
+            FFmpegUpdateChecker updateChecker = new FFmpegUpdateChecker("ShareNot", "FFmpeg");
             string url = await updateChecker.GetLatestDownloadURL(true);
 
             using (DownloaderForm form = new DownloaderForm(url, "ffmpeg.zip"))

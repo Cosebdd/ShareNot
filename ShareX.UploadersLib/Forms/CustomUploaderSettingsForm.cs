@@ -291,7 +291,7 @@ namespace ShareNot.UploadersLib.Forms
             catch (Exception e)
             {
                 DebugHelper.WriteException(e);
-                MessageBox.Show(Resources.ExportFailed + "\n\n" + e, "ShareX - " + "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Resources.ExportFailed + "\n\n" + e, "ShareNot - " + "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -338,7 +338,7 @@ namespace ShareNot.UploadersLib.Forms
                         }
                     }
 
-                    MessageBox.Show($"{updated} custom uploader files updated.", "ShareX", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"{updated} custom uploader files updated.", "ShareNot", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -634,7 +634,7 @@ namespace ShareNot.UploadersLib.Forms
                             break;
                         case CustomUploaderDestinationType.TextUploader:
                             CustomTextUploader textUploader = new CustomTextUploader(item);
-                            using (TextUploadForm form = new TextUploadForm("ShareX text upload test"))
+                            using (TextUploadForm form = new TextUploadForm("ShareNot text upload test"))
                             {
                                 if (form.ShowDialog() == DialogResult.OK)
                                 {
@@ -736,7 +736,7 @@ namespace ShareNot.UploadersLib.Forms
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show(e.Message, "ShareX - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(e.Message, "ShareNot - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -753,7 +753,7 @@ namespace ShareNot.UploadersLib.Forms
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show(e.Message, "ShareX - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(e.Message, "ShareNot - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -857,14 +857,14 @@ namespace ShareNot.UploadersLib.Forms
             {
                 if (string.IsNullOrEmpty(uploader.RequestURL))
                 {
-                    MessageBox.Show(Resources.UploadersConfigForm_eiCustomUploaders_ExportRequested_RequestURLMustBeConfigured, "ShareX - " + Resources.UploadersConfigForm_Error,
+                    MessageBox.Show(Resources.UploadersConfigForm_eiCustomUploaders_ExportRequested_RequestURLMustBeConfigured, "ShareNot - " + Resources.UploadersConfigForm_Error,
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return null;
                 }
 
                 if (uploader.DestinationType == CustomUploaderDestinationType.None)
                 {
-                    MessageBox.Show(Resources.UploadersConfigForm_eiCustomUploaders_ExportRequested_DestinationTypeMustBeConfigured, "ShareX - " + Resources.UploadersConfigForm_Error,
+                    MessageBox.Show(Resources.UploadersConfigForm_eiCustomUploaders_ExportRequested_DestinationTypeMustBeConfigured, "ShareNot - " + Resources.UploadersConfigForm_Error,
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return null;
                 }
@@ -896,7 +896,7 @@ namespace ShareNot.UploadersLib.Forms
 
         private void tsmiClearUploaders_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(Resources.UploadersConfigForm_Remove_all_custom_uploaders_Confirmation, "ShareX",
+            if (MessageBox.Show(Resources.UploadersConfigForm_Remove_all_custom_uploaders_Confirmation, "ShareNot",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 CustomUploaderClearUploaders();

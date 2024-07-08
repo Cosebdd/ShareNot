@@ -266,7 +266,7 @@
             this.MaximizeBox = false;
             this.Name = "ScrollingCaptureOptionsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ShareX - Scrolling capture options";
+            this.Text = "ShareNot - Scrolling capture options";
             ((System.ComponentModel.ISupportInitialize)(this.nudStartDelay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudScrollDelay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudScrollAmount)).EndInit();

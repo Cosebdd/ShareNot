@@ -38,7 +38,7 @@ namespace ShareNot
     {
         private static readonly string ApplicationPath = $"\"{Application.ExecutablePath}\"";
 
-        private static readonly string ShellExtMenuName = "ShareX";
+        private static readonly string ShellExtMenuName = "ShareNot";
         private static readonly string ShellExtMenuFiles = $@"Software\Classes\*\shell\{ShellExtMenuName}";
         private static readonly string ShellExtMenuFilesCmd = $@"{ShellExtMenuFiles}\command";
         private static readonly string ShellExtMenuDirectory = $@"Software\Classes\Directory\shell\{ShellExtMenuName}";
@@ -47,7 +47,7 @@ namespace ShareNot
         private static readonly string ShellExtIcon = $"{ApplicationPath},0";
         private static readonly string ShellExtPath = $"{ApplicationPath} \"%1\"";
 
-        private static readonly string ShellExtEditName = "ShareXImageEditor";
+        private static readonly string ShellExtEditName = "ShareNotImageEditor";
         private static readonly string ShellExtEditImage = $@"Software\Classes\SystemFileAssociations\image\shell\{ShellExtEditName}";
         private static readonly string ShellExtEditImageCmd = $@"{ShellExtEditImage}\command";
         private static readonly string ShellExtEditDesc = Resources.IntegrationHelpers_EditWithShareX;
@@ -55,18 +55,18 @@ namespace ShareNot
         private static readonly string ShellExtEditPath = $"{ApplicationPath} -ImageEditor \"%1\"";
 
         private static readonly string ShellCustomUploaderExtensionPath = @"Software\Classes\.sxcu";
-        private static readonly string ShellCustomUploaderExtensionValue = "ShareX.sxcu";
+        private static readonly string ShellCustomUploaderExtensionValue = "ShareNot.sxcu";
         private static readonly string ShellCustomUploaderAssociatePath = $@"Software\Classes\{ShellCustomUploaderExtensionValue}";
-        private static readonly string ShellCustomUploaderAssociateValue = "ShareX custom uploader";
+        private static readonly string ShellCustomUploaderAssociateValue = "ShareNot custom uploader";
         private static readonly string ShellCustomUploaderIconPath = $@"{ShellCustomUploaderAssociatePath}\DefaultIcon";
         private static readonly string ShellCustomUploaderIconValue = $"{ApplicationPath},0";
         private static readonly string ShellCustomUploaderCommandPath = $@"{ShellCustomUploaderAssociatePath}\shell\open\command";
         private static readonly string ShellCustomUploaderCommandValue = $"{ApplicationPath} -CustomUploader \"%1\"";
 
         private static readonly string ShellImageEffectExtensionPath = @"Software\Classes\.sxie";
-        private static readonly string ShellImageEffectExtensionValue = "ShareX.sxie";
+        private static readonly string ShellImageEffectExtensionValue = "ShareNot.sxie";
         private static readonly string ShellImageEffectAssociatePath = $@"Software\Classes\{ShellImageEffectExtensionValue}";
-        private static readonly string ShellImageEffectAssociateValue = "ShareX image effect";
+        private static readonly string ShellImageEffectAssociateValue = "ShareNot image effect";
         private static readonly string ShellImageEffectIconPath = $@"{ShellImageEffectAssociatePath}\DefaultIcon";
         private static readonly string ShellImageEffectIconValue = $"{ApplicationPath},0";
         private static readonly string ShellImageEffectCommandPath = $@"{ShellImageEffectAssociatePath}\shell\open\command";
@@ -367,12 +367,12 @@ namespace ShareNot
 
         public static bool CheckSendToMenuButton()
         {
-            return ShortcutHelpers.CheckShortcut(Environment.SpecialFolder.SendTo, "ShareX", Application.ExecutablePath);
+            return ShortcutHelpers.CheckShortcut(Environment.SpecialFolder.SendTo, "ShareNot", Application.ExecutablePath);
         }
 
         public static bool CreateSendToMenuButton(bool create)
         {
-            return ShortcutHelpers.SetShortcut(create, Environment.SpecialFolder.SendTo, "ShareX", Application.ExecutablePath);
+            return ShortcutHelpers.SetShortcut(create, Environment.SpecialFolder.SendTo, "ShareNot", Application.ExecutablePath);
         }
 
         public static bool CheckSteamShowInApp()
@@ -403,7 +403,7 @@ namespace ShareNot
             }
 
             MessageBox.Show(Resources.ApplicationSettingsForm_cbSteamShowInApp_CheckedChanged_For_settings_to_take_effect_ShareX_needs_to_be_reopened_from_Steam_,
-                "ShareX", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                "ShareNot", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public static void Uninstall()
