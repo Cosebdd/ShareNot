@@ -29,8 +29,9 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Native;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Input
 {
     public class InputManager
     {

@@ -23,8 +23,6 @@
 
 #endregion License Information (GPL v3)
 
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,8 +30,11 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Settings
 {
     public abstract class SettingsBase<T> where T : SettingsBase<T>, new()
     {
@@ -69,7 +70,7 @@ namespace ShareX.HelpersLib
 
         public bool IsUpgradeFrom(string version)
         {
-            return IsUpgrade && Helpers.CompareVersion(ApplicationVersion, version) <= 0;
+            return IsUpgrade && Helpers.Helpers.CompareVersion(ApplicationVersion, version) <= 0;
         }
 
         protected virtual void OnSettingsSaved(string filePath, bool result)
@@ -85,7 +86,7 @@ namespace ShareX.HelpersLib
         public bool Save(string filePath)
         {
             FilePath = filePath;
-            ApplicationVersion = Helpers.GetApplicationVersion();
+            ApplicationVersion = Helpers.Helpers.GetApplicationVersion();
 
             bool result = SaveInternal(FilePath);
 
@@ -111,7 +112,7 @@ namespace ShareX.HelpersLib
 
         public MemoryStream SaveToMemoryStream(bool supportDPAPIEncryption = false)
         {
-            ApplicationVersion = Helpers.GetApplicationVersion();
+            ApplicationVersion = Helpers.Helpers.GetApplicationVersion();
 
             MemoryStream ms = new MemoryStream();
             SaveToStream(ms, supportDPAPIEncryption, true);
@@ -241,7 +242,7 @@ namespace ShareX.HelpersLib
             {
                 setting.FilePath = filePath;
                 setting.IsFirstTimeRun = string.IsNullOrEmpty(setting.ApplicationVersion);
-                setting.IsUpgrade = !setting.IsFirstTimeRun && Helpers.CompareApplicationVersion(setting.ApplicationVersion) < 0;
+                setting.IsUpgrade = !setting.IsFirstTimeRun && Helpers.Helpers.CompareApplicationVersion(setting.ApplicationVersion) < 0;
                 setting.BackupFolder = backupFolder;
             }
 

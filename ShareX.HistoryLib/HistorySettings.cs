@@ -23,9 +23,9 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
+using ShareNot.HelpersLib;
 
-namespace ShareX.HistoryLib
+namespace ShareNot.HistoryLib
 {
     public class HistorySettings
     {

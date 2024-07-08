@@ -23,12 +23,14 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.ScreenCaptureLib.Helpers;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.Shapes.Drawing
 {
     public class SpeechBalloonDrawingShape : TextDrawingShape
     {
@@ -171,7 +173,7 @@ namespace ShareX.ScreenCaptureLib
             {
                 if (gpTail != null)
                 {
-                    using (Region region = new Region(gpTail))
+                    using (System.Drawing.Region region = new System.Drawing.Region(gpTail))
                     {
                         g.ExcludeClip(region);
                     }

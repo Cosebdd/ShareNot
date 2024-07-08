@@ -25,8 +25,9 @@
 
 using System.Drawing;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Native;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Input
 {
     public static class InputHelpers
     {

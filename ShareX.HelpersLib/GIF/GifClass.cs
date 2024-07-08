@@ -27,8 +27,9 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.GIF
 {
     public class GifClass
     {

@@ -23,11 +23,11 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System.Collections.Generic;
 using System.Linq;
+using ShareNot.UploadersLib.BaseServices;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib
 {
     public static class UploaderFactory
     {
@@ -41,7 +41,7 @@ namespace ShareX.UploadersLib
 
         private static Dictionary<T, T2> CacheServices<T, T2>() where T2 : UploaderService<T>
         {
-            IEnumerable<T2> instances = Helpers.GetInstances<T2>();
+            IEnumerable<T2> instances = HelpersLib.Helpers.Helpers.GetInstances<T2>();
 
             AllServices.AddRange(instances.OfType<IUploaderService>());
             AllGenericUploaderServices.AddRange(instances.OfType<IGenericUploaderService>());

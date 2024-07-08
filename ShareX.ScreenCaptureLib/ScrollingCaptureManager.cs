@@ -23,7 +23,6 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -31,8 +30,12 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Input;
+using ShareNot.HelpersLib.Native;
+using ShareNot.ScreenCaptureLib.Forms;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib
 {
     internal class ScrollingCaptureManager : IDisposable
     {

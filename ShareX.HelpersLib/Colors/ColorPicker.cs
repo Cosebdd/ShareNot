@@ -27,7 +27,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Colors
 {
     [DefaultEvent("ColorChanged")]
     public class ColorPicker : UserControl
@@ -132,8 +132,8 @@ namespace ShareX.HelpersLib
 
         private void InitializeComponent()
         {
-            colorBox = new HelpersLib.ColorBox();
-            colorSlider = new HelpersLib.ColorSlider();
+            colorBox = new ColorBox();
+            colorSlider = new ColorSlider();
             SuspendLayout();
             //
             // colorBox

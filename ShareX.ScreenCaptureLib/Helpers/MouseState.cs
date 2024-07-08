@@ -23,11 +23,11 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System.Drawing;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.Helpers
 {
     public struct MouseState
     {

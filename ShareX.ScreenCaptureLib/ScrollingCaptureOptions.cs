@@ -23,7 +23,7 @@
 
 #endregion License Information (GPL v3)
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib
 {
     public class ScrollingCaptureOptions
     {

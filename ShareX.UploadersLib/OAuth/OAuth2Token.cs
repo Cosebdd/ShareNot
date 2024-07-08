@@ -23,11 +23,11 @@
 
 #endregion License Information (GPL v3)
 
-using Newtonsoft.Json;
-using ShareX.HelpersLib;
 using System;
+using Newtonsoft.Json;
+using ShareNot.HelpersLib.Settings;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.OAuth
 {
     public class OAuth2Token
     {

@@ -23,12 +23,14 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib.Properties;
 using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.DNS;
+using ShareNot.HelpersLib.Native;
+using ShareNot.HelpersLib.Properties;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Forms
 {
     public partial class DNSChangerForm : Form
     {
@@ -172,7 +174,7 @@ namespace ShareX.HelpersLib
                         string primaryDNS = txtPreferredDNS.Text.Trim();
                         string secondaryDNS = txtAlternateDNS.Text.Trim();
 
-                        if (Helpers.IsValidIPAddress(primaryDNS) && (string.IsNullOrEmpty(secondaryDNS) || Helpers.IsValidIPAddress(secondaryDNS)))
+                        if (Helpers.Helpers.IsValidIPAddress(primaryDNS) && (string.IsNullOrEmpty(secondaryDNS) || Helpers.Helpers.IsValidIPAddress(secondaryDNS)))
                         {
                             result = adapter.SetDNS(primaryDNS, secondaryDNS);
                         }

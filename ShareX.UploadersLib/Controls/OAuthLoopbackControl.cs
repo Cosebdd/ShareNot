@@ -23,12 +23,13 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.UploadersLib.Properties;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using ShareNot.UploadersLib.OAuth;
+using ShareNot.UploadersLib.Properties;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.Controls
 {
     public partial class OAuthLoopbackControl : UserControl
     {

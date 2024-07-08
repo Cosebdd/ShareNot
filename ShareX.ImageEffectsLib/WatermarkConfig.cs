@@ -24,8 +24,9 @@
 #endregion License Information (GPL v3)
 
 using System.Drawing;
+using ShareNot.ImageEffectsLib.Drawings;
 
-namespace ShareX.ImageEffectsLib
+namespace ShareNot.ImageEffectsLib
 {
     public class WatermarkConfig
     {

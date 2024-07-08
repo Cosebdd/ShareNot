@@ -23,11 +23,13 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System.Drawing;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Native;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.Forms
 {
     public partial class ScrollingCaptureRegionForm : Form
     {

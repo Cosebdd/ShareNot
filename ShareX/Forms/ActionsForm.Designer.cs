@@ -1,4 +1,4 @@
-﻿namespace ShareX
+﻿namespace ShareNot.Forms
 {
     partial class ActionsForm
     {
@@ -45,93 +45,93 @@
             this.cbHiddenWindow = new System.Windows.Forms.CheckBox();
             this.cbDeleteInputFile = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
-            // 
+            //
             // lblName
-            // 
+            //
             resources.ApplyResources(this.lblName, "lblName");
             this.lblName.Name = "lblName";
-            // 
+            //
             // lblPath
-            // 
+            //
             resources.ApplyResources(this.lblPath, "lblPath");
             this.lblPath.Name = "lblPath";
-            // 
+            //
             // lblArgs
-            // 
+            //
             resources.ApplyResources(this.lblArgs, "lblArgs");
             this.lblArgs.Name = "lblArgs";
-            // 
+            //
             // txtName
-            // 
+            //
             resources.ApplyResources(this.txtName, "txtName");
             this.txtName.Name = "txtName";
-            // 
+            //
             // txtPath
-            // 
+            //
             resources.ApplyResources(this.txtPath, "txtPath");
             this.txtPath.Name = "txtPath";
-            // 
+            //
             // txtArguments
-            // 
+            //
             resources.ApplyResources(this.txtArguments, "txtArguments");
             this.txtArguments.Name = "txtArguments";
-            // 
+            //
             // btnPathBrowse
-            // 
+            //
             resources.ApplyResources(this.btnPathBrowse, "btnPathBrowse");
             this.btnPathBrowse.Name = "btnPathBrowse";
             this.btnPathBrowse.UseVisualStyleBackColor = true;
             this.btnPathBrowse.Click += new System.EventHandler(this.btnPathBrowse_Click);
-            // 
+            //
             // btnOK
-            // 
+            //
             resources.ApplyResources(this.btnOK, "btnOK");
             this.btnOK.Name = "btnOK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
+            //
             // btnCancel
-            // 
+            //
             resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
+            //
             // lblExtensions
-            // 
+            //
             resources.ApplyResources(this.lblExtensions, "lblExtensions");
             this.lblExtensions.Name = "lblExtensions";
-            // 
+            //
             // txtExtensions
-            // 
+            //
             resources.ApplyResources(this.txtExtensions, "txtExtensions");
             this.txtExtensions.Name = "txtExtensions";
-            // 
+            //
             // txtOutputExtension
-            // 
+            //
             resources.ApplyResources(this.txtOutputExtension, "txtOutputExtension");
             this.txtOutputExtension.Name = "txtOutputExtension";
             this.txtOutputExtension.TextChanged += new System.EventHandler(this.txtOutputExtension_TextChanged);
-            // 
+            //
             // lblOutputExtension
-            // 
+            //
             resources.ApplyResources(this.lblOutputExtension, "lblOutputExtension");
             this.lblOutputExtension.Name = "lblOutputExtension";
-            // 
+            //
             // cbHiddenWindow
-            // 
+            //
             resources.ApplyResources(this.cbHiddenWindow, "cbHiddenWindow");
             this.cbHiddenWindow.Name = "cbHiddenWindow";
             this.cbHiddenWindow.UseVisualStyleBackColor = true;
-            // 
+            //
             // cbDeleteInputFile
-            // 
+            //
             resources.ApplyResources(this.cbDeleteInputFile, "cbDeleteInputFile");
             this.cbDeleteInputFile.Name = "cbDeleteInputFile";
             this.cbDeleteInputFile.UseVisualStyleBackColor = true;
-            // 
+            //
             // ActionsForm
-            // 
+            //
             this.AcceptButton = this.btnOK;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;

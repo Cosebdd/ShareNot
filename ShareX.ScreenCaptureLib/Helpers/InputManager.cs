@@ -26,7 +26,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.Helpers
 {
     public class InputManager
     {

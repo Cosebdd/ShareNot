@@ -1,4 +1,6 @@
-﻿namespace ShareX.HelpersLib
+﻿using ShareNot.HelpersLib.Controls;
+
+namespace ShareNot.HelpersLib.Forms
 {
     partial class GradientPickerForm
     {
@@ -47,103 +49,103 @@
             this.lvPresets = new System.Windows.Forms.ListView();
             this.chGradient = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnClear = new System.Windows.Forms.Button();
-            this.cbtnCurrentColor = new ShareX.HelpersLib.ColorButton();
-            this.lvGradientPoints = new ShareX.HelpersLib.MyListView();
+            this.cbtnCurrentColor = new ColorButton();
+            this.lvGradientPoints = new MyListView();
             this.chLocation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.nudLocation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPreview)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // ilColors
-            // 
+            //
             this.ilColors.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
             resources.ApplyResources(this.ilColors, "ilColors");
             this.ilColors.TransparentColor = System.Drawing.Color.Transparent;
-            // 
+            //
             // btnAdd
-            // 
+            //
             resources.ApplyResources(this.btnAdd, "btnAdd");
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
+            //
             // btnRemove
-            // 
+            //
             resources.ApplyResources(this.btnRemove, "btnRemove");
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
-            // 
+            //
             // nudLocation
-            // 
+            //
             this.nudLocation.DecimalPlaces = 2;
             resources.ApplyResources(this.nudLocation, "nudLocation");
             this.nudLocation.Name = "nudLocation";
             this.nudLocation.ValueChanged += new System.EventHandler(this.nudLocation_ValueChanged);
-            // 
+            //
             // lblLocation
-            // 
+            //
             resources.ApplyResources(this.lblLocation, "lblLocation");
             this.lblLocation.Name = "lblLocation";
-            // 
+            //
             // cbGradientType
-            // 
+            //
             this.cbGradientType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGradientType.FormattingEnabled = true;
             resources.ApplyResources(this.cbGradientType, "cbGradientType");
             this.cbGradientType.Name = "cbGradientType";
             this.cbGradientType.SelectedIndexChanged += new System.EventHandler(this.cbGradientType_SelectedIndexChanged);
-            // 
+            //
             // lblGradientType
-            // 
+            //
             resources.ApplyResources(this.lblGradientType, "lblGradientType");
             this.lblGradientType.Name = "lblGradientType";
-            // 
+            //
             // btnOK
-            // 
+            //
             resources.ApplyResources(this.btnOK, "btnOK");
             this.btnOK.Name = "btnOK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
+            //
             // btnCancel
-            // 
+            //
             resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
+            //
             // pbPreview
-            // 
+            //
             resources.ApplyResources(this.pbPreview, "pbPreview");
             this.pbPreview.Name = "pbPreview";
             this.pbPreview.TabStop = false;
-            // 
+            //
             // lblPreview
-            // 
+            //
             resources.ApplyResources(this.lblPreview, "lblPreview");
             this.lblPreview.Name = "lblPreview";
-            // 
+            //
             // btnReverse
-            // 
+            //
             resources.ApplyResources(this.btnReverse, "btnReverse");
             this.btnReverse.Name = "btnReverse";
             this.btnReverse.UseVisualStyleBackColor = true;
             this.btnReverse.Click += new System.EventHandler(this.btnReverse_Click);
-            // 
+            //
             // lblPresets
-            // 
+            //
             resources.ApplyResources(this.lblPresets, "lblPresets");
             this.lblPresets.Name = "lblPresets";
-            // 
+            //
             // ilPresets
-            // 
+            //
             this.ilPresets.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
             resources.ApplyResources(this.ilPresets, "ilPresets");
             this.ilPresets.TransparentColor = System.Drawing.Color.Transparent;
-            // 
+            //
             // lvPresets
-            // 
+            //
             this.lvPresets.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chGradient});
             this.lvPresets.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
@@ -156,29 +158,29 @@
             this.lvPresets.UseCompatibleStateImageBehavior = false;
             this.lvPresets.View = System.Windows.Forms.View.Tile;
             this.lvPresets.SelectedIndexChanged += new System.EventHandler(this.lvPresets_SelectedIndexChanged);
-            // 
+            //
             // chGradient
-            // 
+            //
             resources.ApplyResources(this.chGradient, "chGradient");
-            // 
+            //
             // btnClear
-            // 
+            //
             resources.ApplyResources(this.btnClear, "btnClear");
             this.btnClear.Name = "btnClear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
+            //
             // cbtnCurrentColor
-            // 
+            //
             this.cbtnCurrentColor.Color = System.Drawing.Color.White;
             this.cbtnCurrentColor.ColorPickerOptions = null;
             resources.ApplyResources(this.cbtnCurrentColor, "cbtnCurrentColor");
             this.cbtnCurrentColor.Name = "cbtnCurrentColor";
             this.cbtnCurrentColor.UseVisualStyleBackColor = true;
-            this.cbtnCurrentColor.ColorChanged += new ShareX.HelpersLib.ColorButton.ColorChangedEventHandler(this.cbtnCurrentColor_ColorChanged);
-            // 
+            this.cbtnCurrentColor.ColorChanged += new ColorButton.ColorChangedEventHandler(this.cbtnCurrentColor_ColorChanged);
+            //
             // lvGradientPoints
-            // 
+            //
             this.lvGradientPoints.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chLocation});
             this.lvGradientPoints.DisableDeselect = true;
@@ -193,13 +195,13 @@
             this.lvGradientPoints.View = System.Windows.Forms.View.Details;
             this.lvGradientPoints.SelectedIndexChanged += new System.EventHandler(this.lvGradientPoints_SelectedIndexChanged);
             this.lvGradientPoints.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvGradientPoints_MouseDoubleClick);
-            // 
+            //
             // chLocation
-            // 
+            //
             resources.ApplyResources(this.chLocation, "chLocation");
-            // 
+            //
             // GradientPickerForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Window;

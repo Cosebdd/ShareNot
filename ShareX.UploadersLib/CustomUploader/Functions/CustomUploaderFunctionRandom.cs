@@ -23,9 +23,9 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
+using ShareNot.HelpersLib.Random;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.CustomUploader.Functions
 {
     // Example: {random:domain1.com|domain2.com}
     internal class CustomUploaderFunctionRandom : CustomUploaderFunction

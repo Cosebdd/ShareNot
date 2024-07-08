@@ -23,12 +23,12 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
 
-namespace ShareX
+namespace ShareNot.Tools.OCR
 {
     public partial class ServiceLinksForm : Form
     {

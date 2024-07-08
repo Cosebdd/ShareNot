@@ -25,8 +25,9 @@
 
 using System;
 using System.Runtime.InteropServices;
+using ShareNot.HelpersLib.Native;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     public class TimerResolutionManager : IDisposable
     {

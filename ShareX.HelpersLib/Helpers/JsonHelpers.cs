@@ -23,13 +23,14 @@
 
 #endregion License Information (GPL v3)
 
+using System.IO;
+using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
-using System.IO;
-using System.Text;
+using ShareNot.HelpersLib.Settings;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Helpers
 {
     public static class JsonHelpers
     {

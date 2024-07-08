@@ -29,8 +29,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     public class Logger
     {

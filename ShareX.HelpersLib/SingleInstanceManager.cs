@@ -30,7 +30,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     public class SingleInstanceManager : IDisposable
     {

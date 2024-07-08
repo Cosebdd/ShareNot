@@ -23,14 +23,14 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX
+namespace ShareNot
 {
     public class WatchFolder : IDisposable
     {

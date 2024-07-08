@@ -23,11 +23,11 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
 
-namespace ShareX.HistoryLib
+namespace ShareNot.HistoryLib.Forms
 {
     public partial class HistorySettingsForm : Form
     {

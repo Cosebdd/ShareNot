@@ -1,4 +1,4 @@
-﻿namespace ShareX.HistoryLib
+﻿namespace ShareNot.HistoryLib.Forms
 {
     partial class ImageHistoryForm
     {
@@ -46,23 +46,23 @@
             this.tscMain.SuspendLayout();
             this.tsMain.SuspendLayout();
             this.SuspendLayout();
-            // 
+            //
             // tscMain
-            // 
-            // 
+            //
+            //
             // tscMain.ContentPanel
-            // 
+            //
             this.tscMain.ContentPanel.Controls.Add(this.ilvImages);
             resources.ApplyResources(this.tscMain.ContentPanel, "tscMain.ContentPanel");
             resources.ApplyResources(this.tscMain, "tscMain");
             this.tscMain.Name = "tscMain";
-            // 
+            //
             // tscMain.TopToolStripPanel
-            // 
+            //
             this.tscMain.TopToolStripPanel.Controls.Add(this.tsMain);
-            // 
+            //
             // ilvImages
-            // 
+            //
             this.ilvImages.AllowDrag = true;
             this.ilvImages.AllowDuplicateFileNames = true;
             this.ilvImages.AllowItemReorder = false;
@@ -102,9 +102,9 @@
             this.ilvImages.ItemDoubleClick += new Manina.Windows.Forms.ItemDoubleClickEventHandler(this.ilvImages_ItemDoubleClick);
             this.ilvImages.SelectionChanged += new System.EventHandler(this.ilvImages_SelectionChanged);
             this.ilvImages.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ilvImages_KeyDown);
-            // 
+            //
             // tsMain
-            // 
+            //
             resources.ApplyResources(this.tsMain, "tsMain");
             this.tsMain.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.tsMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -114,44 +114,44 @@
             this.tss1,
             this.tsbSettings});
             this.tsMain.Name = "tsMain";
-            // 
+            //
             // tslSearch
-            // 
+            //
             this.tslSearch.Name = "tslSearch";
             resources.ApplyResources(this.tslSearch, "tslSearch");
-            // 
+            //
             // tstbSearch
-            // 
+            //
             this.tstbSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.tstbSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.tstbSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.tstbSearch, "tstbSearch");
             this.tstbSearch.Name = "tstbSearch";
             this.tstbSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tstbSearch_KeyDown);
-            // 
+            //
             // tsbSearch
-            // 
+            //
             this.tsbSearch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbSearch.Image = global::ShareX.HistoryLib.Properties.Resources.magnifier;
+            this.tsbSearch.Image = global::ShareNot.HistoryLib.Properties.Resources.magnifier;
             resources.ApplyResources(this.tsbSearch, "tsbSearch");
             this.tsbSearch.Name = "tsbSearch";
             this.tsbSearch.Click += new System.EventHandler(this.tsbSearch_Click);
-            // 
+            //
             // tss1
-            // 
+            //
             this.tss1.Name = "tss1";
             resources.ApplyResources(this.tss1, "tss1");
-            // 
+            //
             // tsbSettings
-            // 
+            //
             this.tsbSettings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbSettings.Image = global::ShareX.HistoryLib.Properties.Resources.gear;
+            this.tsbSettings.Image = global::ShareNot.HistoryLib.Properties.Resources.gear;
             resources.ApplyResources(this.tsbSettings, "tsbSettings");
             this.tsbSettings.Name = "tsbSettings";
             this.tsbSettings.Click += new System.EventHandler(this.tsbSettings_Click);
-            // 
+            //
             // ImageHistoryForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Window;

@@ -1,4 +1,4 @@
-﻿namespace ShareX
+﻿namespace ShareNot.Tools.OCR
 {
     partial class ServiceLinksForm
     {
@@ -39,65 +39,65 @@
             this.txtURL = new System.Windows.Forms.TextBox();
             this.btnReset = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
+            //
             // cbServices
-            // 
+            //
             this.cbServices.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbServices.FormattingEnabled = true;
             resources.ApplyResources(this.cbServices, "cbServices");
             this.cbServices.Name = "cbServices";
             this.cbServices.SelectedIndexChanged += new System.EventHandler(this.cbServices_SelectedIndexChanged);
-            // 
+            //
             // lblServices
-            // 
+            //
             resources.ApplyResources(this.lblServices, "lblServices");
             this.lblServices.Name = "lblServices";
-            // 
+            //
             // btnNew
-            // 
+            //
             resources.ApplyResources(this.btnNew, "btnNew");
             this.btnNew.Name = "btnNew";
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
+            //
             // btnRemove
-            // 
+            //
             resources.ApplyResources(this.btnRemove, "btnRemove");
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
-            // 
+            //
             // lblName
-            // 
+            //
             resources.ApplyResources(this.lblName, "lblName");
             this.lblName.Name = "lblName";
-            // 
+            //
             // txtName
-            // 
+            //
             resources.ApplyResources(this.txtName, "txtName");
             this.txtName.Name = "txtName";
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
-            // 
+            //
             // lblURL
-            // 
+            //
             resources.ApplyResources(this.lblURL, "lblURL");
             this.lblURL.Name = "lblURL";
-            // 
+            //
             // txtURL
-            // 
+            //
             resources.ApplyResources(this.txtURL, "txtURL");
             this.txtURL.Name = "txtURL";
             this.txtURL.TextChanged += new System.EventHandler(this.txtURL_TextChanged);
-            // 
+            //
             // btnReset
-            // 
+            //
             resources.ApplyResources(this.btnReset, "btnReset");
             this.btnReset.Name = "btnReset";
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
+            //
             // ServiceLinksForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnReset);

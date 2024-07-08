@@ -23,14 +23,17 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Design;
 using System.Drawing.Drawing2D;
-using System.Linq;
+using ShareNot.HelpersLib.Colors;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Random;
+using ShareNot.HelpersLib.UITypeEditors;
 
-namespace ShareX.ImageEffectsLib
+namespace ShareNot.ImageEffectsLib.Filters
 {
     internal class Glow : ImageEffect
     {

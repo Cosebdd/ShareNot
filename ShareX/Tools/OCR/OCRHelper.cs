@@ -23,8 +23,6 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.Properties;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -36,8 +34,10 @@ using Windows.Globalization;
 using Windows.Graphics.Imaging;
 using Windows.Media.Ocr;
 using Windows.Storage.Streams;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.Properties;
 
-namespace ShareX
+namespace ShareNot.Tools.OCR
 {
     public static class OCRHelper
     {

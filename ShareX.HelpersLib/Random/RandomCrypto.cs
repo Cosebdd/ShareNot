@@ -27,7 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Random
 {
     // https://docs.microsoft.com/en-us/archive/msdn-magazine/2007/september/net-matters-tales-from-the-cryptorandom
     public static class RandomCrypto

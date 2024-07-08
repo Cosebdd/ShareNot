@@ -23,16 +23,20 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Design;
 using System.Drawing.Drawing2D;
 using System.Drawing.Text;
-using System.Linq;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Colors;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.NameParser;
+using ShareNot.HelpersLib.UITypeEditors;
 
-namespace ShareX.ImageEffectsLib
+namespace ShareNot.ImageEffectsLib.Drawings
 {
     [Description("Text watermark")]
     public class DrawText : ImageEffect

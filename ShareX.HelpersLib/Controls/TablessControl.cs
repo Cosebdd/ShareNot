@@ -26,7 +26,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Controls
 {
     public class TablessControl : TabControl
     {

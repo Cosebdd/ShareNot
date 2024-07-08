@@ -27,8 +27,10 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.NameParser;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     public class ExternalProgram
     {

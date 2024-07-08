@@ -23,8 +23,6 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.ImageEffectsLib;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -32,8 +30,21 @@ using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Forms;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Native;
+using ShareNot.ImageEffectsLib;
+using ShareNot.ImageEffectsLib.Forms;
+using ShareNot.ScreenCaptureLib.Forms;
+using ShareNot.ScreenCaptureLib.Helpers;
+using ShareNot.ScreenCaptureLib.Shapes.Drawing;
+using ShareNot.ScreenCaptureLib.Shapes.Effect;
+using ShareNot.ScreenCaptureLib.Shapes.Region;
+using ShareNot.ScreenCaptureLib.Shapes.Tool;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.Shapes
 {
     internal partial class ShapeManager : IDisposable
     {

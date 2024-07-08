@@ -26,7 +26,7 @@
 using System;
 using System.IO;
 
-namespace ShareX.IndexerLib
+namespace ShareNot.IndexerLib
 {
     public abstract class Indexer
     {

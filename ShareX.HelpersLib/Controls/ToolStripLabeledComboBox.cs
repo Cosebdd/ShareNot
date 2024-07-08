@@ -26,7 +26,7 @@
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Controls
 {
     [ToolStripItemDesignerAvailability(ToolStripItemDesignerAvailability.MenuStrip | ToolStripItemDesignerAvailability.ContextMenuStrip)]
     public class ToolStripLabeledComboBox : ToolStripControlHost

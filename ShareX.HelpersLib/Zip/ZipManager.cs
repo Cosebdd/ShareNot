@@ -28,8 +28,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Zip
 {
     public static class ZipManager
     {

@@ -1,13 +1,13 @@
-﻿namespace ShareX.HelpersLib
+﻿namespace ShareNot.HelpersLib.Controls
 {
     partial class TabToListView
     {
-        /// <summary> 
+        /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -22,54 +22,54 @@
 
         #region Component Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
+        /// <summary>
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             this.scMain = new System.Windows.Forms.SplitContainer();
             this.tcMain = new System.Windows.Forms.TabControl();
-            this.lvMain = new HelpersLib.MyListView();
+            this.lvMain = new MyListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.scMain)).BeginInit();
             this.scMain.Panel1.SuspendLayout();
             this.scMain.Panel2.SuspendLayout();
             this.scMain.SuspendLayout();
             this.SuspendLayout();
-            // 
+            //
             // scMain
-            // 
+            //
             this.scMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.scMain.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.scMain.IsSplitterFixed = true;
             this.scMain.Location = new System.Drawing.Point(0, 0);
             this.scMain.Margin = new System.Windows.Forms.Padding(0);
             this.scMain.Name = "scMain";
-            // 
+            //
             // scMain.Panel1
-            // 
+            //
             this.scMain.Panel1.Controls.Add(this.lvMain);
-            // 
+            //
             // scMain.Panel2
-            // 
+            //
             this.scMain.Panel2.Controls.Add(this.tcMain);
             this.scMain.Size = new System.Drawing.Size(700, 500);
             this.scMain.SplitterDistance = 237;
             this.scMain.SplitterWidth = 3;
             this.scMain.TabIndex = 0;
-            // 
+            //
             // tcMain
-            // 
+            //
             this.tcMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcMain.Location = new System.Drawing.Point(0, 0);
             this.tcMain.Name = "tcMain";
             this.tcMain.SelectedIndex = 0;
             this.tcMain.Size = new System.Drawing.Size(460, 500);
             this.tcMain.TabIndex = 0;
-            // 
+            //
             // lvMain
-            // 
+            //
             this.lvMain.AutoFillColumn = true;
             this.lvMain.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader2});
@@ -87,9 +87,9 @@
             this.lvMain.View = System.Windows.Forms.View.Details;
             this.lvMain.SelectedIndexChanged += new System.EventHandler(this.lvMain_SelectedIndexChanged);
             this.lvMain.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lvMain_MouseUp);
-            // 
+            //
             // TabToListView
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.scMain);

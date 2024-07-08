@@ -23,13 +23,15 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Native;
 
-namespace ShareX.NativeMessagingHost
+namespace ShareNot.NativeMessagingHost
 {
     internal class Program
     {

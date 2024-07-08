@@ -23,15 +23,15 @@
 
 #endregion License Information (GPL v3)
 
-using Microsoft.Win32;
-using ShareX.HelpersLib;
 using System;
+using Microsoft.Win32;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX
+namespace ShareNot
 {
     public static class SystemOptions
     {
-        private const string RegistryPath = @"SOFTWARE\ShareX";
+        private const string RegistryPath = @"SOFTWARE\ShareNot";
 
         public static bool DisableUpdateCheck { get; private set; } = true;
         public static bool DisableUpload { get; private set; } = true;

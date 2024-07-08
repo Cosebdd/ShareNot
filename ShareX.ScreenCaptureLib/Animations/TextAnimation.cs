@@ -25,7 +25,7 @@
 
 using System.Drawing;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.Animations
 {
     internal class TextAnimation : OpacityAnimation
     {

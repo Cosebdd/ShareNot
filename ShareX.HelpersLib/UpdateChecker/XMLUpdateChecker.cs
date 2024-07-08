@@ -28,8 +28,10 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.UpdateChecker
 {
     public class XMLUpdateChecker : UpdateChecker
     {

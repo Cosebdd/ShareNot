@@ -25,7 +25,7 @@
 
 using System;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib
 {
     public static class UploadersConfigValidator
     {

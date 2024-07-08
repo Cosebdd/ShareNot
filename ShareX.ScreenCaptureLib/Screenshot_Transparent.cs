@@ -23,15 +23,18 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Native;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib
 {
     public partial class Screenshot
     {
@@ -207,7 +210,7 @@ namespace ShareX.ScreenCaptureLib
         private void TrimShadow(Bitmap bitmap)
         {
             int cornerSize = 10;
-            int alphaOffset = Helpers.IsWindows11OrGreater() ? 50 : 200;
+            int alphaOffset = HelpersLib.Helpers.Helpers.IsWindows11OrGreater() ? 50 : 200;
 
             using (UnsafeBitmap unsafeBitmap = new UnsafeBitmap(bitmap, true))
             {
@@ -296,11 +299,11 @@ namespace ShareX.ScreenCaptureLib
         {
             byte[,] corner;
 
-            if (Helpers.IsWindows7())
+            if (HelpersLib.Helpers.Helpers.IsWindows7())
             {
                 corner = windows7Corner;
             }
-            else if (Helpers.IsWindowsVista())
+            else if (HelpersLib.Helpers.Helpers.IsWindowsVista())
             {
                 corner = windowsVistaCorner;
             }

@@ -28,7 +28,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.CLI
 {
     public abstract class ExternalCLIManager : IDisposable
     {

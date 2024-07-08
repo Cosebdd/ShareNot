@@ -23,13 +23,14 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.Properties;
 using System;
 using System.IO;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.Properties;
 
-namespace ShareX
+namespace ShareNot
 {
     public class ImageData : IDisposable
     {

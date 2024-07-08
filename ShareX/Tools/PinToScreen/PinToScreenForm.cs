@@ -23,8 +23,6 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.Properties;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -32,8 +30,13 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Threading;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Native;
+using ShareNot.Properties;
 
-namespace ShareX
+namespace ShareNot.Tools.PinToScreen
 {
     public partial class PinToScreenForm : Form
     {
@@ -170,7 +173,7 @@ namespace ShareX
 
             if (location == null)
             {
-                location = Helpers.GetPosition(Options.Placement, Options.PlacementOffset, CaptureHelpers.GetActiveScreenWorkingArea(), FormSize);
+                location = Helpers.GetPosition(Options.Placement, Options.PlacementOffset, HelpersLib.Helpers.CaptureHelpers.GetActiveScreenWorkingArea(), FormSize);
             }
             else if (Options.Border)
             {

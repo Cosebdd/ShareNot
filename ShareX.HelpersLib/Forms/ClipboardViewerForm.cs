@@ -27,8 +27,10 @@ using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Forms
 {
     public partial class ClipboardViewerForm : Form
     {

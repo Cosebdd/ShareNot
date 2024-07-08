@@ -1,13 +1,13 @@
-﻿namespace ShareX.HelpersLib
+﻿namespace ShareNot.HelpersLib.UpdateChecker
 {
     partial class UpdateCheckerLabel
     {
-        /// <summary> 
+        /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -22,8 +22,8 @@
 
         #region Component Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
+        /// <summary>
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
@@ -35,35 +35,35 @@
             this.llblUpdateAvailable = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoading)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // pbLoading
-            // 
-            this.pbLoading.Image = global::ShareX.HelpersLib.Properties.Resources.LoadingSmallBlack;
+            //
+            this.pbLoading.Image = global::ShareNot.HelpersLib.Properties.Resources.LoadingSmallBlack;
             resources.ApplyResources(this.pbLoading, "pbLoading");
             this.pbLoading.Name = "pbLoading";
             this.pbLoading.TabStop = false;
-            // 
+            //
             // lblCheckingUpdates
-            // 
+            //
             resources.ApplyResources(this.lblCheckingUpdates, "lblCheckingUpdates");
             this.lblCheckingUpdates.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblCheckingUpdates.Name = "lblCheckingUpdates";
-            // 
+            //
             // lblStatus
-            // 
+            //
             resources.ApplyResources(this.lblStatus, "lblStatus");
             this.lblStatus.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblStatus.Name = "lblStatus";
-            // 
+            //
             // llblUpdateAvailable
-            // 
+            //
             resources.ApplyResources(this.llblUpdateAvailable, "llblUpdateAvailable");
             this.llblUpdateAvailable.Name = "llblUpdateAvailable";
             this.llblUpdateAvailable.TabStop = true;
             this.llblUpdateAvailable.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblUpdateAvailable_LinkClicked);
-            // 
+            //
             // UpdateCheckerLabel
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.llblUpdateAvailable);

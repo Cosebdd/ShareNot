@@ -27,7 +27,7 @@ using System;
 using System.IO;
 using System.Text;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     public class NativeMessagingHost
     {

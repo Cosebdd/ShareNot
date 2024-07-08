@@ -23,11 +23,6 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.ImageEffectsLib;
-using ShareX.Properties;
-using ShareX.ScreenCaptureLib;
-using ShareX.UploadersLib;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -35,8 +30,22 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShareNot.CaptureHelpers;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Controls;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Forms;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Input;
+using ShareNot.HelpersLib.Native;
+using ShareNot.HelpersLib.UpdateChecker;
+using ShareNot.ImageEffectsLib;
+using ShareNot.Properties;
+using ShareNot.ScreenCaptureLib;
+using ShareNot.ScreenCaptureLib.Helpers;
+using ShareNot.UploadersLib;
 
-namespace ShareX
+namespace ShareNot.Forms
 {
     public partial class MainForm : HotkeyForm
     {
@@ -208,7 +217,7 @@ namespace ShareX
             bool isPositionChanged = false;
 
             if (Program.Settings.RememberMainFormPosition && !Program.Settings.MainFormPosition.IsEmpty &&
-                CaptureHelpers.GetScreenBounds().IntersectsWith(new Rectangle(Program.Settings.MainFormPosition, Program.Settings.MainFormSize)))
+                HelpersLib.Helpers.CaptureHelpers.GetScreenBounds().IntersectsWith(new Rectangle(Program.Settings.MainFormPosition, Program.Settings.MainFormSize)))
             {
                 StartPosition = FormStartPosition.Manual;
                 Location = Program.Settings.MainFormPosition;
@@ -226,7 +235,7 @@ namespace ShareX
                 if (!isPositionChanged)
                 {
                     StartPosition = FormStartPosition.Manual;
-                    Rectangle activeScreen = CaptureHelpers.GetActiveScreenBounds();
+                    Rectangle activeScreen = HelpersLib.Helpers.CaptureHelpers.GetActiveScreenBounds();
                     Location = new Point((activeScreen.Width / 2) - (Size.Width / 2), (activeScreen.Height / 2) - (Size.Height / 2));
                 }
             }

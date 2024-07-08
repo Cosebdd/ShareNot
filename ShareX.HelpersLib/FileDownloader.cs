@@ -29,7 +29,7 @@ using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     public class FileDownloader
     {

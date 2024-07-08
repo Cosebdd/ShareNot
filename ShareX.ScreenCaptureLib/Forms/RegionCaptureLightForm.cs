@@ -23,15 +23,17 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.ScreenCaptureLib.Properties;
 using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.ScreenCaptureLib.Properties;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.Forms
 {
     public sealed class RegionCaptureLightForm : Form
     {
@@ -66,7 +68,7 @@ namespace ShareX.ScreenCaptureLib
             {
                 ScreenRectangle = CaptureHelpers.GetActiveScreenBounds();
 
-                Helpers.LockCursorToWindow(this);
+                HelpersLib.Helpers.Helpers.LockCursorToWindow(this);
             }
             else
             {
@@ -75,7 +77,7 @@ namespace ShareX.ScreenCaptureLib
 
             InitializeComponent();
             Icon = ShareXResources.Icon;
-            Cursor = Helpers.CreateCursor(Resources.Crosshair);
+            Cursor = HelpersLib.Helpers.Helpers.CreateCursor(Resources.Crosshair);
 
             timer = new Timer { Interval = 10 };
             timer.Tick += timer_Tick;

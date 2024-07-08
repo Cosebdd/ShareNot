@@ -35,8 +35,13 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 using System.Windows.Media.Imaging;
+using ShareNot.HelpersLib.Colors;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.GIF;
+using ShareNot.HelpersLib.Native;
+using ShareNot.HelpersLib.Random;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Helpers
 {
     public static class ImageHelpers
     {

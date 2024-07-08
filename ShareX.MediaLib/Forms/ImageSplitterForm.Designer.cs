@@ -1,4 +1,4 @@
-﻿namespace ShareX.MediaLib
+﻿namespace ShareNot.MediaLib.Forms
 {
     partial class ImageSplitterForm
     {
@@ -45,24 +45,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudRowCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudColumnCount)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // lblImageFilePath
-            // 
+            //
             resources.ApplyResources(this.lblImageFilePath, "lblImageFilePath");
             this.lblImageFilePath.Name = "lblImageFilePath";
-            // 
+            //
             // lblRowCount
-            // 
+            //
             resources.ApplyResources(this.lblRowCount, "lblRowCount");
             this.lblRowCount.Name = "lblRowCount";
-            // 
+            //
             // lblColumnCount
-            // 
+            //
             resources.ApplyResources(this.lblColumnCount, "lblColumnCount");
             this.lblColumnCount.Name = "lblColumnCount";
-            // 
+            //
             // nudRowCount
-            // 
+            //
             resources.ApplyResources(this.nudRowCount, "nudRowCount");
             this.nudRowCount.Minimum = new decimal(new int[] {
             1,
@@ -76,9 +76,9 @@
             0,
             0});
             this.nudRowCount.ValueChanged += new System.EventHandler(this.nudRowCount_ValueChanged);
-            // 
+            //
             // nudColumnCount
-            // 
+            //
             resources.ApplyResources(this.nudColumnCount, "nudColumnCount");
             this.nudColumnCount.Minimum = new decimal(new int[] {
             1,
@@ -92,59 +92,59 @@
             0,
             0});
             this.nudColumnCount.ValueChanged += new System.EventHandler(this.nudColumnCount_ValueChanged);
-            // 
+            //
             // txtImageFilePath
-            // 
+            //
             resources.ApplyResources(this.txtImageFilePath, "txtImageFilePath");
             this.txtImageFilePath.Name = "txtImageFilePath";
             this.txtImageFilePath.TextChanged += new System.EventHandler(this.txtImageFilePath_TextChanged);
-            // 
+            //
             // lblOutputFolder
-            // 
+            //
             resources.ApplyResources(this.lblOutputFolder, "lblOutputFolder");
             this.lblOutputFolder.Name = "lblOutputFolder";
-            // 
+            //
             // txtOutputFolder
-            // 
+            //
             resources.ApplyResources(this.txtOutputFolder, "txtOutputFolder");
             this.txtOutputFolder.Name = "txtOutputFolder";
             this.txtOutputFolder.TextChanged += new System.EventHandler(this.txtOutputFolder_TextChanged);
-            // 
+            //
             // btnImageFilePathBrowse
-            // 
+            //
             resources.ApplyResources(this.btnImageFilePathBrowse, "btnImageFilePathBrowse");
             this.btnImageFilePathBrowse.Name = "btnImageFilePathBrowse";
             this.btnImageFilePathBrowse.UseVisualStyleBackColor = true;
             this.btnImageFilePathBrowse.Click += new System.EventHandler(this.BtnImageFilePathBrowse_Click);
-            // 
+            //
             // btnOutputFolderBrowse
-            // 
+            //
             resources.ApplyResources(this.btnOutputFolderBrowse, "btnOutputFolderBrowse");
             this.btnOutputFolderBrowse.Name = "btnOutputFolderBrowse";
             this.btnOutputFolderBrowse.UseVisualStyleBackColor = true;
             this.btnOutputFolderBrowse.Click += new System.EventHandler(this.BtnOutputFolderBrowse_Click);
-            // 
+            //
             // btnSplitImage
-            // 
+            //
             resources.ApplyResources(this.btnSplitImage, "btnSplitImage");
             this.btnSplitImage.Name = "btnSplitImage";
             this.btnSplitImage.UseVisualStyleBackColor = true;
             this.btnSplitImage.Click += new System.EventHandler(this.BtnSplitImage_Click);
-            // 
+            //
             // btnCopyChatEmoji
-            // 
+            //
             resources.ApplyResources(this.btnCopyChatEmoji, "btnCopyChatEmoji");
             this.btnCopyChatEmoji.Name = "btnCopyChatEmoji";
             this.btnCopyChatEmoji.UseVisualStyleBackColor = true;
             this.btnCopyChatEmoji.Click += new System.EventHandler(this.btnCopyChatEmoji_Click);
-            // 
+            //
             // lblColumnRow
-            // 
+            //
             resources.ApplyResources(this.lblColumnRow, "lblColumnRow");
             this.lblColumnRow.Name = "lblColumnRow";
-            // 
+            //
             // ImageSplitterForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;

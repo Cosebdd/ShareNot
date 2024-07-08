@@ -1,5 +1,5 @@
 ﻿
-namespace ShareX
+namespace ShareNot.Tools.BorderlessWindow
 {
     partial class BorderlessWindowSettingsForm
     {
@@ -34,30 +34,30 @@ namespace ShareX
             this.cbAutoCloseWindow = new System.Windows.Forms.CheckBox();
             this.cbExcludeTaskbarArea = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
-            // 
+            //
             // cbRememberWindowTitle
-            // 
+            //
             resources.ApplyResources(this.cbRememberWindowTitle, "cbRememberWindowTitle");
             this.cbRememberWindowTitle.Name = "cbRememberWindowTitle";
             this.cbRememberWindowTitle.UseVisualStyleBackColor = true;
             this.cbRememberWindowTitle.CheckedChanged += new System.EventHandler(this.cbRememberWindowTitle_CheckedChanged);
-            // 
+            //
             // cbAutoCloseWindow
-            // 
+            //
             resources.ApplyResources(this.cbAutoCloseWindow, "cbAutoCloseWindow");
             this.cbAutoCloseWindow.Name = "cbAutoCloseWindow";
             this.cbAutoCloseWindow.UseVisualStyleBackColor = true;
             this.cbAutoCloseWindow.CheckedChanged += new System.EventHandler(this.cbAutoCloseWindow_CheckedChanged);
-            // 
+            //
             // cbExcludeTaskbarArea
-            // 
+            //
             resources.ApplyResources(this.cbExcludeTaskbarArea, "cbExcludeTaskbarArea");
             this.cbExcludeTaskbarArea.Name = "cbExcludeTaskbarArea";
             this.cbExcludeTaskbarArea.UseVisualStyleBackColor = true;
             this.cbExcludeTaskbarArea.CheckedChanged += new System.EventHandler(this.cbExcludeTaskbarArea_CheckedChanged);
-            // 
+            //
             // BorderlessWindowSettingsForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.cbExcludeTaskbarArea);

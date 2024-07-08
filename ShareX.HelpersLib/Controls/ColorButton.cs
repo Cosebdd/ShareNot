@@ -27,8 +27,11 @@ using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Forms;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Controls
 {
     [DefaultEvent("ColorChanged")]
     public class ColorButton : Button

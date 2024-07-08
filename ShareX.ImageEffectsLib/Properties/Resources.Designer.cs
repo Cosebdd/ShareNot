@@ -8,10 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ShareX.ImageEffectsLib.Properties {
-    using System;
-    
-    
+namespace ShareNot.ImageEffectsLib.Properties {
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -23,15 +20,15 @@ namespace ShareX.ImageEffectsLib.Properties {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
-        
+
         private static global::System.Resources.ResourceManager resourceMan;
-        
+
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Resources() {
         }
-        
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -39,13 +36,13 @@ namespace ShareX.ImageEffectsLib.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ShareX.ImageEffectsLib.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ShareNot.ImageEffectsLib.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-        
+
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
@@ -59,7 +56,7 @@ namespace ShareX.ImageEffectsLib.Properties {
                 resourceCulture = value;
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -69,7 +66,7 @@ namespace ShareX.ImageEffectsLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Assets folder must be inside ShareX image effects folder..
         /// </summary>
@@ -78,7 +75,7 @@ namespace ShareX.ImageEffectsLib.Properties {
                 return ResourceManager.GetString("AssetsFolderMustBeInsideShareXImageEffectsFolder", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Confirmation.
         /// </summary>
@@ -87,7 +84,7 @@ namespace ShareX.ImageEffectsLib.Properties {
                 return ResourceManager.GetString("Confirmation", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -97,7 +94,7 @@ namespace ShareX.ImageEffectsLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -107,7 +104,7 @@ namespace ShareX.ImageEffectsLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Adjustments.
         /// </summary>
@@ -116,7 +113,7 @@ namespace ShareX.ImageEffectsLib.Properties {
                 return ResourceManager.GetString("ImageEffectsForm_AddAllEffectsToTreeView_Adjustments", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Drawings.
         /// </summary>
@@ -125,7 +122,7 @@ namespace ShareX.ImageEffectsLib.Properties {
                 return ResourceManager.GetString("ImageEffectsForm_AddAllEffectsToTreeView_Drawings", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Filters.
         /// </summary>
@@ -134,7 +131,7 @@ namespace ShareX.ImageEffectsLib.Properties {
                 return ResourceManager.GetString("ImageEffectsForm_AddAllEffectsToTreeView_Filters", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Manipulations.
         /// </summary>
@@ -143,7 +140,7 @@ namespace ShareX.ImageEffectsLib.Properties {
                 return ResourceManager.GetString("ImageEffectsForm_AddAllEffectsToTreeView_Manipulations", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
@@ -152,7 +149,7 @@ namespace ShareX.ImageEffectsLib.Properties {
                 return ResourceManager.GetString("ImageEffectsForm_EditorMode_Cancel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Image effects - Width: {0}, Height: {1}, Render time: {2} ms.
         /// </summary>
@@ -162,7 +159,7 @@ namespace ShareX.ImageEffectsLib.Properties {
                         "me___2__ms", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Invalid assets folder path.
         /// </summary>
@@ -171,7 +168,7 @@ namespace ShareX.ImageEffectsLib.Properties {
                 return ResourceManager.GetString("InvalidAssetsFolderPath", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -181,7 +178,7 @@ namespace ShareX.ImageEffectsLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Missing preset name.
         /// </summary>
@@ -190,7 +187,7 @@ namespace ShareX.ImageEffectsLib.Properties {
                 return ResourceManager.GetString("MissingPresetName", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Package with this file name already exists.
         ///Would you like to overwrite it?.
@@ -200,7 +197,7 @@ namespace ShareX.ImageEffectsLib.Properties {
                 return ResourceManager.GetString("PackageWithThisFileNameAlreadyExistsRNWouldYouLikeToOverwriteIt", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -210,7 +207,7 @@ namespace ShareX.ImageEffectsLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Preset name cannot be empty..
         /// </summary>
@@ -219,7 +216,7 @@ namespace ShareX.ImageEffectsLib.Properties {
                 return ResourceManager.GetString("PresetNameCannotBeEmpty", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Would you like to clear effects?.
         /// </summary>

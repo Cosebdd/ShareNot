@@ -27,7 +27,7 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.OAuth
 {
     public enum OAuth2ChallengeMethod
     {

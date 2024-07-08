@@ -23,11 +23,11 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using ShareNot.HelpersLib.Colors;
 
-namespace ShareX.MediaLib
+namespace ShareNot.MediaLib
 {
     public class ImageBeautifierOptions
     {

@@ -27,8 +27,10 @@ using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Native;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     public class CursorData
     {

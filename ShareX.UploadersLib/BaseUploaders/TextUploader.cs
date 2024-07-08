@@ -26,7 +26,7 @@
 using System.IO;
 using System.Text;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.BaseUploaders
 {
     public abstract class TextUploader : GenericUploader
     {

@@ -23,12 +23,18 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Forms;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Native;
+using ShareNot.ScreenCaptureLib.Forms;
+using ShareNot.ScreenCaptureLib.Helpers;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib
 {
     public static class RegionCaptureTasks
     {

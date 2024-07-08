@@ -23,15 +23,19 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.IO;
 using System.Net;
 using System.Text;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.UploadersLib.Helpers;
+using ShareNot.UploadersLib.OAuth;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.BaseUploaders
 {
     public class Uploader
     {
@@ -59,7 +63,7 @@ namespace ShareX.UploadersLib
             ServicePointManager.Expect100Continue = false;
             ServicePointManager.UseNagleAlgorithm = false;
 
-            if (Helpers.IsWindows7())
+            if (HelpersLib.Helpers.Helpers.IsWindows7())
             {
                 try
                 {

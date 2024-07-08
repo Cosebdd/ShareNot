@@ -26,7 +26,7 @@
 using System;
 using System.Drawing;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Helpers
 {
     public static class MathHelpers
     {

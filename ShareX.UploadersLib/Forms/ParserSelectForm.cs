@@ -23,12 +23,13 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.Forms
 {
     public partial class ParserSelectForm : Form
     {

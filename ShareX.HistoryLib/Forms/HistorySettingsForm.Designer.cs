@@ -1,5 +1,5 @@
 ﻿
-namespace ShareX.HistoryLib
+namespace ShareNot.HistoryLib.Forms
 {
     partial class HistorySettingsForm
     {
@@ -33,23 +33,23 @@ namespace ShareX.HistoryLib
             this.cbRememberSearchText = new System.Windows.Forms.CheckBox();
             this.cbRememberWindowState = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
-            // 
+            //
             // cbRememberSearchText
-            // 
+            //
             resources.ApplyResources(this.cbRememberSearchText, "cbRememberSearchText");
             this.cbRememberSearchText.Name = "cbRememberSearchText";
             this.cbRememberSearchText.UseVisualStyleBackColor = true;
             this.cbRememberSearchText.CheckedChanged += new System.EventHandler(this.cbRememberSearchText_CheckedChanged);
-            // 
+            //
             // cbRememberWindowState
-            // 
+            //
             resources.ApplyResources(this.cbRememberWindowState, "cbRememberWindowState");
             this.cbRememberWindowState.Name = "cbRememberWindowState";
             this.cbRememberWindowState.UseVisualStyleBackColor = true;
             this.cbRememberWindowState.CheckedChanged += new System.EventHandler(this.cbRememberWindowState_CheckedChanged);
-            // 
+            //
             // HistorySettingsForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Window;

@@ -28,8 +28,11 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text.RegularExpressions;
+using ShareNot.HelpersLib.Colors;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Random;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Helpers
 {
     public static class ColorHelpers
     {

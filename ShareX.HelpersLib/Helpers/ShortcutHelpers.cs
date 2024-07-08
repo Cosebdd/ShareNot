@@ -23,12 +23,13 @@
 
 #endregion License Information (GPL v3)
 
-using IWshRuntimeLibrary;
 using System;
 using System.IO;
+using IWshRuntimeLibrary;
+using ShareNot.HelpersLib.Extensions;
 using File = System.IO.File;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Helpers
 {
     public static class ShortcutHelpers
     {

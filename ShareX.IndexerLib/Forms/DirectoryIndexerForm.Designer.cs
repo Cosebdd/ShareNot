@@ -1,4 +1,4 @@
-﻿namespace ShareX.IndexerLib
+﻿namespace ShareNot.IndexerLib.Forms
 {
     partial class DirectoryIndexerForm
     {
@@ -44,84 +44,84 @@
             this.tpPreview.SuspendLayout();
             this.tpSettings.SuspendLayout();
             this.SuspendLayout();
-            // 
+            //
             // txtFolderPath
-            // 
+            //
             resources.ApplyResources(this.txtFolderPath, "txtFolderPath");
             this.txtFolderPath.Name = "txtFolderPath";
             this.txtFolderPath.TextChanged += new System.EventHandler(this.txtFolderPath_TextChanged);
-            // 
+            //
             // btnBrowseFolder
-            // 
+            //
             resources.ApplyResources(this.btnBrowseFolder, "btnBrowseFolder");
             this.btnBrowseFolder.Name = "btnBrowseFolder";
             this.btnBrowseFolder.UseVisualStyleBackColor = true;
             this.btnBrowseFolder.Click += new System.EventHandler(this.btnBrowseFolder_Click);
-            // 
+            //
             // btnIndexFolder
-            // 
+            //
             resources.ApplyResources(this.btnIndexFolder, "btnIndexFolder");
             this.btnIndexFolder.Name = "btnIndexFolder";
             this.btnIndexFolder.UseVisualStyleBackColor = true;
             this.btnIndexFolder.Click += new System.EventHandler(this.btnIndexFolder_Click);
-            // 
+            //
             // btnUpload
-            // 
+            //
             resources.ApplyResources(this.btnUpload, "btnUpload");
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.UseVisualStyleBackColor = true;
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
-            // 
+            //
             // tcMain
-            // 
+            //
             resources.ApplyResources(this.tcMain, "tcMain");
             this.tcMain.Controls.Add(this.tpPreview);
             this.tcMain.Controls.Add(this.tpSettings);
             this.tcMain.Name = "tcMain";
             this.tcMain.SelectedIndex = 0;
-            // 
+            //
             // tpPreview
-            // 
+            //
             this.tpPreview.BackColor = System.Drawing.SystemColors.Window;
             this.tpPreview.Controls.Add(this.txtPreview);
             this.tpPreview.Controls.Add(this.wbPreview);
             resources.ApplyResources(this.tpPreview, "tpPreview");
             this.tpPreview.Name = "tpPreview";
-            // 
+            //
             // txtPreview
-            // 
+            //
             this.txtPreview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtPreview, "txtPreview");
             this.txtPreview.Name = "txtPreview";
-            // 
+            //
             // tpSettings
-            // 
+            //
             this.tpSettings.BackColor = System.Drawing.SystemColors.Window;
             this.tpSettings.Controls.Add(this.pgSettings);
             resources.ApplyResources(this.tpSettings, "tpSettings");
             this.tpSettings.Name = "tpSettings";
-            // 
+            //
             // pgSettings
-            // 
+            //
             resources.ApplyResources(this.pgSettings, "pgSettings");
             this.pgSettings.Name = "pgSettings";
             this.pgSettings.PropertySort = System.Windows.Forms.PropertySort.Categorized;
             this.pgSettings.ToolbarVisible = false;
-            // 
+            //
             // btnSaveAs
-            // 
+            //
             resources.ApplyResources(this.btnSaveAs, "btnSaveAs");
             this.btnSaveAs.Name = "btnSaveAs";
             this.btnSaveAs.UseVisualStyleBackColor = true;
             this.btnSaveAs.Click += new System.EventHandler(this.btnSaveAs_Click);
-            // 
+            //
             // wbPreview
-            // 
+            //
             resources.ApplyResources(this.wbPreview, "wbPreview");
             this.wbPreview.Name = "wbPreview";
-            // 
+            //
             // DirectoryIndexerForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;

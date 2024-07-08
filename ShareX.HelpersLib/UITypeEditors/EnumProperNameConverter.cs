@@ -28,7 +28,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.UITypeEditors
 {
     public class EnumProperNameConverter : EnumConverter
     {
@@ -46,7 +46,7 @@ namespace ShareX.HelpersLib
 
         public override object ConvertTo(ITypeDescriptorContext context, CultureInfo culture, object value, Type destType)
         {
-            return Helpers.GetProperName(value.ToString());
+            return Helpers.Helpers.GetProperName(value.ToString());
         }
 
         public override bool CanConvertFrom(ITypeDescriptorContext context, Type srcType)
@@ -58,7 +58,7 @@ namespace ShareX.HelpersLib
         {
             foreach (Enum e in Enum.GetValues(enumType).OfType<Enum>())
             {
-                if (Helpers.GetProperName(e.ToString()) == (string)value)
+                if (Helpers.Helpers.GetProperName(e.ToString()) == (string)value)
                 {
                     return e;
                 }

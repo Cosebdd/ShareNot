@@ -23,15 +23,17 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.Properties;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using ShareNot.Controls;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.Properties;
 
-namespace ShareX
+namespace ShareNot.Forms
 {
     public partial class HotkeySettingsForm : Form
     {

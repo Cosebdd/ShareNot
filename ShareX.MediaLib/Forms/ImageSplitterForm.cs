@@ -23,7 +23,6 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -32,8 +31,11 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.MediaLib
+namespace ShareNot.MediaLib.Forms
 {
     public partial class ImageSplitterForm : Form
     {

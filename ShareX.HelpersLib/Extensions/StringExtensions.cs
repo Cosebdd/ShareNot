@@ -29,7 +29,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Extensions
 {
     public static class StringExtensions
     {

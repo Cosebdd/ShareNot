@@ -1,4 +1,6 @@
-﻿namespace ShareX.ScreenCaptureLib
+﻿using ShareNot.HelpersLib.Controls;
+
+namespace ShareNot.ScreenCaptureLib.Forms
 {
     partial class CanvasSizeForm
     {
@@ -39,15 +41,15 @@
             this.nudBottom = new System.Windows.Forms.NumericUpDown();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.cbtnCanvasColor = new ShareX.HelpersLib.ColorButton();
+            this.cbtnCanvasColor = new ColorButton();
             ((System.ComponentModel.ISupportInitialize)(this.nudLeft)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudRight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudBottom)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // nudLeft
-            // 
+            //
             resources.ApplyResources(this.nudLeft, "nudLeft");
             this.nudLeft.Maximum = new decimal(new int[] {
             10000,
@@ -60,19 +62,19 @@
             0,
             -2147483648});
             this.nudLeft.Name = "nudLeft";
-            // 
+            //
             // lblLeft
-            // 
+            //
             resources.ApplyResources(this.lblLeft, "lblLeft");
             this.lblLeft.Name = "lblLeft";
-            // 
+            //
             // lblRight
-            // 
+            //
             resources.ApplyResources(this.lblRight, "lblRight");
             this.lblRight.Name = "lblRight";
-            // 
+            //
             // nudRight
-            // 
+            //
             resources.ApplyResources(this.nudRight, "nudRight");
             this.nudRight.Maximum = new decimal(new int[] {
             10000,
@@ -85,14 +87,14 @@
             0,
             -2147483648});
             this.nudRight.Name = "nudRight";
-            // 
+            //
             // lblTop
-            // 
+            //
             resources.ApplyResources(this.lblTop, "lblTop");
             this.lblTop.Name = "lblTop";
-            // 
+            //
             // nudTop
-            // 
+            //
             resources.ApplyResources(this.nudTop, "nudTop");
             this.nudTop.Maximum = new decimal(new int[] {
             10000,
@@ -105,14 +107,14 @@
             0,
             -2147483648});
             this.nudTop.Name = "nudTop";
-            // 
+            //
             // lblBottom
-            // 
+            //
             resources.ApplyResources(this.lblBottom, "lblBottom");
             this.lblBottom.Name = "lblBottom";
-            // 
+            //
             // nudBottom
-            // 
+            //
             resources.ApplyResources(this.nudBottom, "nudBottom");
             this.nudBottom.Maximum = new decimal(new int[] {
             10000,
@@ -125,31 +127,31 @@
             0,
             -2147483648});
             this.nudBottom.Name = "nudBottom";
-            // 
+            //
             // btnOK
-            // 
+            //
             resources.ApplyResources(this.btnOK, "btnOK");
             this.btnOK.Name = "btnOK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
+            //
             // btnCancel
-            // 
+            //
             resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
+            //
             // cbtnCanvasColor
-            // 
+            //
             this.cbtnCanvasColor.Color = System.Drawing.Color.Transparent;
             this.cbtnCanvasColor.ColorPickerOptions = null;
             resources.ApplyResources(this.cbtnCanvasColor, "cbtnCanvasColor");
             this.cbtnCanvasColor.Name = "cbtnCanvasColor";
             this.cbtnCanvasColor.UseVisualStyleBackColor = true;
-            // 
+            //
             // CanvasSizeForm
-            // 
+            //
             this.AcceptButton = this.btnOK;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -191,6 +193,6 @@
         private System.Windows.Forms.NumericUpDown nudBottom;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
-        private HelpersLib.ColorButton cbtnCanvasColor;
+        private ColorButton cbtnCanvasColor;
     }
 }

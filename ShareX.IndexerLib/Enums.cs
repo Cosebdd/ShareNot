@@ -25,7 +25,7 @@
 
 using System.ComponentModel;
 
-namespace ShareX.IndexerLib
+namespace ShareNot.IndexerLib
 {
     public enum IndexerOutput
     {

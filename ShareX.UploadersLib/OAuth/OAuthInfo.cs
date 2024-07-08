@@ -23,12 +23,12 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.UploadersLib.Properties;
 using System;
 using System.ComponentModel;
+using ShareNot.HelpersLib.Settings;
+using ShareNot.UploadersLib.Properties;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.OAuth
 {
     public class OAuthInfo : ICloneable
     {

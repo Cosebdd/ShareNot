@@ -1,4 +1,6 @@
-﻿namespace ShareX.HelpersLib
+﻿using ShareNot.HelpersLib.Controls;
+
+namespace ShareNot.HelpersLib.Forms
 {
     partial class ClipboardViewerForm
     {
@@ -34,31 +36,31 @@
             this.btnClearClipboard = new System.Windows.Forms.Button();
             this.lvClipboardContentList = new System.Windows.Forms.ListView();
             this.chFormat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.pbSelectedClipboardContent = new ShareX.HelpersLib.MyPictureBox();
+            this.pbSelectedClipboardContent = new MyPictureBox();
             this.SuspendLayout();
-            // 
+            //
             // txtSelectedClipboardContent
-            // 
+            //
             resources.ApplyResources(this.txtSelectedClipboardContent, "txtSelectedClipboardContent");
             this.txtSelectedClipboardContent.Name = "txtSelectedClipboardContent";
             this.txtSelectedClipboardContent.ReadOnly = true;
-            // 
+            //
             // btnRefresh
-            // 
+            //
             resources.ApplyResources(this.btnRefresh, "btnRefresh");
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
+            //
             // btnClearClipboard
-            // 
+            //
             resources.ApplyResources(this.btnClearClipboard, "btnClearClipboard");
             this.btnClearClipboard.Name = "btnClearClipboard";
             this.btnClearClipboard.UseVisualStyleBackColor = true;
             this.btnClearClipboard.Click += new System.EventHandler(this.btnClearClipboard_Click);
-            // 
+            //
             // lvClipboardContentList
-            // 
+            //
             resources.ApplyResources(this.lvClipboardContentList, "lvClipboardContentList");
             this.lvClipboardContentList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chFormat});
@@ -70,13 +72,13 @@
             this.lvClipboardContentList.UseCompatibleStateImageBehavior = false;
             this.lvClipboardContentList.View = System.Windows.Forms.View.Details;
             this.lvClipboardContentList.SelectedIndexChanged += new System.EventHandler(this.lvClipboardContentList_SelectedIndexChanged);
-            // 
+            //
             // chFormat
-            // 
+            //
             resources.ApplyResources(this.chFormat, "chFormat");
-            // 
+            //
             // pbSelectedClipboardContent
-            // 
+            //
             resources.ApplyResources(this.pbSelectedClipboardContent, "pbSelectedClipboardContent");
             this.pbSelectedClipboardContent.BackColor = System.Drawing.SystemColors.Window;
             this.pbSelectedClipboardContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -85,9 +87,9 @@
             this.pbSelectedClipboardContent.Name = "pbSelectedClipboardContent";
             this.pbSelectedClipboardContent.PictureBoxBackColor = System.Drawing.SystemColors.Window;
             this.pbSelectedClipboardContent.ShowImageSizeLabel = true;
-            // 
+            //
             // ClipboardViewerForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pbSelectedClipboardContent);

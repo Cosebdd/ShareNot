@@ -1,4 +1,6 @@
-﻿namespace ShareX.HelpersLib
+﻿using ShareNot.HelpersLib.Controls.BlackStyle;
+
+namespace ShareNot.HelpersLib.UpdateChecker
 {
     partial class DownloaderForm
     {
@@ -33,38 +35,38 @@
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblFilename = new System.Windows.Forms.Label();
             this.btnAction = new System.Windows.Forms.Button();
-            this.pbProgress = new ShareX.HelpersLib.BlackStyleProgressBar();
+            this.pbProgress = new BlackStyleProgressBar();
             this.SuspendLayout();
-            // 
+            //
             // lblProgress
-            // 
+            //
             resources.ApplyResources(this.lblProgress, "lblProgress");
             this.lblProgress.Name = "lblProgress";
-            // 
+            //
             // lblStatus
-            // 
+            //
             resources.ApplyResources(this.lblStatus, "lblStatus");
             this.lblStatus.Name = "lblStatus";
-            // 
+            //
             // lblFilename
-            // 
+            //
             resources.ApplyResources(this.lblFilename, "lblFilename");
             this.lblFilename.Name = "lblFilename";
-            // 
+            //
             // btnAction
-            // 
+            //
             resources.ApplyResources(this.btnAction, "btnAction");
             this.btnAction.Name = "btnAction";
             this.btnAction.UseVisualStyleBackColor = true;
             this.btnAction.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnAction_MouseClick);
-            // 
+            //
             // pbProgress
-            // 
+            //
             resources.ApplyResources(this.pbProgress, "pbProgress");
             this.pbProgress.Name = "pbProgress";
-            // 
+            //
             // DownloaderForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Window;

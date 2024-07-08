@@ -27,7 +27,7 @@ using System;
 using System.Collections;
 using System.Drawing;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.GIF
 {
     /// <summary>
     /// Summary description for PaletteQuantizer.

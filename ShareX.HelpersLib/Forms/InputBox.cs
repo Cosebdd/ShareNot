@@ -26,8 +26,9 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Extensions;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Forms
 {
     public class InputBox : Form
     {

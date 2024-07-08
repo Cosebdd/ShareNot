@@ -1,4 +1,4 @@
-﻿namespace ShareX.HelpersLib
+﻿namespace ShareNot.HelpersLib.Forms
 {
     partial class ErrorForm
     {
@@ -39,39 +39,39 @@
             this.lblErrorMessage = new System.Windows.Forms.Label();
             this.flpMenu.SuspendLayout();
             this.SuspendLayout();
-            // 
+            //
             // txtException
-            // 
+            //
             resources.ApplyResources(this.txtException, "txtException");
             this.txtException.Name = "txtException";
             this.txtException.ReadOnly = true;
-            // 
+            //
             // btnSendBugReport
-            // 
+            //
             this.btnSendBugReport.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.btnSendBugReport, "btnSendBugReport");
             this.btnSendBugReport.Name = "btnSendBugReport";
             this.btnSendBugReport.UseVisualStyleBackColor = false;
             this.btnSendBugReport.Click += new System.EventHandler(this.btnSendBugReport_Click);
-            // 
+            //
             // btnClose
-            // 
+            //
             resources.ApplyResources(this.btnClose, "btnClose");
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
             this.btnClose.Name = "btnClose";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
+            //
             // btnOpenLogFile
-            // 
+            //
             this.btnOpenLogFile.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.btnOpenLogFile, "btnOpenLogFile");
             this.btnOpenLogFile.Name = "btnOpenLogFile";
             this.btnOpenLogFile.UseVisualStyleBackColor = false;
             this.btnOpenLogFile.Click += new System.EventHandler(this.btnOpenLogFile_Click);
-            // 
+            //
             // flpMenu
-            // 
+            //
             resources.ApplyResources(this.flpMenu, "flpMenu");
             this.flpMenu.Controls.Add(this.btnSendBugReport);
             this.flpMenu.Controls.Add(this.btnOpenLogFile);
@@ -79,30 +79,30 @@
             this.flpMenu.Controls.Add(this.btnClose);
             this.flpMenu.Controls.Add(this.btnOK);
             this.flpMenu.Name = "flpMenu";
-            // 
+            //
             // btnContinue
-            // 
+            //
             this.btnContinue.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.btnContinue, "btnContinue");
             this.btnContinue.Name = "btnContinue";
             this.btnContinue.UseVisualStyleBackColor = false;
             this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
-            // 
+            //
             // btnOK
-            // 
+            //
             resources.ApplyResources(this.btnOK, "btnOK");
             this.btnOK.BackColor = System.Drawing.Color.Transparent;
             this.btnOK.Name = "btnOK";
             this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
+            //
             // lblErrorMessage
-            // 
+            //
             resources.ApplyResources(this.lblErrorMessage, "lblErrorMessage");
             this.lblErrorMessage.Name = "lblErrorMessage";
-            // 
+            //
             // ErrorForm
-            // 
+            //
             this.AcceptButton = this.btnContinue;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;

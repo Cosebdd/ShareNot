@@ -23,13 +23,15 @@
 
 #endregion License Information (GPL v3)
 
-using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using ShareNot.ImageEffectsLib.Drawings;
+using ShareNot.ImageEffectsLib.Manipulations;
 
-namespace ShareX.ImageEffectsLib
+namespace ShareNot.ImageEffectsLib
 {
     public class ImageEffectPreset
     {

@@ -23,11 +23,11 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
 
-namespace ShareX
+namespace ShareNot.Forms
 {
     public partial class FirstTimeConfigForm : Form
     {

@@ -23,10 +23,11 @@
 
 #endregion License Information (GPL v3)
 
-using Newtonsoft.Json.Serialization;
 using System.Reflection;
+using Newtonsoft.Json.Serialization;
+using ShareNot.HelpersLib.Cryptographic;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Settings
 {
     public class DPAPIEncryptedStringValueProvider : IValueProvider
     {

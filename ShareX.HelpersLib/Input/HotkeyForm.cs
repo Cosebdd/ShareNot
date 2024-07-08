@@ -25,8 +25,9 @@
 
 using System.Diagnostics;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Native;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Input
 {
     public class HotkeyForm : Form
     {
@@ -56,7 +57,7 @@ namespace ShareX.HelpersLib
 
                 if (hotkeyInfo.ID == 0)
                 {
-                    string uniqueID = Helpers.GetUniqueID();
+                    string uniqueID = Helpers.Helpers.GetUniqueID();
                     hotkeyInfo.ID = NativeMethods.GlobalAddAtom(uniqueID);
 
                     if (hotkeyInfo.ID == 0)

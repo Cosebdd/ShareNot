@@ -23,13 +23,16 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Text;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.ScreenCaptureLib.Helpers;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.Shapes.Drawing
 {
     public class StepDrawingShape : EllipseDrawingShape
     {
@@ -136,13 +139,13 @@ namespace ShareX.ScreenCaptureLib
             switch (StepType)
             {
                 case StepType.LettersUppercase:
-                    return Helpers.NumberToLetters(Number);
+                    return HelpersLib.Helpers.Helpers.NumberToLetters(Number);
                 case StepType.LettersLowercase:
-                    return Helpers.NumberToLetters(Number).ToLowerInvariant();
+                    return HelpersLib.Helpers.Helpers.NumberToLetters(Number).ToLowerInvariant();
                 case StepType.RomanNumeralsUppercase:
-                    return Helpers.NumberToRomanNumeral(Number);
+                    return HelpersLib.Helpers.Helpers.NumberToRomanNumeral(Number);
                 case StepType.RomanNumeralsLowercase:
-                    return Helpers.NumberToRomanNumeral(Number).ToLowerInvariant();
+                    return HelpersLib.Helpers.Helpers.NumberToRomanNumeral(Number).ToLowerInvariant();
                 default:
                     return Number.ToString();
             }

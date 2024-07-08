@@ -23,9 +23,9 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.CustomUploader.Functions
 {
     // Example: {filename}
     internal class CustomUploaderFunctionFileName : CustomUploaderFunction

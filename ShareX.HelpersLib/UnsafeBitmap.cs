@@ -27,7 +27,7 @@ using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     public unsafe class UnsafeBitmap : IDisposable
     {

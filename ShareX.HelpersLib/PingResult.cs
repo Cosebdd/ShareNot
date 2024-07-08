@@ -28,7 +28,7 @@ using System.Linq;
 using System.Net.NetworkInformation;
 using System.Text;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     public class PingResult
     {

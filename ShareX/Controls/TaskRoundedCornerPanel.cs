@@ -23,12 +23,14 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Controls;
+using ShareNot.HelpersLib.Extensions;
 
-namespace ShareX
+namespace ShareNot.Controls
 {
     public class TaskRoundedCornerPanel : RoundedCornerPanel
     {

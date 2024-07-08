@@ -8,10 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ShareX.ScreenCaptureLib.Properties {
-    using System;
-    
-    
+namespace ShareNot.ScreenCaptureLib.Properties {
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -23,15 +20,15 @@ namespace ShareX.ScreenCaptureLib.Properties {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
-        
+
         private static global::System.Resources.ResourceManager resourceMan;
-        
+
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Resources() {
         }
-        
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -39,13 +36,13 @@ namespace ShareX.ScreenCaptureLib.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ShareX.ScreenCaptureLib.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ShareNot.ScreenCaptureLib.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-        
+
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
@@ -59,7 +56,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 resourceCulture = value;
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -69,7 +66,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -79,7 +76,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -89,7 +86,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -99,7 +96,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -109,7 +106,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Auto copy image to clipboard.
         /// </summary>
@@ -118,7 +115,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("AutoCopyImageToClipboard", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -128,7 +125,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Region capture.
         /// </summary>
@@ -137,7 +134,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("BaseRegionForm_InitializeComponent_Region_capture", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Bitrate:.
         /// </summary>
@@ -146,7 +143,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("Bitrate", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Blur.
         /// </summary>
@@ -155,7 +152,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("Blur", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -165,7 +162,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -175,7 +172,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -185,7 +182,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -195,7 +192,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
@@ -205,7 +202,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((byte[])(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Close (Esc).
         /// </summary>
@@ -214,7 +211,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("CloseEsc", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Confirmation.
         /// </summary>
@@ -223,7 +220,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("Confirmation", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -233,7 +230,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -243,7 +240,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -253,7 +250,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -263,7 +260,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -273,7 +270,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -283,7 +280,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to CRF:.
         /// </summary>
@@ -292,7 +289,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("CRF", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -302,7 +299,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
@@ -312,7 +309,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((byte[])(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -322,7 +319,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cut out background color....
         /// </summary>
@@ -331,7 +328,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("CutOutBackgroundColor", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cut out effect size:.
         /// </summary>
@@ -340,7 +337,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("CutOutEffectSize", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cut out effect:.
         /// </summary>
@@ -349,7 +346,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("CutOutEffectType", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -359,7 +356,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -369,7 +366,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -379,7 +376,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -389,7 +386,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Drop shadow color....
         /// </summary>
@@ -398,7 +395,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("DropShadowColor", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Duplicate.
         /// </summary>
@@ -407,7 +404,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("Duplicate", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -417,7 +414,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -427,7 +424,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -437,7 +434,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -447,7 +444,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -457,7 +454,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -467,7 +464,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -477,7 +474,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -487,7 +484,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -497,7 +494,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -507,7 +504,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -517,7 +514,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -527,7 +524,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -537,7 +534,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -547,7 +544,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -557,7 +554,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -567,7 +564,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -577,7 +574,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -587,7 +584,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -597,7 +594,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -607,7 +604,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -617,7 +614,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -627,7 +624,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Clipboard does not contain an image..
         /// </summary>
@@ -636,7 +633,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("EditorStartupForm_ClipboardDoesNotContainAnImage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -646,7 +643,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -656,7 +653,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Browse for ffmpeg.exe.
         /// </summary>
@@ -665,7 +662,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("FFmpegOptionsForm_buttonFFmpegBrowse_Click_Browse_for_ffmpeg_exe", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -675,7 +672,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to FPS limit:.
         /// </summary>
@@ -684,7 +681,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("FPSLimit", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -694,7 +691,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -704,7 +701,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -714,7 +711,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -724,7 +721,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Highlight.
         /// </summary>
@@ -733,7 +730,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("Highlight", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -743,7 +740,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -753,7 +750,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -763,7 +760,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -773,7 +770,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -783,7 +780,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -793,7 +790,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -803,7 +800,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -813,7 +810,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -823,7 +820,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Image copied.
         /// </summary>
@@ -832,7 +829,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ImageCopied", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Add image effects....
         /// </summary>
@@ -841,7 +838,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ImageEffects", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Image saved.
         /// </summary>
@@ -850,7 +847,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ImageSaved", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Image saved.
         /// </summary>
@@ -859,7 +856,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ImageSavedAs", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Image uploading.
         /// </summary>
@@ -868,7 +865,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ImageUploading", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Image URL.
         /// </summary>
@@ -877,7 +874,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ImageURL", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -887,7 +884,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -897,7 +894,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -907,7 +904,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -917,7 +914,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -927,7 +924,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -937,7 +934,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -947,7 +944,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -957,7 +954,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -967,7 +964,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -977,7 +974,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -987,7 +984,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -997,7 +994,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1007,7 +1004,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1017,7 +1014,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1027,7 +1024,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1037,7 +1034,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1047,7 +1044,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1057,7 +1054,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1067,7 +1064,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1077,7 +1074,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1087,7 +1084,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1097,7 +1094,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1107,7 +1104,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1117,7 +1114,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1127,7 +1124,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1137,7 +1134,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1147,7 +1144,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1157,7 +1154,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1167,7 +1164,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Use light resize nodes.
         /// </summary>
@@ -1176,7 +1173,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("LightResizeNodes", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Lock menu.
         /// </summary>
@@ -1185,7 +1182,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("LockMenu", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1195,7 +1192,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Magnify strength:.
         /// </summary>
@@ -1204,7 +1201,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("MagnifyStrength", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Menu icon size:.
         /// </summary>
@@ -1213,7 +1210,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("MenuIconSize", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1223,7 +1220,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1233,7 +1230,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1243,7 +1240,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to New line: Ctrl + Enter, OK: Enter.
         /// </summary>
@@ -1252,7 +1249,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("NewLineCtrlEnterOKEnter", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to New line: Enter, OK: Ctrl + Enter.
         /// </summary>
@@ -1261,7 +1258,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("NewLineEnterOKCtrlEnter", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
@@ -1271,7 +1268,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((byte[])(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Open keybinds web page....
         /// </summary>
@@ -1280,7 +1277,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("OpenKeybindsPage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Pause.
         /// </summary>
@@ -1289,7 +1286,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("Pause", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1299,7 +1296,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1309,7 +1306,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Pixelate.
         /// </summary>
@@ -1318,7 +1315,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("Pixelate", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -1328,7 +1325,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Processing....
         /// </summary>
@@ -1337,7 +1334,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("Processing", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Rectangle capture light.
         /// </summary>
@@ -1346,7 +1343,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("RectangleLight_InitializeComponent_Rectangle_capture_light", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to X: {0} Y: {1} W: {2} H: {3}.
         /// </summary>
@@ -1355,7 +1352,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("RectangleRegion_GetAreaText_Area", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to RGB: {0}, {1}, {2}
         ///Hex: {3}
@@ -1366,7 +1363,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("RectangleRegion_GetColorPickerText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Rectangle capture transparent.
         /// </summary>
@@ -1375,7 +1372,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("RectangleTransparent_RectangleTransparent_Rectangle_capture_transparent", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Image editor.
         /// </summary>
@@ -1384,7 +1381,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("RegionCaptureForm_InitializeComponent_ImageEditor", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to There are unsaved changes.
         ///
@@ -1395,7 +1392,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("RegionCaptureForm_SaveChangesBeforeClosingEditor", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to ShareX - Image editor.
         /// </summary>
@@ -1404,7 +1401,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("RegionCaptureForm_ShowExitConfirmation_ShareXImageEditor", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Tip: You can pan image by holding mouse middle button and dragging..
         /// </summary>
@@ -1413,7 +1410,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("RegionCaptureForm_TipYouCanPanImageByHoldingMouseMiddleButtonAndDragging", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Resume.
         /// </summary>
@@ -1422,7 +1419,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("Resume", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Are you sure you want to abort this recording?.
         /// </summary>
@@ -1431,7 +1428,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ScreenRecordForm_ConfirmCancel", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Start.
         /// </summary>
@@ -1440,7 +1437,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ScreenRecordForm_Start", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Click to start recording..
         /// </summary>
@@ -1449,7 +1446,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ScreenRecordForm_StartRecording_Click_tray_icon_to_start_recording_", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Click to stop recording..
         /// </summary>
@@ -1458,7 +1455,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ScreenRecordForm_StartRecording_Click_tray_icon_to_stop_recording_", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Encoding....
         /// </summary>
@@ -1467,7 +1464,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ScreenRecordForm_StartRecording_Encoding___", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Waiting....
         /// </summary>
@@ -1476,7 +1473,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ScreenRecordForm_StartRecording_Waiting___", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Stop.
         /// </summary>
@@ -1485,7 +1482,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ScreenRecordForm_Stop", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Stop capture.
         /// </summary>
@@ -1494,7 +1491,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ScrollingCaptureForm_StartCapture_Stop_capture", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Start capture.
         /// </summary>
@@ -1503,7 +1500,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ScrollingCaptureForm_StopCapture_Start_capture", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Arrow head direction:.
         /// </summary>
@@ -1512,7 +1509,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_ArrowHeadDirection", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Border style:.
         /// </summary>
@@ -1521,7 +1518,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_BorderStyle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Center points:.
         /// </summary>
@@ -1530,7 +1527,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CenterPoints", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Blur strength:.
         /// </summary>
@@ -1539,7 +1536,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_Blur_radius_", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Border color....
         /// </summary>
@@ -1548,7 +1545,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_Border_color___", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Border size:.
         /// </summary>
@@ -1557,7 +1554,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_Border_size_", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Capture.
         /// </summary>
@@ -1566,7 +1563,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_Capture", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Capture active monitor.
         /// </summary>
@@ -1575,7 +1572,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_Capture_active_monitor", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Capture fullscreen.
         /// </summary>
@@ -1584,7 +1581,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_Capture_fullscreen", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Capture monitor.
         /// </summary>
@@ -1593,7 +1590,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_Capture_monitor", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Corner radius:.
         /// </summary>
@@ -1602,7 +1599,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_Corner_radius_", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Enable animations.
         /// </summary>
@@ -1611,7 +1608,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_EnableAnimations", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Fill color....
         /// </summary>
@@ -1620,7 +1617,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_Fill_color___", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Fixed size region mode.
         /// </summary>
@@ -1629,7 +1626,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_Fixed_size_region_mode", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Height:.
         /// </summary>
@@ -1638,7 +1635,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_Height_", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Highlight color....
         /// </summary>
@@ -1647,7 +1644,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_Highlight_color___", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Magnifier pixel count:.
         /// </summary>
@@ -1656,7 +1653,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_Magnifier_pixel_count_", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Magnifier pixel size:.
         /// </summary>
@@ -1665,7 +1662,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_Magnifier_pixel_size_", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Multi region mode.
         /// </summary>
@@ -1674,7 +1671,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_Multi_region_mode", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Options.
         /// </summary>
@@ -1683,7 +1680,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_Options", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Pixel size:.
         /// </summary>
@@ -1692,7 +1689,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_Pixel_size_", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Remember menu state.
         /// </summary>
@@ -1701,7 +1698,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_RememberMenuState", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show FPS.
         /// </summary>
@@ -1710,7 +1707,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_Show_FPS", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show magnifier.
         /// </summary>
@@ -1719,7 +1716,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_Show_magnifier", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show position and size info.
         /// </summary>
@@ -1728,7 +1725,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_Show_position_and_size_info", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Show screen wide crosshair.
         /// </summary>
@@ -1737,7 +1734,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_Show_screen_wide_crosshair", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Square shape magnifier.
         /// </summary>
@@ -1746,7 +1743,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_Square_shape_magnifier", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Switch to drawing tool after shape selection.
         /// </summary>
@@ -1755,7 +1752,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_SwitchToDrawingToolAfterSelection", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Switch to selection tool after shape drawing.
         /// </summary>
@@ -1764,7 +1761,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_SwitchToSelectionToolAfterDrawing", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Width:.
         /// </summary>
@@ -1773,7 +1770,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateContextMenu_Width_", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Editor menu.
         /// </summary>
@@ -1782,7 +1779,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_AnnotateMenu", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Apply changes &amp; continue task (Enter).
         /// </summary>
@@ -1791,7 +1788,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_ApplyChangesContinueTaskEnter", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Auto close editor on task.
         /// </summary>
@@ -1800,7 +1797,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_AutoCloseEditorOnTask", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Auto crop image....
         /// </summary>
@@ -1809,7 +1806,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_AutoCropImage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Bring forward.
         /// </summary>
@@ -1818,7 +1815,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_BringForward", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Bring to front.
         /// </summary>
@@ -1827,7 +1824,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_BringToFront", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cancel task (Esc).
         /// </summary>
@@ -1836,7 +1833,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_CancelTaskEsc", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Canvas size....
         /// </summary>
@@ -1845,7 +1842,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_CanvasSize", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Capture regions.
         /// </summary>
@@ -1854,7 +1851,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_CaptureRegions", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Continue task (Space or right click).
         /// </summary>
@@ -1863,7 +1860,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_ContinueTaskSpaceOrRightClick", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Copy image to clipboard (Ctrl + C).
         /// </summary>
@@ -1872,7 +1869,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_CopyImageToClipboard", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Crop image....
         /// </summary>
@@ -1881,7 +1878,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_CropImage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
@@ -1890,7 +1887,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_Delete", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Delete all.
         /// </summary>
@@ -1899,7 +1896,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_DeleteAll", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Drop shadow.
         /// </summary>
@@ -1908,7 +1905,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_DropShadow", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Edit.
         /// </summary>
@@ -1917,7 +1914,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_Edit", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Editor start mode:.
         /// </summary>
@@ -1926,7 +1923,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_EditorStartMode", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Flip horizontal.
         /// </summary>
@@ -1935,7 +1932,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_FlipHorizontal", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Flip vertical.
         /// </summary>
@@ -1944,7 +1941,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_FlipVertical", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Font size:.
         /// </summary>
@@ -1953,7 +1950,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_FontSize", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Image.
         /// </summary>
@@ -1962,7 +1959,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_Image", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Image size....
         /// </summary>
@@ -1971,7 +1968,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_ImageSize", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Insert image file....
         /// </summary>
@@ -1980,7 +1977,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_InsertImageFile", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Insert image from screen....
         /// </summary>
@@ -1989,7 +1986,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_InsertImageFromScreen", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Interpolation mode:.
         /// </summary>
@@ -1998,7 +1995,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_InterpolationMode", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Capture last region.
         /// </summary>
@@ -2007,7 +2004,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_LastRegion", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to New image....
         /// </summary>
@@ -2016,7 +2013,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_NewImage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Open image file....
         /// </summary>
@@ -2025,7 +2022,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_OpenImageFile", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Paste image/text.
         /// </summary>
@@ -2034,7 +2031,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_PasteImageText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Print image... (Ctrl + P).
         /// </summary>
@@ -2043,7 +2040,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_PrintImage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Redo.
         /// </summary>
@@ -2052,7 +2049,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_Redo", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Rotate 180°.
         /// </summary>
@@ -2061,7 +2058,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_Rotate180", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Rotate 90° clockwise.
         /// </summary>
@@ -2070,7 +2067,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_Rotate90Clockwise", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Rotate 90° counter clockwise.
         /// </summary>
@@ -2079,7 +2076,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_Rotate90CounterClockwise", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Run after capture tasks (Enter).
         /// </summary>
@@ -2088,7 +2085,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_RunAfterCaptureTasks", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Save image (Ctrl + S).
         /// </summary>
@@ -2097,7 +2094,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_SaveImage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Save image as... (Ctrl + Shift + S).
         /// </summary>
@@ -2106,7 +2103,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_SaveImageAs", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Send backward.
         /// </summary>
@@ -2115,7 +2112,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_SendBackward", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Send to back.
         /// </summary>
@@ -2124,7 +2121,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_SendToBack", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Value of first step:.
         /// </summary>
@@ -2133,7 +2130,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_StartingStepValue", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Step type:.
         /// </summary>
@@ -2142,7 +2139,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_StepType", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Tool options.
         /// </summary>
@@ -2151,7 +2148,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_ToolOptions", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Undo.
         /// </summary>
@@ -2160,7 +2157,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_Undo", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Upload image (Ctrl + U).
         /// </summary>
@@ -2169,7 +2166,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_UploadImage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Zoom to fit on open.
         /// </summary>
@@ -2178,7 +2175,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_ZoomToFitOnOpen", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cursor type:.
         /// </summary>
@@ -2187,7 +2184,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ShapeManager_CursorType", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2197,7 +2194,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2207,7 +2204,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2217,7 +2214,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2227,7 +2224,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to This window will close before opening the keybinds web page. Do you want to continue?.
         /// </summary>
@@ -2236,7 +2233,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("ThisWindowWillCloseBeforeOpeningKeybindsPageWantContinue", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -2246,7 +2243,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Capture.
         /// </summary>
@@ -2255,7 +2252,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("WebpageCaptureForm_UpdateControls_Capture", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Stop.
         /// </summary>
@@ -2264,7 +2261,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("WebpageCaptureForm_UpdateControls_Stop", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Would you like to reset options?.
         /// </summary>
@@ -2273,7 +2270,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
                 return ResourceManager.GetString("WouldYouLikeToResetOptions", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>

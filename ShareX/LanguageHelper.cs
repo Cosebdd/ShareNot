@@ -23,15 +23,16 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.Properties;
 using System.ComponentModel;
 using System.Drawing;
 using System.Globalization;
 using System.Threading;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.Properties;
 
-namespace ShareX
+namespace ShareNot
 {
     public static class LanguageHelper
     {

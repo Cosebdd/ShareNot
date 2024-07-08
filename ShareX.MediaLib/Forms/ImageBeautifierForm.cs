@@ -23,15 +23,19 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.MediaLib.Properties;
 using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Colors;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Forms;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.MediaLib.Properties;
 
-namespace ShareX.MediaLib
+namespace ShareNot.MediaLib.Forms
 {
     public partial class ImageBeautifierForm : Form
     {

@@ -24,8 +24,9 @@
 #endregion License Information (GPL v3)
 
 using System.Text;
+using ShareNot.HelpersLib.Extensions;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Cryptographic
 {
     public class Translator
     {

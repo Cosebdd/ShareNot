@@ -23,14 +23,17 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.Properties;
-using ShareX.UploadersLib;
 using System;
 using System.Linq;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.Properties;
+using ShareNot.UploadersLib;
+using ShareNot.UploadersLib.CustomUploader;
 
-namespace ShareX
+namespace ShareNot.Controls
 {
     public partial class BeforeUploadControl : UserControl
     {

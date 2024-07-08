@@ -25,7 +25,7 @@
 
 using System;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.Helpers
 {
     public class UploaderErrorInfo
     {

@@ -23,15 +23,18 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Controls;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Native;
+using ShareNot.Properties;
 
-namespace ShareX
+namespace ShareNot.Forms
 {
     public partial class ActionsToolbarForm : Form
     {
@@ -187,7 +190,7 @@ namespace ShareX
         private void CheckToolbarPosition()
         {
             Rectangle rectToolbar = Bounds;
-            Rectangle rectScreen = CaptureHelpers.GetScreenWorkingArea();
+            Rectangle rectScreen = HelpersLib.Helpers.CaptureHelpers.GetScreenWorkingArea();
             Point pos = rectToolbar.Location;
 
             if (rectToolbar.Width < rectScreen.Width)
@@ -224,7 +227,7 @@ namespace ShareX
 
         private void UpdatePosition()
         {
-            Rectangle rectScreen = CaptureHelpers.GetScreenWorkingArea();
+            Rectangle rectScreen = HelpersLib.Helpers.CaptureHelpers.GetScreenWorkingArea();
 
             if (!Program.Settings.ActionsToolbarPosition.IsEmpty && rectScreen.Contains(Program.Settings.ActionsToolbarPosition))
             {
@@ -232,7 +235,7 @@ namespace ShareX
             }
             else
             {
-                Rectangle rectActiveScreen = CaptureHelpers.GetActiveScreenWorkingArea();
+                Rectangle rectActiveScreen = HelpersLib.Helpers.CaptureHelpers.GetActiveScreenWorkingArea();
 
                 if (Width < rectActiveScreen.Width)
                 {

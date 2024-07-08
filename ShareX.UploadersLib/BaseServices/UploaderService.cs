@@ -23,12 +23,13 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.UploadersLib.Forms;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.BaseServices
 {
     public abstract class UploaderService<T> : IUploaderService
     {

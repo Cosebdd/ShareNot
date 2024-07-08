@@ -26,7 +26,7 @@
 using System;
 using System.IO;
 
-namespace ShareX.MediaLib
+namespace ShareNot.MediaLib
 {
     public class VideoThumbnailInfo
     {

@@ -1,4 +1,4 @@
-﻿namespace ShareX.UploadersLib
+﻿namespace ShareNot.UploadersLib.Forms
 {
     partial class ParserSelectForm
     {
@@ -30,9 +30,9 @@
         {
             this.flpMain = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
-            // 
+            //
             // flpMain
-            // 
+            //
             this.flpMain.AutoSize = true;
             this.flpMain.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flpMain.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
@@ -40,9 +40,9 @@
             this.flpMain.Name = "flpMain";
             this.flpMain.Size = new System.Drawing.Size(0, 0);
             this.flpMain.TabIndex = 0;
-            // 
+            //
             // ParserSelectForm
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;

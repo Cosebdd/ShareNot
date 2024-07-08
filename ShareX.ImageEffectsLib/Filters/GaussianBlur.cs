@@ -23,12 +23,13 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.ComponentModel;
 using System.Drawing;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.ImageEffectsLib
+namespace ShareNot.ImageEffectsLib.Filters
 {
     [Description("Gaussian blur")]
     internal class GaussianBlur : ImageEffect

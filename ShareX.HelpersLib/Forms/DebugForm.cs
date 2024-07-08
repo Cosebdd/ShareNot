@@ -28,8 +28,10 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Forms
 {
     public partial class DebugForm : Form
     {

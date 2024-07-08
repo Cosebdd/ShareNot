@@ -27,8 +27,12 @@ using System;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Colors;
+using ShareNot.HelpersLib.Controls;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Forms
 {
     public partial class ColorPickerForm : Form
     {

@@ -1,4 +1,7 @@
-﻿namespace ShareX
+﻿using ShareNot.Controls;
+using ShareNot.HelpersLib.Controls;
+
+namespace ShareNot.Forms
 {
     partial class BeforeUploadForm
     {
@@ -32,31 +35,31 @@
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.pbPreview = new ShareX.HelpersLib.MyPictureBox();
-            this.ucBeforeUpload = new ShareX.BeforeUploadControl();
+            this.pbPreview = new MyPictureBox();
+            this.ucBeforeUpload = new BeforeUploadControl();
             this.SuspendLayout();
-            // 
+            //
             // btnOK
-            // 
+            //
             resources.ApplyResources(this.btnOK, "btnOK");
             this.btnOK.Name = "btnOK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
+            //
             // btnCancel
-            // 
+            //
             resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
+            //
             // lblTitle
-            // 
+            //
             resources.ApplyResources(this.lblTitle, "lblTitle");
             this.lblTitle.Name = "lblTitle";
-            // 
+            //
             // pbPreview
-            // 
+            //
             resources.ApplyResources(this.pbPreview, "pbPreview");
             this.pbPreview.BackColor = System.Drawing.SystemColors.Window;
             this.pbPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -66,14 +69,14 @@
             this.pbPreview.Name = "pbPreview";
             this.pbPreview.PictureBoxBackColor = System.Drawing.SystemColors.Window;
             this.pbPreview.ShowImageSizeLabel = true;
-            // 
+            //
             // ucBeforeUpload
-            // 
+            //
             resources.ApplyResources(this.ucBeforeUpload, "ucBeforeUpload");
             this.ucBeforeUpload.Name = "ucBeforeUpload";
-            // 
+            //
             // BeforeUploadForm
-            // 
+            //
             this.AcceptButton = this.btnOK;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -99,6 +102,6 @@
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblTitle;
-        private HelpersLib.MyPictureBox pbPreview;
+        private MyPictureBox pbPreview;
     }
 }

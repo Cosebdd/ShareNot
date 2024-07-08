@@ -23,9 +23,9 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib.Properties;
+using ShareNot.HelpersLib.Properties;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.NameParser
 {
     public class CodeMenuEntryFilename : CodeMenuEntry
     {

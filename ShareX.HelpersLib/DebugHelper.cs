@@ -26,7 +26,7 @@
 using System;
 using System.Diagnostics;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     public static class DebugHelper
     {

@@ -26,8 +26,9 @@
 using System;
 using System.Diagnostics;
 using System.Drawing;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Native
 {
     public class WindowInfo
     {

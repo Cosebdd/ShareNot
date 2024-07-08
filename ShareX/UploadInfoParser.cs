@@ -23,10 +23,10 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System.IO;
+using ShareNot.HelpersLib.NameParser;
 
-namespace ShareX
+namespace ShareNot
 {
     public class UploadInfoParser : NameParser
     {

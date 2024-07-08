@@ -23,20 +23,22 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.Properties;
-using ShareX.ScreenCaptureLib;
 using System;
 using System.Drawing;
 using System.IO;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.Properties;
+using ShareNot.ScreenCaptureLib;
 using ZXing;
 using ZXing.QrCode;
 using ZXing.Rendering;
 
-namespace ShareX
+namespace ShareNot.Forms
 {
     public partial class QRCodeForm : Form
     {

@@ -23,12 +23,14 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Drawing;
 using System.Drawing.Imaging;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Native;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib
 {
     public partial class Screenshot
     {

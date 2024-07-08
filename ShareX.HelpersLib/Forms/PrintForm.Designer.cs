@@ -1,4 +1,4 @@
-﻿namespace ShareX.HelpersLib
+﻿namespace ShareNot.HelpersLib.Forms
 {
     partial class PrintForm
     {
@@ -27,16 +27,16 @@
             this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudMargin)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // cbAutoRotate
-            // 
+            //
             resources.ApplyResources(this.cbAutoRotate, "cbAutoRotate");
             this.cbAutoRotate.Name = "cbAutoRotate";
             this.cbAutoRotate.UseVisualStyleBackColor = true;
             this.cbAutoRotate.CheckedChanged += new System.EventHandler(this.cbAutoRotate_CheckedChanged);
-            // 
+            //
             // nudMargin
-            // 
+            //
             resources.ApplyResources(this.nudMargin, "nudMargin");
             this.nudMargin.Maximum = new decimal(new int[] {
             1000,
@@ -50,56 +50,56 @@
             0,
             0});
             this.nudMargin.ValueChanged += new System.EventHandler(this.nudMargin_ValueChanged);
-            // 
+            //
             // cbAutoScale
-            // 
+            //
             resources.ApplyResources(this.cbAutoScale, "cbAutoScale");
             this.cbAutoScale.Name = "cbAutoScale";
             this.cbAutoScale.UseVisualStyleBackColor = true;
             this.cbAutoScale.CheckedChanged += new System.EventHandler(this.cbAutoScale_CheckedChanged);
-            // 
+            //
             // lblMargin
-            // 
+            //
             resources.ApplyResources(this.lblMargin, "lblMargin");
             this.lblMargin.Name = "lblMargin";
-            // 
+            //
             // cbAllowEnlarge
-            // 
+            //
             resources.ApplyResources(this.cbAllowEnlarge, "cbAllowEnlarge");
             this.cbAllowEnlarge.Name = "cbAllowEnlarge";
             this.cbAllowEnlarge.UseVisualStyleBackColor = true;
             this.cbAllowEnlarge.CheckedChanged += new System.EventHandler(this.cbAllowEnlarge_CheckedChanged);
-            // 
+            //
             // cbCenterImage
-            // 
+            //
             resources.ApplyResources(this.cbCenterImage, "cbCenterImage");
             this.cbCenterImage.Name = "cbCenterImage";
             this.cbCenterImage.UseVisualStyleBackColor = true;
             this.cbCenterImage.CheckedChanged += new System.EventHandler(this.cbCenterImage_CheckedChanged);
-            // 
+            //
             // btnShowPreview
-            // 
+            //
             resources.ApplyResources(this.btnShowPreview, "btnShowPreview");
             this.btnShowPreview.Name = "btnShowPreview";
             this.btnShowPreview.UseVisualStyleBackColor = true;
             this.btnShowPreview.Click += new System.EventHandler(this.btnShowPreview_Click);
-            // 
+            //
             // btnPrint
-            // 
+            //
             resources.ApplyResources(this.btnPrint, "btnPrint");
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.UseVisualStyleBackColor = true;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
+            //
             // btnCancel
-            // 
+            //
             resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
+            //
             // PrintForm
-            // 
+            //
             this.AcceptButton = this.btnPrint;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;

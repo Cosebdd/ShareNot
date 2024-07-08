@@ -23,10 +23,9 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.Helpers
 {
     public class EscapeHelper
     {
@@ -34,8 +33,8 @@ namespace ShareX.UploadersLib
         public string EscapeableCharacter { get; set; } = "%";
         public bool KeepEscapeCharacter { get; set; }
 
-        private string escapeCharacterReserve = Helpers.GetRandomAlphanumeric(32);
-        private string escapeableCharacterReserve = Helpers.GetRandomAlphanumeric(32);
+        private string escapeCharacterReserve = HelpersLib.Helpers.Helpers.GetRandomAlphanumeric(32);
+        private string escapeableCharacterReserve = HelpersLib.Helpers.Helpers.GetRandomAlphanumeric(32);
 
         public string Parse(string input, Func<string, string> action)
         {

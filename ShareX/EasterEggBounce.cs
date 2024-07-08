@@ -23,12 +23,12 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Random;
 
-namespace ShareX
+namespace ShareNot
 {
     public class EasterEggBounce : IDisposable
     {
@@ -51,7 +51,7 @@ namespace ShareX
             timer.Interval = 20;
             timer.Tick += bounceTimer_Tick;
 
-            BounceRectangle = CaptureHelpers.GetScreenWorkingArea();
+            BounceRectangle = HelpersLib.Helpers.CaptureHelpers.GetScreenWorkingArea();
         }
 
         public void Start()

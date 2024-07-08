@@ -23,10 +23,10 @@
 
 #endregion License Information (GPL v3)
 
-using Newtonsoft.Json;
 using System;
+using Newtonsoft.Json;
 
-namespace ShareX
+namespace ShareNot
 {
     public class NewsItem
     {

@@ -25,7 +25,7 @@
 
 using System;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.UpdateChecker
 {
     public class FFmpegUpdateChecker : GitHubUpdateChecker
     {

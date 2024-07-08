@@ -23,7 +23,6 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -32,8 +31,9 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.OAuth
 {
     public static class OAuthManager
     {
@@ -232,7 +232,7 @@ namespace ShareX.UploadersLib
 
         private static string GenerateNonce()
         {
-            return Helpers.GetRandomAlphanumeric(12);
+            return HelpersLib.Helpers.Helpers.GetRandomAlphanumeric(12);
         }
 
         private static string NormalizeUrl(string url)

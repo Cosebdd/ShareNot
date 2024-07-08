@@ -23,7 +23,6 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,8 +32,13 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Random;
+using ShareNot.HelpersLib.UITypeEditors;
 
-namespace ShareX.ImageEffectsLib
+namespace ShareNot.ImageEffectsLib.Drawings
 {
     [Description("Particles")]
     public class DrawParticles : ImageEffect

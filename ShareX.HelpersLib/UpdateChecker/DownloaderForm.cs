@@ -23,15 +23,17 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib.Properties;
 using System;
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Properties;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.UpdateChecker
 {
     public partial class DownloaderForm : Form
     {
@@ -67,7 +69,7 @@ namespace ShareX.HelpersLib
         {
             URL = url;
             FileName = fileName;
-            lblFilename.Text = Helpers.SafeStringFormat(Resources.DownloaderForm_DownloaderForm_Filename___0_, FileName);
+            lblFilename.Text = Helpers.Helpers.SafeStringFormat(Resources.DownloaderForm_DownloaderForm_Filename___0_, FileName);
         }
 
         public DownloaderForm(UpdateChecker updateChecker) : this(updateChecker.DownloadURL, updateChecker.FileName)
@@ -166,7 +168,7 @@ namespace ShareX.HelpersLib
                             psi.Arguments += " /VERYSILENT";
                         }
 
-                        if (Helpers.IsDefaultInstallDir() && !Helpers.IsMemberOfAdministratorsGroup())
+                        if (Helpers.Helpers.IsDefaultInstallDir() && !Helpers.Helpers.IsMemberOfAdministratorsGroup())
                         {
                             psi.Verb = "runas";
                         }
@@ -192,7 +194,7 @@ namespace ShareX.HelpersLib
 
         private void ChangeStatus(string status)
         {
-            lblStatus.Text = Helpers.SafeStringFormat(Resources.DownloaderForm_ChangeStatus_Status___0_, status);
+            lblStatus.Text = Helpers.Helpers.SafeStringFormat(Resources.DownloaderForm_ChangeStatus_Status___0_, status);
         }
 
         private async Task StartDownload()

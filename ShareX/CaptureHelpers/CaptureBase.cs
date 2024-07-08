@@ -23,13 +23,16 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Drawing;
 using System.Threading;
 using System.Threading.Tasks;
+using ShareNot.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Native;
 
-namespace ShareX
+namespace ShareNot.CaptureHelpers
 {
     public abstract class CaptureBase
     {

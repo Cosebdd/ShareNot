@@ -27,8 +27,9 @@ using System;
 using System.ComponentModel;
 using System.IO;
 using System.Windows.Forms.Design;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.UITypeEditors
 {
     public class ImageFileNameEditor : FileNameEditor
     {

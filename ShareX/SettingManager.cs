@@ -23,11 +23,6 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.HistoryLib;
-using ShareX.Properties;
-using ShareX.ScreenCaptureLib;
-using ShareX.UploadersLib;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -35,8 +30,17 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Zip;
+using ShareNot.HistoryLib;
+using ShareNot.Properties;
+using ShareNot.ScreenCaptureLib;
+using ShareNot.UploadersLib;
+using ShareNot.UploadersLib.CustomUploader;
 
-namespace ShareX
+namespace ShareNot
 {
     internal static class SettingManager
     {

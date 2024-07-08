@@ -23,17 +23,25 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.Properties;
-using ShareX.ScreenCaptureLib;
-using ShareX.UploadersLib;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.NameParser;
+using ShareNot.Properties;
+using ShareNot.ScreenCaptureLib;
+using ShareNot.ScreenCaptureLib.Forms;
+using ShareNot.ScreenCaptureLib.Helpers;
+using ShareNot.ScreenCaptureLib.ScreenRecording;
+using ShareNot.Tools.OCR;
+using ShareNot.UploadersLib;
+using ShareNot.UploadersLib.BaseServices;
 
-namespace ShareX
+namespace ShareNot.Forms
 {
     public partial class TaskSettingsForm : Form
     {

@@ -25,7 +25,7 @@
 
 using System;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Settings
 {
     [AttributeUsage(AttributeTargets.Property)]
     public class JsonEncryptAttribute : Attribute

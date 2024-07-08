@@ -23,14 +23,6 @@
 
 #endregion License Information (GPL v3)
 
-using Newtonsoft.Json;
-using ShareX.HelpersLib;
-using ShareX.UploadersLib.FileUploaders;
-using ShareX.UploadersLib.ImageUploaders;
-using ShareX.UploadersLib.Properties;
-using ShareX.UploadersLib.SharingServices;
-using ShareX.UploadersLib.TextUploaders;
-using ShareX.UploadersLib.URLShorteners;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -38,8 +30,21 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.NameParser;
+using ShareNot.HelpersLib.Native;
+using ShareNot.UploadersLib.CustomUploader;
+using ShareNot.UploadersLib.FileUploaders;
+using ShareNot.UploadersLib.ImageUploaders;
+using ShareNot.UploadersLib.Properties;
+using ShareNot.UploadersLib.SharingServices;
+using ShareNot.UploadersLib.TextUploaders;
+using ShareNot.UploadersLib.URLShorteners;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.Forms
 {
     public partial class CustomUploaderSettingsForm : Form
     {
@@ -100,7 +105,7 @@ namespace ShareX.UploadersLib
             eiCustomUploaders.ObjectType = typeof(CustomUploaderItem);
             CustomUploaderAddDestinationTypes();
             cbRequestMethod.Items.AddRange(Enum.GetNames(typeof(HttpMethod)));
-            cbBody.Items.AddRange(Helpers.GetEnumDescriptions<CustomUploaderBody>());
+            cbBody.Items.AddRange(HelpersLib.Helpers.Helpers.GetEnumDescriptions<CustomUploaderBody>());
 
             ShareXResources.ApplyTheme(this, true);
 
@@ -391,7 +396,7 @@ namespace ShareX.UploadersLib
 
         private void CustomUploaderAddDestinationTypes()
         {
-            string[] enums = Helpers.GetLocalizedEnumDescriptions<CustomUploaderDestinationType>().Skip(1).Select(x => x.Replace("&", "&&")).ToArray();
+            string[] enums = HelpersLib.Helpers.Helpers.GetLocalizedEnumDescriptions<CustomUploaderDestinationType>().Skip(1).Select(x => x.Replace("&", "&&")).ToArray();
 
             for (int i = 0; i < enums.Length; i++)
             {
@@ -727,7 +732,7 @@ namespace ShareX.UploadersLib
             {
                 try
                 {
-                    rtbData.Text = Helpers.JSONFormat(json, formatting);
+                    rtbData.Text = HelpersLib.Helpers.Helpers.JSONFormat(json, formatting);
                 }
                 catch (Exception e)
                 {
@@ -744,7 +749,7 @@ namespace ShareX.UploadersLib
             {
                 try
                 {
-                    rtbData.Text = Helpers.XMLFormat(xml);
+                    rtbData.Text = HelpersLib.Helpers.Helpers.XMLFormat(xml);
                 }
                 catch (Exception e)
                 {

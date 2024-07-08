@@ -23,12 +23,13 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.Forms
 {
     public partial class ImageSizeForm : Form
     {
@@ -56,7 +57,7 @@ namespace ShareX.ScreenCaptureLib
             nudWidth.TextChanged += NudWidth_TextChanged;
             nudHeight.TextChanged += NudHeight_TextChanged;
 
-            cbResampling.Items.AddRange(Helpers.GetLocalizedEnumDescriptions<ImageInterpolationMode>());
+            cbResampling.Items.AddRange(HelpersLib.Helpers.Helpers.GetLocalizedEnumDescriptions<ImageInterpolationMode>());
             cbResampling.SelectedIndex = (int)InterpolationMode;
 
             ignoreValueChanged = false;

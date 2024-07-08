@@ -27,7 +27,7 @@ using System;
 using System.Diagnostics;
 using System.Globalization;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     public class DebugTimer : IDisposable
     {

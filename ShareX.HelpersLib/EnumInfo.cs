@@ -24,8 +24,9 @@
 #endregion License Information (GPL v3)
 
 using System;
+using ShareNot.HelpersLib.Extensions;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     public class EnumInfo
     {

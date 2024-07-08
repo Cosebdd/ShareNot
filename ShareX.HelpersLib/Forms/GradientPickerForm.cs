@@ -27,8 +27,11 @@ using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Colors;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Forms
 {
     public partial class GradientPickerForm : Form
     {
@@ -46,7 +49,7 @@ namespace ShareX.HelpersLib
             InitializeComponent();
             ShareXResources.ApplyTheme(this, true);
 
-            cbGradientType.Items.AddRange(Helpers.GetLocalizedEnumDescriptions<LinearGradientMode>());
+            cbGradientType.Items.AddRange(Helpers.Helpers.GetLocalizedEnumDescriptions<LinearGradientMode>());
             cbGradientType.SelectedIndex = (int)Gradient.Type;
             UpdateGradientList(true);
         }

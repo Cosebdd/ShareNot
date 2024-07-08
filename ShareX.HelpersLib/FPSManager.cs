@@ -27,7 +27,7 @@ using System;
 using System.Diagnostics;
 using System.Threading;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     public class FPSManager
     {

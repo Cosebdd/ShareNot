@@ -23,12 +23,12 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Extensions;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.Controls
 {
     [DefaultEvent("AccountTypeChanged")]
     public partial class AccountTypeControl : UserControl

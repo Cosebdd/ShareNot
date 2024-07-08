@@ -23,12 +23,12 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Diagnostics;
 using System.Linq;
+using ShareNot.HelpersLib;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.Helpers
 {
     public class ProgressManager
     {

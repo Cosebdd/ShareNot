@@ -23,12 +23,15 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib.Properties;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Cryptographic;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Properties;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Forms
 {
     public partial class HashCheckerForm : Form
     {
@@ -43,7 +46,7 @@ namespace ShareX.HelpersLib
 
             UpdateCompareControls();
             UpdateCheckButton();
-            cbHashType.Items.AddRange(Helpers.GetEnumDescriptions<HashType>());
+            cbHashType.Items.AddRange(Helpers.Helpers.GetEnumDescriptions<HashType>());
             cbHashType.SelectedIndex = (int)HashType.SHA256;
 
             hashChecker = new HashChecker();

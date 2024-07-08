@@ -23,13 +23,15 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.CLI;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX
+namespace ShareNot
 {
     public class ShareXCLIManager : CLIManager
     {

@@ -23,12 +23,12 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.UploadersLib.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using ShareNot.UploadersLib.Properties;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.Helpers
 {
     public class UploaderErrorManager
     {

@@ -28,7 +28,7 @@ using System.Collections;
 using System.Drawing;
 using System.Drawing.Imaging;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.GIF
 {
     /// <summary>
     /// Quantize using an Octree

@@ -23,11 +23,12 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.Forms
 {
     public partial class YouTubeVideoOptionsForm : Form
     {
@@ -46,7 +47,7 @@ namespace ShareX.UploadersLib
 
             txtTitle.Text = title;
             txtDescription.Text = description;
-            cbVisibility.Items.AddRange(Helpers.GetLocalizedEnumDescriptions<YouTubeVideoPrivacy>());
+            cbVisibility.Items.AddRange(HelpersLib.Helpers.Helpers.GetLocalizedEnumDescriptions<YouTubeVideoPrivacy>());
             cbVisibility.SelectedIndex = (int)Visibility;
         }
 

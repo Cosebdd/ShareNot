@@ -23,11 +23,12 @@
 
 #endregion License Information (GPL v3)
 
-using Microsoft.Win32;
 using System;
 using System.IO;
+using Microsoft.Win32;
+using ShareNot.HelpersLib.Extensions;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Helpers
 {
     public static class RegistryHelpers
     {

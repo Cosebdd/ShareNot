@@ -1,4 +1,4 @@
-﻿namespace ShareX.UploadersLib
+﻿namespace ShareNot.UploadersLib.Forms
 {
     partial class EmailForm
     {
@@ -38,53 +38,53 @@
             this.btnSend = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
+            //
             // lblToEmail
-            // 
+            //
             resources.ApplyResources(this.lblToEmail, "lblToEmail");
             this.lblToEmail.Name = "lblToEmail";
-            // 
+            //
             // txtToEmail
-            // 
+            //
             resources.ApplyResources(this.txtToEmail, "txtToEmail");
             this.txtToEmail.Name = "txtToEmail";
-            // 
+            //
             // lblSubject
-            // 
+            //
             resources.ApplyResources(this.lblSubject, "lblSubject");
             this.lblSubject.Name = "lblSubject";
-            // 
+            //
             // txtSubject
-            // 
+            //
             resources.ApplyResources(this.txtSubject, "txtSubject");
             this.txtSubject.Name = "txtSubject";
-            // 
+            //
             // lblMessage
-            // 
+            //
             resources.ApplyResources(this.lblMessage, "lblMessage");
             this.lblMessage.Name = "lblMessage";
-            // 
+            //
             // txtMessage
-            // 
+            //
             resources.ApplyResources(this.txtMessage, "txtMessage");
             this.txtMessage.Name = "txtMessage";
-            // 
+            //
             // btnSend
-            // 
+            //
             resources.ApplyResources(this.btnSend, "btnSend");
             this.btnSend.Name = "btnSend";
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
-            // 
+            //
             // btnCancel
-            // 
+            //
             resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
+            //
             // EmailForm
-            // 
+            //
             this.AcceptButton = this.btnSend;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;

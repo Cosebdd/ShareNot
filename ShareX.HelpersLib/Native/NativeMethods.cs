@@ -28,7 +28,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Native
 {
     #region Delegates
 

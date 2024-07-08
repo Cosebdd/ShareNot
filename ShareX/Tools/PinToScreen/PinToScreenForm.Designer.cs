@@ -1,4 +1,6 @@
-﻿namespace ShareX
+﻿using ShareNot.HelpersLib.Controls;
+
+namespace ShareNot.Tools.PinToScreen
 {
     partial class PinToScreenForm
     {
@@ -16,16 +18,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PinToScreenForm));
-            this.tsMain = new ShareX.HelpersLib.ToolStripEx();
+            this.tsMain = new ToolStripEx();
             this.tsbCopy = new System.Windows.Forms.ToolStripButton();
             this.tslScale = new System.Windows.Forms.ToolStripLabel();
             this.tsbOptions = new System.Windows.Forms.ToolStripButton();
             this.tsbClose = new System.Windows.Forms.ToolStripButton();
             this.tsMain.SuspendLayout();
             this.SuspendLayout();
-            // 
+            //
             // tsMain
-            // 
+            //
             this.tsMain.ClickThrough = true;
             resources.ApplyResources(this.tsMain, "tsMain");
             this.tsMain.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
@@ -36,43 +38,43 @@
             this.tsbClose});
             this.tsMain.Name = "tsMain";
             this.tsMain.MouseLeave += new System.EventHandler(this.tsMain_MouseLeave);
-            // 
+            //
             // tsbCopy
-            // 
+            //
             this.tsbCopy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbCopy.Image = global::ShareX.Properties.Resources.document_copy;
+            this.tsbCopy.Image = global::ShareNot.Properties.Resources.document_copy;
             resources.ApplyResources(this.tsbCopy, "tsbCopy");
             this.tsbCopy.Name = "tsbCopy";
             this.tsbCopy.Padding = new System.Windows.Forms.Padding(4);
             this.tsbCopy.Click += new System.EventHandler(this.tsbCopy_Click);
-            // 
+            //
             // tslScale
-            // 
+            //
             resources.ApplyResources(this.tslScale, "tslScale");
             this.tslScale.Name = "tslScale";
             this.tslScale.Padding = new System.Windows.Forms.Padding(4);
             this.tslScale.Click += new System.EventHandler(this.tslScale_Click);
-            // 
+            //
             // tsbOptions
-            // 
+            //
             this.tsbOptions.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbOptions.Image = global::ShareX.Properties.Resources.gear;
+            this.tsbOptions.Image = global::ShareNot.Properties.Resources.gear;
             resources.ApplyResources(this.tsbOptions, "tsbOptions");
             this.tsbOptions.Name = "tsbOptions";
             this.tsbOptions.Padding = new System.Windows.Forms.Padding(4);
             this.tsbOptions.Click += new System.EventHandler(this.tsbOptions_Click);
-            // 
+            //
             // tsbClose
-            // 
+            //
             this.tsbClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbClose.Image = global::ShareX.Properties.Resources.cross_button;
+            this.tsbClose.Image = global::ShareNot.Properties.Resources.cross_button;
             resources.ApplyResources(this.tsbClose, "tsbClose");
             this.tsbClose.Name = "tsbClose";
             this.tsbClose.Padding = new System.Windows.Forms.Padding(4);
             this.tsbClose.Click += new System.EventHandler(this.tsbClose_Click);
-            // 
+            //
             // PinToScreenForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tsMain);
@@ -94,7 +96,7 @@
         }
 
         #endregion
-        private HelpersLib.ToolStripEx tsMain;
+        private ToolStripEx tsMain;
         private System.Windows.Forms.ToolStripButton tsbOptions;
         private System.Windows.Forms.ToolStripButton tsbClose;
         private System.Windows.Forms.ToolStripLabel tslScale;

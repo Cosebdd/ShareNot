@@ -23,13 +23,14 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib.Properties;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Properties;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.NameParser
 {
     public class CodeMenu : ContextMenuStrip
     {
@@ -149,7 +150,7 @@ namespace ShareX.HelpersLib
                 items.AddRange(extraItems);
             }
 
-            IEnumerable<CodeMenuItem> codeMenuItems = Helpers.GetValueFields<TEntry>().Where(x => !ignoreList.Contains(x)).
+            IEnumerable<CodeMenuItem> codeMenuItems = Helpers.Helpers.GetValueFields<TEntry>().Where(x => !ignoreList.Contains(x)).
                 Select(x => new CodeMenuItem(x.ToPrefixString(), x.Description, x.Category));
 
             items.AddRange(codeMenuItems);

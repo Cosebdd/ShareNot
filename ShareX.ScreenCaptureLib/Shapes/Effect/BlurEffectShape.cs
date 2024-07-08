@@ -23,11 +23,11 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.ScreenCaptureLib.Properties;
 using System.Drawing;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.ScreenCaptureLib.Properties;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.Shapes.Effect
 {
     public class BlurEffectShape : BaseEffectShape
     {

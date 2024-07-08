@@ -23,17 +23,20 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.MediaLib;
-using ShareX.ScreenCaptureLib.Properties;
 using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.MediaLib;
+using ShareNot.ScreenCaptureLib.Properties;
+using ShareNot.ScreenCaptureLib.ScreenRecording;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.Forms
 {
     public partial class FFmpegOptionsForm : Form
     {
@@ -48,21 +51,21 @@ namespace ShareX.ScreenCaptureLib
             InitializeComponent();
             ShareXResources.ApplyTheme(this, true);
 
-            cbVideoCodec.Items.AddRange(Helpers.GetEnumDescriptions<FFmpegVideoCodec>());
-            cbAudioCodec.Items.AddRange(Helpers.GetEnumDescriptions<FFmpegAudioCodec>());
-            cbx264Preset.Items.AddRange(Helpers.GetEnumDescriptions<FFmpegPreset>());
-            cbGIFStatsMode.Items.AddRange(Helpers.GetEnumDescriptions<FFmpegPaletteGenStatsMode>());
-            cbNVENCPreset.Items.AddRange(Helpers.GetEnumDescriptions<FFmpegNVENCPreset>());
-            cbNVENCTune.Items.AddRange(Helpers.GetEnumDescriptions<FFmpegNVENCTune>());
-            cbGIFDither.Items.AddRange(Helpers.GetEnumDescriptions<FFmpegPaletteUseDither>());
-            cbAMFUsage.Items.AddRange(Helpers.GetEnumDescriptions<FFmpegAMFUsage>());
-            cbAMFQuality.Items.AddRange(Helpers.GetEnumDescriptions<FFmpegAMFQuality>());
-            cbQSVPreset.Items.AddRange(Helpers.GetEnumDescriptions<FFmpegQSVPreset>());
+            cbVideoCodec.Items.AddRange(HelpersLib.Helpers.Helpers.GetEnumDescriptions<FFmpegVideoCodec>());
+            cbAudioCodec.Items.AddRange(HelpersLib.Helpers.Helpers.GetEnumDescriptions<FFmpegAudioCodec>());
+            cbx264Preset.Items.AddRange(HelpersLib.Helpers.Helpers.GetEnumDescriptions<FFmpegPreset>());
+            cbGIFStatsMode.Items.AddRange(HelpersLib.Helpers.Helpers.GetEnumDescriptions<FFmpegPaletteGenStatsMode>());
+            cbNVENCPreset.Items.AddRange(HelpersLib.Helpers.Helpers.GetEnumDescriptions<FFmpegNVENCPreset>());
+            cbNVENCTune.Items.AddRange(HelpersLib.Helpers.Helpers.GetEnumDescriptions<FFmpegNVENCTune>());
+            cbGIFDither.Items.AddRange(HelpersLib.Helpers.Helpers.GetEnumDescriptions<FFmpegPaletteUseDither>());
+            cbAMFUsage.Items.AddRange(HelpersLib.Helpers.Helpers.GetEnumDescriptions<FFmpegAMFUsage>());
+            cbAMFQuality.Items.AddRange(HelpersLib.Helpers.Helpers.GetEnumDescriptions<FFmpegAMFQuality>());
+            cbQSVPreset.Items.AddRange(HelpersLib.Helpers.Helpers.GetEnumDescriptions<FFmpegQSVPreset>());
 
-            cbAACBitrate.Items.AddRange(Helpers.Range(64, 320, 32).Cast<object>().ToArray());
-            cbOpusBitrate.Items.AddRange(Helpers.Range(32, 512, 32).Cast<object>().ToArray());
-            cbVorbisQuality.Items.AddRange(Helpers.Range(0, 10).Cast<object>().ToArray());
-            cbMP3Quality.Items.AddRange(Helpers.Range(9, 0).Cast<object>().ToArray());
+            cbAACBitrate.Items.AddRange(HelpersLib.Helpers.Helpers.Range(64, 320, 32).Cast<object>().ToArray());
+            cbOpusBitrate.Items.AddRange(HelpersLib.Helpers.Helpers.Range(32, 512, 32).Cast<object>().ToArray());
+            cbVorbisQuality.Items.AddRange(HelpersLib.Helpers.Helpers.Range(0, 10).Cast<object>().ToArray());
+            cbMP3Quality.Items.AddRange(HelpersLib.Helpers.Helpers.Range(9, 0).Cast<object>().ToArray());
         }
 
         private async Task LoadSettings()
@@ -199,7 +202,7 @@ namespace ShareX.ScreenCaptureLib
                 cbVideoSource.Items.Add(FFmpegCaptureDevice.None);
                 cbVideoSource.Items.Add(FFmpegCaptureDevice.GDIGrab);
 
-                if (Helpers.IsWindows10OrGreater())
+                if (HelpersLib.Helpers.Helpers.IsWindows10OrGreater())
                 {
                     cbVideoSource.Items.Add(FFmpegCaptureDevice.DDAGrab);
                 }

@@ -23,14 +23,15 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.UploadersLib.Properties;
 using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.UploadersLib.OAuth;
+using ShareNot.UploadersLib.Properties;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.Controls
 {
     public partial class OAuthControl : UserControl
     {

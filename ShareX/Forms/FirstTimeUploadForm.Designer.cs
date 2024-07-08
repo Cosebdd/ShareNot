@@ -1,4 +1,4 @@
-﻿namespace ShareX
+﻿namespace ShareNot.Forms
 {
     partial class FirstTimeUploadForm
     {
@@ -36,38 +36,38 @@
             this.lblHeader = new System.Windows.Forms.Label();
             this.tCountdown = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
-            // 
+            //
             // lblInfo
-            // 
+            //
             resources.ApplyResources(this.lblInfo, "lblInfo");
             this.lblInfo.Name = "lblInfo";
-            // 
+            //
             // btnYes
-            // 
+            //
             resources.ApplyResources(this.btnYes, "btnYes");
             this.btnYes.Name = "btnYes";
             this.btnYes.UseVisualStyleBackColor = true;
             this.btnYes.Click += new System.EventHandler(this.btnYes_Click);
-            // 
+            //
             // btnNo
-            // 
+            //
             resources.ApplyResources(this.btnNo, "btnNo");
             this.btnNo.Name = "btnNo";
             this.btnNo.UseVisualStyleBackColor = true;
             this.btnNo.Click += new System.EventHandler(this.btnNo_Click);
-            // 
+            //
             // lblHeader
-            // 
+            //
             resources.ApplyResources(this.lblHeader, "lblHeader");
             this.lblHeader.Name = "lblHeader";
-            // 
+            //
             // tCountdown
-            // 
+            //
             this.tCountdown.Interval = 1000;
             this.tCountdown.Tick += new System.EventHandler(this.tCountdown_Tick);
-            // 
+            //
             // FirstTimeUploadForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblHeader);

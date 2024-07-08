@@ -1,4 +1,4 @@
-﻿namespace ShareX.ImageEffectsLib
+﻿namespace ShareNot.ImageEffectsLib.Forms
 {
     partial class ImageEffectPackagerForm
     {
@@ -38,59 +38,59 @@
             this.btnAssetsFolderPathBrowse = new System.Windows.Forms.Button();
             this.btnOpenImageEffectsFolder = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
+            //
             // btnPackage
-            // 
+            //
             resources.ApplyResources(this.btnPackage, "btnPackage");
             this.btnPackage.Name = "btnPackage";
             this.btnPackage.UseVisualStyleBackColor = true;
             this.btnPackage.Click += new System.EventHandler(this.btnPackage_Click);
-            // 
+            //
             // lblAssetsFolderPath
-            // 
+            //
             resources.ApplyResources(this.lblAssetsFolderPath, "lblAssetsFolderPath");
             this.lblAssetsFolderPath.Name = "lblAssetsFolderPath";
-            // 
+            //
             // lblPackageFilePath
-            // 
+            //
             resources.ApplyResources(this.lblPackageFilePath, "lblPackageFilePath");
             this.lblPackageFilePath.Name = "lblPackageFilePath";
-            // 
+            //
             // txtPackageFilePath
-            // 
+            //
             resources.ApplyResources(this.txtPackageFilePath, "txtPackageFilePath");
             this.txtPackageFilePath.Name = "txtPackageFilePath";
             this.txtPackageFilePath.TextChanged += new System.EventHandler(this.txtPackageFilePath_TextChanged);
-            // 
+            //
             // btnPackageFilePathBrowse
-            // 
+            //
             resources.ApplyResources(this.btnPackageFilePathBrowse, "btnPackageFilePathBrowse");
             this.btnPackageFilePathBrowse.Name = "btnPackageFilePathBrowse";
             this.btnPackageFilePathBrowse.UseVisualStyleBackColor = true;
             this.btnPackageFilePathBrowse.Click += new System.EventHandler(this.btnPackageFilePathBrowse_Click);
-            // 
+            //
             // txtAssetsFolderPath
-            // 
+            //
             resources.ApplyResources(this.txtAssetsFolderPath, "txtAssetsFolderPath");
             this.txtAssetsFolderPath.Name = "txtAssetsFolderPath";
             this.txtAssetsFolderPath.TextChanged += new System.EventHandler(this.txtAssetsFolderPath_TextChanged);
-            // 
+            //
             // btnAssetsFolderPathBrowse
-            // 
+            //
             resources.ApplyResources(this.btnAssetsFolderPathBrowse, "btnAssetsFolderPathBrowse");
             this.btnAssetsFolderPathBrowse.Name = "btnAssetsFolderPathBrowse";
             this.btnAssetsFolderPathBrowse.UseVisualStyleBackColor = true;
             this.btnAssetsFolderPathBrowse.Click += new System.EventHandler(this.btnAssetsFolderPathBrowse_Click);
-            // 
+            //
             // btnOpenImageEffectsFolder
-            // 
+            //
             resources.ApplyResources(this.btnOpenImageEffectsFolder, "btnOpenImageEffectsFolder");
             this.btnOpenImageEffectsFolder.Name = "btnOpenImageEffectsFolder";
             this.btnOpenImageEffectsFolder.UseVisualStyleBackColor = true;
             this.btnOpenImageEffectsFolder.Click += new System.EventHandler(this.btnOpenImageEffectsFolder_Click);
-            // 
+            //
             // ImageEffectPackagerForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.btnOpenImageEffectsFolder);

@@ -23,11 +23,12 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Drawing;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Native;
 
-namespace ShareX
+namespace ShareNot
 {
     public class TaskMetadata : IDisposable
     {

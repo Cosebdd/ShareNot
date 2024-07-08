@@ -27,7 +27,7 @@ using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Extensions
 {
     public static class XMLExtensions
     {

@@ -23,15 +23,16 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.UploadersLib.Properties;
 using System;
 using System.IO;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.UploadersLib.Properties;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.OAuth
 {
     public class OAuthListener : IDisposable
     {
@@ -60,7 +61,7 @@ namespace ShareX.UploadersLib
             IPAddress ip = IPAddress.Loopback;
             int port = WebHelpers.GetRandomUnusedPort();
             string redirectURI = string.Format($"http://{ip}:{port}/");
-            string state = Helpers.GetRandomAlphanumeric(32);
+            string state = HelpersLib.Helpers.Helpers.GetRandomAlphanumeric(32);
 
             OAuth.RedirectURI = redirectURI;
             OAuth.State = state;

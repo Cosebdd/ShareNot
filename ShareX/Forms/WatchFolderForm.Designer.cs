@@ -1,4 +1,4 @@
-﻿namespace ShareX
+﻿namespace ShareNot.Forms
 {
     partial class WatchFolderForm
     {
@@ -40,67 +40,67 @@
             this.btnOK = new System.Windows.Forms.Button();
             this.cbMoveToScreenshotsFolder = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
-            // 
+            //
             // btnPathBrowse
-            // 
+            //
             resources.ApplyResources(this.btnPathBrowse, "btnPathBrowse");
             this.btnPathBrowse.Name = "btnPathBrowse";
             this.btnPathBrowse.UseVisualStyleBackColor = true;
             this.btnPathBrowse.Click += new System.EventHandler(this.btnPathBrowse_Click);
-            // 
+            //
             // txtFilter
-            // 
+            //
             resources.ApplyResources(this.txtFilter, "txtFilter");
             this.txtFilter.Name = "txtFilter";
-            // 
+            //
             // txtFolderPath
-            // 
+            //
             resources.ApplyResources(this.txtFolderPath, "txtFolderPath");
             this.txtFolderPath.Name = "txtFolderPath";
-            // 
+            //
             // lblFilter
-            // 
+            //
             resources.ApplyResources(this.lblFilter, "lblFilter");
             this.lblFilter.Name = "lblFilter";
-            // 
+            //
             // lblFolderPath
-            // 
+            //
             resources.ApplyResources(this.lblFolderPath, "lblFolderPath");
             this.lblFolderPath.Name = "lblFolderPath";
-            // 
+            //
             // lblFilterExample
-            // 
+            //
             resources.ApplyResources(this.lblFilterExample, "lblFilterExample");
             this.lblFilterExample.Name = "lblFilterExample";
-            // 
+            //
             // cbIncludeSubdirectories
-            // 
+            //
             resources.ApplyResources(this.cbIncludeSubdirectories, "cbIncludeSubdirectories");
             this.cbIncludeSubdirectories.Name = "cbIncludeSubdirectories";
             this.cbIncludeSubdirectories.UseVisualStyleBackColor = true;
-            // 
+            //
             // btnCancel
-            // 
+            //
             resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
+            //
             // btnOK
-            // 
+            //
             resources.ApplyResources(this.btnOK, "btnOK");
             this.btnOK.Name = "btnOK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
+            //
             // cbMoveToScreenshotsFolder
-            // 
+            //
             resources.ApplyResources(this.cbMoveToScreenshotsFolder, "cbMoveToScreenshotsFolder");
             this.cbMoveToScreenshotsFolder.Name = "cbMoveToScreenshotsFolder";
             this.cbMoveToScreenshotsFolder.UseVisualStyleBackColor = true;
-            // 
+            //
             // WatchFolderForm
-            // 
+            //
             this.AcceptButton = this.btnOK;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;

@@ -27,8 +27,9 @@ using System;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
+using ShareNot.HelpersLib.Extensions;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.UITypeEditors
 {
     public class EnumDescriptionConverter : EnumConverter
     {

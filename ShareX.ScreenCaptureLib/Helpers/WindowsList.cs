@@ -23,12 +23,13 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Native;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.Helpers
 {
     public class WindowsList
     {

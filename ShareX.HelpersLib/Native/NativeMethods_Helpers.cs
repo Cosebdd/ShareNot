@@ -29,8 +29,9 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Extensions;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Native
 {
     public static partial class NativeMethods
     {
@@ -226,7 +227,7 @@ namespace ShareX.HelpersLib
 
         public static bool IsDWMEnabled()
         {
-            return Helpers.IsWindowsVistaOrGreater() && DwmIsCompositionEnabled();
+            return Helpers.Helpers.IsWindowsVistaOrGreater() && DwmIsCompositionEnabled();
         }
 
         public static bool GetExtendedFrameBounds(IntPtr handle, out Rectangle rectangle)
@@ -250,7 +251,7 @@ namespace ShareX.HelpersLib
 
         public static bool UseImmersiveDarkMode(IntPtr handle, bool enabled)
         {
-            if (Helpers.IsWindows10OrGreater(18985))
+            if (Helpers.Helpers.IsWindows10OrGreater(18985))
             {
                 int useImmersiveDarkMode = enabled ? 1 : 0;
                 return DwmSetWindowAttribute(handle, (int)DWMWINDOWATTRIBUTE.DWMWA_USE_IMMERSIVE_DARK_MODE, ref useImmersiveDarkMode, sizeof(int)) == 0;
@@ -312,7 +313,7 @@ namespace ShareX.HelpersLib
                     result = true;
                 }
 
-                if (Helpers.IsWindowsVista() || Helpers.IsWindows7())
+                if (Helpers.Helpers.IsWindowsVista() || Helpers.Helpers.IsWindows7())
                 {
                     IntPtr startHandle = FindWindowEx(IntPtr.Zero, IntPtr.Zero, (IntPtr)0xC017, null);
 
@@ -340,7 +341,7 @@ namespace ShareX.HelpersLib
             {
                 ShowWindow(taskbarHandle, visible ? (int)WindowShowStyle.Show : (int)WindowShowStyle.Hide);
 
-                if (Helpers.IsWindowsVista() || Helpers.IsWindows7())
+                if (Helpers.Helpers.IsWindowsVista() || Helpers.Helpers.IsWindows7())
                 {
                     IntPtr startHandle = FindWindowEx(IntPtr.Zero, IntPtr.Zero, (IntPtr)0xC017, null);
 

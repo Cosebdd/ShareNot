@@ -26,8 +26,9 @@
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Native;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Controls
 {
     // https://blogs.msdn.microsoft.com/rickbrew/2006/01/09/how-to-enable-click-through-for-net-2-0-toolstrip-and-menustrip/
     public class ToolStripEx : ToolStrip

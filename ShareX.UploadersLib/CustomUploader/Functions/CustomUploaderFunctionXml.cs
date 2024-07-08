@@ -26,7 +26,7 @@
 using System.IO;
 using System.Xml.XPath;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.CustomUploader.Functions
 {
     // Example: {xml:/files/file[1]/url}
     // Example: {xml:{response}|/files/file[1]/url}

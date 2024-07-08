@@ -1,4 +1,4 @@
-﻿namespace ShareX.HelpersLib
+﻿namespace ShareNot.HelpersLib.UpdateChecker
 {
     partial class UpdateMessageBox
     {
@@ -34,35 +34,35 @@
             this.btnYes = new System.Windows.Forms.Button();
             this.lblViewChangelog = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
+            //
             // lblText
-            // 
+            //
             resources.ApplyResources(this.lblText, "lblText");
             this.lblText.Name = "lblText";
-            // 
+            //
             // btnNo
-            // 
+            //
             resources.ApplyResources(this.btnNo, "btnNo");
             this.btnNo.Name = "btnNo";
             this.btnNo.UseVisualStyleBackColor = true;
             this.btnNo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnNo_MouseClick);
-            // 
+            //
             // btnYes
-            // 
+            //
             resources.ApplyResources(this.btnYes, "btnYes");
             this.btnYes.Name = "btnYes";
             this.btnYes.UseVisualStyleBackColor = true;
             this.btnYes.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnYes_MouseClick);
-            // 
+            //
             // lblViewChangelog
-            // 
+            //
             resources.ApplyResources(this.lblViewChangelog, "lblViewChangelog");
             this.lblViewChangelog.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblViewChangelog.Name = "lblViewChangelog";
             this.lblViewChangelog.Click += new System.EventHandler(this.lblViewChangelog_Click);
-            // 
+            //
             // UpdateMessageBox
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Window;

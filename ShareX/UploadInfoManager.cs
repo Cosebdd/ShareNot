@@ -23,16 +23,19 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.UploadersLib;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShareNot.Forms;
+using ShareNot.HelpersLib.Forms;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.UploadersLib;
+using ShareNot.UploadersLib.Forms;
 
-namespace ShareX
+namespace ShareNot
 {
     public class UploadInfoManager
     {

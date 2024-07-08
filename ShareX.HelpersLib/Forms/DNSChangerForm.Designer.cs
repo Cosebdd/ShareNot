@@ -1,4 +1,4 @@
-﻿namespace ShareX.HelpersLib
+﻿namespace ShareNot.HelpersLib.Forms
 {
     partial class DNSChangerForm
     {
@@ -43,92 +43,92 @@
             this.btnPingPrimary = new System.Windows.Forms.Button();
             this.btnPingSecondary = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
+            //
             // cbAdapters
-            // 
+            //
             this.cbAdapters.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAdapters.FormattingEnabled = true;
             resources.ApplyResources(this.cbAdapters, "cbAdapters");
             this.cbAdapters.Name = "cbAdapters";
             this.cbAdapters.SelectedIndexChanged += new System.EventHandler(this.cbAdapters_SelectedIndexChanged);
-            // 
+            //
             // lblAdapters
-            // 
+            //
             resources.ApplyResources(this.lblAdapters, "lblAdapters");
             this.lblAdapters.Name = "lblAdapters";
-            // 
+            //
             // txtPreferredDNS
-            // 
+            //
             resources.ApplyResources(this.txtPreferredDNS, "txtPreferredDNS");
             this.txtPreferredDNS.Name = "txtPreferredDNS";
             this.txtPreferredDNS.TextChanged += new System.EventHandler(this.txtPreferredDNS_TextChanged);
-            // 
+            //
             // lblPreferredDNS
-            // 
+            //
             resources.ApplyResources(this.lblPreferredDNS, "lblPreferredDNS");
             this.lblPreferredDNS.Name = "lblPreferredDNS";
-            // 
+            //
             // lblAlternateDNS
-            // 
+            //
             resources.ApplyResources(this.lblAlternateDNS, "lblAlternateDNS");
             this.lblAlternateDNS.Name = "lblAlternateDNS";
-            // 
+            //
             // txtAlternateDNS
-            // 
+            //
             resources.ApplyResources(this.txtAlternateDNS, "txtAlternateDNS");
             this.txtAlternateDNS.Name = "txtAlternateDNS";
             this.txtAlternateDNS.TextChanged += new System.EventHandler(this.txtAlternateDNS_TextChanged);
-            // 
+            //
             // btnSave
-            // 
+            //
             resources.ApplyResources(this.btnSave, "btnSave");
             this.btnSave.Name = "btnSave";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
+            //
             // btnCancel
-            // 
+            //
             resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
+            //
             // cbDNSType
-            // 
+            //
             this.cbDNSType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDNSType.FormattingEnabled = true;
             resources.ApplyResources(this.cbDNSType, "cbDNSType");
             this.cbDNSType.Name = "cbDNSType";
             this.cbDNSType.SelectedIndexChanged += new System.EventHandler(this.cbDNSType_SelectedIndexChanged);
-            // 
+            //
             // lblDNS
-            // 
+            //
             resources.ApplyResources(this.lblDNS, "lblDNS");
             this.lblDNS.Name = "lblDNS";
-            // 
+            //
             // cbAutomatic
-            // 
+            //
             resources.ApplyResources(this.cbAutomatic, "cbAutomatic");
             this.cbAutomatic.Name = "cbAutomatic";
             this.cbAutomatic.UseVisualStyleBackColor = true;
             this.cbAutomatic.CheckedChanged += new System.EventHandler(this.cbAutomatic_CheckedChanged);
-            // 
+            //
             // btnPingPrimary
-            // 
+            //
             resources.ApplyResources(this.btnPingPrimary, "btnPingPrimary");
             this.btnPingPrimary.Name = "btnPingPrimary";
             this.btnPingPrimary.UseVisualStyleBackColor = true;
             this.btnPingPrimary.Click += new System.EventHandler(this.btnPingPrimary_Click);
-            // 
+            //
             // btnPingSecondary
-            // 
+            //
             resources.ApplyResources(this.btnPingSecondary, "btnPingSecondary");
             this.btnPingSecondary.Name = "btnPingSecondary";
             this.btnPingSecondary.UseVisualStyleBackColor = true;
             this.btnPingSecondary.Click += new System.EventHandler(this.btnPingSecondary_Click);
-            // 
+            //
             // DNSChangerForm
-            // 
+            //
             this.AcceptButton = this.btnSave;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;

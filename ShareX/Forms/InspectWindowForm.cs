@@ -23,16 +23,19 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.Properties;
-using ShareX.ScreenCaptureLib;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Native;
+using ShareNot.Properties;
+using ShareNot.ScreenCaptureLib;
+using ShareNot.ScreenCaptureLib.Helpers;
 
-namespace ShareX
+namespace ShareNot.Forms
 {
     public partial class InspectWindowForm : Form
     {

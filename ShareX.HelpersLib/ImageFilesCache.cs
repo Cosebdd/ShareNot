@@ -26,8 +26,10 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Native;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     public class ImageFilesCache : IDisposable
     {

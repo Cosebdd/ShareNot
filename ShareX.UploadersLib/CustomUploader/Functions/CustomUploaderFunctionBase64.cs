@@ -23,9 +23,9 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
+using ShareNot.HelpersLib.Cryptographic;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.CustomUploader.Functions
 {
     // Example: Basic {base64:username:password}
     internal class CustomUploaderFunctionBase64 : CustomUploaderFunction

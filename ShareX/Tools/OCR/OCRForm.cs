@@ -23,15 +23,17 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.ScreenCaptureLib;
 using System;
 using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.ScreenCaptureLib;
 
-namespace ShareX
+namespace ShareNot.Tools.OCR
 {
     public partial class OCRForm : Form
     {

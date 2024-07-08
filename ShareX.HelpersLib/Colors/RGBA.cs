@@ -24,8 +24,9 @@
 #endregion License Information (GPL v3)
 
 using System.Drawing;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Colors
 {
     public struct RGBA
     {

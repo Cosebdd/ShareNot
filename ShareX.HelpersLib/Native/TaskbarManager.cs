@@ -28,8 +28,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Extensions;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Native
 {
     public enum TaskbarProgressBarStatus
     {
@@ -132,7 +133,7 @@ namespace ShareX.HelpersLib
         {
             get
             {
-                return Helpers.IsWindows7OrGreater();
+                return Helpers.Helpers.IsWindows7OrGreater();
             }
         }
 

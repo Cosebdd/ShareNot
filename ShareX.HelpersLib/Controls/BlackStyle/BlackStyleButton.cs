@@ -30,7 +30,7 @@ using System.Drawing.Design;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Controls.BlackStyle
 {
     [DefaultEvent("MouseClick")]
     public class BlackStyleButton : Control

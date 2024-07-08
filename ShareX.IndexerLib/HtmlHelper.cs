@@ -23,9 +23,9 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.IndexerLib
+namespace ShareNot.IndexerLib
 {
     public static class HtmlHelper
     {

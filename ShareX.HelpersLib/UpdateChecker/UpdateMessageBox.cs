@@ -23,12 +23,15 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib.Properties;
 using System;
 using System.Text;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Native;
+using ShareNot.HelpersLib.Properties;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.UpdateChecker
 {
     public partial class UpdateMessageBox : Form
     {
@@ -57,11 +60,11 @@ namespace ShareX.HelpersLib
 
             if (updateChecker.IsPortable)
             {
-                sbText.AppendLine(Helpers.SafeStringFormat(Resources.UpdateMessageBox_UpdateMessageBox_Portable, Application.ProductName));
+                sbText.AppendLine(Helpers.Helpers.SafeStringFormat(Resources.UpdateMessageBox_UpdateMessageBox_Portable, Application.ProductName));
             }
             else
             {
-                sbText.AppendLine(Helpers.SafeStringFormat(Resources.UpdateMessageBox_UpdateMessageBox_, Application.ProductName));
+                sbText.AppendLine(Helpers.Helpers.SafeStringFormat(Resources.UpdateMessageBox_UpdateMessageBox_, Application.ProductName));
             }
 
             sbText.AppendLine();

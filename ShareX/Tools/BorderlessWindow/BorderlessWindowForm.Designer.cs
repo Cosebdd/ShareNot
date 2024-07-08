@@ -1,5 +1,7 @@
 ﻿
-namespace ShareX
+using ShareNot.HelpersLib.Controls;
+
+namespace ShareNot.Tools.BorderlessWindow
 {
     partial class BorderlessWindowForm
     {
@@ -36,50 +38,50 @@ namespace ShareX
             this.btnMakeWindowBorderless = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.cmsWindowList = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.mbWindowList = new ShareX.HelpersLib.MenuButton();
+            this.mbWindowList = new MenuButton();
             this.SuspendLayout();
-            // 
+            //
             // lblWindowTitle
-            // 
+            //
             resources.ApplyResources(this.lblWindowTitle, "lblWindowTitle");
             this.lblWindowTitle.Name = "lblWindowTitle";
-            // 
+            //
             // txtWindowTitle
-            // 
+            //
             resources.ApplyResources(this.txtWindowTitle, "txtWindowTitle");
             this.txtWindowTitle.Name = "txtWindowTitle";
             this.txtWindowTitle.TextChanged += new System.EventHandler(this.txtWindowTitle_TextChanged);
-            // 
+            //
             // btnMakeWindowBorderless
-            // 
+            //
             resources.ApplyResources(this.btnMakeWindowBorderless, "btnMakeWindowBorderless");
             this.btnMakeWindowBorderless.Name = "btnMakeWindowBorderless";
             this.btnMakeWindowBorderless.UseVisualStyleBackColor = true;
             this.btnMakeWindowBorderless.Click += new System.EventHandler(this.btnMakeWindowBorderless_Click);
-            // 
+            //
             // btnSettings
-            // 
+            //
             resources.ApplyResources(this.btnSettings, "btnSettings");
-            this.btnSettings.Image = global::ShareX.Properties.Resources.gear;
+            this.btnSettings.Image = global::ShareNot.Properties.Resources.gear;
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.UseVisualStyleBackColor = true;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
-            // 
+            //
             // cmsWindowList
-            // 
+            //
             this.cmsWindowList.Name = "cmsWindowList";
             resources.ApplyResources(this.cmsWindowList, "cmsWindowList");
-            // 
+            //
             // mbWindowList
-            // 
+            //
             resources.ApplyResources(this.mbWindowList, "mbWindowList");
             this.mbWindowList.Menu = this.cmsWindowList;
             this.mbWindowList.Name = "mbWindowList";
             this.mbWindowList.UseVisualStyleBackColor = true;
             this.mbWindowList.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mbWindowList_MouseDown);
-            // 
+            //
             // BorderlessWindowForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.mbWindowList);
@@ -103,7 +105,7 @@ namespace ShareX
         private System.Windows.Forms.TextBox txtWindowTitle;
         private System.Windows.Forms.Button btnMakeWindowBorderless;
         private System.Windows.Forms.Button btnSettings;
-        private HelpersLib.MenuButton mbWindowList;
+        private MenuButton mbWindowList;
         private System.Windows.Forms.ContextMenuStrip cmsWindowList;
     }
 }

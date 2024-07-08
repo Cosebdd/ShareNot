@@ -25,7 +25,7 @@
 
 using System.IO;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.Shapes
 {
     public class StickerPackInfo
     {

@@ -23,14 +23,14 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using ShareNot.HelpersLib;
 
-namespace ShareX
+namespace ShareNot
 {
     public static class CleanupManager
     {

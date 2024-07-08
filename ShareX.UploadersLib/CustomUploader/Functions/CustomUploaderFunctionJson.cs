@@ -25,7 +25,7 @@
 
 using Newtonsoft.Json.Linq;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.CustomUploader.Functions
 {
     // Example: {json:files[0].url}
     // Example: {json:{response}|files[0].url}

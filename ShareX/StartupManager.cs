@@ -23,16 +23,15 @@
 
 #endregion License Information (GPL v3)
 
-using Microsoft.Win32;
-using ShareX.HelpersLib;
 using System;
 using System.Windows.Forms;
-
+using Microsoft.Win32;
+using ShareNot.HelpersLib.Helpers;
 #if MicrosoftStore
 using Windows.ApplicationModel;
 #endif
 
-namespace ShareX
+namespace ShareNot
 {
     public static class StartupManager
     {

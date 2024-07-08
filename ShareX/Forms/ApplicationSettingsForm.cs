@@ -23,16 +23,21 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.Properties;
-using ShareX.UploadersLib;
 using System;
 using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Forms;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.NameParser;
+using ShareNot.HelpersLib.Native;
+using ShareNot.Properties;
+using ShareNot.UploadersLib;
 
-namespace ShareX
+namespace ShareNot.Forms
 {
     public partial class ApplicationSettingsForm : Form
     {

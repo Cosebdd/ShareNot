@@ -23,16 +23,18 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using ShareNot.HelpersLib.NameParser;
+using ShareNot.UploadersLib.CustomUploader.Functions;
+using ShareNot.UploadersLib.Helpers;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.CustomUploader
 {
     public class ShareXCustomUploaderSyntaxParser : ShareXSyntaxParser
     {
-        private static IEnumerable<CustomUploaderFunction> Functions = Helpers.GetInstances<CustomUploaderFunction>();
+        private static IEnumerable<CustomUploaderFunction> Functions = HelpersLib.Helpers.Helpers.GetInstances<CustomUploaderFunction>();
 
         public string FileName { get; set; }
         public string Input { get; set; }

@@ -23,15 +23,14 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.ComponentModel;
-
+using ShareNot.HelpersLib.Extensions;
 #if MicrosoftStore
 using Windows.ApplicationModel;
 #endif
 
-namespace ShareX
+namespace ShareNot
 {
     public enum ShareXBuild
     {

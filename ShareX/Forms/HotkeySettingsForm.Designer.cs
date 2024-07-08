@@ -1,4 +1,4 @@
-﻿namespace ShareX
+﻿namespace ShareNot.Forms
 {
     partial class HotkeySettingsForm
     {
@@ -39,71 +39,71 @@
             this.btnHotkeysDisabled = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
+            //
             // btnDuplicate
-            // 
+            //
             resources.ApplyResources(this.btnDuplicate, "btnDuplicate");
             this.btnDuplicate.Name = "btnDuplicate";
             this.btnDuplicate.UseVisualStyleBackColor = true;
             this.btnDuplicate.Click += new System.EventHandler(this.btnDuplicate_Click);
-            // 
+            //
             // flpHotkeys
-            // 
+            //
             resources.ApplyResources(this.flpHotkeys, "flpHotkeys");
             this.flpHotkeys.Name = "flpHotkeys";
             this.flpHotkeys.Layout += new System.Windows.Forms.LayoutEventHandler(this.flpHotkeys_Layout);
-            // 
+            //
             // btnEdit
-            // 
+            //
             resources.ApplyResources(this.btnEdit, "btnEdit");
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
+            //
             // btnRemove
-            // 
+            //
             resources.ApplyResources(this.btnRemove, "btnRemove");
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
-            // 
+            //
             // btnAdd
-            // 
+            //
             resources.ApplyResources(this.btnAdd, "btnAdd");
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
+            //
             // btnMoveUp
-            // 
+            //
             resources.ApplyResources(this.btnMoveUp, "btnMoveUp");
             this.btnMoveUp.Name = "btnMoveUp";
             this.btnMoveUp.UseVisualStyleBackColor = true;
             this.btnMoveUp.Click += new System.EventHandler(this.btnMoveUp_Click);
-            // 
+            //
             // btnMoveDown
-            // 
+            //
             resources.ApplyResources(this.btnMoveDown, "btnMoveDown");
             this.btnMoveDown.Name = "btnMoveDown";
             this.btnMoveDown.UseVisualStyleBackColor = true;
             this.btnMoveDown.Click += new System.EventHandler(this.btnMoveDown_Click);
-            // 
+            //
             // btnHotkeysDisabled
-            // 
+            //
             resources.ApplyResources(this.btnHotkeysDisabled, "btnHotkeysDisabled");
             this.btnHotkeysDisabled.Name = "btnHotkeysDisabled";
             this.btnHotkeysDisabled.UseVisualStyleBackColor = true;
             this.btnHotkeysDisabled.Click += new System.EventHandler(this.btnHotkeysDisabled_Click);
-            // 
+            //
             // btnReset
-            // 
+            //
             resources.ApplyResources(this.btnReset, "btnReset");
             this.btnReset.Name = "btnReset";
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
+            //
             // HotkeySettingsForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Window;

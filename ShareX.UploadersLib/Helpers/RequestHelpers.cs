@@ -23,7 +23,6 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -31,8 +30,10 @@ using System.IO;
 using System.Net;
 using System.Net.Cache;
 using System.Text;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Cryptographic;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.Helpers
 {
     internal static class RequestHelpers
     {

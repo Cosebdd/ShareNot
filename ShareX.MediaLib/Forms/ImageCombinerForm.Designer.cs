@@ -1,4 +1,6 @@
-﻿namespace ShareX.MediaLib
+﻿using ShareNot.HelpersLib.Controls;
+
+namespace ShareNot.MediaLib.Forms
 {
     partial class ImageCombinerForm
     {
@@ -33,7 +35,7 @@
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnMoveUp = new System.Windows.Forms.Button();
             this.btnMoveDown = new System.Windows.Forms.Button();
-            this.lvImages = new ShareX.HelpersLib.MyListView();
+            this.lvImages = new MyListView();
             this.chFilepath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnCombine = new System.Windows.Forms.Button();
             this.lblSpace = new System.Windows.Forms.Label();
@@ -54,37 +56,37 @@
             this.flpOrientation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudWrapAfter)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // btnAdd
-            // 
+            //
             resources.ApplyResources(this.btnAdd, "btnAdd");
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
+            //
             // btnRemove
-            // 
+            //
             resources.ApplyResources(this.btnRemove, "btnRemove");
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
-            // 
+            //
             // btnMoveUp
-            // 
+            //
             resources.ApplyResources(this.btnMoveUp, "btnMoveUp");
             this.btnMoveUp.Name = "btnMoveUp";
             this.btnMoveUp.UseVisualStyleBackColor = true;
             this.btnMoveUp.Click += new System.EventHandler(this.btnMoveUp_Click);
-            // 
+            //
             // btnMoveDown
-            // 
+            //
             resources.ApplyResources(this.btnMoveDown, "btnMoveDown");
             this.btnMoveDown.Name = "btnMoveDown";
             this.btnMoveDown.UseVisualStyleBackColor = true;
             this.btnMoveDown.Click += new System.EventHandler(this.btnMoveDown_Click);
-            // 
+            //
             // lvImages
-            // 
+            //
             this.lvImages.AllowDrop = true;
             this.lvImages.AllowItemDrag = true;
             resources.ApplyResources(this.lvImages, "lvImages");
@@ -99,25 +101,25 @@
             this.lvImages.View = System.Windows.Forms.View.Details;
             this.lvImages.DragDrop += new System.Windows.Forms.DragEventHandler(this.ImageCombinerForm_DragDrop);
             this.lvImages.DragEnter += new System.Windows.Forms.DragEventHandler(this.ImageCombinerForm_DragEnter);
-            // 
+            //
             // chFilepath
-            // 
+            //
             resources.ApplyResources(this.chFilepath, "chFilepath");
-            // 
+            //
             // btnCombine
-            // 
+            //
             resources.ApplyResources(this.btnCombine, "btnCombine");
             this.btnCombine.Name = "btnCombine";
             this.btnCombine.UseVisualStyleBackColor = true;
             this.btnCombine.Click += new System.EventHandler(this.btnCombine_Click);
-            // 
+            //
             // lblSpace
-            // 
+            //
             resources.ApplyResources(this.lblSpace, "lblSpace");
             this.lblSpace.Name = "lblSpace";
-            // 
+            //
             // nudSpace
-            // 
+            //
             resources.ApplyResources(this.nudSpace, "nudSpace");
             this.nudSpace.Maximum = new decimal(new int[] {
             1000,
@@ -126,67 +128,67 @@
             0});
             this.nudSpace.Name = "nudSpace";
             this.nudSpace.ValueChanged += new System.EventHandler(this.nudSpace_ValueChanged);
-            // 
+            //
             // lblOrientation
-            // 
+            //
             resources.ApplyResources(this.lblOrientation, "lblOrientation");
             this.lblOrientation.Name = "lblOrientation";
-            // 
+            //
             // lblSpacePixel
-            // 
+            //
             resources.ApplyResources(this.lblSpacePixel, "lblSpacePixel");
             this.lblSpacePixel.Name = "lblSpacePixel";
-            // 
+            //
             // lblImageAlignment
-            // 
+            //
             resources.ApplyResources(this.lblImageAlignment, "lblImageAlignment");
             this.lblImageAlignment.Name = "lblImageAlignment";
-            // 
+            //
             // cbAlignment
-            // 
+            //
             resources.ApplyResources(this.cbAlignment, "cbAlignment");
             this.cbAlignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAlignment.FormattingEnabled = true;
             this.cbAlignment.Name = "cbAlignment";
             this.cbAlignment.SelectedIndexChanged += new System.EventHandler(this.cbAlignment_SelectedIndexChanged);
-            // 
+            //
             // flpOrientation
-            // 
+            //
             resources.ApplyResources(this.flpOrientation, "flpOrientation");
             this.flpOrientation.Controls.Add(this.rbOrientationHorizontal);
             this.flpOrientation.Controls.Add(this.rbOrientationVertical);
             this.flpOrientation.Name = "flpOrientation";
-            // 
+            //
             // rbOrientationHorizontal
-            // 
+            //
             resources.ApplyResources(this.rbOrientationHorizontal, "rbOrientationHorizontal");
             this.rbOrientationHorizontal.Name = "rbOrientationHorizontal";
             this.rbOrientationHorizontal.TabStop = true;
             this.rbOrientationHorizontal.UseVisualStyleBackColor = true;
             this.rbOrientationHorizontal.CheckedChanged += new System.EventHandler(this.rbOrientationHorizontal_CheckedChanged);
-            // 
+            //
             // rbOrientationVertical
-            // 
+            //
             resources.ApplyResources(this.rbOrientationVertical, "rbOrientationVertical");
             this.rbOrientationVertical.Name = "rbOrientationVertical";
             this.rbOrientationVertical.TabStop = true;
             this.rbOrientationVertical.UseVisualStyleBackColor = true;
             this.rbOrientationVertical.CheckedChanged += new System.EventHandler(this.rbOrientationVertical_CheckedChanged);
-            // 
+            //
             // cbAutoFillBackground
-            // 
+            //
             resources.ApplyResources(this.cbAutoFillBackground, "cbAutoFillBackground");
             this.cbAutoFillBackground.Name = "cbAutoFillBackground";
             this.cbAutoFillBackground.UseVisualStyleBackColor = true;
             this.cbAutoFillBackground.CheckedChanged += new System.EventHandler(this.cbAutoFillBackground_CheckedChanged);
-            // 
+            //
             // lblWrapAfter
-            // 
+            //
             resources.ApplyResources(this.lblWrapAfter, "lblWrapAfter");
             this.lblWrapAfter.Name = "lblWrapAfter";
-            // 
+            //
             // nudWrapAfter
-            // 
+            //
             resources.ApplyResources(this.nudWrapAfter, "nudWrapAfter");
             this.nudWrapAfter.Maximum = new decimal(new int[] {
             1000,
@@ -195,19 +197,19 @@
             0});
             this.nudWrapAfter.Name = "nudWrapAfter";
             this.nudWrapAfter.ValueChanged += new System.EventHandler(this.nudWrapAfter_ValueChanged);
-            // 
+            //
             // lblWrapAfterImages
-            // 
+            //
             resources.ApplyResources(this.lblWrapAfterImages, "lblWrapAfterImages");
             this.lblWrapAfterImages.Name = "lblWrapAfterImages";
-            // 
+            //
             // lblImageCount
-            // 
+            //
             resources.ApplyResources(this.lblImageCount, "lblImageCount");
             this.lblImageCount.Name = "lblImageCount";
-            // 
+            //
             // ImageCombinerForm
-            // 
+            //
             this.AcceptButton = this.btnCombine;
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
@@ -249,7 +251,7 @@
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnMoveUp;
         private System.Windows.Forms.Button btnMoveDown;
-        private HelpersLib.MyListView lvImages;
+        private MyListView lvImages;
         private System.Windows.Forms.Button btnCombine;
         private System.Windows.Forms.Label lblSpace;
         private System.Windows.Forms.NumericUpDown nudSpace;

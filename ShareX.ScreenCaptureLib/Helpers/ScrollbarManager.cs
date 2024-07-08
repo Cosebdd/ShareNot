@@ -24,8 +24,10 @@
 #endregion License Information (GPL v3)
 
 using System.Windows.Forms;
+using ShareNot.ScreenCaptureLib.Forms;
+using ShareNot.ScreenCaptureLib.Shapes;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.Helpers
 {
     internal class ScrollbarManager
     {

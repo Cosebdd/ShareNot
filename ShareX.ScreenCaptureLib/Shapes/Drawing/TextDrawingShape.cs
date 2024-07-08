@@ -23,12 +23,13 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.ScreenCaptureLib.Forms;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.Shapes.Drawing
 {
     public class TextDrawingShape : RectangleDrawingShape
     {
@@ -160,7 +161,7 @@ namespace ShareX.ScreenCaptureLib
             {
                 using (Font font = new Font(TextOptions.Font, TextOptions.Size, TextOptions.Style))
                 {
-                    size = Helpers.MeasureText(Text, font).Offset(15, 20);
+                    size = HelpersLib.Helpers.Helpers.MeasureText(Text, font).Offset(15, 20);
                 }
             }
             else

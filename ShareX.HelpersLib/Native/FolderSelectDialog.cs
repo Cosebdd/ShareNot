@@ -25,12 +25,12 @@
 
 // http://www.lyquidity.com/devblog/?p=136
 
-using ShareX.HelpersLib.Properties;
 using System;
 using System.Reflection;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Properties;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Native
 {
     /// <summary>
     /// Wraps System.Windows.Forms.OpenFileDialog to make it present
@@ -114,7 +114,7 @@ namespace ShareX.HelpersLib
         {
             bool flag;
 
-            if (Helpers.IsWindowsVistaOrGreater())
+            if (Helpers.Helpers.IsWindowsVistaOrGreater())
             {
                 Reflector r = new Reflector("System.Windows.Forms");
 

@@ -23,11 +23,11 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System.ComponentModel;
 using System.Drawing;
+using ShareNot.HelpersLib;
 
-namespace ShareX.ImageEffectsLib
+namespace ShareNot.ImageEffectsLib.Adjustments
 {
     [Description("Black & white")]
     internal class BlackWhite : ImageEffect

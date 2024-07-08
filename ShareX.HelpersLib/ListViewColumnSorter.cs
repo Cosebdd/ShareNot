@@ -27,7 +27,7 @@ using System;
 using System.Collections;
 using System.Windows.Forms;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     /// <summary>
     /// This class is an implementation of the 'IComparer' interface.

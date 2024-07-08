@@ -27,8 +27,9 @@ using System;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.UpdateChecker
 {
     public abstract class UpdateChecker
     {
@@ -72,7 +73,7 @@ namespace ShareX.HelpersLib
             }
 
             if (Status != UpdateStatus.UpdateCheckFailed && CurrentVersion != null && LatestVersion != null && !string.IsNullOrEmpty(DownloadURL) &&
-                (ForceUpdate || Helpers.CompareVersion(CurrentVersion, LatestVersion, IgnoreRevision) < 0))
+                (ForceUpdate || Helpers.Helpers.CompareVersion(CurrentVersion, LatestVersion, IgnoreRevision) < 0))
             {
                 Status = UpdateStatus.UpdateAvailable;
             }

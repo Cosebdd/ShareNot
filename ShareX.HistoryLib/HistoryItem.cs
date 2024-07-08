@@ -23,12 +23,12 @@
 
 #endregion License Information (GPL v3)
 
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using Newtonsoft.Json;
 
-namespace ShareX.HistoryLib
+namespace ShareNot.HistoryLib
 {
     public class HistoryItem
     {

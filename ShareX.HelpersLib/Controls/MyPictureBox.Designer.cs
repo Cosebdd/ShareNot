@@ -1,4 +1,4 @@
-﻿namespace ShareX.HelpersLib
+﻿namespace ShareNot.HelpersLib.Controls
 {
     partial class MyPictureBox
     {
@@ -38,19 +38,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbMain)).BeginInit();
             this.cmsMenu.SuspendLayout();
             this.SuspendLayout();
-            // 
+            //
             // lblStatus
-            // 
+            //
             this.lblStatus.BackColor = System.Drawing.Color.DimGray;
             resources.ApplyResources(this.lblStatus, "lblStatus");
             this.lblStatus.ForeColor = System.Drawing.Color.White;
             this.lblStatus.Name = "lblStatus";
-            // 
+            //
             // pbMain
-            // 
+            //
             resources.ApplyResources(this.pbMain, "pbMain");
-            this.pbMain.ErrorImage = global::ShareX.HelpersLib.Properties.Resources.cross;
-            this.pbMain.InitialImage = global::ShareX.HelpersLib.Properties.Resources.Loading;
+            this.pbMain.ErrorImage = global::ShareNot.HelpersLib.Properties.Resources.cross;
+            this.pbMain.InitialImage = global::ShareNot.HelpersLib.Properties.Resources.Loading;
             this.pbMain.Name = "pbMain";
             this.pbMain.TabStop = false;
             this.pbMain.LoadCompleted += new System.ComponentModel.AsyncCompletedEventHandler(this.PbMain_LoadCompleted);
@@ -60,30 +60,30 @@
             this.pbMain.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PbMain_MouseMove);
             this.pbMain.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PbMain_MouseUp);
             this.pbMain.Resize += new System.EventHandler(this.PbMain_Resize);
-            // 
+            //
             // cmsMenu
-            // 
+            //
             this.cmsMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiCopyImage});
             this.cmsMenu.Name = "cmsMenu";
             this.cmsMenu.ShowImageMargin = false;
             resources.ApplyResources(this.cmsMenu, "cmsMenu");
-            // 
+            //
             // tsmiCopyImage
-            // 
+            //
             this.tsmiCopyImage.Name = "tsmiCopyImage";
             resources.ApplyResources(this.tsmiCopyImage, "tsmiCopyImage");
             this.tsmiCopyImage.Click += new System.EventHandler(this.tsmiCopyImage_Click);
-            // 
+            //
             // lblImageSize
-            // 
+            //
             resources.ApplyResources(this.lblImageSize, "lblImageSize");
             this.lblImageSize.BackColor = System.Drawing.SystemColors.Window;
             this.lblImageSize.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblImageSize.Name = "lblImageSize";
-            // 
+            //
             // MyPictureBox
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;

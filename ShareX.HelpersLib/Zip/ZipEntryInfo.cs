@@ -25,7 +25,7 @@
 
 using System.IO;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Zip
 {
     public class ZipEntryInfo
     {

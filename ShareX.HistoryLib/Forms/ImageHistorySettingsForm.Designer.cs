@@ -1,4 +1,4 @@
-﻿namespace ShareX.HistoryLib
+﻿namespace ShareNot.HistoryLib.Forms
 {
     partial class ImageHistorySettingsForm
     {
@@ -40,19 +40,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudThumbnailSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMaximumImageLimit)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // lblThumbnailSize
-            // 
+            //
             resources.ApplyResources(this.lblThumbnailSize, "lblThumbnailSize");
             this.lblThumbnailSize.Name = "lblThumbnailSize";
-            // 
+            //
             // lblMaximumImageLimit
-            // 
+            //
             resources.ApplyResources(this.lblMaximumImageLimit, "lblMaximumImageLimit");
             this.lblMaximumImageLimit.Name = "lblMaximumImageLimit";
-            // 
+            //
             // nudThumbnailSize
-            // 
+            //
             resources.ApplyResources(this.nudThumbnailSize, "nudThumbnailSize");
             this.nudThumbnailSize.Maximum = new decimal(new int[] {
             1000,
@@ -71,9 +71,9 @@
             0,
             0});
             this.nudThumbnailSize.ValueChanged += new System.EventHandler(this.nudThumbnailSize_ValueChanged);
-            // 
+            //
             // nudMaximumImageLimit
-            // 
+            //
             resources.ApplyResources(this.nudMaximumImageLimit, "nudMaximumImageLimit");
             this.nudMaximumImageLimit.Maximum = new decimal(new int[] {
             10000,
@@ -82,35 +82,35 @@
             0});
             this.nudMaximumImageLimit.Name = "nudMaximumImageLimit";
             this.nudMaximumImageLimit.ValueChanged += new System.EventHandler(this.nudMaximumImageLimit_ValueChanged);
-            // 
+            //
             // lblThumbnailSizeUnit
-            // 
+            //
             resources.ApplyResources(this.lblThumbnailSizeUnit, "lblThumbnailSizeUnit");
             this.lblThumbnailSizeUnit.Name = "lblThumbnailSizeUnit";
-            // 
+            //
             // cbRememberSearchText
-            // 
+            //
             resources.ApplyResources(this.cbRememberSearchText, "cbRememberSearchText");
             this.cbRememberSearchText.Name = "cbRememberSearchText";
             this.cbRememberSearchText.UseVisualStyleBackColor = true;
             this.cbRememberSearchText.CheckedChanged += new System.EventHandler(this.cbRememberSearchText_CheckedChanged);
-            // 
+            //
             // cbFilterMissingFiles
-            // 
+            //
             resources.ApplyResources(this.cbFilterMissingFiles, "cbFilterMissingFiles");
             this.cbFilterMissingFiles.Name = "cbFilterMissingFiles";
             this.cbFilterMissingFiles.UseVisualStyleBackColor = true;
             this.cbFilterMissingFiles.CheckedChanged += new System.EventHandler(this.cbFilterMissingFiles_CheckedChanged);
-            // 
+            //
             // cbRememberWindowState
-            // 
+            //
             resources.ApplyResources(this.cbRememberWindowState, "cbRememberWindowState");
             this.cbRememberWindowState.Name = "cbRememberWindowState";
             this.cbRememberWindowState.UseVisualStyleBackColor = true;
             this.cbRememberWindowState.CheckedChanged += new System.EventHandler(this.cbRememberWindowState_CheckedChanged);
-            // 
+            //
             // ImageHistorySettingsForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Window;

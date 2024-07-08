@@ -23,14 +23,22 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.ScreenCaptureLib.Properties;
 using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Controls;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Native;
+using ShareNot.HelpersLib.Random;
+using ShareNot.ScreenCaptureLib.Animations;
+using ShareNot.ScreenCaptureLib.Forms;
+using ShareNot.ScreenCaptureLib.Properties;
+using ShareNot.ScreenCaptureLib.Shapes.Drawing;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.Shapes
 {
     internal partial class ShapeManager
     {
@@ -195,7 +203,7 @@ namespace ShareX.ScreenCaptureLib
 
                 #endregion Editor mode
             }
-            else if (Helpers.IsTabletMode())
+            else if (HelpersLib.Helpers.Helpers.IsTabletMode())
             {
                 ToolStripButton tsbClose = new ToolStripButton(Resources.CloseEsc);
                 tsbClose.DisplayStyle = ToolStripItemDisplayStyle.Image;
@@ -208,7 +216,7 @@ namespace ShareX.ScreenCaptureLib
 
             #region Tools
 
-            foreach (ShapeType shapeType in Helpers.GetEnums<ShapeType>())
+            foreach (ShapeType shapeType in HelpersLib.Helpers.Helpers.GetEnums<ShapeType>())
             {
                 if (Form.IsEditorMode)
                 {
@@ -521,7 +529,7 @@ namespace ShareX.ScreenCaptureLib
             tsddbShapeOptions.DropDownItems.Add(tslnudCornerRadius);
 
             tscbBorderStyle = new ToolStripLabeledComboBox(Resources.ShapeManager_BorderStyle);
-            tscbBorderStyle.Content.AddRange(Helpers.GetLocalizedEnumDescriptions<BorderStyle>());
+            tscbBorderStyle.Content.AddRange(HelpersLib.Helpers.Helpers.GetLocalizedEnumDescriptions<BorderStyle>());
             tscbBorderStyle.Content.SelectedIndexChanged += (sender, e) =>
             {
                 AnnotationOptions.BorderStyle = (BorderStyle)tscbBorderStyle.Content.SelectedIndex;
@@ -531,7 +539,7 @@ namespace ShareX.ScreenCaptureLib
             tsddbShapeOptions.DropDownItems.Add(tscbBorderStyle);
 
             tscbImageInterpolationMode = new ToolStripLabeledComboBox(Resources.ShapeManager_CreateToolbar_InterpolationMode);
-            tscbImageInterpolationMode.Content.AddRange(Helpers.GetLocalizedEnumDescriptions<ImageInterpolationMode>());
+            tscbImageInterpolationMode.Content.AddRange(HelpersLib.Helpers.Helpers.GetLocalizedEnumDescriptions<ImageInterpolationMode>());
             tscbImageInterpolationMode.Content.SelectedIndexChanged += (sender, e) =>
             {
                 AnnotationOptions.ImageInterpolationMode = (ImageInterpolationMode)tscbImageInterpolationMode.Content.SelectedIndex;
@@ -542,7 +550,7 @@ namespace ShareX.ScreenCaptureLib
 
             tscbCursorTypes = new ToolStripLabeledComboBox(Resources.ShapeManager_CursorType);
             CursorConverter cursorConverter = new CursorConverter();
-            foreach (Cursor cursor in Helpers.CursorList)
+            foreach (Cursor cursor in HelpersLib.Helpers.Helpers.CursorList)
             {
                 string name = cursorConverter.ConvertToString(cursor);
                 tscbCursorTypes.Content.Add(name);
@@ -583,7 +591,7 @@ namespace ShareX.ScreenCaptureLib
             tsddbShapeOptions.DropDownItems.Add(tslnudCenterPoints);
 
             tscbArrowHeadDirection = new ToolStripLabeledComboBox(Resources.ShapeManager_ArrowHeadDirection);
-            tscbArrowHeadDirection.Content.AddRange(Helpers.GetLocalizedEnumDescriptions<ArrowHeadDirection>());
+            tscbArrowHeadDirection.Content.AddRange(HelpersLib.Helpers.Helpers.GetLocalizedEnumDescriptions<ArrowHeadDirection>());
             tscbArrowHeadDirection.Content.SelectedIndexChanged += (sender, e) =>
             {
                 AnnotationOptions.ArrowHeadDirection = (ArrowHeadDirection)tscbArrowHeadDirection.Content.SelectedIndex;
@@ -613,7 +621,7 @@ namespace ShareX.ScreenCaptureLib
             tsddbShapeOptions.DropDownItems.Add(tslnudStartingStepValue);
 
             tscbStepType = new ToolStripLabeledComboBox(Resources.ShapeManager_CreateToolbar_StepType);
-            tscbStepType.Content.AddRange(Helpers.GetLocalizedEnumDescriptions<StepType>());
+            tscbStepType.Content.AddRange(HelpersLib.Helpers.Helpers.GetLocalizedEnumDescriptions<StepType>());
             tscbStepType.Content.SelectedIndexChanged += (sender, e) =>
             {
                 AnnotationOptions.StepType = (StepType)tscbStepType.Content.SelectedIndex;
@@ -649,7 +657,7 @@ namespace ShareX.ScreenCaptureLib
             tsddbShapeOptions.DropDownItems.Add(tsmiShadowColor);
 
             tscbCutOutEffectType = new ToolStripLabeledComboBox(Resources.CutOutEffectType);
-            tscbCutOutEffectType.Content.AddRange(Helpers.GetLocalizedEnumDescriptions<CutOutEffectType>());
+            tscbCutOutEffectType.Content.AddRange(HelpersLib.Helpers.Helpers.GetLocalizedEnumDescriptions<CutOutEffectType>());
             tscbCutOutEffectType.Content.SelectedIndexChanged += (sender, e) =>
             {
                 AnnotationOptions.CutOutEffectType = (CutOutEffectType)tscbCutOutEffectType.Content.SelectedIndex;
@@ -927,7 +935,7 @@ namespace ShareX.ScreenCaptureLib
             if (Form.IsEditorMode)
             {
                 ToolStripLabeledComboBox tscbImageEditorStartMode = new ToolStripLabeledComboBox(Resources.ShapeManager_CreateToolbar_EditorStartMode);
-                tscbImageEditorStartMode.Content.AddRange(Helpers.GetLocalizedEnumDescriptions<ImageEditorStartMode>());
+                tscbImageEditorStartMode.Content.AddRange(HelpersLib.Helpers.Helpers.GetLocalizedEnumDescriptions<ImageEditorStartMode>());
                 tscbImageEditorStartMode.Content.SelectedIndex = (int)Options.ImageEditorStartMode;
                 tscbImageEditorStartMode.Content.SelectedIndexChanged +=
                     (sender, e) => Options.ImageEditorStartMode = (ImageEditorStartMode)tscbImageEditorStartMode.Content.SelectedIndex;
@@ -1639,7 +1647,7 @@ namespace ShareX.ScreenCaptureLib
         {
             if (tscbCursorTypes.Content.SelectedIndex > -1)
             {
-                return Helpers.CursorList[tscbCursorTypes.Content.SelectedIndex];
+                return HelpersLib.Helpers.Helpers.CursorList[tscbCursorTypes.Content.SelectedIndex];
             }
 
             return Cursors.Default;

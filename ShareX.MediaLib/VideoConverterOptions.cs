@@ -23,13 +23,13 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.IO;
 using System.Linq;
 using System.Text;
+using ShareNot.HelpersLib.Extensions;
 
-namespace ShareX.MediaLib
+namespace ShareNot.MediaLib
 {
     public class VideoConverterOptions
     {

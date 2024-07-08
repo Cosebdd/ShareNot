@@ -23,14 +23,15 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Zip;
 
-namespace ShareX.ImageEffectsLib
+namespace ShareNot.ImageEffectsLib
 {
     public static class ImageEffectPackager
     {

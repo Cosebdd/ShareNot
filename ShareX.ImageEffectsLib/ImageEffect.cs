@@ -23,12 +23,12 @@
 
 #endregion License Information (GPL v3)
 
-using Newtonsoft.Json;
-using ShareX.HelpersLib;
 using System.ComponentModel;
 using System.Drawing;
+using Newtonsoft.Json;
+using ShareNot.HelpersLib.Extensions;
 
-namespace ShareX.ImageEffectsLib
+namespace ShareNot.ImageEffectsLib
 {
     public abstract class ImageEffect
     {

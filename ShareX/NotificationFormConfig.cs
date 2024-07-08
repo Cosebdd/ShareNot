@@ -26,7 +26,7 @@
 using System;
 using System.Drawing;
 
-namespace ShareX
+namespace ShareNot
 {
     public class NotificationFormConfig : IDisposable
     {

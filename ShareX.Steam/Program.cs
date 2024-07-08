@@ -25,7 +25,7 @@
 
 using System.Windows.Forms;
 
-namespace ShareX.Steam
+namespace ShareNot.Steam
 {
     internal static class Program
     {

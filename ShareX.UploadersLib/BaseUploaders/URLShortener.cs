@@ -23,7 +23,7 @@
 
 #endregion License Information (GPL v3)
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.BaseUploaders
 {
     public abstract class URLShortener : Uploader
     {

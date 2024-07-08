@@ -23,10 +23,10 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System.Drawing;
+using ShareNot.HelpersLib;
 
-namespace ShareX.ImageEffectsLib
+namespace ShareNot.ImageEffectsLib.Adjustments
 {
     internal class Polaroid : ImageEffect
     {

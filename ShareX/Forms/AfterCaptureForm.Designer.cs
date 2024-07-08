@@ -1,4 +1,7 @@
-﻿namespace ShareX
+﻿using ShareNot.Controls;
+using ShareNot.HelpersLib.Controls;
+
+namespace ShareNot.Forms
 {
     partial class AfterCaptureForm
     {
@@ -34,61 +37,61 @@
             this.btnCopy = new System.Windows.Forms.Button();
             this.tcTasks = new System.Windows.Forms.TabControl();
             this.tpAfterCapture = new System.Windows.Forms.TabPage();
-            this.lvAfterCaptureTasks = new ShareX.HelpersLib.MyListView();
+            this.lvAfterCaptureTasks = new MyListView();
             this.chAfterCapture = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tpBeforeUpload = new System.Windows.Forms.TabPage();
-            this.ucBeforeUpload = new ShareX.BeforeUploadControl();
+            this.ucBeforeUpload = new BeforeUploadControl();
             this.tpAfterUpload = new System.Windows.Forms.TabPage();
-            this.lvAfterUploadTasks = new ShareX.HelpersLib.MyListView();
+            this.lvAfterUploadTasks = new MyListView();
             this.chAfterUpload = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblFileName = new System.Windows.Forms.Label();
             this.txtFileName = new System.Windows.Forms.TextBox();
-            this.pbImage = new ShareX.HelpersLib.MyPictureBox();
+            this.pbImage = new MyPictureBox();
             this.tcTasks.SuspendLayout();
             this.tpAfterCapture.SuspendLayout();
             this.tpBeforeUpload.SuspendLayout();
             this.tpAfterUpload.SuspendLayout();
             this.SuspendLayout();
-            // 
+            //
             // btnContinue
-            // 
+            //
             resources.ApplyResources(this.btnContinue, "btnContinue");
             this.btnContinue.Name = "btnContinue";
             this.btnContinue.UseVisualStyleBackColor = true;
             this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
-            // 
+            //
             // btnCancel
-            // 
+            //
             resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
+            //
             // btnCopy
-            // 
+            //
             resources.ApplyResources(this.btnCopy, "btnCopy");
             this.btnCopy.Name = "btnCopy";
             this.btnCopy.UseVisualStyleBackColor = true;
             this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
-            // 
+            //
             // tcTasks
-            // 
+            //
             resources.ApplyResources(this.tcTasks, "tcTasks");
             this.tcTasks.Controls.Add(this.tpAfterCapture);
             this.tcTasks.Controls.Add(this.tpBeforeUpload);
             this.tcTasks.Controls.Add(this.tpAfterUpload);
             this.tcTasks.Name = "tcTasks";
             this.tcTasks.SelectedIndex = 0;
-            // 
+            //
             // tpAfterCapture
-            // 
+            //
             this.tpAfterCapture.BackColor = System.Drawing.SystemColors.Window;
             this.tpAfterCapture.Controls.Add(this.lvAfterCaptureTasks);
             resources.ApplyResources(this.tpAfterCapture, "tpAfterCapture");
             this.tpAfterCapture.Name = "tpAfterCapture";
-            // 
+            //
             // lvAfterCaptureTasks
-            // 
+            //
             this.lvAfterCaptureTasks.AutoFillColumn = true;
             this.lvAfterCaptureTasks.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lvAfterCaptureTasks.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -103,28 +106,28 @@
             this.lvAfterCaptureTasks.View = System.Windows.Forms.View.Details;
             this.lvAfterCaptureTasks.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.lvAfterCaptureTasks_ItemSelectionChanged);
             this.lvAfterCaptureTasks.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lvAfterCaptureTasks_MouseDown);
-            // 
+            //
             // tpBeforeUpload
-            // 
+            //
             this.tpBeforeUpload.BackColor = System.Drawing.SystemColors.Window;
             this.tpBeforeUpload.Controls.Add(this.ucBeforeUpload);
             resources.ApplyResources(this.tpBeforeUpload, "tpBeforeUpload");
             this.tpBeforeUpload.Name = "tpBeforeUpload";
-            // 
+            //
             // ucBeforeUpload
-            // 
+            //
             resources.ApplyResources(this.ucBeforeUpload, "ucBeforeUpload");
             this.ucBeforeUpload.Name = "ucBeforeUpload";
-            // 
+            //
             // tpAfterUpload
-            // 
+            //
             this.tpAfterUpload.BackColor = System.Drawing.SystemColors.Window;
             this.tpAfterUpload.Controls.Add(this.lvAfterUploadTasks);
             resources.ApplyResources(this.tpAfterUpload, "tpAfterUpload");
             this.tpAfterUpload.Name = "tpAfterUpload";
-            // 
+            //
             // lvAfterUploadTasks
-            // 
+            //
             this.lvAfterUploadTasks.AutoFillColumn = true;
             this.lvAfterUploadTasks.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lvAfterUploadTasks.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -139,21 +142,21 @@
             this.lvAfterUploadTasks.View = System.Windows.Forms.View.Details;
             this.lvAfterUploadTasks.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.lvAfterUploadTasks_ItemSelectionChanged);
             this.lvAfterUploadTasks.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lvAfterUploadTasks_MouseDown);
-            // 
+            //
             // lblFileName
-            // 
+            //
             resources.ApplyResources(this.lblFileName, "lblFileName");
             this.lblFileName.Name = "lblFileName";
-            // 
+            //
             // txtFileName
-            // 
+            //
             resources.ApplyResources(this.txtFileName, "txtFileName");
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFileName_KeyDown);
             this.txtFileName.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFileName_KeyUp);
-            // 
+            //
             // pbImage
-            // 
+            //
             resources.ApplyResources(this.pbImage, "pbImage");
             this.pbImage.BackColor = System.Drawing.SystemColors.Window;
             this.pbImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -164,9 +167,9 @@
             this.pbImage.Name = "pbImage";
             this.pbImage.PictureBoxBackColor = System.Drawing.SystemColors.Window;
             this.pbImage.ShowImageSizeLabel = true;
-            // 
+            //
             // AfterCaptureForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Window;
@@ -192,7 +195,7 @@
 
         #endregion
 
-        private HelpersLib.MyPictureBox pbImage;
+        private MyPictureBox pbImage;
         private System.Windows.Forms.Button btnContinue;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnCopy;
@@ -203,9 +206,9 @@
         private System.Windows.Forms.Label lblFileName;
         private System.Windows.Forms.TextBox txtFileName;
         private System.Windows.Forms.TabPage tpAfterUpload;
-        private HelpersLib.MyListView lvAfterCaptureTasks;
+        private MyListView lvAfterCaptureTasks;
         private System.Windows.Forms.ColumnHeader chAfterCapture;
-        private HelpersLib.MyListView lvAfterUploadTasks;
+        private MyListView lvAfterUploadTasks;
         private System.Windows.Forms.ColumnHeader chAfterUpload;
     }
 }

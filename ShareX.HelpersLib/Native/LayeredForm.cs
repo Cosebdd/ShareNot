@@ -28,7 +28,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Native
 {
     public class LayeredForm : Form
     {

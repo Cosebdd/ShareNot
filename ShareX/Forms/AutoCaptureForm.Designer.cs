@@ -1,4 +1,4 @@
-﻿namespace ShareX
+﻿namespace ShareNot.Forms
 {
     partial class AutoCaptureForm
     {
@@ -60,62 +60,62 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudRepeatTime)).BeginInit();
             this.gbRegion.SuspendLayout();
             this.SuspendLayout();
-            // 
+            //
             // ssBar
-            // 
+            //
             this.ssBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tspbBar,
             this.tsslStatus});
             resources.ApplyResources(this.ssBar, "ssBar");
             this.ssBar.Name = "ssBar";
             this.ssBar.SizingGrip = false;
-            // 
+            //
             // tspbBar
-            // 
+            //
             this.tspbBar.Name = "tspbBar";
             resources.ApplyResources(this.tspbBar, "tspbBar");
-            // 
+            //
             // tsslStatus
-            // 
+            //
             this.tsslStatus.BackColor = System.Drawing.Color.Transparent;
             this.tsslStatus.Name = "tsslStatus";
             resources.ApplyResources(this.tsslStatus, "tsslStatus");
-            // 
+            //
             // btnExecute
-            // 
+            //
             resources.ApplyResources(this.btnExecute, "btnExecute");
             this.btnExecute.Name = "btnExecute";
             this.btnExecute.UseVisualStyleBackColor = true;
             this.btnExecute.Click += new System.EventHandler(this.btnExecute_Click);
-            // 
+            //
             // cbWaitUploads
-            // 
+            //
             resources.ApplyResources(this.cbWaitUploads, "cbWaitUploads");
             this.cbWaitUploads.Name = "cbWaitUploads";
             this.cbWaitUploads.UseVisualStyleBackColor = true;
             this.cbWaitUploads.CheckedChanged += new System.EventHandler(this.cbWaitUploads_CheckedChanged);
-            // 
+            //
             // cbAutoMinimize
-            // 
+            //
             resources.ApplyResources(this.cbAutoMinimize, "cbAutoMinimize");
             this.cbAutoMinimize.Name = "cbAutoMinimize";
             this.cbAutoMinimize.UseVisualStyleBackColor = true;
             this.cbAutoMinimize.CheckedChanged += new System.EventHandler(this.cbAutoMinimize_CheckedChanged);
-            // 
+            //
             // lblRegion
-            // 
+            //
             resources.ApplyResources(this.lblRegion, "lblRegion");
             this.lblRegion.Name = "lblRegion";
-            // 
+            //
             // btnRegion
-            // 
+            //
             resources.ApplyResources(this.btnRegion, "btnRegion");
             this.btnRegion.Name = "btnRegion";
             this.btnRegion.UseVisualStyleBackColor = true;
             this.btnRegion.Click += new System.EventHandler(this.btnRegion_Click);
-            // 
+            //
             // nudRepeatTime
-            // 
+            //
             this.nudRepeatTime.DecimalPlaces = 1;
             resources.ApplyResources(this.nudRepeatTime, "nudRepeatTime");
             this.nudRepeatTime.Maximum = new decimal(new int[] {
@@ -135,24 +135,24 @@
             0,
             0});
             this.nudRepeatTime.ValueChanged += new System.EventHandler(this.nudDuration_ValueChanged);
-            // 
+            //
             // lblDuration
-            // 
+            //
             resources.ApplyResources(this.lblDuration, "lblDuration");
             this.lblDuration.Name = "lblDuration";
-            // 
+            //
             // niTray
-            // 
+            //
             resources.ApplyResources(this.niTray, "niTray");
             this.niTray.MouseClick += new System.Windows.Forms.MouseEventHandler(this.niTray_MouseClick);
-            // 
+            //
             // lblDurationSeconds
-            // 
+            //
             resources.ApplyResources(this.lblDurationSeconds, "lblDurationSeconds");
             this.lblDurationSeconds.Name = "lblDurationSeconds";
-            // 
+            //
             // gbRegion
-            // 
+            //
             this.gbRegion.Controls.Add(this.rbFullscreen);
             this.gbRegion.Controls.Add(this.rbCustomRegion);
             this.gbRegion.Controls.Add(this.btnRegion);
@@ -160,25 +160,25 @@
             resources.ApplyResources(this.gbRegion, "gbRegion");
             this.gbRegion.Name = "gbRegion";
             this.gbRegion.TabStop = false;
-            // 
+            //
             // rbFullscreen
-            // 
+            //
             resources.ApplyResources(this.rbFullscreen, "rbFullscreen");
             this.rbFullscreen.Name = "rbFullscreen";
             this.rbFullscreen.UseVisualStyleBackColor = true;
             this.rbFullscreen.CheckedChanged += new System.EventHandler(this.rbFullscreen_CheckedChanged);
-            // 
+            //
             // rbCustomRegion
-            // 
+            //
             resources.ApplyResources(this.rbCustomRegion, "rbCustomRegion");
             this.rbCustomRegion.Checked = true;
             this.rbCustomRegion.Name = "rbCustomRegion";
             this.rbCustomRegion.TabStop = true;
             this.rbCustomRegion.UseVisualStyleBackColor = true;
             this.rbCustomRegion.CheckedChanged += new System.EventHandler(this.rbCustomRegion_CheckedChanged);
-            // 
+            //
             // AutoCaptureForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Window;

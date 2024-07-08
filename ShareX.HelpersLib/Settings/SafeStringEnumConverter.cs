@@ -23,11 +23,11 @@
 
 #endregion License Information (GPL v3)
 
+using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Settings
 {
     public class SafeStringEnumConverter : StringEnumConverter
     {

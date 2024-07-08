@@ -23,18 +23,23 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.HistoryLib;
-using ShareX.Properties;
-using ShareX.UploadersLib;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShareNot.Controls;
+using ShareNot.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Native;
+using ShareNot.HistoryLib;
+using ShareNot.Properties;
+using ShareNot.UploadersLib.Helpers;
 
-namespace ShareX
+namespace ShareNot
 {
     public static class TaskManager
     {
@@ -320,7 +325,7 @@ namespace ShareX
                                     }
 
                                     if (info.TaskSettings.GeneralSettings.ShowToastNotificationAfterTaskCompleted && !string.IsNullOrEmpty(error.Text) &&
-                                        (!info.TaskSettings.GeneralSettings.DisableNotificationsOnFullscreen || !CaptureHelpers.IsActiveWindowFullscreen()))
+                                        (!info.TaskSettings.GeneralSettings.DisableNotificationsOnFullscreen || !HelpersLib.Helpers.CaptureHelpers.IsActiveWindowFullscreen()))
                                     {
                                         TaskHelpers.ShowNotificationTip(error.Text, "ShareX - " + title, 5000);
                                     }
@@ -369,7 +374,7 @@ namespace ShareX
                                     }
 
                                     if (info.TaskSettings.GeneralSettings.ShowToastNotificationAfterTaskCompleted && !string.IsNullOrEmpty(result) &&
-                                        (!info.TaskSettings.GeneralSettings.DisableNotificationsOnFullscreen || !CaptureHelpers.IsActiveWindowFullscreen()))
+                                        (!info.TaskSettings.GeneralSettings.DisableNotificationsOnFullscreen || !HelpersLib.Helpers.CaptureHelpers.IsActiveWindowFullscreen()))
                                     {
                                         task.KeepImage = true;
 

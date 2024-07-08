@@ -26,7 +26,7 @@
 using System;
 using System.Diagnostics;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.Animations
 {
     internal class BaseAnimation
     {

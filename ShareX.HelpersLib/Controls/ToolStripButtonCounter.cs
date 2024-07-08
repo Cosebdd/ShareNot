@@ -25,8 +25,9 @@
 
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using ShareNot.HelpersLib.Extensions;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Controls
 {
     public class ToolStripButtonCounter : ToolStripButtonExtraImage
     {

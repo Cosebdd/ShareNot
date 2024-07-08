@@ -23,15 +23,17 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.ScreenCaptureLib;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Native;
+using ShareNot.ScreenCaptureLib.Helpers;
 
-namespace ShareX
+namespace ShareNot.Tools.BorderlessWindow
 {
     public partial class BorderlessWindowForm : Form
     {

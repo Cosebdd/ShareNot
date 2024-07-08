@@ -23,14 +23,16 @@
 
 #endregion License Information (GPL v3)
 
-using Manina.Windows.Forms;
-using ShareX.HelpersLib;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
 using System.Windows.Forms;
+using Manina.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.HistoryLib
+namespace ShareNot.HistoryLib
 {
     public class HistoryImageListViewRenderer : ImageListView.ImageListViewRenderer
     {

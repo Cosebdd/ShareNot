@@ -30,7 +30,7 @@ using System.Security.Cryptography;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Cryptographic
 {
     public class HashChecker
     {

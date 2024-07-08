@@ -1,4 +1,4 @@
-﻿namespace ShareX.HelpersLib
+﻿namespace ShareNot.HelpersLib.Forms
 {
     partial class DebugForm
     {
@@ -39,64 +39,64 @@
             this.btnUploadLog = new System.Windows.Forms.Button();
             this.flpRunningFrom.SuspendLayout();
             this.SuspendLayout();
-            // 
+            //
             // btnLoadedAssemblies
-            // 
+            //
             resources.ApplyResources(this.btnLoadedAssemblies, "btnLoadedAssemblies");
             this.btnLoadedAssemblies.Name = "btnLoadedAssemblies";
             this.btnLoadedAssemblies.UseVisualStyleBackColor = true;
             this.btnLoadedAssemblies.Click += new System.EventHandler(this.btnLoadedAssemblies_Click);
-            // 
+            //
             // btnCopyAll
-            // 
+            //
             resources.ApplyResources(this.btnCopyAll, "btnCopyAll");
             this.btnCopyAll.Name = "btnCopyAll";
             this.btnCopyAll.UseVisualStyleBackColor = true;
             this.btnCopyAll.Click += new System.EventHandler(this.btnCopyAll_Click);
-            // 
+            //
             // rtbDebug
-            // 
+            //
             resources.ApplyResources(this.rtbDebug, "rtbDebug");
             this.rtbDebug.BackColor = System.Drawing.SystemColors.Window;
             this.rtbDebug.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtbDebug.Name = "rtbDebug";
             this.rtbDebug.ReadOnly = true;
             this.rtbDebug.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.rtbDebug_LinkClicked);
-            // 
+            //
             // btnOpenLogFile
-            // 
+            //
             resources.ApplyResources(this.btnOpenLogFile, "btnOpenLogFile");
             this.btnOpenLogFile.Name = "btnOpenLogFile";
             this.btnOpenLogFile.UseVisualStyleBackColor = true;
             this.btnOpenLogFile.Click += new System.EventHandler(this.btnOpenLogFile_Click);
-            // 
+            //
             // llRunningFrom
-            // 
+            //
             resources.ApplyResources(this.llRunningFrom, "llRunningFrom");
             this.llRunningFrom.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.llRunningFrom.Name = "llRunningFrom";
-            // 
+            //
             // flpRunningFrom
-            // 
+            //
             resources.ApplyResources(this.flpRunningFrom, "flpRunningFrom");
             this.flpRunningFrom.Controls.Add(this.lblRunningFrom);
             this.flpRunningFrom.Controls.Add(this.llRunningFrom);
             this.flpRunningFrom.Name = "flpRunningFrom";
-            // 
+            //
             // lblRunningFrom
-            // 
+            //
             resources.ApplyResources(this.lblRunningFrom, "lblRunningFrom");
             this.lblRunningFrom.Name = "lblRunningFrom";
-            // 
+            //
             // btnUploadLog
-            // 
+            //
             resources.ApplyResources(this.btnUploadLog, "btnUploadLog");
             this.btnUploadLog.Name = "btnUploadLog";
             this.btnUploadLog.UseVisualStyleBackColor = true;
             this.btnUploadLog.Click += new System.EventHandler(this.btnUploadLog_Click);
-            // 
+            //
             // DebugForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;

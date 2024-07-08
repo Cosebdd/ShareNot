@@ -23,12 +23,13 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Imaging;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
 
-namespace ShareX.ImageEffectsLib
+namespace ShareNot.ImageEffectsLib.Adjustments
 {
     [Description("Color matrix")]
     internal class MatrixColor : ImageEffect

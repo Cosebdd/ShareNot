@@ -26,8 +26,9 @@
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using ShareNot.HelpersLib.Extensions;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.UpdateChecker
 {
     public class AppVeyorUpdateChecker : UpdateChecker
     {

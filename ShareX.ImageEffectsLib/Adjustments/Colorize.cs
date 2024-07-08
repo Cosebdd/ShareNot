@@ -23,12 +23,14 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Design;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.UITypeEditors;
 
-namespace ShareX.ImageEffectsLib
+namespace ShareNot.ImageEffectsLib.Adjustments
 {
     internal class Colorize : ImageEffect
     {

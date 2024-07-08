@@ -26,7 +26,7 @@
 using System.Net.Http;
 using System.Net.Http.Headers;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     public static class HttpClientFactory
     {

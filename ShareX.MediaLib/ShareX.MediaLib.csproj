@@ -3,6 +3,8 @@
     <TargetFramework>net48</TargetFramework>
     <OutputType>Library</OutputType>
     <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>ShareNot.MediaLib</AssemblyName>
+    <RootNamespace>ShareNot.MediaLib</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />

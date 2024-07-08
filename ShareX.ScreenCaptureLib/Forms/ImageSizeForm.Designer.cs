@@ -1,4 +1,4 @@
-﻿namespace ShareX.ScreenCaptureLib
+﻿namespace ShareNot.ScreenCaptureLib.Forms
 {
     partial class ImageSizeForm
     {
@@ -43,9 +43,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudWidth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // nudWidth
-            // 
+            //
             resources.ApplyResources(this.nudWidth, "nudWidth");
             this.nudWidth.Maximum = new decimal(new int[] {
             10000,
@@ -53,9 +53,9 @@
             0,
             0});
             this.nudWidth.Name = "nudWidth";
-            // 
+            //
             // nudHeight
-            // 
+            //
             resources.ApplyResources(this.nudHeight, "nudHeight");
             this.nudHeight.Maximum = new decimal(new int[] {
             10000,
@@ -63,65 +63,65 @@
             0,
             0});
             this.nudHeight.Name = "nudHeight";
-            // 
+            //
             // lblWidth
-            // 
+            //
             resources.ApplyResources(this.lblWidth, "lblWidth");
             this.lblWidth.Name = "lblWidth";
-            // 
+            //
             // lblHeight
-            // 
+            //
             resources.ApplyResources(this.lblHeight, "lblHeight");
             this.lblHeight.Name = "lblHeight";
-            // 
+            //
             // cbAspectRatio
-            // 
+            //
             resources.ApplyResources(this.cbAspectRatio, "cbAspectRatio");
             this.cbAspectRatio.Checked = true;
             this.cbAspectRatio.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbAspectRatio.Name = "cbAspectRatio";
             this.cbAspectRatio.UseVisualStyleBackColor = true;
             this.cbAspectRatio.CheckedChanged += new System.EventHandler(this.cbAspectRatio_CheckedChanged);
-            // 
+            //
             // btnOK
-            // 
+            //
             resources.ApplyResources(this.btnOK, "btnOK");
             this.btnOK.Name = "btnOK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
+            //
             // btnCancel
-            // 
+            //
             resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
+            //
             // lblWidthPixels
-            // 
+            //
             resources.ApplyResources(this.lblWidthPixels, "lblWidthPixels");
             this.lblWidthPixels.Name = "lblWidthPixels";
-            // 
+            //
             // lblHeightPixels
-            // 
+            //
             resources.ApplyResources(this.lblHeightPixels, "lblHeightPixels");
             this.lblHeightPixels.Name = "lblHeightPixels";
-            // 
+            //
             // lblResampling
-            // 
+            //
             resources.ApplyResources(this.lblResampling, "lblResampling");
             this.lblResampling.Name = "lblResampling";
-            // 
+            //
             // cbResampling
-            // 
+            //
             this.cbResampling.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbResampling.FormattingEnabled = true;
             resources.ApplyResources(this.cbResampling, "cbResampling");
             this.cbResampling.Name = "cbResampling";
             this.cbResampling.SelectedIndexChanged += new System.EventHandler(this.cbResampling_SelectedIndexChanged);
-            // 
+            //
             // ImageSizeForm
-            // 
+            //
             this.AcceptButton = this.btnOK;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

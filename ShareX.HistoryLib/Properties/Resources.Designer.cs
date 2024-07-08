@@ -8,10 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ShareX.HistoryLib.Properties {
-    using System;
-    
-    
+namespace ShareNot.HistoryLib.Properties {
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -23,15 +20,15 @@ namespace ShareX.HistoryLib.Properties {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
-        
+
         private static global::System.Resources.ResourceManager resourceMan;
-        
+
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Resources() {
         }
-        
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -39,13 +36,13 @@ namespace ShareX.HistoryLib.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ShareX.HistoryLib.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ShareNot.HistoryLib.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-        
+
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
@@ -59,7 +56,7 @@ namespace ShareX.HistoryLib.Properties {
                 resourceCulture = value;
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -69,7 +66,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -79,7 +76,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Error occurred while reading history file:.
         /// </summary>
@@ -88,7 +85,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("ErrorOccuredWhileReadingHistoryFile", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Filtered.
         /// </summary>
@@ -97,7 +94,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("Filtered", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -107,7 +104,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -117,7 +114,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to File name, window title, process name, etc..
         /// </summary>
@@ -126,7 +123,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryForm_Search_Watermark", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Filtered: {0}.
         /// </summary>
@@ -135,7 +132,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryForm_UpdateItemCount___Filtered___0_", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Total: {0}.
         /// </summary>
@@ -144,7 +141,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryForm_UpdateItemCount_Total___0_", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to History item counts:.
         /// </summary>
@@ -153,7 +150,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemCounts", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Copy.
         /// </summary>
@@ -162,7 +159,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_Copy", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Deletion URL.
         /// </summary>
@@ -171,7 +168,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_Deletion_URL", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Edit image....
         /// </summary>
@@ -180,7 +177,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_EditImage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to File.
         /// </summary>
@@ -189,7 +186,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_File", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to File name.
         /// </summary>
@@ -198,7 +195,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_File_name", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to File name with extension.
         /// </summary>
@@ -207,7 +204,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_File_name_with_extension", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to File path.
         /// </summary>
@@ -216,7 +213,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_File_path", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Folder.
         /// </summary>
@@ -225,7 +222,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_Folder", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Forum (BBCode) image.
         /// </summary>
@@ -234,7 +231,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_Forum__BBCode__image", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Forum (BBCode) link.
         /// </summary>
@@ -243,7 +240,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_Forum__BBCode__link", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Forum (BBCode) linked image.
         /// </summary>
@@ -252,7 +249,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_Forum__BBCode__linked_image", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to HTML image.
         /// </summary>
@@ -261,7 +258,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_HTML_image", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to HTML link.
         /// </summary>
@@ -270,7 +267,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_HTML_link", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to HTML linked image.
         /// </summary>
@@ -279,7 +276,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_HTML_linked_image", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Image.
         /// </summary>
@@ -288,7 +285,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_Image", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Image preview....
         /// </summary>
@@ -297,7 +294,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_Image_preview", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Markdown image.
         /// </summary>
@@ -306,7 +303,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_Markdown__image", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Markdown link.
         /// </summary>
@@ -315,7 +312,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_Markdown__link", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Markdown linked image.
         /// </summary>
@@ -324,7 +321,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_Markdown__linked_image", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to More info....
         /// </summary>
@@ -333,7 +330,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_More_info", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Open.
         /// </summary>
@@ -342,7 +339,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_Open", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Shortened URL.
         /// </summary>
@@ -351,7 +348,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_Shortened_URL", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Text.
         /// </summary>
@@ -360,7 +357,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_Text", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Thumbnail URL.
         /// </summary>
@@ -369,7 +366,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_Thumbnail_URL", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Upload file.
         /// </summary>
@@ -378,7 +375,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_UploadFile", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to URL.
         /// </summary>
@@ -387,7 +384,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryItemManager_InitializeComponent_URL", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
@@ -396,7 +393,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryManager_GetHistoryItems_Error", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to History stats.
         /// </summary>
@@ -405,7 +402,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryStats", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to File extensions:.
         /// </summary>
@@ -414,7 +411,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryStats_FileExtensions", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Hosts:.
         /// </summary>
@@ -423,7 +420,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryStats_Hosts", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Total:.
         /// </summary>
@@ -432,7 +429,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryStats_Total", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Yearly usages:.
         /// </summary>
@@ -441,7 +438,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("HistoryStats_YearlyUsages", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -451,7 +448,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -461,7 +458,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -471,7 +468,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -481,7 +478,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -491,7 +488,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Pin to screen.
         /// </summary>
@@ -500,7 +497,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("PinToScreen", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Process names:.
         /// </summary>
@@ -509,7 +506,7 @@ namespace ShareX.HistoryLib.Properties {
                 return ResourceManager.GetString("ProcessNames", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Total.
         /// </summary>

@@ -27,7 +27,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.Helpers
 {
     internal abstract class ImageEditorControl
     {

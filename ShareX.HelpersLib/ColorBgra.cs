@@ -26,7 +26,7 @@
 using System.Drawing;
 using System.Runtime.InteropServices;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     [StructLayout(LayoutKind.Explicit)]
     public struct ColorBgra

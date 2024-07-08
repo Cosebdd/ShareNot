@@ -23,17 +23,23 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.MediaLib;
-using ShareX.Properties;
-using ShareX.ScreenCaptureLib;
 using System;
 using System.Drawing;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShareNot.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Native;
+using ShareNot.MediaLib;
+using ShareNot.Properties;
+using ShareNot.ScreenCaptureLib;
+using ShareNot.ScreenCaptureLib.Forms;
+using ShareNot.ScreenCaptureLib.ScreenRecording;
 
-namespace ShareX
+namespace ShareNot
 {
     public static class ScreenRecordManager
     {
@@ -144,11 +150,11 @@ namespace ShareX
                 case ScreenRecordStartMethod.ActiveWindow:
                     if (taskSettings.CaptureSettings.CaptureClientArea)
                     {
-                        captureRectangle = CaptureHelpers.GetActiveWindowClientRectangle();
+                        captureRectangle = HelpersLib.Helpers.CaptureHelpers.GetActiveWindowClientRectangle();
                     }
                     else
                     {
-                        captureRectangle = CaptureHelpers.GetActiveWindowRectangle();
+                        captureRectangle = HelpersLib.Helpers.CaptureHelpers.GetActiveWindowRectangle();
                     }
 
                     IntPtr handle = NativeMethods.GetForegroundWindow();
@@ -163,12 +169,12 @@ namespace ShareX
                     break;
             }
 
-            Rectangle screenRectangle = CaptureHelpers.GetScreenBounds();
+            Rectangle screenRectangle = HelpersLib.Helpers.CaptureHelpers.GetScreenBounds();
             captureRectangle = Rectangle.Intersect(captureRectangle, screenRectangle);
 
             if (taskSettings.CaptureSettings.FFmpegOptions.IsEvenSizeRequired)
             {
-                captureRectangle = CaptureHelpers.EvenRectangleSize(captureRectangle);
+                captureRectangle = HelpersLib.Helpers.CaptureHelpers.EvenRectangleSize(captureRectangle);
             }
 
             if (IsRecording || !captureRectangle.IsValid() || screenRecorder != null)

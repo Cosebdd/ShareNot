@@ -23,9 +23,6 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.Properties;
-using ShareX.UploadersLib;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -34,13 +31,21 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using ShareNot.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.CLI;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Forms;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.Properties;
+using ShareNot.UploadersLib;
+using ShareNot.UploadersLib.BaseUploaders;
 #if MicrosoftStore
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 #endif
 
-namespace ShareX
+namespace ShareNot
 {
     internal static class Program
     {

@@ -23,8 +23,6 @@
 
 #endregion License Information (GPL v3)
 
-using Microsoft.VisualBasic.FileIO;
-using ShareX.HelpersLib.Properties;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -33,8 +31,12 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using Microsoft.VisualBasic.FileIO;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Native;
+using ShareNot.HelpersLib.Properties;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Helpers
 {
     public static class FileHelpers
     {

@@ -23,10 +23,6 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.IndexerLib;
-using ShareX.Properties;
-using ShareX.UploadersLib;
 using System;
 using System.Drawing;
 using System.IO;
@@ -35,8 +31,18 @@ using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
+using ShareNot.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Forms;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Native;
+using ShareNot.IndexerLib;
+using ShareNot.Properties;
+using ShareNot.UploadersLib;
+using ShareNot.UploadersLib.Forms;
 
-namespace ShareX
+namespace ShareNot
 {
     public static class UploadManager
     {

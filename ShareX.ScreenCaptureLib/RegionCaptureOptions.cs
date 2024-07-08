@@ -23,12 +23,14 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.ImageEffectsLib;
 using System.Collections.Generic;
 using System.Drawing;
+using ShareNot.HelpersLib;
+using ShareNot.ImageEffectsLib;
+using ShareNot.ScreenCaptureLib.Helpers;
+using ShareNot.ScreenCaptureLib.Shapes;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib
 {
     public class RegionCaptureOptions
     {

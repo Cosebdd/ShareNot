@@ -1,13 +1,13 @@
-﻿namespace ShareX
+﻿namespace ShareNot.Controls
 {
     partial class NewsListControl
     {
-        /// <summary> 
+        /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -22,8 +22,8 @@
 
         #region Component Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
+        /// <summary>
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
@@ -37,9 +37,9 @@
             this.chText = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNews)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // dgvNews
-            // 
+            //
             this.dgvNews.AllowUserToAddRows = false;
             this.dgvNews.AllowUserToDeleteRows = false;
             this.dgvNews.AllowUserToResizeColumns = false;
@@ -72,16 +72,16 @@
             this.dgvNews.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvNews_CellMouseClick);
             this.dgvNews.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNews_CellMouseEnter);
             this.dgvNews.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNews_CellMouseLeave);
-            // 
+            //
             // chIsUnread
-            // 
+            //
             this.chIsUnread.HeaderText = "IsUnread";
             this.chIsUnread.Name = "chIsUnread";
             this.chIsUnread.ReadOnly = true;
             this.chIsUnread.Width = 5;
-            // 
+            //
             // chDateTime
-            // 
+            //
             this.chDateTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.chDateTime.DefaultCellStyle = dataGridViewCellStyle1;
@@ -89,9 +89,9 @@
             this.chDateTime.Name = "chDateTime";
             this.chDateTime.ReadOnly = true;
             this.chDateTime.Width = 5;
-            // 
+            //
             // chText
-            // 
+            //
             this.chText.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -99,9 +99,9 @@
             this.chText.HeaderText = "Text";
             this.chText.Name = "chText";
             this.chText.ReadOnly = true;
-            // 
+            //
             // NewsListControl
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;

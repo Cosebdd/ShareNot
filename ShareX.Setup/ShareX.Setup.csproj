@@ -2,6 +2,8 @@
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
     <OutputType>Exe</OutputType>
+    <AssemblyName>ShareNot.Setup</AssemblyName>
+    <RootNamespace>ShareNot.Setup</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System.IO.Compression" />

@@ -25,7 +25,7 @@
 
 using System.Drawing;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     public class PointInfo
     {

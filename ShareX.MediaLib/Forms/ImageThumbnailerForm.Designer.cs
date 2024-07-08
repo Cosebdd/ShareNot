@@ -1,4 +1,6 @@
-﻿namespace ShareX.MediaLib
+﻿using ShareNot.HelpersLib.Controls;
+
+namespace ShareNot.MediaLib.Forms
 {
     partial class ImageThumbnailerForm
     {
@@ -29,7 +31,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImageThumbnailerForm));
-            this.lvImages = new ShareX.HelpersLib.MyListView();
+            this.lvImages = new MyListView();
             this.chImages = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
@@ -50,9 +52,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuality)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // lvImages
-            // 
+            //
             this.lvImages.AllowDrop = true;
             this.lvImages.AllowItemDrag = true;
             this.lvImages.AutoFillColumn = true;
@@ -68,28 +70,28 @@
             this.lvImages.SelectedIndexChanged += new System.EventHandler(this.lvImages_SelectedIndexChanged);
             this.lvImages.DragDrop += new System.Windows.Forms.DragEventHandler(this.lvImages_DragDrop);
             this.lvImages.DragEnter += new System.Windows.Forms.DragEventHandler(this.lvImages_DragEnter);
-            // 
+            //
             // btnAdd
-            // 
+            //
             resources.ApplyResources(this.btnAdd, "btnAdd");
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
+            //
             // btnRemove
-            // 
+            //
             resources.ApplyResources(this.btnRemove, "btnRemove");
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
-            // 
+            //
             // lblWidth
-            // 
+            //
             resources.ApplyResources(this.lblWidth, "lblWidth");
             this.lblWidth.Name = "lblWidth";
-            // 
+            //
             // nudWidth
-            // 
+            //
             resources.ApplyResources(this.nudWidth, "nudWidth");
             this.nudWidth.Maximum = new decimal(new int[] {
             10000,
@@ -103,14 +105,14 @@
             0,
             0});
             this.nudWidth.ValueChanged += new System.EventHandler(this.nudWidth_ValueChanged);
-            // 
+            //
             // lblHeight
-            // 
+            //
             resources.ApplyResources(this.lblHeight, "lblHeight");
             this.lblHeight.Name = "lblHeight";
-            // 
+            //
             // nudHeight
-            // 
+            //
             resources.ApplyResources(this.nudHeight, "nudHeight");
             this.nudHeight.Maximum = new decimal(new int[] {
             10000,
@@ -124,50 +126,50 @@
             0,
             0});
             this.nudHeight.ValueChanged += new System.EventHandler(this.nudHeight_ValueChanged);
-            // 
+            //
             // lblOutputFilename
-            // 
+            //
             resources.ApplyResources(this.lblOutputFilename, "lblOutputFilename");
             this.lblOutputFilename.Name = "lblOutputFilename";
-            // 
+            //
             // txtOutputFilename
-            // 
+            //
             resources.ApplyResources(this.txtOutputFilename, "txtOutputFilename");
             this.txtOutputFilename.Name = "txtOutputFilename";
             this.txtOutputFilename.TextChanged += new System.EventHandler(this.txtOutputFilename_TextChanged);
-            // 
+            //
             // btnGenerate
-            // 
+            //
             resources.ApplyResources(this.btnGenerate, "btnGenerate");
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.UseVisualStyleBackColor = true;
             this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
-            // 
+            //
             // lblOutputFolder
-            // 
+            //
             resources.ApplyResources(this.lblOutputFolder, "lblOutputFolder");
             this.lblOutputFolder.Name = "lblOutputFolder";
-            // 
+            //
             // txtOutputFolder
-            // 
+            //
             resources.ApplyResources(this.txtOutputFolder, "txtOutputFolder");
             this.txtOutputFolder.Name = "txtOutputFolder";
             this.txtOutputFolder.TextChanged += new System.EventHandler(this.txtOutputFolder_TextChanged);
-            // 
+            //
             // btnOutputFolder
-            // 
+            //
             resources.ApplyResources(this.btnOutputFolder, "btnOutputFolder");
             this.btnOutputFolder.Name = "btnOutputFolder";
             this.btnOutputFolder.UseVisualStyleBackColor = true;
             this.btnOutputFolder.Click += new System.EventHandler(this.btnOutputFolder_Click);
-            // 
+            //
             // lblQuality
-            // 
+            //
             resources.ApplyResources(this.lblQuality, "lblQuality");
             this.lblQuality.Name = "lblQuality";
-            // 
+            //
             // nudQuality
-            // 
+            //
             resources.ApplyResources(this.nudQuality, "nudQuality");
             this.nudQuality.Name = "nudQuality";
             this.nudQuality.Value = new decimal(new int[] {
@@ -175,14 +177,14 @@
             0,
             0,
             0});
-            // 
+            //
             // lblQualityPercentage
-            // 
+            //
             resources.ApplyResources(this.lblQualityPercentage, "lblQualityPercentage");
             this.lblQualityPercentage.Name = "lblQualityPercentage";
-            // 
+            //
             // ImageThumbnailerForm
-            // 
+            //
             this.AcceptButton = this.btnGenerate;
             resources.ApplyResources(this, "$this");
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -216,7 +218,7 @@
 
         #endregion
 
-        private HelpersLib.MyListView lvImages;
+        private MyListView lvImages;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Label lblWidth;

@@ -1,4 +1,4 @@
-﻿namespace ShareX
+﻿namespace ShareNot.Tools.PinToScreen
 {
     partial class PinToScreenStartupForm
     {
@@ -34,41 +34,41 @@
             this.btnFromScreen = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
+            //
             // btnFromFile
-            // 
-            this.btnFromFile.Image = global::ShareX.Properties.Resources.folder_open_image;
+            //
+            this.btnFromFile.Image = global::ShareNot.Properties.Resources.folder_open_image;
             resources.ApplyResources(this.btnFromFile, "btnFromFile");
             this.btnFromFile.Name = "btnFromFile";
             this.btnFromFile.UseVisualStyleBackColor = true;
             this.btnFromFile.Click += new System.EventHandler(this.btnFromFile_Click);
-            // 
+            //
             // btnFromClipboard
-            // 
-            this.btnFromClipboard.Image = global::ShareX.Properties.Resources.clipboard_paste_image;
+            //
+            this.btnFromClipboard.Image = global::ShareNot.Properties.Resources.clipboard_paste_image;
             resources.ApplyResources(this.btnFromClipboard, "btnFromClipboard");
             this.btnFromClipboard.Name = "btnFromClipboard";
             this.btnFromClipboard.UseVisualStyleBackColor = true;
             this.btnFromClipboard.Click += new System.EventHandler(this.btnFromClipboard_Click);
-            // 
+            //
             // btnFromScreen
-            // 
-            this.btnFromScreen.Image = global::ShareX.Properties.Resources.monitor;
+            //
+            this.btnFromScreen.Image = global::ShareNot.Properties.Resources.monitor;
             resources.ApplyResources(this.btnFromScreen, "btnFromScreen");
             this.btnFromScreen.Name = "btnFromScreen";
             this.btnFromScreen.UseVisualStyleBackColor = true;
             this.btnFromScreen.Click += new System.EventHandler(this.btnFromScreen_Click);
-            // 
+            //
             // btnCancel
-            // 
-            this.btnCancel.Image = global::ShareX.Properties.Resources.cross;
+            //
+            this.btnCancel.Image = global::ShareNot.Properties.Resources.cross;
             resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
+            //
             // PinToScreenStartupForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnCancel);

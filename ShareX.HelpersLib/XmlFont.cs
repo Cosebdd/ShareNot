@@ -26,7 +26,7 @@
 using System;
 using System.Drawing;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     [Serializable]
     public class XmlFont

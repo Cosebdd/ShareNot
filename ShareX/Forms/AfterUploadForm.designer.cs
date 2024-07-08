@@ -1,4 +1,6 @@
-﻿namespace ShareX
+﻿using ShareNot.HelpersLib.Controls;
+
+namespace ShareNot.Forms
 {
     partial class AfterUploadForm
     {
@@ -30,7 +32,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AfterUploadForm));
-            this.pbPreview = new ShareX.HelpersLib.MyPictureBox();
+            this.pbPreview = new MyPictureBox();
             this.btnCopyImage = new System.Windows.Forms.Button();
             this.btnCopyLink = new System.Windows.Forms.Button();
             this.btnOpenLink = new System.Windows.Forms.Button();
@@ -38,13 +40,13 @@
             this.btnOpenFolder = new System.Windows.Forms.Button();
             this.tmrClose = new System.Windows.Forms.Timer(this.components);
             this.btnClose = new System.Windows.Forms.Button();
-            this.lvClipboardFormats = new ShareX.HelpersLib.MyListView();
+            this.lvClipboardFormats = new MyListView();
             this.chDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chFormat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
-            // 
+            //
             // pbPreview
-            // 
+            //
             resources.ApplyResources(this.pbPreview, "pbPreview");
             this.pbPreview.BackColor = System.Drawing.SystemColors.Window;
             this.pbPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -54,56 +56,56 @@
             this.pbPreview.Name = "pbPreview";
             this.pbPreview.PictureBoxBackColor = System.Drawing.SystemColors.Window;
             this.pbPreview.ShowImageSizeLabel = true;
-            // 
+            //
             // btnCopyImage
-            // 
+            //
             resources.ApplyResources(this.btnCopyImage, "btnCopyImage");
             this.btnCopyImage.Name = "btnCopyImage";
             this.btnCopyImage.UseVisualStyleBackColor = true;
             this.btnCopyImage.Click += new System.EventHandler(this.btnCopyImage_Click);
-            // 
+            //
             // btnCopyLink
-            // 
+            //
             resources.ApplyResources(this.btnCopyLink, "btnCopyLink");
             this.btnCopyLink.Name = "btnCopyLink";
             this.btnCopyLink.UseVisualStyleBackColor = true;
             this.btnCopyLink.Click += new System.EventHandler(this.btnCopyLink_Click);
-            // 
+            //
             // btnOpenLink
-            // 
+            //
             resources.ApplyResources(this.btnOpenLink, "btnOpenLink");
             this.btnOpenLink.Name = "btnOpenLink";
             this.btnOpenLink.UseVisualStyleBackColor = true;
             this.btnOpenLink.Click += new System.EventHandler(this.btnOpenLink_Click);
-            // 
+            //
             // btnOpenFile
-            // 
+            //
             resources.ApplyResources(this.btnOpenFile, "btnOpenFile");
             this.btnOpenFile.Name = "btnOpenFile";
             this.btnOpenFile.UseVisualStyleBackColor = true;
             this.btnOpenFile.Click += new System.EventHandler(this.btnOpenFile_Click);
-            // 
+            //
             // btnOpenFolder
-            // 
+            //
             resources.ApplyResources(this.btnOpenFolder, "btnOpenFolder");
             this.btnOpenFolder.Name = "btnOpenFolder";
             this.btnOpenFolder.UseVisualStyleBackColor = true;
             this.btnOpenFolder.Click += new System.EventHandler(this.btnFolderOpen_Click);
-            // 
+            //
             // tmrClose
-            // 
+            //
             this.tmrClose.Interval = 60000;
             this.tmrClose.Tick += new System.EventHandler(this.tmrClose_Tick);
-            // 
+            //
             // btnClose
-            // 
+            //
             resources.ApplyResources(this.btnClose, "btnClose");
             this.btnClose.Name = "btnClose";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
+            //
             // lvClipboardFormats
-            // 
+            //
             resources.ApplyResources(this.lvClipboardFormats, "lvClipboardFormats");
             this.lvClipboardFormats.AutoFillColumn = true;
             this.lvClipboardFormats.AutoFillColumnIndex = 1;
@@ -117,17 +119,17 @@
             this.lvClipboardFormats.UseCompatibleStateImageBehavior = false;
             this.lvClipboardFormats.View = System.Windows.Forms.View.Details;
             this.lvClipboardFormats.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvClipboardFormats_MouseDoubleClick);
-            // 
+            //
             // chDescription
-            // 
+            //
             resources.ApplyResources(this.chDescription, "chDescription");
-            // 
+            //
             // chFormat
-            // 
+            //
             resources.ApplyResources(this.chFormat, "chFormat");
-            // 
+            //
             // AfterUploadForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Window;
@@ -147,7 +149,7 @@
 
         #endregion
 
-        private HelpersLib.MyPictureBox pbPreview;
+        private MyPictureBox pbPreview;
         private System.Windows.Forms.Timer tmrClose;
         private System.Windows.Forms.Button btnOpenFolder;
         private System.Windows.Forms.Button btnCopyImage;
@@ -155,7 +157,7 @@
         private System.Windows.Forms.Button btnCopyLink;
         private System.Windows.Forms.Button btnOpenFile;
         private System.Windows.Forms.Button btnClose;
-        private HelpersLib.MyListView lvClipboardFormats;
+        private MyListView lvClipboardFormats;
         private System.Windows.Forms.ColumnHeader chDescription;
         private System.Windows.Forms.ColumnHeader chFormat;
     }

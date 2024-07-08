@@ -23,16 +23,20 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.HistoryLib;
-using ShareX.UploadersLib;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Design;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Printer;
+using ShareNot.HelpersLib.Settings;
+using ShareNot.HelpersLib.UITypeEditors;
+using ShareNot.HistoryLib;
+using ShareNot.UploadersLib;
 
-namespace ShareX
+namespace ShareNot
 {
     public class ApplicationConfig : SettingsBase<ApplicationConfig>
     {

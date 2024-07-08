@@ -1,4 +1,6 @@
-﻿namespace ShareX.ImageEffectsLib
+﻿using ShareNot.HelpersLib.Controls;
+
+namespace ShareNot.ImageEffectsLib.Forms
 {
     partial class ImageEffectsForm
     {
@@ -56,204 +58,204 @@
             this.btnImageEffects = new System.Windows.Forms.Button();
             this.lblEffectName = new System.Windows.Forms.Label();
             this.txtEffectName = new System.Windows.Forms.TextBox();
-            this.pbResult = new ShareX.HelpersLib.MyPictureBox();
-            this.lvPresets = new ShareX.HelpersLib.MyListView();
+            this.pbResult = new MyPictureBox();
+            this.lvPresets = new MyListView();
             this.chPreset = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.mbLoadImage = new ShareX.HelpersLib.MenuButton();
-            this.lvEffects = new ShareX.HelpersLib.MyListView();
+            this.mbLoadImage = new MenuButton();
+            this.lvEffects = new MyListView();
             this.chEffect = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cmsLoadImage.SuspendLayout();
             this.SuspendLayout();
-            // 
+            //
             // btnSaveImage
-            // 
+            //
             resources.ApplyResources(this.btnSaveImage, "btnSaveImage");
             this.btnSaveImage.Name = "btnSaveImage";
             this.btnSaveImage.UseVisualStyleBackColor = true;
             this.btnSaveImage.Click += new System.EventHandler(this.btnSaveImage_Click);
-            // 
+            //
             // cmsEffects
-            // 
+            //
             this.cmsEffects.Name = "cmsEffects";
             this.cmsEffects.ShowImageMargin = false;
             resources.ApplyResources(this.cmsEffects, "cmsEffects");
-            // 
+            //
             // cmsLoadImage
-            // 
+            //
             this.cmsLoadImage.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiLoadImageFromFile,
             this.tsmiLoadImageFromClipboard});
             this.cmsLoadImage.Name = "cmsLoadImage";
             this.cmsLoadImage.ShowImageMargin = false;
             resources.ApplyResources(this.cmsLoadImage, "cmsLoadImage");
-            // 
+            //
             // tsmiLoadImageFromFile
-            // 
+            //
             this.tsmiLoadImageFromFile.Name = "tsmiLoadImageFromFile";
             resources.ApplyResources(this.tsmiLoadImageFromFile, "tsmiLoadImageFromFile");
             this.tsmiLoadImageFromFile.Click += new System.EventHandler(this.tsmiLoadImageFromFile_Click);
-            // 
+            //
             // tsmiLoadImageFromClipboard
-            // 
+            //
             this.tsmiLoadImageFromClipboard.Name = "tsmiLoadImageFromClipboard";
             resources.ApplyResources(this.tsmiLoadImageFromClipboard, "tsmiLoadImageFromClipboard");
             this.tsmiLoadImageFromClipboard.Click += new System.EventHandler(this.tsmiLoadImageFromClipboard_Click);
-            // 
+            //
             // lblPresetName
-            // 
+            //
             resources.ApplyResources(this.lblPresetName, "lblPresetName");
             this.lblPresetName.Name = "lblPresetName";
-            // 
+            //
             // txtPresetName
-            // 
+            //
             resources.ApplyResources(this.txtPresetName, "txtPresetName");
             this.txtPresetName.Name = "txtPresetName";
             this.txtPresetName.TextChanged += new System.EventHandler(this.txtPresetName_TextChanged);
-            // 
+            //
             // btnClose
-            // 
+            //
             resources.ApplyResources(this.btnClose, "btnClose");
             this.btnClose.Name = "btnClose";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
+            //
             // btnOK
-            // 
+            //
             resources.ApplyResources(this.btnOK, "btnOK");
             this.btnOK.Name = "btnOK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
+            //
             // btnUploadImage
-            // 
+            //
             resources.ApplyResources(this.btnUploadImage, "btnUploadImage");
             this.btnUploadImage.Name = "btnUploadImage";
             this.btnUploadImage.UseVisualStyleBackColor = true;
             this.btnUploadImage.Click += new System.EventHandler(this.btnUploadImage_Click);
-            // 
+            //
             // lblPresets
-            // 
+            //
             resources.ApplyResources(this.lblPresets, "lblPresets");
             this.lblPresets.Name = "lblPresets";
-            // 
+            //
             // btnPackager
-            // 
+            //
             resources.ApplyResources(this.btnPackager, "btnPackager");
             this.btnPackager.Name = "btnPackager";
             this.btnPackager.UseVisualStyleBackColor = true;
             this.btnPackager.Click += new System.EventHandler(this.btnPackager_Click);
-            // 
+            //
             // btnPresetNew
-            // 
-            this.btnPresetNew.Image = global::ShareX.ImageEffectsLib.Properties.Resources.plus;
+            //
+            this.btnPresetNew.Image = global::ShareNot.ImageEffectsLib.Properties.Resources.plus;
             resources.ApplyResources(this.btnPresetNew, "btnPresetNew");
             this.btnPresetNew.Name = "btnPresetNew";
             this.ttMain.SetToolTip(this.btnPresetNew, resources.GetString("btnPresetNew.ToolTip"));
             this.btnPresetNew.UseVisualStyleBackColor = true;
             this.btnPresetNew.Click += new System.EventHandler(this.btnPresetNew_Click);
-            // 
+            //
             // btnPresetRemove
-            // 
-            this.btnPresetRemove.Image = global::ShareX.ImageEffectsLib.Properties.Resources.minus;
+            //
+            this.btnPresetRemove.Image = global::ShareNot.ImageEffectsLib.Properties.Resources.minus;
             resources.ApplyResources(this.btnPresetRemove, "btnPresetRemove");
             this.btnPresetRemove.Name = "btnPresetRemove";
             this.ttMain.SetToolTip(this.btnPresetRemove, resources.GetString("btnPresetRemove.ToolTip"));
             this.btnPresetRemove.UseVisualStyleBackColor = true;
             this.btnPresetRemove.Click += new System.EventHandler(this.btnPresetRemove_Click);
-            // 
+            //
             // btnPresetDuplicate
-            // 
-            this.btnPresetDuplicate.Image = global::ShareX.ImageEffectsLib.Properties.Resources.document_copy;
+            //
+            this.btnPresetDuplicate.Image = global::ShareNot.ImageEffectsLib.Properties.Resources.document_copy;
             resources.ApplyResources(this.btnPresetDuplicate, "btnPresetDuplicate");
             this.btnPresetDuplicate.Name = "btnPresetDuplicate";
             this.ttMain.SetToolTip(this.btnPresetDuplicate, resources.GetString("btnPresetDuplicate.ToolTip"));
             this.btnPresetDuplicate.UseVisualStyleBackColor = true;
             this.btnPresetDuplicate.Click += new System.EventHandler(this.btnPresetDuplicate_Click);
-            // 
+            //
             // lblEffects
-            // 
+            //
             resources.ApplyResources(this.lblEffects, "lblEffects");
             this.lblEffects.Name = "lblEffects";
-            // 
+            //
             // btnEffectAdd
-            // 
-            this.btnEffectAdd.Image = global::ShareX.ImageEffectsLib.Properties.Resources.plus;
+            //
+            this.btnEffectAdd.Image = global::ShareNot.ImageEffectsLib.Properties.Resources.plus;
             resources.ApplyResources(this.btnEffectAdd, "btnEffectAdd");
             this.btnEffectAdd.Name = "btnEffectAdd";
             this.ttMain.SetToolTip(this.btnEffectAdd, resources.GetString("btnEffectAdd.ToolTip"));
             this.btnEffectAdd.UseVisualStyleBackColor = true;
             this.btnEffectAdd.Click += new System.EventHandler(this.btnEffectAdd_Click);
-            // 
+            //
             // btnEffectRemove
-            // 
-            this.btnEffectRemove.Image = global::ShareX.ImageEffectsLib.Properties.Resources.minus;
+            //
+            this.btnEffectRemove.Image = global::ShareNot.ImageEffectsLib.Properties.Resources.minus;
             resources.ApplyResources(this.btnEffectRemove, "btnEffectRemove");
             this.btnEffectRemove.Name = "btnEffectRemove";
             this.ttMain.SetToolTip(this.btnEffectRemove, resources.GetString("btnEffectRemove.ToolTip"));
             this.btnEffectRemove.UseVisualStyleBackColor = true;
             this.btnEffectRemove.Click += new System.EventHandler(this.btnEffectRemove_Click);
-            // 
+            //
             // btnEffectDuplicate
-            // 
-            this.btnEffectDuplicate.Image = global::ShareX.ImageEffectsLib.Properties.Resources.document_copy;
+            //
+            this.btnEffectDuplicate.Image = global::ShareNot.ImageEffectsLib.Properties.Resources.document_copy;
             resources.ApplyResources(this.btnEffectDuplicate, "btnEffectDuplicate");
             this.btnEffectDuplicate.Name = "btnEffectDuplicate";
             this.ttMain.SetToolTip(this.btnEffectDuplicate, resources.GetString("btnEffectDuplicate.ToolTip"));
             this.btnEffectDuplicate.UseVisualStyleBackColor = true;
             this.btnEffectDuplicate.Click += new System.EventHandler(this.btnEffectDuplicate_Click);
-            // 
+            //
             // btnEffectClear
-            // 
-            this.btnEffectClear.Image = global::ShareX.ImageEffectsLib.Properties.Resources.eraser;
+            //
+            this.btnEffectClear.Image = global::ShareNot.ImageEffectsLib.Properties.Resources.eraser;
             resources.ApplyResources(this.btnEffectClear, "btnEffectClear");
             this.btnEffectClear.Name = "btnEffectClear";
             this.ttMain.SetToolTip(this.btnEffectClear, resources.GetString("btnEffectClear.ToolTip"));
             this.btnEffectClear.UseVisualStyleBackColor = true;
             this.btnEffectClear.Click += new System.EventHandler(this.btnEffectClear_Click);
-            // 
+            //
             // btnEffectRefresh
-            // 
-            this.btnEffectRefresh.Image = global::ShareX.ImageEffectsLib.Properties.Resources.arrow_circle_double_135;
+            //
+            this.btnEffectRefresh.Image = global::ShareNot.ImageEffectsLib.Properties.Resources.arrow_circle_double_135;
             resources.ApplyResources(this.btnEffectRefresh, "btnEffectRefresh");
             this.btnEffectRefresh.Name = "btnEffectRefresh";
             this.ttMain.SetToolTip(this.btnEffectRefresh, resources.GetString("btnEffectRefresh.ToolTip"));
             this.btnEffectRefresh.UseVisualStyleBackColor = true;
             this.btnEffectRefresh.Click += new System.EventHandler(this.btnEffectRefresh_Click);
-            // 
+            //
             // ttMain
-            // 
+            //
             this.ttMain.AutoPopDelay = 5000;
             this.ttMain.InitialDelay = 200;
             this.ttMain.ReshowDelay = 100;
-            // 
+            //
             // pgSettings
-            // 
+            //
             resources.ApplyResources(this.pgSettings, "pgSettings");
             this.pgSettings.Name = "pgSettings";
             this.pgSettings.PropertySort = System.Windows.Forms.PropertySort.NoSort;
             this.pgSettings.ToolbarVisible = false;
             this.pgSettings.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.pgSettings_PropertyValueChanged);
-            // 
+            //
             // btnImageEffects
-            // 
+            //
             resources.ApplyResources(this.btnImageEffects, "btnImageEffects");
             this.btnImageEffects.Name = "btnImageEffects";
             this.btnImageEffects.UseVisualStyleBackColor = true;
             this.btnImageEffects.Click += new System.EventHandler(this.btnImageEffects_Click);
-            // 
+            //
             // lblEffectName
-            // 
+            //
             resources.ApplyResources(this.lblEffectName, "lblEffectName");
             this.lblEffectName.Name = "lblEffectName";
-            // 
+            //
             // txtEffectName
-            // 
+            //
             resources.ApplyResources(this.txtEffectName, "txtEffectName");
             this.txtEffectName.Name = "txtEffectName";
             this.txtEffectName.TextChanged += new System.EventHandler(this.txtEffectName_TextChanged);
-            // 
+            //
             // pbResult
-            // 
+            //
             resources.ApplyResources(this.pbResult, "pbResult");
             this.pbResult.BackColor = System.Drawing.SystemColors.Window;
             this.pbResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -265,9 +267,9 @@
             this.pbResult.ShowImageSizeLabel = true;
             this.pbResult.DragDrop += new System.Windows.Forms.DragEventHandler(this.pbResult_DragDrop);
             this.pbResult.DragEnter += new System.Windows.Forms.DragEventHandler(this.pbResult_DragEnter);
-            // 
+            //
             // lvPresets
-            // 
+            //
             this.lvPresets.AllowDrop = true;
             this.lvPresets.AllowItemDrag = true;
             resources.ApplyResources(this.lvPresets, "lvPresets");
@@ -282,22 +284,22 @@
             this.lvPresets.Name = "lvPresets";
             this.lvPresets.UseCompatibleStateImageBehavior = false;
             this.lvPresets.View = System.Windows.Forms.View.Details;
-            this.lvPresets.ItemMoving += new ShareX.HelpersLib.MyListView.ListViewItemMovedEventHandler(this.lvPresets_ItemMoving);
+            this.lvPresets.ItemMoving += new MyListView.ListViewItemMovedEventHandler(this.lvPresets_ItemMoving);
             this.lvPresets.SelectedIndexChanged += new System.EventHandler(this.lvPresets_SelectedIndexChanged);
-            // 
+            //
             // chPreset
-            // 
+            //
             resources.ApplyResources(this.chPreset, "chPreset");
-            // 
+            //
             // mbLoadImage
-            // 
+            //
             resources.ApplyResources(this.mbLoadImage, "mbLoadImage");
             this.mbLoadImage.Menu = this.cmsLoadImage;
             this.mbLoadImage.Name = "mbLoadImage";
             this.mbLoadImage.UseVisualStyleBackColor = true;
-            // 
+            //
             // lvEffects
-            // 
+            //
             this.lvEffects.AllowDrop = true;
             this.lvEffects.AllowItemDrag = true;
             resources.ApplyResources(this.lvEffects, "lvEffects");
@@ -313,17 +315,17 @@
             this.lvEffects.Name = "lvEffects";
             this.lvEffects.UseCompatibleStateImageBehavior = false;
             this.lvEffects.View = System.Windows.Forms.View.Details;
-            this.lvEffects.ItemMoved += new ShareX.HelpersLib.MyListView.ListViewItemMovedEventHandler(this.lvEffects_ItemMoved);
+            this.lvEffects.ItemMoved += new MyListView.ListViewItemMovedEventHandler(this.lvEffects_ItemMoved);
             this.lvEffects.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.lvEffects_ItemChecked);
             this.lvEffects.SelectedIndexChanged += new System.EventHandler(this.lvEffects_SelectedIndexChanged);
             this.lvEffects.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lvEffects_KeyDown);
-            // 
+            //
             // chEffect
-            // 
+            //
             resources.ApplyResources(this.chEffect, "chEffect");
-            // 
+            //
             // ImageEffectsForm
-            // 
+            //
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -367,12 +369,12 @@
         #endregion
 
         private System.Windows.Forms.PropertyGrid pgSettings;
-        private ShareX.HelpersLib.MyListView lvEffects;
+        private MyListView lvEffects;
         private System.Windows.Forms.ColumnHeader chEffect;
-        private ShareX.HelpersLib.MyPictureBox pbResult;
+        private MyPictureBox pbResult;
         private System.Windows.Forms.Button btnSaveImage;
         private System.Windows.Forms.ContextMenuStrip cmsEffects;
-        private HelpersLib.MenuButton mbLoadImage;
+        private MenuButton mbLoadImage;
         private System.Windows.Forms.ContextMenuStrip cmsLoadImage;
         private System.Windows.Forms.ToolStripMenuItem tsmiLoadImageFromFile;
         private System.Windows.Forms.ToolStripMenuItem tsmiLoadImageFromClipboard;
@@ -386,7 +388,7 @@
         private System.Windows.Forms.Button btnPresetNew;
         private System.Windows.Forms.Button btnPresetRemove;
         private System.Windows.Forms.Button btnPresetDuplicate;
-        private HelpersLib.MyListView lvPresets;
+        private MyListView lvPresets;
         private System.Windows.Forms.Label lblEffects;
         private System.Windows.Forms.Button btnEffectAdd;
         private System.Windows.Forms.Button btnEffectRemove;

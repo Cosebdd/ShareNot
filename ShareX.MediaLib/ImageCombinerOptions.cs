@@ -23,10 +23,10 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
 
-namespace ShareX.MediaLib
+namespace ShareNot.MediaLib
 {
     public class ImageCombinerOptions
     {

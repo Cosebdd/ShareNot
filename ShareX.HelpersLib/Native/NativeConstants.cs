@@ -23,7 +23,7 @@
 
 #endregion License Information (GPL v3)
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Native
 {
     public static class NativeConstants
     {

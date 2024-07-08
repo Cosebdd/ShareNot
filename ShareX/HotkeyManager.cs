@@ -23,13 +23,15 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.Properties;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Input;
+using ShareNot.HelpersLib.Native;
+using ShareNot.Properties;
 
-namespace ShareX
+namespace ShareNot
 {
     public class HotkeyManager
     {
@@ -53,7 +55,7 @@ namespace ShareX
 
         private void HotkeyForm_HotkeyPress(ushort id, Keys key, Modifiers modifier)
         {
-            if (!IgnoreHotkeys && (!Program.Settings.DisableHotkeysOnFullscreen || !CaptureHelpers.IsActiveWindowFullscreen()))
+            if (!IgnoreHotkeys && (!Program.Settings.DisableHotkeysOnFullscreen || !HelpersLib.Helpers.CaptureHelpers.IsActiveWindowFullscreen()))
             {
                 HotkeySettings hotkeySetting = Hotkeys.Find(x => x.HotkeyInfo.ID == id);
 

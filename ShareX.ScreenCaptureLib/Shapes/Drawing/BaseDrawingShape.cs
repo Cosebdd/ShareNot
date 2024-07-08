@@ -25,7 +25,7 @@
 
 using System.Drawing;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.Shapes.Drawing
 {
     public abstract class BaseDrawingShape : BaseShape
     {

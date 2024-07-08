@@ -1,4 +1,4 @@
-﻿namespace ShareX
+﻿namespace ShareNot.Forms
 {
     partial class FileExistForm
     {
@@ -36,50 +36,50 @@
             this.btnNewName = new System.Windows.Forms.Button();
             this.txtNewName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
+            //
             // lblTitle
-            // 
+            //
             resources.ApplyResources(this.lblTitle, "lblTitle");
             this.lblTitle.Name = "lblTitle";
-            // 
+            //
             // btnOverwrite
-            // 
+            //
             resources.ApplyResources(this.btnOverwrite, "btnOverwrite");
             this.btnOverwrite.Name = "btnOverwrite";
             this.btnOverwrite.UseVisualStyleBackColor = true;
             this.btnOverwrite.Click += new System.EventHandler(this.btnOverwrite_Click);
-            // 
+            //
             // btnCancel
-            // 
+            //
             resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
+            //
             // btnUniqueName
-            // 
+            //
             resources.ApplyResources(this.btnUniqueName, "btnUniqueName");
             this.btnUniqueName.Name = "btnUniqueName";
             this.btnUniqueName.UseVisualStyleBackColor = true;
             this.btnUniqueName.Click += new System.EventHandler(this.btnUniqueName_Click);
-            // 
+            //
             // btnNewName
-            // 
+            //
             resources.ApplyResources(this.btnNewName, "btnNewName");
             this.btnNewName.Name = "btnNewName";
             this.btnNewName.UseVisualStyleBackColor = true;
             this.btnNewName.Click += new System.EventHandler(this.btnNewName_Click);
-            // 
+            //
             // txtNewName
-            // 
+            //
             resources.ApplyResources(this.txtNewName, "txtNewName");
             this.txtNewName.Name = "txtNewName";
             this.txtNewName.TextChanged += new System.EventHandler(this.txtNewName_TextChanged);
             this.txtNewName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNewName_KeyDown);
             this.txtNewName.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtNewName_KeyUp);
-            // 
+            //
             // FileExistForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;

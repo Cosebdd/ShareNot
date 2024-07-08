@@ -1,4 +1,4 @@
-﻿namespace ShareX.UploadersLib
+﻿namespace ShareNot.UploadersLib.Forms
 {
     partial class YouTubeVideoOptionsForm
     {
@@ -38,55 +38,55 @@
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
+            //
             // lblTitle
-            // 
+            //
             resources.ApplyResources(this.lblTitle, "lblTitle");
             this.lblTitle.Name = "lblTitle";
-            // 
+            //
             // lblDescription
-            // 
+            //
             resources.ApplyResources(this.lblDescription, "lblDescription");
             this.lblDescription.Name = "lblDescription";
-            // 
+            //
             // lblVisibility
-            // 
+            //
             resources.ApplyResources(this.lblVisibility, "lblVisibility");
             this.lblVisibility.Name = "lblVisibility";
-            // 
+            //
             // txtTitle
-            // 
+            //
             resources.ApplyResources(this.txtTitle, "txtTitle");
             this.txtTitle.Name = "txtTitle";
-            // 
+            //
             // txtDescription
-            // 
+            //
             resources.ApplyResources(this.txtDescription, "txtDescription");
             this.txtDescription.Name = "txtDescription";
-            // 
+            //
             // cbVisibility
-            // 
+            //
             this.cbVisibility.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbVisibility.FormattingEnabled = true;
             resources.ApplyResources(this.cbVisibility, "cbVisibility");
             this.cbVisibility.Name = "cbVisibility";
-            // 
+            //
             // btnOK
-            // 
+            //
             resources.ApplyResources(this.btnOK, "btnOK");
             this.btnOK.Name = "btnOK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
+            //
             // btnCancel
-            // 
+            //
             resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
+            //
             // YouTubeVideoOptionsForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;

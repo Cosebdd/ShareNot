@@ -26,7 +26,7 @@
 using System;
 using System.ComponentModel;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib
 {
     [Description("Image uploaders"), DefaultValue(CustomImageUploader)]
     public enum ImageDestination

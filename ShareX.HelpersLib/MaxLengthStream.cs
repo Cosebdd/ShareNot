@@ -26,7 +26,7 @@
 using System;
 using System.IO;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     internal sealed class MaxLengthStream : Stream
     {

@@ -23,11 +23,12 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System.ComponentModel;
 using System.Drawing;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.ImageEffectsLib
+namespace ShareNot.ImageEffectsLib.Manipulations
 {
     internal class Skew : ImageEffect
     {

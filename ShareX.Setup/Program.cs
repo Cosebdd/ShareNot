@@ -23,14 +23,16 @@
 
 #endregion License Information (GPL v3)
 
-using Microsoft.Win32;
-using ShareX.HelpersLib;
 using System;
 using System.Diagnostics;
 using System.IO;
 using System.Text.RegularExpressions;
+using Microsoft.Win32;
+using ShareNot.HelpersLib.CLI;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Zip;
 
-namespace ShareX.Setup
+namespace ShareNot.Setup
 {
     internal class Program
     {

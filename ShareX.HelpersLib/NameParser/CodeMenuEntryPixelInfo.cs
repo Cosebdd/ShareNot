@@ -26,8 +26,10 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.NameParser
 {
     public class CodeMenuEntryPixelInfo : CodeMenuEntry
     {

@@ -23,7 +23,6 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Drawing;
 using System.Globalization;
@@ -31,8 +30,10 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.ScreenRecording
 {
     public class ScreenRecordingOptions
     {
@@ -103,7 +104,7 @@ namespace ShareX.ScreenCaptureLib
                         if (FFmpeg.IsAudioSourceSelected)
                         {
                             AppendInputDevice(args, "dshow", true);
-                            args.Append($"-i audio={Helpers.EscapeCLIText(FFmpeg.AudioSource)} ");
+                            args.Append($"-i audio={HelpersLib.Helpers.Helpers.EscapeCLIText(FFmpeg.AudioSource)} ");
                         }
 
                         string x = isCustom ? "$area_x$" : CaptureArea.X.ToString();
@@ -126,7 +127,7 @@ namespace ShareX.ScreenCaptureLib
                         if (FFmpeg.IsAudioSourceSelected)
                         {
                             AppendInputDevice(args, "dshow", true);
-                            args.Append($"-i audio={Helpers.EscapeCLIText(FFmpeg.AudioSource)} ");
+                            args.Append($"-i audio={HelpersLib.Helpers.Helpers.EscapeCLIText(FFmpeg.AudioSource)} ");
                         }
 
                         Screen[] screens = Screen.AllScreens.OrderBy(x => !x.Primary).ToArray();
@@ -178,11 +179,11 @@ namespace ShareX.ScreenCaptureLib
                         // https://ffmpeg.org/ffmpeg-devices.html#dshow
                         AppendInputDevice(args, "dshow", FFmpeg.IsAudioSourceSelected);
                         args.Append($"-framerate {framerate} ");
-                        args.Append($"-i video={Helpers.EscapeCLIText(FFmpeg.VideoSource)}");
+                        args.Append($"-i video={HelpersLib.Helpers.Helpers.EscapeCLIText(FFmpeg.VideoSource)}");
 
                         if (FFmpeg.IsAudioSourceSelected)
                         {
-                            args.Append($":audio={Helpers.EscapeCLIText(FFmpeg.AudioSource)} ");
+                            args.Append($":audio={HelpersLib.Helpers.Helpers.EscapeCLIText(FFmpeg.AudioSource)} ");
                         }
                         else
                         {
@@ -193,7 +194,7 @@ namespace ShareX.ScreenCaptureLib
                 else if (FFmpeg.IsAudioSourceSelected)
                 {
                     AppendInputDevice(args, "dshow", true);
-                    args.Append($"-i audio={Helpers.EscapeCLIText(FFmpeg.AudioSource)} ");
+                    args.Append($"-i audio={HelpersLib.Helpers.Helpers.EscapeCLIText(FFmpeg.AudioSource)} ");
                 }
             }
             else

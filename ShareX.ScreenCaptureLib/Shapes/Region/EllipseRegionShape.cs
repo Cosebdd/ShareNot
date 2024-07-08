@@ -26,7 +26,7 @@
 using System.Drawing;
 using System.Drawing.Drawing2D;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.Shapes.Region
 {
     public class EllipseRegionShape : BaseRegionShape
     {

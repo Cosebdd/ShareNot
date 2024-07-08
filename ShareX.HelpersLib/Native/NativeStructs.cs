@@ -28,7 +28,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Runtime.InteropServices;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Native
 {
     [StructLayout(LayoutKind.Sequential)]
     public struct RECT
@@ -889,9 +889,9 @@ namespace ShareX.HelpersLib
         public RECT rcImage;
     }
 
-    [ComImportAttribute()]
-    [GuidAttribute("46EB5926-582E-4017-9FDF-E8998DAA0950")]
-    [InterfaceTypeAttribute(ComInterfaceType.InterfaceIsIUnknown)]
+    [ComImport()]
+    [Guid("46EB5926-582E-4017-9FDF-E8998DAA0950")]
+    [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     public interface IImageList
     {
         [PreserveSig]

@@ -8,10 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ShareX.MediaLib.Properties {
-    using System;
-    
-    
+namespace ShareNot.MediaLib.Properties {
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -23,15 +20,15 @@ namespace ShareX.MediaLib.Properties {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
-        
+
         private static global::System.Resources.ResourceManager resourceMan;
-        
+
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Resources() {
         }
-        
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -39,13 +36,13 @@ namespace ShareX.MediaLib.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ShareX.MediaLib.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ShareNot.MediaLib.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-        
+
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
@@ -59,7 +56,7 @@ namespace ShareX.MediaLib.Properties {
                 resourceCulture = value;
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Bottom.
         /// </summary>
@@ -68,7 +65,7 @@ namespace ShareX.MediaLib.Properties {
                 return ResourceManager.GetString("AlignmentBottom", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Center.
         /// </summary>
@@ -77,7 +74,7 @@ namespace ShareX.MediaLib.Properties {
                 return ResourceManager.GetString("AlignmentHorizontalCenter", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Left.
         /// </summary>
@@ -86,7 +83,7 @@ namespace ShareX.MediaLib.Properties {
                 return ResourceManager.GetString("AlignmentLeft", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Right.
         /// </summary>
@@ -95,7 +92,7 @@ namespace ShareX.MediaLib.Properties {
                 return ResourceManager.GetString("AlignmentRight", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Top.
         /// </summary>
@@ -104,7 +101,7 @@ namespace ShareX.MediaLib.Properties {
                 return ResourceManager.GetString("AlignmentTop", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Center.
         /// </summary>
@@ -113,7 +110,7 @@ namespace ShareX.MediaLib.Properties {
                 return ResourceManager.GetString("AlignmentVerticalCenter", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Confirmation.
         /// </summary>
@@ -122,7 +119,7 @@ namespace ShareX.MediaLib.Properties {
                 return ResourceManager.GetString("Confirmation", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -132,7 +129,7 @@ namespace ShareX.MediaLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -142,7 +139,7 @@ namespace ShareX.MediaLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -152,7 +149,7 @@ namespace ShareX.MediaLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to FFmpeg error.
         /// </summary>
@@ -161,7 +158,7 @@ namespace ShareX.MediaLib.Properties {
                 return ResourceManager.GetString("FFmpegError", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Higher quality/size.
         /// </summary>
@@ -170,7 +167,7 @@ namespace ShareX.MediaLib.Properties {
                 return ResourceManager.GetString("HigherQualitySize", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Lower quality/size.
         /// </summary>
@@ -179,7 +176,7 @@ namespace ShareX.MediaLib.Properties {
                 return ResourceManager.GetString("LowerQualitySize", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -189,7 +186,7 @@ namespace ShareX.MediaLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -199,7 +196,7 @@ namespace ShareX.MediaLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -209,7 +206,7 @@ namespace ShareX.MediaLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Start encoding.
         /// </summary>
@@ -218,7 +215,7 @@ namespace ShareX.MediaLib.Properties {
                 return ResourceManager.GetString("StartEncoding", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Stop encoding.
         /// </summary>
@@ -227,7 +224,7 @@ namespace ShareX.MediaLib.Properties {
                 return ResourceManager.GetString("StopEncoding", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Thumbnails successfully generated..
         /// </summary>
@@ -236,7 +233,7 @@ namespace ShareX.MediaLib.Properties {
                 return ResourceManager.GetString("ThumbnailsSuccessfullyGenerated", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -246,7 +243,7 @@ namespace ShareX.MediaLib.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Browse for media file.
         /// </summary>
@@ -255,7 +252,7 @@ namespace ShareX.MediaLib.Properties {
                 return ResourceManager.GetString("VideoThumbnailerForm_btnBrowse_Click_Browse_for_media_file", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Would you like to reset options?.
         /// </summary>

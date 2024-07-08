@@ -25,7 +25,7 @@
 
 using System;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.CLI
 {
     public class CLICommand
     {

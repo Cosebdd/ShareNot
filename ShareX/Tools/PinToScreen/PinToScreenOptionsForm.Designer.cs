@@ -1,4 +1,6 @@
-﻿namespace ShareX
+﻿using ShareNot.HelpersLib.Controls;
+
+namespace ShareNot.Tools.PinToScreen
 {
     partial class PinToScreenOptionsForm
     {
@@ -41,7 +43,7 @@
             this.cbBorder = new System.Windows.Forms.CheckBox();
             this.lblBorderSize = new System.Windows.Forms.Label();
             this.nudBorderSize = new System.Windows.Forms.NumericUpDown();
-            this.btnBorderColor = new ShareX.HelpersLib.ColorButton();
+            this.btnBorderColor = new ColorButton();
             this.lblMinimizeSize = new System.Windows.Forms.Label();
             this.nudMinimizeSizeWidth = new System.Windows.Forms.NumericUpDown();
             this.nudMinimizeSizeHeight = new System.Windows.Forms.NumericUpDown();
@@ -51,40 +53,40 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudMinimizeSizeWidth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMinimizeSizeHeight)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // btnOK
-            // 
+            //
             resources.ApplyResources(this.btnOK, "btnOK");
             this.btnOK.Name = "btnOK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
+            //
             // btnCancel
-            // 
+            //
             resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
+            //
             // lblPlacement
-            // 
+            //
             resources.ApplyResources(this.lblPlacement, "lblPlacement");
             this.lblPlacement.Name = "lblPlacement";
-            // 
+            //
             // cbPlacement
-            // 
+            //
             this.cbPlacement.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPlacement.FormattingEnabled = true;
             resources.ApplyResources(this.cbPlacement, "cbPlacement");
             this.cbPlacement.Name = "cbPlacement";
-            // 
+            //
             // lblPlacementOffset
-            // 
+            //
             resources.ApplyResources(this.lblPlacementOffset, "lblPlacementOffset");
             this.lblPlacementOffset.Name = "lblPlacementOffset";
-            // 
+            //
             // nudPlacementOffset
-            // 
+            //
             resources.ApplyResources(this.nudPlacementOffset, "nudPlacementOffset");
             this.nudPlacementOffset.Maximum = new decimal(new int[] {
             300,
@@ -92,38 +94,38 @@
             0,
             0});
             this.nudPlacementOffset.Name = "nudPlacementOffset";
-            // 
+            //
             // cbTopMost
-            // 
+            //
             resources.ApplyResources(this.cbTopMost, "cbTopMost");
             this.cbTopMost.Name = "cbTopMost";
             this.cbTopMost.UseVisualStyleBackColor = true;
-            // 
+            //
             // cbKeepCenterLocation
-            // 
+            //
             resources.ApplyResources(this.cbKeepCenterLocation, "cbKeepCenterLocation");
             this.cbKeepCenterLocation.Name = "cbKeepCenterLocation";
             this.cbKeepCenterLocation.UseVisualStyleBackColor = true;
-            // 
+            //
             // cbShadow
-            // 
+            //
             resources.ApplyResources(this.cbShadow, "cbShadow");
             this.cbShadow.Name = "cbShadow";
             this.cbShadow.UseVisualStyleBackColor = true;
-            // 
+            //
             // cbBorder
-            // 
+            //
             resources.ApplyResources(this.cbBorder, "cbBorder");
             this.cbBorder.Name = "cbBorder";
             this.cbBorder.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblBorderSize
-            // 
+            //
             resources.ApplyResources(this.lblBorderSize, "lblBorderSize");
             this.lblBorderSize.Name = "lblBorderSize";
-            // 
+            //
             // nudBorderSize
-            // 
+            //
             resources.ApplyResources(this.nudBorderSize, "nudBorderSize");
             this.nudBorderSize.Maximum = new decimal(new int[] {
             30,
@@ -141,22 +143,22 @@
             0,
             0,
             0});
-            // 
+            //
             // btnBorderColor
-            // 
+            //
             this.btnBorderColor.Color = System.Drawing.Color.Empty;
             this.btnBorderColor.ColorPickerOptions = null;
             resources.ApplyResources(this.btnBorderColor, "btnBorderColor");
             this.btnBorderColor.Name = "btnBorderColor";
             this.btnBorderColor.UseVisualStyleBackColor = true;
-            // 
+            //
             // lblMinimizeSize
-            // 
+            //
             resources.ApplyResources(this.lblMinimizeSize, "lblMinimizeSize");
             this.lblMinimizeSize.Name = "lblMinimizeSize";
-            // 
+            //
             // nudMinimizeSizeWidth
-            // 
+            //
             resources.ApplyResources(this.nudMinimizeSizeWidth, "nudMinimizeSizeWidth");
             this.nudMinimizeSizeWidth.Maximum = new decimal(new int[] {
             1000,
@@ -164,9 +166,9 @@
             0,
             0});
             this.nudMinimizeSizeWidth.Name = "nudMinimizeSizeWidth";
-            // 
+            //
             // nudMinimizeSizeHeight
-            // 
+            //
             resources.ApplyResources(this.nudMinimizeSizeHeight, "nudMinimizeSizeHeight");
             this.nudMinimizeSizeHeight.Maximum = new decimal(new int[] {
             1000,
@@ -174,14 +176,14 @@
             0,
             0});
             this.nudMinimizeSizeHeight.Name = "nudMinimizeSizeHeight";
-            // 
+            //
             // lblMinimizeSizeX
-            // 
+            //
             resources.ApplyResources(this.lblMinimizeSizeX, "lblMinimizeSizeX");
             this.lblMinimizeSizeX.Name = "lblMinimizeSizeX";
-            // 
+            //
             // PinToScreenOptionsForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblMinimizeSizeX);
@@ -227,7 +229,7 @@
         private System.Windows.Forms.CheckBox cbBorder;
         private System.Windows.Forms.Label lblBorderSize;
         private System.Windows.Forms.NumericUpDown nudBorderSize;
-        private HelpersLib.ColorButton btnBorderColor;
+        private ColorButton btnBorderColor;
         private System.Windows.Forms.Label lblMinimizeSize;
         private System.Windows.Forms.NumericUpDown nudMinimizeSizeWidth;
         private System.Windows.Forms.NumericUpDown nudMinimizeSizeHeight;

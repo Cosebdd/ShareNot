@@ -23,9 +23,10 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Settings;
 
-namespace ShareX.ImageEffectsLib
+namespace ShareNot.ImageEffectsLib
 {
     public class ImageEffectsSerializationBinder : KnownTypesSerializationBinder
     {

@@ -27,8 +27,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Design;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.UITypeEditors;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     public class ShareXTheme
     {

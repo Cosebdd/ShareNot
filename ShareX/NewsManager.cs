@@ -23,15 +23,16 @@
 
 #endregion License Information (GPL v3)
 
-using Newtonsoft.Json;
-using ShareX.HelpersLib;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX
+namespace ShareNot
 {
     public class NewsManager
     {

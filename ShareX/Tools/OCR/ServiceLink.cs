@@ -23,9 +23,9 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX
+namespace ShareNot.Tools.OCR
 {
     public class ServiceLink
     {

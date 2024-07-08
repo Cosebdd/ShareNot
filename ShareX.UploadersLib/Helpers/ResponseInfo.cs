@@ -23,11 +23,11 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System.Net;
 using System.Text;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.Helpers
 {
     public class ResponseInfo
     {

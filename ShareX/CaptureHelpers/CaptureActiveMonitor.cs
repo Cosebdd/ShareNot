@@ -23,16 +23,15 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System.Drawing;
 
-namespace ShareX
+namespace ShareNot.CaptureHelpers
 {
     public class CaptureActiveMonitor : CaptureBase
     {
         protected override TaskMetadata Execute(TaskSettings taskSettings)
         {
-            Rectangle rect = CaptureHelpers.GetActiveScreenWorkingArea();
+            Rectangle rect = HelpersLib.Helpers.CaptureHelpers.GetActiveScreenWorkingArea();
             TaskMetadata metadata = CreateMetadata(rect);
             metadata.Image = TaskHelpers.GetScreenshot(taskSettings).CaptureActiveMonitor();
             return metadata;

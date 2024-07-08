@@ -25,7 +25,7 @@
 
 using System.Collections.Generic;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     public class FixedSizedQueue<T> : Queue<T>
     {

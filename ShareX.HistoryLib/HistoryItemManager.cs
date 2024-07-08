@@ -23,13 +23,16 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Forms;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HistoryLib.Forms;
 
-namespace ShareX.HistoryLib
+namespace ShareNot.HistoryLib
 {
     public partial class HistoryItemManager
     {

@@ -23,15 +23,17 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.ScreenCaptureLib.Properties;
 using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Native;
+using ShareNot.ScreenCaptureLib.Properties;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.Forms
 {
     public sealed class RegionCaptureTransparentForm : LayeredForm
     {
@@ -68,7 +70,7 @@ namespace ShareX.ScreenCaptureLib
             {
                 ScreenRectangle = CaptureHelpers.GetActiveScreenBounds();
 
-                Helpers.LockCursorToWindow(this);
+                HelpersLib.Helpers.Helpers.LockCursorToWindow(this);
             }
             else
             {
@@ -86,7 +88,7 @@ namespace ShareX.ScreenCaptureLib
             StartPosition = FormStartPosition.Manual;
             Bounds = ScreenRectangle;
             Text = "ShareX - " + Resources.RectangleTransparent_RectangleTransparent_Rectangle_capture_transparent;
-            Cursor = Helpers.CreateCursor(Resources.Crosshair);
+            Cursor = HelpersLib.Helpers.Helpers.CreateCursor(Resources.Crosshair);
             TopMost = true;
 
             Shown += RectangleTransparent_Shown;

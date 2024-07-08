@@ -1,13 +1,13 @@
-﻿namespace ShareX
+﻿namespace ShareNot.Controls
 {
     partial class TaskThumbnailView
     {
-        /// <summary> 
+        /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -22,17 +22,17 @@
 
         #region Component Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
+        /// <summary>
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             this.flpMain = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
-            // 
+            //
             // flpMain
-            // 
+            //
             this.flpMain.AutoSize = true;
             this.flpMain.Dock = System.Windows.Forms.DockStyle.Top;
             this.flpMain.Location = new System.Drawing.Point(0, 0);
@@ -43,9 +43,9 @@
             this.flpMain.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
             this.flpMain.MouseEnter += new System.EventHandler(this.Panel_MouseEnter);
             this.flpMain.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseUp);
-            // 
+            //
             // TaskThumbnailView
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;

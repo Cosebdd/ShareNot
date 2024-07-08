@@ -23,9 +23,6 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.Properties;
-using ShareX.UploadersLib;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -36,8 +33,19 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
+using ShareNot.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Forms;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Native;
+using ShareNot.Properties;
+using ShareNot.UploadersLib;
+using ShareNot.UploadersLib.BaseServices;
+using ShareNot.UploadersLib.BaseUploaders;
+using ShareNot.UploadersLib.Helpers;
 
-namespace ShareX
+namespace ShareNot
 {
     public class WorkerTask : IDisposable
     {

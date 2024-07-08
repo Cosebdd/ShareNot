@@ -23,11 +23,12 @@
 
 #endregion License Information (GPL v3)
 
-using Newtonsoft.Json;
 using System.Text;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using ShareNot.HelpersLib.Native;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Input
 {
     public class HotkeyInfo
     {

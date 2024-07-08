@@ -23,15 +23,16 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.Properties;
-using ShareX.ScreenCaptureLib;
 using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.Properties;
+using ShareNot.ScreenCaptureLib;
 
-namespace ShareX
+namespace ShareNot.Forms
 {
     public partial class AutoCaptureForm : Form
     {
@@ -187,7 +188,7 @@ namespace ShareX
             if (isLoaded && rbFullscreen.Checked)
             {
                 customRegion = Program.Settings.AutoCaptureRegion;
-                Program.Settings.AutoCaptureRegion = CaptureHelpers.GetScreenBounds();
+                Program.Settings.AutoCaptureRegion = HelpersLib.Helpers.CaptureHelpers.GetScreenBounds();
                 UpdateRegion();
                 btnRegion.Enabled = false;
             }

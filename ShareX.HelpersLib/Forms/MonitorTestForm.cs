@@ -27,8 +27,9 @@ using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Forms
 {
     public partial class MonitorTestForm : Form
     {
@@ -44,7 +45,7 @@ namespace ShareX.HelpersLib
             rbBlackWhite.Checked = true;
             tbBlackWhite.Value = 255;
             tbRed.Value = 255;
-            cbGradient.Items.AddRange(Helpers.GetLocalizedEnumDescriptions<LinearGradientMode>());
+            cbGradient.Items.AddRange(Helpers.Helpers.GetLocalizedEnumDescriptions<LinearGradientMode>());
             cbGradient.SelectedIndex = 1;
             btnGradientColor1.Color = Color.White;
             btnGradientColor2.Color = Color.Black;

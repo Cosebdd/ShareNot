@@ -23,13 +23,16 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib.Properties;
 using System.ComponentModel;
 using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Controls;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Native;
+using ShareNot.HelpersLib.Properties;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     public static class ShareXResources
     {
@@ -39,7 +42,7 @@ namespace ShareX.HelpersLib
         {
             get
             {
-                return $"{Name}/{Helpers.GetApplicationVersion()}";
+                return $"{Name}/{Helpers.Helpers.GetApplicationVersion()}";
             }
         }
 

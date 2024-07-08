@@ -23,10 +23,11 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System.Collections.Generic;
+using ShareNot.HelpersLib.Settings;
+using ShareNot.UploadersLib.CustomUploader;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib
 {
     public class UploadersConfig : SettingsBase<UploadersConfig>
     {

@@ -23,12 +23,12 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.Properties;
 using System;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Native;
+using ShareNot.Properties;
 
-namespace ShareX
+namespace ShareNot.CaptureHelpers
 {
     public class CaptureCustomWindow : CaptureWindow
     {

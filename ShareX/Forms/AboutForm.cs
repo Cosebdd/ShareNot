@@ -23,13 +23,16 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.Properties;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.UpdateChecker;
+using ShareNot.Properties;
 
-namespace ShareX
+namespace ShareNot.Forms
 {
     public partial class AboutForm : Form
     {

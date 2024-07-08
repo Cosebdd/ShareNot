@@ -27,7 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Management;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.DNS
 {
     public class AdapterInfo : IDisposable
     {

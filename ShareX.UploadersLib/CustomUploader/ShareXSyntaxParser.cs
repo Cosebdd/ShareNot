@@ -26,7 +26,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.CustomUploader
 {
     public abstract class ShareXSyntaxParser
     {

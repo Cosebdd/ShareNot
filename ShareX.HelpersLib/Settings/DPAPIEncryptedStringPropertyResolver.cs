@@ -23,14 +23,14 @@
 
 #endregion License Information (GPL v3)
 
-using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Settings
 {
     public class DPAPIEncryptedStringPropertyResolver : WritablePropertiesOnlyResolver
     {

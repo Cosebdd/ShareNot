@@ -1,4 +1,4 @@
-﻿namespace ShareX.ScreenCaptureLib
+﻿namespace ShareNot.ScreenCaptureLib.Forms
 {
     partial class StickerPackForm
     {
@@ -38,60 +38,60 @@
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnFolderBrowse = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
+            //
             // lblFolder
-            // 
+            //
             resources.ApplyResources(this.lblFolder, "lblFolder");
             this.lblFolder.Name = "lblFolder";
-            // 
+            //
             // txtFolder
-            // 
+            //
             resources.ApplyResources(this.txtFolder, "txtFolder");
             this.txtFolder.Name = "txtFolder";
             this.txtFolder.TextChanged += new System.EventHandler(this.txtFolder_TextChanged);
-            // 
+            //
             // lblName
-            // 
+            //
             resources.ApplyResources(this.lblName, "lblName");
             this.lblName.Name = "lblName";
-            // 
+            //
             // txtName
-            // 
+            //
             resources.ApplyResources(this.txtName, "txtName");
             this.txtName.Name = "txtName";
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
-            // 
+            //
             // cbStickers
-            // 
+            //
             this.cbStickers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbStickers.FormattingEnabled = true;
             resources.ApplyResources(this.cbStickers, "cbStickers");
             this.cbStickers.Name = "cbStickers";
             this.cbStickers.SelectedIndexChanged += new System.EventHandler(this.cbStickers_SelectedIndexChanged);
-            // 
+            //
             // btnAdd
-            // 
+            //
             resources.ApplyResources(this.btnAdd, "btnAdd");
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
+            //
             // btnRemove
-            // 
+            //
             resources.ApplyResources(this.btnRemove, "btnRemove");
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
-            // 
+            //
             // btnFolderBrowse
-            // 
+            //
             resources.ApplyResources(this.btnFolderBrowse, "btnFolderBrowse");
             this.btnFolderBrowse.Name = "btnFolderBrowse";
             this.btnFolderBrowse.UseVisualStyleBackColor = true;
             this.btnFolderBrowse.Click += new System.EventHandler(this.btnFolderBrowse_Click);
-            // 
+            //
             // StickerPackForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnFolderBrowse);

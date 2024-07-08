@@ -23,15 +23,6 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.HistoryLib;
-using ShareX.ImageEffectsLib;
-using ShareX.IndexerLib;
-using ShareX.MediaLib;
-using ShareX.Properties;
-using ShareX.ScreenCaptureLib;
-using ShareX.UploadersLib;
-using ShareX.UploadersLib.SharingServices;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -43,12 +34,41 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShareNot.CaptureHelpers;
+using ShareNot.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.CLI;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Forms;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.NameParser;
+using ShareNot.HelpersLib.Native;
+using ShareNot.HelpersLib.Printer;
+using ShareNot.HelpersLib.Random;
+using ShareNot.HelpersLib.UpdateChecker;
+using ShareNot.HistoryLib.Forms;
+using ShareNot.ImageEffectsLib;
+using ShareNot.ImageEffectsLib.Forms;
+using ShareNot.ImageEffectsLib.Manipulations;
+using ShareNot.IndexerLib;
+using ShareNot.IndexerLib.Forms;
+using ShareNot.MediaLib;
+using ShareNot.MediaLib.Forms;
+using ShareNot.Properties;
+using ShareNot.ScreenCaptureLib;
+using ShareNot.ScreenCaptureLib.Forms;
+using ShareNot.Tools.BorderlessWindow;
+using ShareNot.Tools.OCR;
+using ShareNot.Tools.PinToScreen;
+using ShareNot.UploadersLib;
+using ShareNot.UploadersLib.CustomUploader;
+using ShareNot.UploadersLib.Forms;
 using ZXing;
 using ZXing.Common;
 using ZXing.QrCode;
 using ZXing.Rendering;
 
-namespace ShareX
+namespace ShareNot
 {
     public static class TaskHelpers
     {

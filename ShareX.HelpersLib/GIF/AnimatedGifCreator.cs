@@ -26,8 +26,10 @@
 using System;
 using System.Drawing;
 using System.IO;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.GIF
 {
     public class AnimatedGifCreator : IDisposable
     {

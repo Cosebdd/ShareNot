@@ -1,4 +1,6 @@
-﻿namespace ShareX.HelpersLib
+﻿using ShareNot.HelpersLib.Controls.BlackStyle;
+
+namespace ShareNot.HelpersLib.Forms
 {
     partial class HashCheckerForm
     {
@@ -43,79 +45,79 @@
             this.txtFilePath2 = new System.Windows.Forms.TextBox();
             this.btnFilePathBrowse2 = new System.Windows.Forms.Button();
             this.cbCompareTwoFiles = new System.Windows.Forms.CheckBox();
-            this.pbProgress = new ShareX.HelpersLib.BlackStyleProgressBar();
+            this.pbProgress = new BlackStyleProgressBar();
             this.SuspendLayout();
-            // 
+            //
             // txtFilePath
-            // 
+            //
             this.txtFilePath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.txtFilePath, "txtFilePath");
             this.txtFilePath.Name = "txtFilePath";
             this.txtFilePath.TextChanged += new System.EventHandler(this.txtFilePath_TextChanged);
-            // 
+            //
             // btnFilePathBrowse
-            // 
+            //
             resources.ApplyResources(this.btnFilePathBrowse, "btnFilePathBrowse");
             this.btnFilePathBrowse.Name = "btnFilePathBrowse";
             this.btnFilePathBrowse.UseVisualStyleBackColor = true;
             this.btnFilePathBrowse.Click += new System.EventHandler(this.btnFilePathBrowse_Click);
-            // 
+            //
             // lblHashType
-            // 
+            //
             resources.ApplyResources(this.lblHashType, "lblHashType");
             this.lblHashType.Name = "lblHashType";
-            // 
+            //
             // lblResult
-            // 
+            //
             resources.ApplyResources(this.lblResult, "lblResult");
             this.lblResult.Name = "lblResult";
-            // 
+            //
             // lblTarget
-            // 
+            //
             resources.ApplyResources(this.lblTarget, "lblTarget");
             this.lblTarget.Name = "lblTarget";
-            // 
+            //
             // btnStartHashCheck
-            // 
+            //
             resources.ApplyResources(this.btnStartHashCheck, "btnStartHashCheck");
             this.btnStartHashCheck.Name = "btnStartHashCheck";
             this.btnStartHashCheck.UseVisualStyleBackColor = true;
             this.btnStartHashCheck.Click += new System.EventHandler(this.btnStartHashCheck_Click);
-            // 
+            //
             // cbHashType
-            // 
+            //
             this.cbHashType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbHashType.FormattingEnabled = true;
             resources.ApplyResources(this.cbHashType, "cbHashType");
             this.cbHashType.Name = "cbHashType";
-            // 
+            //
             // txtResult
-            // 
+            //
             this.txtResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.txtResult, "txtResult");
             this.txtResult.Name = "txtResult";
             this.txtResult.ReadOnly = true;
             this.txtResult.TextChanged += new System.EventHandler(this.txtResult_TextChanged);
-            // 
+            //
             // txtTarget
-            // 
+            //
             this.txtTarget.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.txtTarget, "txtTarget");
             this.txtTarget.Name = "txtTarget";
             this.txtTarget.TextChanged += new System.EventHandler(this.txtTarget_TextChanged);
-            // 
+            //
             // lblFilePath
-            // 
+            //
             resources.ApplyResources(this.lblFilePath, "lblFilePath");
             this.lblFilePath.Name = "lblFilePath";
-            // 
+            //
             // lblFilePath2
-            // 
+            //
             resources.ApplyResources(this.lblFilePath2, "lblFilePath2");
             this.lblFilePath2.Name = "lblFilePath2";
-            // 
+            //
             // txtFilePath2
-            // 
+            //
             this.txtFilePath2.AllowDrop = true;
             this.txtFilePath2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.txtFilePath2, "txtFilePath2");
@@ -123,29 +125,29 @@
             this.txtFilePath2.TextChanged += new System.EventHandler(this.txtFilePath2_TextChanged);
             this.txtFilePath2.DragDrop += new System.Windows.Forms.DragEventHandler(this.txtFilePath2_DragDrop);
             this.txtFilePath2.DragEnter += new System.Windows.Forms.DragEventHandler(this.txtFilePath2_DragEnter);
-            // 
+            //
             // btnFilePathBrowse2
-            // 
+            //
             resources.ApplyResources(this.btnFilePathBrowse2, "btnFilePathBrowse2");
             this.btnFilePathBrowse2.Name = "btnFilePathBrowse2";
             this.btnFilePathBrowse2.UseVisualStyleBackColor = true;
             this.btnFilePathBrowse2.Click += new System.EventHandler(this.btnFilePathBrowse2_Click);
-            // 
+            //
             // cbCompareTwoFiles
-            // 
+            //
             resources.ApplyResources(this.cbCompareTwoFiles, "cbCompareTwoFiles");
             this.cbCompareTwoFiles.Name = "cbCompareTwoFiles";
             this.cbCompareTwoFiles.UseVisualStyleBackColor = true;
             this.cbCompareTwoFiles.CheckedChanged += new System.EventHandler(this.cbCompareTwoFiles_CheckedChanged);
-            // 
+            //
             // pbProgress
-            // 
+            //
             resources.ApplyResources(this.pbProgress, "pbProgress");
             this.pbProgress.Name = "pbProgress";
             this.pbProgress.ShowPercentageText = true;
-            // 
+            //
             // HashCheckerForm
-            // 
+            //
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

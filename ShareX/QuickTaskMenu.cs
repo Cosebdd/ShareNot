@@ -23,12 +23,13 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.Properties;
 using System.Drawing;
 using System.Windows.Forms;
+using ShareNot.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.Properties;
 
-namespace ShareX
+namespace ShareNot
 {
     public class QuickTaskMenu
     {
@@ -110,7 +111,7 @@ namespace ShareX
                 ShareXResources.ApplyCustomThemeToContextMenuStrip(cms);
             }
 
-            Point cursorPosition = CaptureHelpers.GetCursorPosition();
+            Point cursorPosition = HelpersLib.Helpers.CaptureHelpers.GetCursorPosition();
             cursorPosition.Offset(-10, -10);
             cms.Show(cursorPosition);
             cms.Focus();

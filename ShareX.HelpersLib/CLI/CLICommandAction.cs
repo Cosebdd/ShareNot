@@ -26,7 +26,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.CLI
 {
     public class CLICommandAction
     {

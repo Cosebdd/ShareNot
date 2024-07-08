@@ -23,11 +23,11 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Drawing;
+using ShareNot.HelpersLib.Native;
 
-namespace ShareX
+namespace ShareNot.Tools.BorderlessWindow
 {
     public class BorderlessWindowInfo
     {

@@ -23,10 +23,10 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
+using ShareNot.HelpersLib.Extensions;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.Animations
 {
     internal class OpacityAnimation : BaseAnimation
     {

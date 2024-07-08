@@ -23,11 +23,13 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System.ComponentModel;
 using System.Drawing.Design;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.UITypeEditors;
 
-namespace ShareX.MediaLib
+namespace ShareNot.MediaLib
 {
     public class VideoThumbnailOptions
     {

@@ -1,4 +1,4 @@
-﻿namespace ShareX.MediaLib
+﻿namespace ShareNot.MediaLib.Forms
 {
     partial class VideoThumbnailerForm
     {
@@ -35,40 +35,40 @@
             this.btnBrowse = new System.Windows.Forms.Button();
             this.pbProgress = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
-            // 
+            //
             // txtMediaPath
-            // 
+            //
             resources.ApplyResources(this.txtMediaPath, "txtMediaPath");
             this.txtMediaPath.Name = "txtMediaPath";
-            // 
+            //
             // btnStart
-            // 
+            //
             resources.ApplyResources(this.btnStart, "btnStart");
             this.btnStart.Name = "btnStart";
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
-            // 
+            //
             // pgOptions
-            // 
+            //
             resources.ApplyResources(this.pgOptions, "pgOptions");
             this.pgOptions.Name = "pgOptions";
             this.pgOptions.PropertySort = System.Windows.Forms.PropertySort.Categorized;
             this.pgOptions.ToolbarVisible = false;
-            // 
+            //
             // btnBrowse
-            // 
+            //
             resources.ApplyResources(this.btnBrowse, "btnBrowse");
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.UseVisualStyleBackColor = true;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
-            // 
+            //
             // pbProgress
-            // 
+            //
             resources.ApplyResources(this.pbProgress, "pbProgress");
             this.pbProgress.Name = "pbProgress";
-            // 
+            //
             // VideoThumbnailerForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;

@@ -23,12 +23,13 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
 
-namespace ShareX.HistoryLib
+namespace ShareNot.HistoryLib.Forms
 {
     public partial class ImageHistorySettingsForm : Form
     {

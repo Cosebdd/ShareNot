@@ -23,13 +23,14 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.MediaLib
+namespace ShareNot.MediaLib
 {
     public class ImageBeautifier : IDisposable
     {

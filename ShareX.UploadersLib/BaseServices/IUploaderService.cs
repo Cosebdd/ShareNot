@@ -25,8 +25,9 @@
 
 using System.Drawing;
 using System.Windows.Forms;
+using ShareNot.UploadersLib.Forms;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.BaseServices
 {
     public interface IUploaderService
     {

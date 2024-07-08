@@ -1,4 +1,4 @@
-﻿namespace ShareX.HelpersLib
+﻿namespace ShareNot.HelpersLib.Forms
 {
     partial class PrintTextForm
     {
@@ -22,42 +22,42 @@
             this.btnChangeFont = new System.Windows.Forms.Button();
             this.lblFont = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
+            //
             // btnCancel
-            // 
+            //
             resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
+            //
             // btnPrint
-            // 
+            //
             resources.ApplyResources(this.btnPrint, "btnPrint");
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.UseVisualStyleBackColor = true;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
+            //
             // btnShowPreview
-            // 
+            //
             resources.ApplyResources(this.btnShowPreview, "btnShowPreview");
             this.btnShowPreview.Name = "btnShowPreview";
             this.btnShowPreview.UseVisualStyleBackColor = true;
             this.btnShowPreview.Click += new System.EventHandler(this.btnShowPreview_Click);
-            // 
+            //
             // btnChangeFont
-            // 
+            //
             resources.ApplyResources(this.btnChangeFont, "btnChangeFont");
             this.btnChangeFont.Name = "btnChangeFont";
             this.btnChangeFont.UseVisualStyleBackColor = true;
             this.btnChangeFont.Click += new System.EventHandler(this.btnChangeFont_Click);
-            // 
+            //
             // lblFont
-            // 
+            //
             resources.ApplyResources(this.lblFont, "lblFont");
             this.lblFont.Name = "lblFont";
-            // 
+            //
             // PrintTextForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;

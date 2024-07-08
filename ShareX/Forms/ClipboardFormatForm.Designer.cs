@@ -1,4 +1,4 @@
-﻿namespace ShareX
+﻿namespace ShareNot.Forms
 {
     partial class ClipboardFormatForm
     {
@@ -37,48 +37,48 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
+            //
             // txtFormat
-            // 
+            //
             resources.ApplyResources(this.txtFormat, "txtFormat");
             this.txtFormat.Name = "txtFormat";
-            // 
+            //
             // txtDescription
-            // 
+            //
             resources.ApplyResources(this.txtDescription, "txtDescription");
             this.txtDescription.Name = "txtDescription";
-            // 
+            //
             // lblFilter
-            // 
+            //
             resources.ApplyResources(this.lblFilter, "lblFilter");
             this.lblFilter.Name = "lblFilter";
-            // 
+            //
             // lblFolderPath
-            // 
+            //
             resources.ApplyResources(this.lblFolderPath, "lblFolderPath");
             this.lblFolderPath.Name = "lblFolderPath";
-            // 
+            //
             // lblExample
-            // 
+            //
             resources.ApplyResources(this.lblExample, "lblExample");
             this.lblExample.Name = "lblExample";
-            // 
+            //
             // btnCancel
-            // 
+            //
             resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
+            //
             // btnOK
-            // 
+            //
             resources.ApplyResources(this.btnOK, "btnOK");
             this.btnOK.Name = "btnOK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
+            //
             // ClipboardFormatForm
-            // 
+            //
             this.AcceptButton = this.btnOK;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;

@@ -5,6 +5,8 @@
     <UseWindowsForms>true</UseWindowsForms>
     <UseWPF>true</UseWPF>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AssemblyName>ShareNot.HelpersLib</AssemblyName>
+    <RootNamespace>ShareNot.HelpersLib</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />

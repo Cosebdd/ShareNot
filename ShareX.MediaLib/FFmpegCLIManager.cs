@@ -23,8 +23,6 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.MediaLib.Properties;
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -33,8 +31,12 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using ShareNot.HelpersLib.CLI;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Forms;
+using ShareNot.MediaLib.Properties;
 
-namespace ShareX.MediaLib
+namespace ShareNot.MediaLib
 {
     public class FFmpegCLIManager : ExternalCLIManager
     {

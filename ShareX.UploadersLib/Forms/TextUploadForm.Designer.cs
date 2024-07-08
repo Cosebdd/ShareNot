@@ -1,4 +1,4 @@
-﻿namespace ShareX.UploadersLib
+﻿namespace ShareNot.UploadersLib.Forms
 {
     partial class TextUploadForm
     {
@@ -33,28 +33,28 @@
             this.btnUpload = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
+            //
             // txtContent
-            // 
+            //
             resources.ApplyResources(this.txtContent, "txtContent");
             this.txtContent.Name = "txtContent";
-            // 
+            //
             // btnUpload
-            // 
+            //
             resources.ApplyResources(this.btnUpload, "btnUpload");
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.UseVisualStyleBackColor = true;
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
-            // 
+            //
             // btnCancel
-            // 
+            //
             resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
+            //
             // TextUploadForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.btnCancel);

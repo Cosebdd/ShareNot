@@ -30,7 +30,7 @@ using System.Management;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace ShareX.Steam
+namespace ShareNot.Steam
 {
     public static class Launcher
     {

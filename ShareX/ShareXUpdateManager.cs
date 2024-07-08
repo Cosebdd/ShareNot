@@ -23,9 +23,9 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
+using ShareNot.HelpersLib.UpdateChecker;
 
-namespace ShareX
+namespace ShareNot
 {
     internal class ShareXUpdateManager : GitHubUpdateManager
     {

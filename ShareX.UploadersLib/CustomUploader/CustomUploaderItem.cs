@@ -23,17 +23,20 @@
 
 #endregion License Information (GPL v3)
 
-using Newtonsoft.Json;
-using ShareX.HelpersLib;
-using ShareX.UploadersLib.Properties;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using Newtonsoft.Json;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.NameParser;
+using ShareNot.UploadersLib.Helpers;
+using ShareNot.UploadersLib.Properties;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.CustomUploader
 {
     public class CustomUploaderItem
     {
@@ -110,7 +113,7 @@ namespace ShareX.UploadersLib
         {
             return new CustomUploaderItem()
             {
-                Version = Helpers.GetApplicationVersion(),
+                Version = HelpersLib.Helpers.Helpers.GetApplicationVersion(),
                 RequestMethod = HttpMethod.POST,
                 Body = CustomUploaderBody.MultipartFormData
             };
@@ -357,7 +360,7 @@ namespace ShareX.UploadersLib
         {
             CheckRequestURL();
 
-            if (string.IsNullOrEmpty(Version) || Helpers.CompareVersion(Version, "12.3.1") <= 0)
+            if (string.IsNullOrEmpty(Version) || HelpersLib.Helpers.Helpers.CompareVersion(Version, "12.3.1") <= 0)
             {
                 if (RequestMethod == HttpMethod.POST)
                 {
@@ -418,7 +421,7 @@ namespace ShareX.UploadersLib
                 Version = "13.7.1";
             }
 
-            if (Helpers.CompareVersion(Version, "13.7.1") <= 0)
+            if (HelpersLib.Helpers.Helpers.CompareVersion(Version, "13.7.1") <= 0)
             {
                 RequestURL = MigrateOldSyntax(RequestURL);
 
@@ -453,7 +456,7 @@ namespace ShareX.UploadersLib
                 DeletionURL = MigrateOldSyntax(DeletionURL);
                 ErrorMessage = MigrateOldSyntax(ErrorMessage);
 
-                Version = Helpers.GetApplicationVersion();
+                Version = HelpersLib.Helpers.Helpers.GetApplicationVersion();
             }
         }
 

@@ -25,7 +25,7 @@
 
 using System.Collections.Generic;
 
-namespace ShareX.MediaLib
+namespace ShareNot.MediaLib
 {
     public class DirectShowDevices
     {

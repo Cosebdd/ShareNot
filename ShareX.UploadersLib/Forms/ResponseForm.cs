@@ -23,13 +23,16 @@
 
 #endregion License Information (GPL v3)
 
-using Newtonsoft.Json;
-using ShareX.HelpersLib;
-using ShareX.UploadersLib.Properties;
 using System;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.UploadersLib.Helpers;
+using ShareNot.UploadersLib.Properties;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.Forms
 {
     public partial class ResponseForm : Form
     {
@@ -172,7 +175,7 @@ namespace ShareX.UploadersLib
             {
                 try
                 {
-                    response = Helpers.JSONFormat(response, Formatting.Indented);
+                    response = HelpersLib.Helpers.Helpers.JSONFormat(response, Formatting.Indented);
                     rtbResponseText.Text = response;
                 }
                 catch
@@ -189,7 +192,7 @@ namespace ShareX.UploadersLib
             {
                 try
                 {
-                    response = Helpers.XMLFormat(response);
+                    response = HelpersLib.Helpers.Helpers.XMLFormat(response);
                     rtbResponseText.Text = response;
                 }
                 catch

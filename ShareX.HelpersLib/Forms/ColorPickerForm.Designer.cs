@@ -1,4 +1,7 @@
-﻿namespace ShareX.HelpersLib
+﻿using ShareNot.HelpersLib.Colors;
+using ShareNot.HelpersLib.Controls;
+
+namespace ShareNot.HelpersLib.Forms
 {
     partial class ColorPickerForm
     {
@@ -70,7 +73,7 @@
             this.ttMain = new System.Windows.Forms.ToolTip(this.components);
             this.btnScreenColorPicker = new System.Windows.Forms.Button();
             this.btnClipboardColorPicker = new System.Windows.Forms.Button();
-            this.cbTransparent = new ShareX.HelpersLib.ColorButton();
+            this.cbTransparent = new ColorButton();
             this.cmsCopy = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiCopyAll = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCopyRGB = new System.Windows.Forms.ToolStripMenuItem();
@@ -93,9 +96,9 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblNameValue = new System.Windows.Forms.Label();
             this.btnClipboardStatus = new System.Windows.Forms.Button();
-            this.mbCopy = new ShareX.HelpersLib.MenuButton();
-            this.pbColorPreview = new ShareX.HelpersLib.MyPictureBox();
-            this.colorPicker = new ShareX.HelpersLib.ColorPicker();
+            this.mbCopy = new MenuButton();
+            this.pbColorPreview = new MyPictureBox();
+            this.colorPicker = new ColorPicker();
             ((System.ComponentModel.ISupportInitialize)(this.nudKey)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudYellow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMagenta)).BeginInit();
@@ -111,44 +114,44 @@
             this.pCursorPosition.SuspendLayout();
             this.flpColorPaletteSelection.SuspendLayout();
             this.SuspendLayout();
-            // 
+            //
             // btnCancel
-            // 
+            //
             resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
+            //
             // btnOK
-            // 
+            //
             resources.ApplyResources(this.btnOK, "btnOK");
             this.btnOK.Name = "btnOK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
+            //
             // lblOld
-            // 
+            //
             resources.ApplyResources(this.lblOld, "lblOld");
             this.lblOld.Name = "lblOld";
-            // 
+            //
             // lblNew
-            // 
+            //
             resources.ApplyResources(this.lblNew, "lblNew");
             this.lblNew.Name = "lblNew";
-            // 
+            //
             // txtHex
-            // 
+            //
             resources.ApplyResources(this.txtHex, "txtHex");
             this.txtHex.Name = "txtHex";
             this.txtHex.TextChanged += new System.EventHandler(this.txtHex_TextChanged);
-            // 
+            //
             // lblHex
-            // 
+            //
             resources.ApplyResources(this.lblHex, "lblHex");
             this.lblHex.Name = "lblHex";
-            // 
+            //
             // nudKey
-            // 
+            //
             this.nudKey.DecimalPlaces = 1;
             resources.ApplyResources(this.nudKey, "nudKey");
             this.nudKey.Name = "nudKey";
@@ -158,9 +161,9 @@
             0,
             0});
             this.nudKey.ValueChanged += new System.EventHandler(this.CMYK_ValueChanged);
-            // 
+            //
             // nudYellow
-            // 
+            //
             this.nudYellow.DecimalPlaces = 1;
             resources.ApplyResources(this.nudYellow, "nudYellow");
             this.nudYellow.Name = "nudYellow";
@@ -170,9 +173,9 @@
             0,
             0});
             this.nudYellow.ValueChanged += new System.EventHandler(this.CMYK_ValueChanged);
-            // 
+            //
             // nudMagenta
-            // 
+            //
             this.nudMagenta.DecimalPlaces = 1;
             resources.ApplyResources(this.nudMagenta, "nudMagenta");
             this.nudMagenta.Name = "nudMagenta";
@@ -182,9 +185,9 @@
             0,
             0});
             this.nudMagenta.ValueChanged += new System.EventHandler(this.CMYK_ValueChanged);
-            // 
+            //
             // nudCyan
-            // 
+            //
             this.nudCyan.DecimalPlaces = 1;
             resources.ApplyResources(this.nudCyan, "nudCyan");
             this.nudCyan.Name = "nudCyan";
@@ -194,44 +197,44 @@
             0,
             0});
             this.nudCyan.ValueChanged += new System.EventHandler(this.CMYK_ValueChanged);
-            // 
+            //
             // lblKey
-            // 
+            //
             resources.ApplyResources(this.lblKey, "lblKey");
             this.lblKey.Name = "lblKey";
-            // 
+            //
             // lblYellow
-            // 
+            //
             resources.ApplyResources(this.lblYellow, "lblYellow");
             this.lblYellow.Name = "lblYellow";
-            // 
+            //
             // lblMagenta
-            // 
+            //
             resources.ApplyResources(this.lblMagenta, "lblMagenta");
             this.lblMagenta.Name = "lblMagenta";
-            // 
+            //
             // lblCyan
-            // 
+            //
             resources.ApplyResources(this.lblCyan, "lblCyan");
             this.lblCyan.Name = "lblCyan";
-            // 
+            //
             // lblHue
-            // 
+            //
             resources.ApplyResources(this.lblHue, "lblHue");
             this.lblHue.Name = "lblHue";
-            // 
+            //
             // lblBrightnessPerc
-            // 
+            //
             resources.ApplyResources(this.lblBrightnessPerc, "lblBrightnessPerc");
             this.lblBrightnessPerc.Name = "lblBrightnessPerc";
-            // 
+            //
             // lblSaturationPerc
-            // 
+            //
             resources.ApplyResources(this.lblSaturationPerc, "lblSaturationPerc");
             this.lblSaturationPerc.Name = "lblSaturationPerc";
-            // 
+            //
             // nudBlue
-            // 
+            //
             resources.ApplyResources(this.nudBlue, "nudBlue");
             this.nudBlue.Maximum = new decimal(new int[] {
             255,
@@ -245,9 +248,9 @@
             0,
             0});
             this.nudBlue.ValueChanged += new System.EventHandler(this.RGB_ValueChanged);
-            // 
+            //
             // nudGreen
-            // 
+            //
             resources.ApplyResources(this.nudGreen, "nudGreen");
             this.nudGreen.Maximum = new decimal(new int[] {
             255,
@@ -261,9 +264,9 @@
             0,
             0});
             this.nudGreen.ValueChanged += new System.EventHandler(this.RGB_ValueChanged);
-            // 
+            //
             // nudRed
-            // 
+            //
             resources.ApplyResources(this.nudRed, "nudRed");
             this.nudRed.Maximum = new decimal(new int[] {
             255,
@@ -277,9 +280,9 @@
             0,
             0});
             this.nudRed.ValueChanged += new System.EventHandler(this.RGB_ValueChanged);
-            // 
+            //
             // nudBrightness
-            // 
+            //
             resources.ApplyResources(this.nudBrightness, "nudBrightness");
             this.nudBrightness.Name = "nudBrightness";
             this.nudBrightness.Value = new decimal(new int[] {
@@ -288,9 +291,9 @@
             0,
             0});
             this.nudBrightness.ValueChanged += new System.EventHandler(this.HSB_ValueChanged);
-            // 
+            //
             // nudSaturation
-            // 
+            //
             resources.ApplyResources(this.nudSaturation, "nudSaturation");
             this.nudSaturation.Name = "nudSaturation";
             this.nudSaturation.Value = new decimal(new int[] {
@@ -299,9 +302,9 @@
             0,
             0});
             this.nudSaturation.ValueChanged += new System.EventHandler(this.HSB_ValueChanged);
-            // 
+            //
             // nudHue
-            // 
+            //
             resources.ApplyResources(this.nudHue, "nudHue");
             this.nudHue.Maximum = new decimal(new int[] {
             360,
@@ -315,84 +318,84 @@
             0,
             0});
             this.nudHue.ValueChanged += new System.EventHandler(this.HSB_ValueChanged);
-            // 
+            //
             // rbBlue
-            // 
+            //
             resources.ApplyResources(this.rbBlue, "rbBlue");
             this.rbBlue.Name = "rbBlue";
             this.rbBlue.UseVisualStyleBackColor = true;
             this.rbBlue.CheckedChanged += new System.EventHandler(this.rbBlue_CheckedChanged);
-            // 
+            //
             // rbGreen
-            // 
+            //
             resources.ApplyResources(this.rbGreen, "rbGreen");
             this.rbGreen.Name = "rbGreen";
             this.rbGreen.UseVisualStyleBackColor = true;
             this.rbGreen.CheckedChanged += new System.EventHandler(this.rbGreen_CheckedChanged);
-            // 
+            //
             // rbRed
-            // 
+            //
             resources.ApplyResources(this.rbRed, "rbRed");
             this.rbRed.Name = "rbRed";
             this.rbRed.UseVisualStyleBackColor = true;
             this.rbRed.CheckedChanged += new System.EventHandler(this.rbRed_CheckedChanged);
-            // 
+            //
             // rbBrightness
-            // 
+            //
             resources.ApplyResources(this.rbBrightness, "rbBrightness");
             this.rbBrightness.Name = "rbBrightness";
             this.rbBrightness.UseVisualStyleBackColor = true;
             this.rbBrightness.CheckedChanged += new System.EventHandler(this.rbBrightness_CheckedChanged);
-            // 
+            //
             // rbSaturation
-            // 
+            //
             resources.ApplyResources(this.rbSaturation, "rbSaturation");
             this.rbSaturation.Name = "rbSaturation";
             this.rbSaturation.UseVisualStyleBackColor = true;
             this.rbSaturation.CheckedChanged += new System.EventHandler(this.rbSaturation_CheckedChanged);
-            // 
+            //
             // rbHue
-            // 
+            //
             resources.ApplyResources(this.rbHue, "rbHue");
             this.rbHue.Checked = true;
             this.rbHue.Name = "rbHue";
             this.rbHue.TabStop = true;
             this.rbHue.UseVisualStyleBackColor = true;
             this.rbHue.CheckedChanged += new System.EventHandler(this.rbHue_CheckedChanged);
-            // 
+            //
             // lblDecimal
-            // 
+            //
             resources.ApplyResources(this.lblDecimal, "lblDecimal");
             this.lblDecimal.Name = "lblDecimal";
-            // 
+            //
             // txtDecimal
-            // 
+            //
             resources.ApplyResources(this.txtDecimal, "txtDecimal");
             this.txtDecimal.Name = "txtDecimal";
             this.txtDecimal.TextChanged += new System.EventHandler(this.txtDecimal_TextChanged);
-            // 
+            //
             // lblCyanPerc
-            // 
+            //
             resources.ApplyResources(this.lblCyanPerc, "lblCyanPerc");
             this.lblCyanPerc.Name = "lblCyanPerc";
-            // 
+            //
             // lblMagentaPerc
-            // 
+            //
             resources.ApplyResources(this.lblMagentaPerc, "lblMagentaPerc");
             this.lblMagentaPerc.Name = "lblMagentaPerc";
-            // 
+            //
             // lblYellowPerc
-            // 
+            //
             resources.ApplyResources(this.lblYellowPerc, "lblYellowPerc");
             this.lblYellowPerc.Name = "lblYellowPerc";
-            // 
+            //
             // lblKeyPerc
-            // 
+            //
             resources.ApplyResources(this.lblKeyPerc, "lblKeyPerc");
             this.lblKeyPerc.Name = "lblKeyPerc";
-            // 
+            //
             // nudAlpha
-            // 
+            //
             resources.ApplyResources(this.nudAlpha, "nudAlpha");
             this.nudAlpha.Maximum = new decimal(new int[] {
             255,
@@ -406,38 +409,38 @@
             0,
             0});
             this.nudAlpha.ValueChanged += new System.EventHandler(this.RGB_ValueChanged);
-            // 
+            //
             // lblAlpha
-            // 
+            //
             resources.ApplyResources(this.lblAlpha, "lblAlpha");
             this.lblAlpha.Name = "lblAlpha";
-            // 
+            //
             // ttMain
-            // 
+            //
             this.ttMain.AutoPopDelay = 5000;
             this.ttMain.InitialDelay = 100;
             this.ttMain.ReshowDelay = 100;
-            // 
+            //
             // btnScreenColorPicker
-            // 
-            this.btnScreenColorPicker.Image = global::ShareX.HelpersLib.Properties.Resources.pipette;
+            //
+            this.btnScreenColorPicker.Image = global::ShareNot.HelpersLib.Properties.Resources.pipette;
             resources.ApplyResources(this.btnScreenColorPicker, "btnScreenColorPicker");
             this.btnScreenColorPicker.Name = "btnScreenColorPicker";
             this.ttMain.SetToolTip(this.btnScreenColorPicker, resources.GetString("btnScreenColorPicker.ToolTip"));
             this.btnScreenColorPicker.UseVisualStyleBackColor = true;
             this.btnScreenColorPicker.Click += new System.EventHandler(this.btnScreenColorPicker_Click);
-            // 
+            //
             // btnClipboardColorPicker
-            // 
-            this.btnClipboardColorPicker.Image = global::ShareX.HelpersLib.Properties.Resources.clipboard_block;
+            //
+            this.btnClipboardColorPicker.Image = global::ShareNot.HelpersLib.Properties.Resources.clipboard_block;
             resources.ApplyResources(this.btnClipboardColorPicker, "btnClipboardColorPicker");
             this.btnClipboardColorPicker.Name = "btnClipboardColorPicker";
             this.ttMain.SetToolTip(this.btnClipboardColorPicker, resources.GetString("btnClipboardColorPicker.ToolTip"));
             this.btnClipboardColorPicker.UseVisualStyleBackColor = true;
             this.btnClipboardColorPicker.Click += new System.EventHandler(this.btnClipboardColorPicker_Click);
-            // 
+            //
             // cbTransparent
-            // 
+            //
             this.cbTransparent.Color = System.Drawing.Color.Transparent;
             this.cbTransparent.ColorPickerOptions = null;
             resources.ApplyResources(this.cbTransparent, "cbTransparent");
@@ -446,9 +449,9 @@
             this.ttMain.SetToolTip(this.cbTransparent, resources.GetString("cbTransparent.ToolTip"));
             this.cbTransparent.UseVisualStyleBackColor = true;
             this.cbTransparent.Click += new System.EventHandler(this.cbTransparent_Click);
-            // 
+            //
             // cmsCopy
-            // 
+            //
             this.cmsCopy.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiCopyAll,
             this.tsmiCopyRGB,
@@ -460,51 +463,51 @@
             this.cmsCopy.Name = "cmsCopy";
             this.cmsCopy.ShowImageMargin = false;
             resources.ApplyResources(this.cmsCopy, "cmsCopy");
-            // 
+            //
             // tsmiCopyAll
-            // 
+            //
             this.tsmiCopyAll.Name = "tsmiCopyAll";
             resources.ApplyResources(this.tsmiCopyAll, "tsmiCopyAll");
             this.tsmiCopyAll.Click += new System.EventHandler(this.tsmiCopyAll_Click);
-            // 
+            //
             // tsmiCopyRGB
-            // 
+            //
             this.tsmiCopyRGB.Name = "tsmiCopyRGB";
             resources.ApplyResources(this.tsmiCopyRGB, "tsmiCopyRGB");
             this.tsmiCopyRGB.Click += new System.EventHandler(this.tsmiCopyRGB_Click);
-            // 
+            //
             // tsmiCopyHexadecimal
-            // 
+            //
             this.tsmiCopyHexadecimal.Name = "tsmiCopyHexadecimal";
             resources.ApplyResources(this.tsmiCopyHexadecimal, "tsmiCopyHexadecimal");
             this.tsmiCopyHexadecimal.Click += new System.EventHandler(this.tsmiCopyHexadecimal_Click);
-            // 
+            //
             // tsmiCopyCMYK
-            // 
+            //
             this.tsmiCopyCMYK.Name = "tsmiCopyCMYK";
             resources.ApplyResources(this.tsmiCopyCMYK, "tsmiCopyCMYK");
             this.tsmiCopyCMYK.Click += new System.EventHandler(this.tsmiCopyCMYK_Click);
-            // 
+            //
             // tsmiCopyHSB
-            // 
+            //
             this.tsmiCopyHSB.Name = "tsmiCopyHSB";
             resources.ApplyResources(this.tsmiCopyHSB, "tsmiCopyHSB");
             this.tsmiCopyHSB.Click += new System.EventHandler(this.tsmiCopyHSB_Click);
-            // 
+            //
             // tsmiCopyDecimal
-            // 
+            //
             this.tsmiCopyDecimal.Name = "tsmiCopyDecimal";
             resources.ApplyResources(this.tsmiCopyDecimal, "tsmiCopyDecimal");
             this.tsmiCopyDecimal.Click += new System.EventHandler(this.tsmiCopyDecimal_Click);
-            // 
+            //
             // tsmiCopyPosition
-            // 
+            //
             this.tsmiCopyPosition.Name = "tsmiCopyPosition";
             resources.ApplyResources(this.tsmiCopyPosition, "tsmiCopyPosition");
             this.tsmiCopyPosition.Click += new System.EventHandler(this.tsmiCopyPosition_Click);
-            // 
+            //
             // pCursorPosition
-            // 
+            //
             this.pCursorPosition.Controls.Add(this.txtY);
             this.pCursorPosition.Controls.Add(this.txtX);
             this.pCursorPosition.Controls.Add(this.lblY);
@@ -512,94 +515,94 @@
             this.pCursorPosition.Controls.Add(this.lblCursorPosition);
             resources.ApplyResources(this.pCursorPosition, "pCursorPosition");
             this.pCursorPosition.Name = "pCursorPosition";
-            // 
+            //
             // txtY
-            // 
+            //
             resources.ApplyResources(this.txtY, "txtY");
             this.txtY.Name = "txtY";
             this.txtY.ReadOnly = true;
-            // 
+            //
             // txtX
-            // 
+            //
             resources.ApplyResources(this.txtX, "txtX");
             this.txtX.Name = "txtX";
             this.txtX.ReadOnly = true;
-            // 
+            //
             // lblY
-            // 
+            //
             resources.ApplyResources(this.lblY, "lblY");
             this.lblY.Name = "lblY";
-            // 
+            //
             // lblX
-            // 
+            //
             resources.ApplyResources(this.lblX, "lblX");
             this.lblX.Name = "lblX";
-            // 
+            //
             // lblCursorPosition
-            // 
+            //
             resources.ApplyResources(this.lblCursorPosition, "lblCursorPosition");
             this.lblCursorPosition.Name = "lblCursorPosition";
-            // 
+            //
             // btnClose
-            // 
+            //
             resources.ApplyResources(this.btnClose, "btnClose");
             this.btnClose.Name = "btnClose";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
+            //
             // flpColorPalette
-            // 
+            //
             resources.ApplyResources(this.flpColorPalette, "flpColorPalette");
             this.flpColorPalette.Name = "flpColorPalette";
-            // 
+            //
             // rbRecentColors
-            // 
+            //
             resources.ApplyResources(this.rbRecentColors, "rbRecentColors");
             this.rbRecentColors.Checked = true;
             this.rbRecentColors.Name = "rbRecentColors";
             this.rbRecentColors.TabStop = true;
             this.rbRecentColors.UseVisualStyleBackColor = true;
             this.rbRecentColors.CheckedChanged += new System.EventHandler(this.rbRecentColors_CheckedChanged);
-            // 
+            //
             // rbStandardColors
-            // 
+            //
             resources.ApplyResources(this.rbStandardColors, "rbStandardColors");
             this.rbStandardColors.Name = "rbStandardColors";
             this.rbStandardColors.UseVisualStyleBackColor = true;
-            // 
+            //
             // flpColorPaletteSelection
-            // 
+            //
             resources.ApplyResources(this.flpColorPaletteSelection, "flpColorPaletteSelection");
             this.flpColorPaletteSelection.Controls.Add(this.rbRecentColors);
             this.flpColorPaletteSelection.Controls.Add(this.rbStandardColors);
             this.flpColorPaletteSelection.Name = "flpColorPaletteSelection";
-            // 
+            //
             // lblName
-            // 
+            //
             resources.ApplyResources(this.lblName, "lblName");
             this.lblName.Name = "lblName";
-            // 
+            //
             // lblNameValue
-            // 
+            //
             resources.ApplyResources(this.lblNameValue, "lblNameValue");
             this.lblNameValue.Name = "lblNameValue";
-            // 
+            //
             // btnClipboardStatus
-            // 
+            //
             resources.ApplyResources(this.btnClipboardStatus, "btnClipboardStatus");
-            this.btnClipboardStatus.Image = global::ShareX.HelpersLib.Properties.Resources.tick;
+            this.btnClipboardStatus.Image = global::ShareNot.HelpersLib.Properties.Resources.tick;
             this.btnClipboardStatus.Name = "btnClipboardStatus";
             this.btnClipboardStatus.UseVisualStyleBackColor = true;
-            // 
+            //
             // mbCopy
-            // 
+            //
             resources.ApplyResources(this.mbCopy, "mbCopy");
             this.mbCopy.Menu = this.cmsCopy;
             this.mbCopy.Name = "mbCopy";
             this.mbCopy.UseVisualStyleBackColor = true;
-            // 
+            //
             // pbColorPreview
-            // 
+            //
             this.pbColorPreview.BackColor = System.Drawing.SystemColors.Window;
             this.pbColorPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbColorPreview.DrawCheckeredBackground = true;
@@ -607,16 +610,16 @@
             this.pbColorPreview.Name = "pbColorPreview";
             this.pbColorPreview.PictureBoxBackColor = System.Drawing.SystemColors.Window;
             this.pbColorPreview.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pbColorPreview_MouseClick);
-            // 
+            //
             // colorPicker
-            // 
+            //
             resources.ApplyResources(this.colorPicker, "colorPicker");
-            this.colorPicker.DrawStyle = ShareX.HelpersLib.DrawStyle.Hue;
+            this.colorPicker.DrawStyle = DrawStyle.Hue;
             this.colorPicker.Name = "colorPicker";
-            this.colorPicker.ColorChanged += new ShareX.HelpersLib.ColorEventHandler(this.colorPicker_ColorChanged);
-            // 
+            this.colorPicker.ColorChanged += new ColorEventHandler(this.colorPicker_ColorChanged);
+            //
             // ColorPickerForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Window;

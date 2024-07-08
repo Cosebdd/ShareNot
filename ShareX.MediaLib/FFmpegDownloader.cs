@@ -23,11 +23,13 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.UpdateChecker;
+using ShareNot.HelpersLib.Zip;
 
-namespace ShareX.MediaLib
+namespace ShareNot.MediaLib
 {
     public static class FFmpegDownloader
     {

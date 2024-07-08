@@ -23,10 +23,10 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System.Drawing;
+using ShareNot.HelpersLib;
 
-namespace ShareX.HistoryLib
+namespace ShareNot.HistoryLib
 {
     public class ImageHistorySettings
     {

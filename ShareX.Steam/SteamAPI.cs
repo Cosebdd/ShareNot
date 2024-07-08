@@ -25,7 +25,7 @@
 
 using System.Runtime.InteropServices;
 
-namespace ShareX.Steam
+namespace ShareNot.Steam
 {
     internal static class SteamAPI
     {

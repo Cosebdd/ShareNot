@@ -28,8 +28,9 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Design;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.NameParser;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.UITypeEditors
 {
     public class NameParserEditor : UITypeEditor
     {

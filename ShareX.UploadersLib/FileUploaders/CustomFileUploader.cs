@@ -23,13 +23,18 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.UploadersLib.Properties;
 using System;
 using System.Drawing;
 using System.IO;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.UploadersLib.BaseServices;
+using ShareNot.UploadersLib.BaseUploaders;
+using ShareNot.UploadersLib.CustomUploader;
+using ShareNot.UploadersLib.Helpers;
+using ShareNot.UploadersLib.Properties;
 
-namespace ShareX.UploadersLib.FileUploaders
+namespace ShareNot.UploadersLib.FileUploaders
 {
     public class CustomFileUploaderService : FileUploaderService
     {

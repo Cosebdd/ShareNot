@@ -24,8 +24,9 @@
 #endregion License Information (GPL v3)
 
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Native;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Controls
 {
     public class ReadOnlyRichTextBox : RichTextBox
     {

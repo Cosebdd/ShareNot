@@ -1,4 +1,4 @@
-﻿namespace ShareX.HistoryLib
+﻿namespace ShareNot.HistoryLib.Forms
 {
     partial class HistoryItemInfoForm
     {
@@ -31,16 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistoryItemInfoForm));
             this.pgHistoryItem = new System.Windows.Forms.PropertyGrid();
             this.SuspendLayout();
-            // 
+            //
             // pgHistoryItem
-            // 
+            //
             resources.ApplyResources(this.pgHistoryItem, "pgHistoryItem");
             this.pgHistoryItem.Name = "pgHistoryItem";
             this.pgHistoryItem.PropertySort = System.Windows.Forms.PropertySort.NoSort;
             this.pgHistoryItem.ToolbarVisible = false;
-            // 
+            //
             // HistoryItemInfoForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.pgHistoryItem);

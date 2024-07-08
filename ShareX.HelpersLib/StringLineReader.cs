@@ -26,7 +26,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     public class StringLineReader
     {

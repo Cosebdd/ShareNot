@@ -23,15 +23,15 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 using System.Resources;
+using ShareNot.HelpersLib.Properties;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Extensions
 {
     public static class EnumExtensions
     {
@@ -109,7 +109,7 @@ namespace ShareX.HelpersLib
 
         public static IEnumerable<T> GetFlags<T>(this T value) where T : Enum
         {
-            return Helpers.GetEnums<T>().Where(x => Convert.ToUInt64(x) != 0 && value.HasFlag(x));
+            return Helpers.Helpers.GetEnums<T>().Where(x => Convert.ToUInt64(x) != 0 && value.HasFlag(x));
         }
 
         public static bool HasFlag<T>(this Enum value, params T[] flags)

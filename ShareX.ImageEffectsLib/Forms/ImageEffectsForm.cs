@@ -23,17 +23,24 @@
 
 #endregion License Information (GPL v3)
 
-using Newtonsoft.Json.Serialization;
-using ShareX.HelpersLib;
-using ShareX.ImageEffectsLib.Properties;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using Newtonsoft.Json.Serialization;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.ImageEffectsLib.Adjustments;
+using ShareNot.ImageEffectsLib.Drawings;
+using ShareNot.ImageEffectsLib.Filters;
+using ShareNot.ImageEffectsLib.Manipulations;
+using ShareNot.ImageEffectsLib.Properties;
+using ColorDepth = ShareNot.ImageEffectsLib.Filters.ColorDepth;
 
-namespace ShareX.ImageEffectsLib
+namespace ShareNot.ImageEffectsLib.Forms
 {
     public partial class ImageEffectsForm : Form
     {

@@ -25,7 +25,7 @@
 
 using System.ComponentModel;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib
 {
     public enum ScreenRecordOutput
     {

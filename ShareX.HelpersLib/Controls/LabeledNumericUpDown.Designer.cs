@@ -1,13 +1,13 @@
-﻿namespace ShareX.HelpersLib
+﻿namespace ShareNot.HelpersLib.Controls
 {
     partial class LabeledNumericUpDown
     {
-        /// <summary> 
+        /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -22,8 +22,8 @@
 
         #region Component Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
+        /// <summary>
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
@@ -35,9 +35,9 @@
             this.flpMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudValue)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // flpMain
-            // 
+            //
             this.flpMain.AutoSize = true;
             this.flpMain.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flpMain.Controls.Add(this.lblText);
@@ -49,9 +49,9 @@
             this.flpMain.Size = new System.Drawing.Size(96, 20);
             this.flpMain.TabIndex = 0;
             this.flpMain.WrapContents = false;
-            // 
+            //
             // lblText
-            // 
+            //
             this.lblText.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblText.AutoSize = true;
             this.lblText.Location = new System.Drawing.Point(0, 3);
@@ -60,9 +60,9 @@
             this.lblText.Size = new System.Drawing.Size(35, 13);
             this.lblText.TabIndex = 0;
             this.lblText.Text = "label1";
-            // 
+            //
             // nudValue
-            // 
+            //
             this.nudValue.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.nudValue.Location = new System.Drawing.Point(38, 0);
             this.nudValue.Margin = new System.Windows.Forms.Padding(0);
@@ -70,9 +70,9 @@
             this.nudValue.Size = new System.Drawing.Size(55, 20);
             this.nudValue.TabIndex = 1;
             this.nudValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
+            //
             // lblText2
-            // 
+            //
             this.lblText2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblText2.AutoSize = true;
             this.lblText2.Location = new System.Drawing.Point(93, 3);
@@ -80,9 +80,9 @@
             this.lblText2.Name = "lblText2";
             this.lblText2.Size = new System.Drawing.Size(0, 13);
             this.lblText2.TabIndex = 2;
-            // 
+            //
             // LabeledNumericUpDown
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;

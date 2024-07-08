@@ -23,14 +23,15 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.IndexerLib
+namespace ShareNot.IndexerLib.Forms
 {
     public partial class DirectoryIndexerForm : Form
     {

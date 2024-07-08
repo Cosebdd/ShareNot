@@ -23,12 +23,13 @@
 
 #endregion License Information (GPL v3)
 
-using Newtonsoft.Json;
-using ShareX.HelpersLib;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using Newtonsoft.Json;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.UploadersLib.BaseUploaders;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.OAuth
 {
     public class GoogleOAuth2 : IOAuth2Loopback
     {

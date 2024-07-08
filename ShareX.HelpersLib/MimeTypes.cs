@@ -23,12 +23,13 @@
 
 #endregion License Information (GPL v3)
 
-using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Microsoft.Win32;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     public static class MimeTypes
     {

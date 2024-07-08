@@ -1,4 +1,4 @@
-﻿namespace ShareX.UploadersLib
+﻿namespace ShareNot.UploadersLib.Forms
 {
     partial class UserPassBox
     {
@@ -40,66 +40,66 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
+            //
             // btnOK
-            // 
+            //
             resources.ApplyResources(this.btnOK, "btnOK");
             this.btnOK.Name = "btnOK";
             this.btnOK.UseCompatibleTextRendering = true;
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
+            //
             // btnCancel
-            // 
+            //
             resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseCompatibleTextRendering = true;
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
+            //
             // txtUserName
-            // 
+            //
             resources.ApplyResources(this.txtUserName, "txtUserName");
             this.txtUserName.Name = "txtUserName";
-            // 
+            //
             // txtPassword
-            // 
+            //
             resources.ApplyResources(this.txtPassword, "txtPassword");
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.UseSystemPasswordChar = true;
-            // 
+            //
             // lblUserName
-            // 
+            //
             resources.ApplyResources(this.lblUserName, "lblUserName");
             this.lblUserName.Name = "lblUserName";
-            // 
+            //
             // lblPassword
-            // 
+            //
             resources.ApplyResources(this.lblPassword, "lblPassword");
             this.lblPassword.Name = "lblPassword";
-            // 
+            //
             // lblFullName
-            // 
+            //
             resources.ApplyResources(this.lblFullName, "lblFullName");
             this.lblFullName.Name = "lblFullName";
-            // 
+            //
             // txtFullName
-            // 
+            //
             resources.ApplyResources(this.txtFullName, "txtFullName");
             this.txtFullName.Name = "txtFullName";
-            // 
+            //
             // lblEmail
-            // 
+            //
             resources.ApplyResources(this.lblEmail, "lblEmail");
             this.lblEmail.Name = "lblEmail";
-            // 
+            //
             // txtEmail
-            // 
+            //
             resources.ApplyResources(this.txtEmail, "txtEmail");
             this.txtEmail.Name = "txtEmail";
-            // 
+            //
             // UserPassBox
-            // 
+            //
             this.AcceptButton = this.btnOK;
             resources.ApplyResources(this, "$this");
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);

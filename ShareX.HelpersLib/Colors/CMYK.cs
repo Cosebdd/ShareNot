@@ -23,10 +23,11 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib.Properties;
 using System.Drawing;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Properties;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Colors
 {
     public struct CMYK
     {

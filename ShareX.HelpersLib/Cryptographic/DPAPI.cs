@@ -27,7 +27,7 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Cryptographic
 {
     // https://en.wikipedia.org/wiki/Data_Protection_API
     public static class DPAPI

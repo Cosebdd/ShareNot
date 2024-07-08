@@ -26,8 +26,9 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using ShareNot.ScreenCaptureLib.Shapes;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.Helpers
 {
     internal class ImageEditorMemento : IDisposable
     {

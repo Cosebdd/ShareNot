@@ -23,12 +23,13 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.Random;
 
-namespace ShareX.HistoryLib
+namespace ShareNot.HistoryLib
 {
     public class HistoryManagerMock : HistoryManager
     {

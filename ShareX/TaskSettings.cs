@@ -23,13 +23,6 @@
 
 #endregion License Information (GPL v3)
 
-using Newtonsoft.Json;
-using ShareX.HelpersLib;
-using ShareX.ImageEffectsLib;
-using ShareX.IndexerLib;
-using ShareX.MediaLib;
-using ShareX.ScreenCaptureLib;
-using ShareX.UploadersLib;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,8 +30,21 @@ using System.ComponentModel.Design;
 using System.Drawing;
 using System.Drawing.Design;
 using System.Linq;
+using Newtonsoft.Json;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.ImageEffectsLib;
+using ShareNot.IndexerLib;
+using ShareNot.MediaLib;
+using ShareNot.ScreenCaptureLib;
+using ShareNot.ScreenCaptureLib.ScreenRecording;
+using ShareNot.Tools.BorderlessWindow;
+using ShareNot.Tools.OCR;
+using ShareNot.Tools.PinToScreen;
+using ShareNot.UploadersLib;
 
-namespace ShareX
+namespace ShareNot
 {
     public class TaskSettings
     {

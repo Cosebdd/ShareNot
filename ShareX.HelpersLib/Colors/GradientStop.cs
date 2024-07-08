@@ -26,8 +26,10 @@
 using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Design;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.UITypeEditors;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Colors
 {
     public class GradientStop
     {

@@ -25,7 +25,7 @@
 
 using System.Collections.Generic;
 
-namespace ShareX
+namespace ShareNot.Tools.OCR
 {
     public class OCROptions
     {

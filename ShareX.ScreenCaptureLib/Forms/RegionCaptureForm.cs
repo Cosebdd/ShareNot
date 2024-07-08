@@ -23,8 +23,6 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.ScreenCaptureLib.Properties;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -34,8 +32,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.HelpersLib.NameParser;
+using ShareNot.HelpersLib.Native;
+using ShareNot.ScreenCaptureLib.Animations;
+using ShareNot.ScreenCaptureLib.Helpers;
+using ShareNot.ScreenCaptureLib.Properties;
+using ShareNot.ScreenCaptureLib.Shapes;
+using ShareNot.ScreenCaptureLib.Shapes.Drawing;
+using ShareNot.ScreenCaptureLib.Shapes.Effect;
+using ShareNot.ScreenCaptureLib.Shapes.Tool;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.Forms
 {
     public sealed class RegionCaptureForm : Form
     {
@@ -121,7 +131,7 @@ namespace ShareX.ScreenCaptureLib
                     canvas = new Screenshot().CaptureRectangle(ScreenBounds);
                 }
 
-                Helpers.LockCursorToWindow(this);
+                HelpersLib.Helpers.Helpers.LockCursorToWindow(this);
             }
             else
             {
@@ -200,9 +210,9 @@ namespace ShareX.ScreenCaptureLib
             SuspendLayout();
 
             AutoScaleMode = AutoScaleMode.None;
-            defaultCursor = Helpers.CreateCursor(Resources.Crosshair);
-            openHandCursor = Helpers.CreateCursor(Resources.openhand);
-            closedHandCursor = Helpers.CreateCursor(Resources.closedhand);
+            defaultCursor = HelpersLib.Helpers.Helpers.CreateCursor(Resources.Crosshair);
+            openHandCursor = HelpersLib.Helpers.Helpers.CreateCursor(Resources.openhand);
+            closedHandCursor = HelpersLib.Helpers.Helpers.CreateCursor(Resources.closedhand);
             SetDefaultCursor();
             Icon = ShareXResources.Icon;
             SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.UserPaint | ControlStyles.AllPaintingInWmPaint, true);

@@ -23,10 +23,10 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System.Windows.Forms;
+using ShareNot.HelpersLib.Input;
 
-namespace ShareX
+namespace ShareNot
 {
     public class HotkeySettings
     {

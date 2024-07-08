@@ -2,8 +2,9 @@
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
     <OutputType>WinExe</OutputType>
-    <AssemblyName>ShareX_NativeMessagingHost</AssemblyName>
+    <AssemblyName>ShareNot_NativeMessagingHost</AssemblyName>
     <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>ShareNot.NativeMessagingHost</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\ShareX.HelpersLib\ShareX.HelpersLib.csproj" />

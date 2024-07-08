@@ -23,10 +23,11 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System.Text;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.UploadersLib.Helpers;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib
 {
     public class UploadResult
     {

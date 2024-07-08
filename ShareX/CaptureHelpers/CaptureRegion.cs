@@ -23,12 +23,14 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.ScreenCaptureLib;
 using System.Drawing;
 using System.Windows.Forms;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Native;
+using ShareNot.ScreenCaptureLib;
+using ShareNot.ScreenCaptureLib.Forms;
 
-namespace ShareX
+namespace ShareNot.CaptureHelpers
 {
     public class CaptureRegion : CaptureBase
     {

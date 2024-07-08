@@ -6,6 +6,8 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <Description>Screen capture, file sharing and productivity tool</Description>
+    <AssemblyName>ShareNot</AssemblyName>
+    <RootNamespace>ShareNot</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System.Design" />

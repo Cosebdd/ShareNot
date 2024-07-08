@@ -1,4 +1,4 @@
-﻿namespace ShareX.UploadersLib
+﻿namespace ShareNot.UploadersLib.Forms
 {
     partial class JiraUpload
     {
@@ -37,46 +37,46 @@
             this.gpSummary = new System.Windows.Forms.GroupBox();
             this.gpSummary.SuspendLayout();
             this.SuspendLayout();
-            // 
+            //
             // lblIssueId
-            // 
+            //
             resources.ApplyResources(this.lblIssueId, "lblIssueId");
             this.lblIssueId.Name = "lblIssueId";
-            // 
+            //
             // txtIssueId
-            // 
+            //
             resources.ApplyResources(this.txtIssueId, "txtIssueId");
             this.txtIssueId.Name = "txtIssueId";
             this.txtIssueId.TextChanged += new System.EventHandler(this.txtIssueId_TextChanged);
-            // 
+            //
             // lblSummary
-            // 
+            //
             resources.ApplyResources(this.lblSummary, "lblSummary");
             this.lblSummary.Name = "lblSummary";
-            // 
+            //
             // btnUpload
-            // 
+            //
             resources.ApplyResources(this.btnUpload, "btnUpload");
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.UseVisualStyleBackColor = true;
             this.btnUpload.Click += new System.EventHandler(this.btnSend_Click);
-            // 
+            //
             // btnCancel
-            // 
+            //
             resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
+            //
             // gpSummary
-            // 
+            //
             resources.ApplyResources(this.gpSummary, "gpSummary");
             this.gpSummary.Controls.Add(this.lblSummary);
             this.gpSummary.Name = "gpSummary";
             this.gpSummary.TabStop = false;
-            // 
+            //
             // JiraUpload
-            // 
+            //
             this.AcceptButton = this.btnUpload;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;

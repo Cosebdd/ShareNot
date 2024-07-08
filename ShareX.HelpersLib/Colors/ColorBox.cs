@@ -26,7 +26,7 @@
 using System.Drawing;
 using System.Drawing.Drawing2D;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib.Colors
 {
     public class ColorBox : ColorUserControl
     {

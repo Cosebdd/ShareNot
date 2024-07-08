@@ -24,8 +24,9 @@
 #endregion License Information (GPL v3)
 
 using System.Linq;
+using ShareNot.UploadersLib.Forms;
 
-namespace ShareX.UploadersLib
+namespace ShareNot.UploadersLib.CustomUploader.Functions
 {
     // Example: {select:domain1.com|domain2.com}
     internal class CustomUploaderFunctionSelect : CustomUploaderFunction

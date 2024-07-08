@@ -26,7 +26,7 @@
 using System;
 using System.Threading;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     public class ThreadWorker
     {

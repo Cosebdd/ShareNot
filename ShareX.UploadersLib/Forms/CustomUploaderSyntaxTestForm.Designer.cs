@@ -1,4 +1,4 @@
-﻿namespace ShareX.UploadersLib
+﻿namespace ShareNot.UploadersLib.Forms
 {
     partial class CustomUploaderSyntaxTestForm
     {
@@ -39,36 +39,36 @@
             this.pURLSyntax.SuspendLayout();
             this.pResponseText.SuspendLayout();
             this.SuspendLayout();
-            // 
+            //
             // lblResponseText
-            // 
+            //
             this.lblResponseText.AutoSize = true;
             this.lblResponseText.Location = new System.Drawing.Point(13, 16);
             this.lblResponseText.Name = "lblResponseText";
             this.lblResponseText.Size = new System.Drawing.Size(78, 13);
             this.lblResponseText.TabIndex = 4;
             this.lblResponseText.Text = "Response text:";
-            // 
+            //
             // lblURLSyntax
-            // 
+            //
             this.lblURLSyntax.AutoSize = true;
             this.lblURLSyntax.Location = new System.Drawing.Point(13, 208);
             this.lblURLSyntax.Name = "lblURLSyntax";
             this.lblURLSyntax.Size = new System.Drawing.Size(65, 13);
             this.lblURLSyntax.TabIndex = 0;
             this.lblURLSyntax.Text = "URL syntax:";
-            // 
+            //
             // lblResult
-            // 
+            //
             this.lblResult.AutoSize = true;
             this.lblResult.Location = new System.Drawing.Point(13, 256);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(40, 13);
             this.lblResult.TabIndex = 2;
             this.lblResult.Text = "Result:";
-            // 
+            //
             // txtResult
-            // 
+            //
             this.txtResult.Location = new System.Drawing.Point(16, 272);
             this.txtResult.Multiline = true;
             this.txtResult.Name = "txtResult";
@@ -76,9 +76,9 @@
             this.txtResult.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtResult.Size = new System.Drawing.Size(568, 56);
             this.txtResult.TabIndex = 3;
-            // 
+            //
             // rtbURLSyntax
-            // 
+            //
             this.rtbURLSyntax.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtbURLSyntax.DetectUrls = false;
             this.rtbURLSyntax.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -90,9 +90,9 @@
             this.rtbURLSyntax.TabIndex = 0;
             this.rtbURLSyntax.Text = "";
             this.rtbURLSyntax.TextChanged += new System.EventHandler(this.rtbURLSyntax_TextChanged);
-            // 
+            //
             // pURLSyntax
-            // 
+            //
             this.pURLSyntax.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pURLSyntax.Controls.Add(this.rtbURLSyntax);
             this.pURLSyntax.Location = new System.Drawing.Point(16, 224);
@@ -100,9 +100,9 @@
             this.pURLSyntax.Padding = new System.Windows.Forms.Padding(2);
             this.pURLSyntax.Size = new System.Drawing.Size(568, 20);
             this.pURLSyntax.TabIndex = 1;
-            // 
+            //
             // pResponseText
-            // 
+            //
             this.pResponseText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pResponseText.Controls.Add(this.rtbResponseText);
             this.pResponseText.Location = new System.Drawing.Point(16, 32);
@@ -110,9 +110,9 @@
             this.pResponseText.Padding = new System.Windows.Forms.Padding(2);
             this.pResponseText.Size = new System.Drawing.Size(568, 168);
             this.pResponseText.TabIndex = 5;
-            // 
+            //
             // rtbResponseText
-            // 
+            //
             this.rtbResponseText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtbResponseText.DetectUrls = false;
             this.rtbResponseText.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -121,9 +121,9 @@
             this.rtbResponseText.Size = new System.Drawing.Size(562, 162);
             this.rtbResponseText.TabIndex = 0;
             this.rtbResponseText.Text = "";
-            // 
+            //
             // CustomUploaderSyntaxTestForm
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 344);

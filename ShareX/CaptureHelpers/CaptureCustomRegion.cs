@@ -25,7 +25,7 @@
 
 using System.Drawing;
 
-namespace ShareX
+namespace ShareNot.CaptureHelpers
 {
     public class CaptureCustomRegion : CaptureBase
     {

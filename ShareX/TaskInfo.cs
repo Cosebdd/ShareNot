@@ -23,15 +23,17 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.HistoryLib;
-using ShareX.UploadersLib;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HistoryLib;
+using ShareNot.UploadersLib;
+using ShareNot.UploadersLib.Helpers;
 
-namespace ShareX
+namespace ShareNot
 {
     public class TaskInfo
     {

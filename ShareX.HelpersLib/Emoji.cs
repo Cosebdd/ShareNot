@@ -28,7 +28,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     public static class Emoji
     {

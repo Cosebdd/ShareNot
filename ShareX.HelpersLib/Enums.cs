@@ -25,7 +25,7 @@
 
 using System.ComponentModel;
 
-namespace ShareX.HelpersLib
+namespace ShareNot.HelpersLib
 {
     public enum EDataType // Localized
     {

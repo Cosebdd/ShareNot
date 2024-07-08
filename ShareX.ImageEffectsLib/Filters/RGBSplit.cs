@@ -23,12 +23,14 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
 using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Imaging;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.Extensions;
+using ShareNot.HelpersLib.Helpers;
 
-namespace ShareX.ImageEffectsLib
+namespace ShareNot.ImageEffectsLib.Filters
 {
     [Description("RGB split")]
     internal class RGBSplit : ImageEffect

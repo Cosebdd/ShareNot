@@ -23,15 +23,17 @@
 
 #endregion License Information (GPL v3)
 
-using ShareX.HelpersLib;
-using ShareX.MediaLib;
 using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Text;
 using System.Threading;
+using ShareNot.HelpersLib;
+using ShareNot.HelpersLib.GIF;
+using ShareNot.HelpersLib.Helpers;
+using ShareNot.MediaLib;
 
-namespace ShareX.ScreenCaptureLib
+namespace ShareNot.ScreenCaptureLib.ScreenRecording
 {
     public class ScreenRecorder : IDisposable
     {
