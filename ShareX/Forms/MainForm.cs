@@ -55,8 +55,6 @@ namespace ShareX
 
         private async void MainForm_HandleCreated(object sender, EventArgs e)
         {
-            RunPuushTasks();
-
             NativeMethods.UseImmersiveDarkMode(Handle, ShareXResources.IsDarkTheme);
 
             await UpdateControls();
@@ -822,10 +820,6 @@ namespace ShareX
                 dgvHotkeys.BackgroundColor = SystemColors.Window;
             }
 
-            tsmiTweetMessage.Image = TaskHelpers.FindMenuIcon(HotkeyType.TweetMessage);
-            tsmiTrayTweetMessage.Image = TaskHelpers.FindMenuIcon(HotkeyType.TweetMessage);
-            tsbX.Image = TaskHelpers.FindMenuIcon(HotkeyType.TweetMessage);
-
             tsbDiscord.Image = ShareXResources.IsDarkTheme ? Resources.Discord_white : Resources.Discord_black;
 
             tsmiQRCode.Image = TaskHelpers.FindMenuIcon(HotkeyType.QRCode);
@@ -1084,31 +1078,6 @@ namespace ShareX
             {
                 tsmiTrayToggleHotkeys.Text = Resources.MainForm_UpdateToggleHotkeyButton_Disable_hotkeys;
                 tsmiTrayToggleHotkeys.Image = Resources.keyboard__minus;
-            }
-        }
-
-        private void RunPuushTasks()
-        {
-            if (Program.PuushMode && Program.Settings.IsFirstTimeRun)
-            {
-                using (PuushLoginForm puushLoginForm = new PuushLoginForm())
-                {
-                    if (puushLoginForm.ShowDialog() == DialogResult.OK)
-                    {
-                        Program.DefaultTaskSettings.ImageDestination = ImageDestination.FileUploader;
-                        Program.DefaultTaskSettings.ImageFileDestination = FileDestination.Puush;
-                        Program.DefaultTaskSettings.TextDestination = TextDestination.FileUploader;
-                        Program.DefaultTaskSettings.TextFileDestination = FileDestination.Puush;
-                        Program.DefaultTaskSettings.FileDestination = FileDestination.Puush;
-
-                        SettingManager.WaitUploadersConfig();
-
-                        if (Program.UploadersConfig != null)
-                        {
-                            Program.UploadersConfig.PuushAPIKey = puushLoginForm.APIKey;
-                        }
-                    }
-                }
             }
         }
 
@@ -1671,11 +1640,6 @@ namespace ShareX
             UploadManager.ShowShortenURLDialog();
         }
 
-        private void tsmiTweetMessage_Click(object sender, EventArgs e)
-        {
-            TaskHelpers.TweetMessage();
-        }
-
         private void tsmiColorPicker_Click(object sender, EventArgs e)
         {
             TaskHelpers.ShowScreenColorPickerDialog();
@@ -1813,11 +1777,6 @@ namespace ShareX
         private void tsddbDestinations_DropDownOpened(object sender, EventArgs e)
         {
             UpdateDestinationStates();
-        }
-
-        private void tsmiDestinationSettings_Click(object sender, EventArgs e)
-        {
-            TaskHelpers.OpenUploadersConfigWindow();
         }
 
         private void tsmiCustomUploaderSettings_Click(object sender, EventArgs e)
@@ -2326,16 +2285,6 @@ namespace ShareX
         private void tsmiPinSelectedFile_Click(object sender, EventArgs e)
         {
             uim.PinToScreen();
-        }
-
-        private void tsmiGoogleLens_Click(object sender, EventArgs e)
-        {
-            uim.SearchImageUsingGoogleLens();
-        }
-
-        private void tsmiBingVisualSearch_Click(object sender, EventArgs e)
-        {
-            uim.SearchImageUsingBing();
         }
 
         private void tsmiShowQRCode_Click(object sender, EventArgs e)

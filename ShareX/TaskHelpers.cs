@@ -97,9 +97,6 @@ namespace ShareX
                 case HotkeyType.ShortenURL:
                     UploadManager.ShowShortenURLDialog(safeTaskSettings);
                     break;
-                case HotkeyType.TweetMessage:
-                    TweetMessage();
-                    break;
                 case HotkeyType.StopUploads:
                     TaskManager.StopAllTasks();
                     break;
@@ -1332,16 +1329,6 @@ namespace ShareX
             RegionCaptureTasks.ShowScreenRuler(taskSettings.CaptureSettings.SurfaceOptions);
         }
 
-        public static void SearchImageUsingGoogleLens(string url)
-        {
-            new GoogleLensSharingService().CreateSharer(null, null).ShareURL(url);
-        }
-
-        public static void SearchImageUsingBing(string url)
-        {
-            new BingVisualSearchSharingService().CreateSharer(null, null).ShareURL(url);
-        }
-
         public static async Task OCRImage(TaskSettings taskSettings = null)
         {
             if (taskSettings == null) taskSettings = TaskSettings.GetDefaultTaskSettings();
@@ -1515,35 +1502,6 @@ namespace ShareX
             PlayPopSound();
         }
 
-        public static void TweetMessage()
-        {
-            if (IsUploadAllowed())
-            {
-                if (Program.UploadersConfig != null && Program.UploadersConfig.TwitterOAuthInfoList != null)
-                {
-                    OAuthInfo twitterOAuth = Program.UploadersConfig.TwitterOAuthInfoList.ReturnIfValidIndex(Program.UploadersConfig.TwitterSelectedAccount);
-
-                    if (twitterOAuth != null && OAuthInfo.CheckOAuth(twitterOAuth))
-                    {
-                        Task.Run(() =>
-                        {
-                            using (TwitterTweetForm twitter = new TwitterTweetForm(twitterOAuth))
-                            {
-                                if (twitter.ShowDialog() == DialogResult.OK && twitter.IsTweetSent)
-                                {
-                                    ShowNotificationTip(Resources.TaskHelpers_TweetMessage_Tweet_successfully_sent_);
-                                }
-                            }
-                        });
-
-                        return;
-                    }
-                }
-
-                MessageBox.Show(Resources.TaskHelpers_TweetMessage_Unable_to_find_valid_Twitter_account_, "ShareX", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
         public static EDataType FindDataType(string filePath, TaskSettings taskSettings)
         {
             if (FileHelpers.CheckExtension(filePath, taskSettings.AdvancedSettings.ImageExtensions))
@@ -1650,36 +1608,6 @@ namespace ShareX
             }
         }
 
-        public static void OpenUploadersConfigWindow(IUploaderService uploaderService = null)
-        {
-            SettingManager.WaitUploadersConfig();
-
-            bool firstInstance = !UploadersConfigForm.IsInstanceActive;
-
-            UploadersConfigForm form = UploadersConfigForm.GetFormInstance(Program.UploadersConfig);
-
-            if (firstInstance)
-            {
-                form.FormClosed += (sender, e) => SettingManager.SaveUploadersConfigAsync();
-
-                if (uploaderService != null)
-                {
-                    form.NavigateToTabPage(uploaderService.GetUploadersConfigTabPage(form));
-                }
-
-                form.Show();
-            }
-            else
-            {
-                if (uploaderService != null)
-                {
-                    form.NavigateToTabPage(uploaderService.GetUploadersConfigTabPage(form));
-                }
-
-                form.ForceActivate();
-            }
-        }
-
         public static void OpenCustomUploaderSettingsWindow()
         {
             SettingManager.WaitUploadersConfig();
@@ -1756,7 +1684,6 @@ namespace ShareX
                     case HotkeyType.UploadURL: return Resources.drive;
                     case HotkeyType.DragDropUpload: return Resources.inbox;
                     case HotkeyType.ShortenURL: return ShareXResources.IsDarkTheme ? Resources.edit_scale_white : Resources.edit_scale;
-                    case HotkeyType.TweetMessage: return ShareXResources.IsDarkTheme ? Resources.X_white : Resources.X_black;
                     case HotkeyType.StopUploads: return Resources.cross_button;
                     // Screen capture
                     case HotkeyType.PrintScreen: return Resources.layer_fullscreen;

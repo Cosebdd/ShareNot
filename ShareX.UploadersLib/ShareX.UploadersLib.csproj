@@ -13,9 +13,6 @@
     <ProjectReference Include="..\ShareX.HelpersLib\ShareX.HelpersLib.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="APIKeys\jira_sharex.pfx" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="FluentFTP" Version="50.0.1" />
     <PackageReference Include="MegaApiClient" Version="1.10.4" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />

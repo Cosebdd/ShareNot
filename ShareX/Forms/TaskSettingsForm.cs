@@ -138,17 +138,6 @@ namespace ShareX
 
                 if (Program.UploadersConfig != null)
                 {
-                    cbOverrideFTPAccount.Enabled = cbFTPAccounts.Enabled = Program.UploadersConfig.FTPAccountList.Count > 0;
-
-                    if (Program.UploadersConfig.FTPAccountList.Count > 0)
-                    {
-                        cbOverrideFTPAccount.Checked = TaskSettings.OverrideFTP;
-                        cbFTPAccounts.Enabled = TaskSettings.OverrideFTP;
-                        cbFTPAccounts.Items.Clear();
-                        cbFTPAccounts.Items.AddRange(Program.UploadersConfig.FTPAccountList.ToArray());
-                        cbFTPAccounts.SelectedIndex = TaskSettings.FTPIndex.BetweenOrDefault(0, Program.UploadersConfig.FTPAccountList.Count - 1);
-                    }
-
                     cbOverrideCustomUploader.Enabled = cbCustomUploaders.Enabled = Program.UploadersConfig.CustomUploadersList.Count > 0;
 
                     if (Program.UploadersConfig.CustomUploadersList.Count > 0)
@@ -766,17 +755,6 @@ namespace ShareX
         {
             TaskSettings.UseDefaultDestinations = !cbOverrideDestinationSettings.Checked;
             btnDestinations.Enabled = !TaskSettings.UseDefaultDestinations;
-        }
-
-        private void cbOverrideFTPAccount_CheckedChanged(object sender, EventArgs e)
-        {
-            TaskSettings.OverrideFTP = cbOverrideFTPAccount.Checked;
-            cbFTPAccounts.Enabled = TaskSettings.OverrideFTP;
-        }
-
-        private void cbFTPAccounts_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            TaskSettings.FTPIndex = cbFTPAccounts.SelectedIndex;
         }
 
         private void cbOverrideCustomUploader_CheckedChanged(object sender, EventArgs e)

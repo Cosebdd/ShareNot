@@ -59,16 +59,13 @@ namespace ShareX
         public AfterUploadTasks AfterUploadJob = AfterUploadTasks.CopyURLToClipboard;
 
         public bool UseDefaultDestinations = true;
-        public ImageDestination ImageDestination = ImageDestination.Imgur;
-        public FileDestination ImageFileDestination = FileDestination.Dropbox;
-        public TextDestination TextDestination = TextDestination.Pastebin;
-        public FileDestination TextFileDestination = FileDestination.Dropbox;
-        public FileDestination FileDestination = FileDestination.Dropbox;
-        public UrlShortenerType URLShortenerDestination = UrlShortenerType.BITLY;
-        public URLSharingServices URLSharingServiceDestination = URLSharingServices.Twitter;
-
-        public bool OverrideFTP = false;
-        public int FTPIndex = 0;
+        public ImageDestination ImageDestination = ImageDestination.CustomImageUploader;
+        public FileDestination ImageFileDestination = FileDestination.CustomFileUploader;
+        public TextDestination TextDestination = TextDestination.CustomTextUploader;
+        public FileDestination TextFileDestination = FileDestination.CustomFileUploader;
+        public FileDestination FileDestination = FileDestination.CustomFileUploader;
+        public UrlShortenerType URLShortenerDestination = UrlShortenerType.CustomURLShortener;
+        public URLSharingServices URLSharingServiceDestination = URLSharingServices.CustomURLSharingService;
 
         public bool OverrideCustomUploader = false;
         public int CustomUploaderIndex = 0;
@@ -151,7 +148,7 @@ namespace ShareX
         {
             get
             {
-                return UseDefaultAfterCaptureJob && UseDefaultAfterUploadJob && UseDefaultDestinations && !OverrideFTP && !OverrideCustomUploader &&
+                return UseDefaultAfterCaptureJob && UseDefaultAfterUploadJob && UseDefaultDestinations && !OverrideCustomUploader &&
                     !OverrideScreenshotsFolder && UseDefaultGeneralSettings && UseDefaultImageSettings && UseDefaultCaptureSettings && UseDefaultUploadSettings &&
                     UseDefaultActions && UseDefaultToolsSettings && UseDefaultAdvancedSettings && !WatchFolderEnabled;
             }

@@ -203,8 +203,6 @@ namespace ShareX
         [Category(EnumExtensions.HotkeyType_Category_Upload)]
         ShortenURL,
         [Category(EnumExtensions.HotkeyType_Category_Upload)]
-        TweetMessage,
-        [Category(EnumExtensions.HotkeyType_Category_Upload)]
         StopUploads,
         // Screen capture
         [Category(EnumExtensions.HotkeyType_Category_ScreenCapture)]

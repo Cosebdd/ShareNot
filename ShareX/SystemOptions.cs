@@ -33,8 +33,8 @@ namespace ShareX
     {
         private const string RegistryPath = @"SOFTWARE\ShareX";
 
-        public static bool DisableUpdateCheck { get; private set; }
-        public static bool DisableUpload { get; private set; }
+        public static bool DisableUpdateCheck { get; private set; } = true;
+        public static bool DisableUpload { get; private set; } = true;
         public static bool DisableLogging { get; private set; }
         public static string PersonalPath { get; private set; }
 

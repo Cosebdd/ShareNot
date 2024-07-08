@@ -47,7 +47,6 @@ namespace ShareX
 
         public event TaskEventHandler StatusChanged, UploadStarted, UploadProgressChanged, UploadCompleted, TaskCompleted;
         public event TaskImageEventHandler ImageReady;
-        public event UploaderServiceEventHandler UploadersConfigWindowRequested;
 
         public TaskInfo Info { get; private set; }
         public TaskStatus Status { get; private set; }
@@ -359,8 +358,6 @@ namespace ShareX
             taskReferenceHelper = new TaskReferenceHelper()
             {
                 DataType = Info.DataType,
-                OverrideFTP = Info.TaskSettings.OverrideFTP,
-                FTPIndex = Info.TaskSettings.FTPIndex,
                 OverrideCustomUploader = Info.TaskSettings.OverrideCustomUploader,
                 CustomUploaderIndex = Info.TaskSettings.CustomUploaderIndex,
                 TextFormat = Info.TaskSettings.AdvancedSettings.TextFormat
@@ -1062,8 +1059,6 @@ namespace ShareX
             DebugHelper.WriteLine(message);
             ur.Errors.Add(message);
 
-            OnUploadersConfigWindowRequested(uploaderService);
-
             return ur;
         }
 
@@ -1232,14 +1227,6 @@ namespace ShareX
             TaskCompleted?.Invoke(this);
 
             Dispose();
-        }
-
-        private void OnUploadersConfigWindowRequested(IUploaderService uploaderService)
-        {
-            if (UploadersConfigWindowRequested != null)
-            {
-                threadWorker.InvokeAsync(() => UploadersConfigWindowRequested(uploaderService));
-            }
         }
 
         public void Dispose()
