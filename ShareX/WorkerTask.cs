@@ -376,7 +376,7 @@ namespace ShareNot
         {
             if (Program.Settings.ShowUploadWarning)
             {
-                bool disableUpload = !FirstTimeUploadForm.ShowForm();
+                bool disableUpload = true;
 
                 Program.Settings.ShowUploadWarning = false;
 
