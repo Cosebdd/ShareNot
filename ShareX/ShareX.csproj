@@ -9,6 +9,12 @@
     <AssemblyName>ShareNot</AssemblyName>
     <RootNamespace>ShareNot</RootNamespace>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\ShareNot\bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\ShareNot\bin\Release\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System.Design" />
     <Reference Include="System.IO.Compression" />
@@ -27,13 +33,5 @@
     <PackageReference Include="Microsoft.Windows.SDK.Contracts" Version="10.0.26100.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="ZXing.Net" Version="0.16.9" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Update="host-manifest-chrome.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="host-manifest-firefox.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 </Project>

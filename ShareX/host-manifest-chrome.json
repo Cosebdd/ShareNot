@@ -1,9 +1,0 @@
-﻿{
-  "name": "com.getsharex.sharex",
-  "description": "ShareNot",
-  "path": "ShareX_NativeMessagingHost.exe",
-  "type": "stdio",
-  "allowed_origins": [
-    "chrome-extension://nlkoigbdolhchiicbonbihbphgamnaoc/"
-  ]
-}

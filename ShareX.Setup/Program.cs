@@ -43,19 +43,13 @@ namespace ShareNot.Setup
             CreateSetup = 1,
             CreatePortable = 1 << 1,
             CreateDebug = 1 << 2,
-            CreateSteamFolder = 1 << 3,
-            CreateMicrosoftStoreFolder = 1 << 4,
-            CreateMicrosoftStoreDebugFolder = 1 << 5,
-            CompileAppx = 1 << 6,
-            DownloadFFmpeg = 1 << 7,
-            CreateChecksumFile = 1 << 8,
-            OpenOutputDirectory = 1 << 9,
+            CompileAppx = 1 << 3,
+            DownloadFFmpeg = 1 << 4,
+            CreateChecksumFile = 1 << 5,
+            OpenOutputDirectory = 1 << 6,
 
             Release = CreateSetup | CreatePortable | DownloadFFmpeg | OpenOutputDirectory,
-            Debug = CreateDebug | DownloadFFmpeg | OpenOutputDirectory,
-            Steam = CreateSteamFolder | DownloadFFmpeg | OpenOutputDirectory,
-            MicrosoftStore = CreateMicrosoftStoreFolder | CompileAppx | DownloadFFmpeg | OpenOutputDirectory,
-            MicrosoftStoreDebug = CreateMicrosoftStoreDebugFolder | CompileAppx | DownloadFFmpeg | OpenOutputDirectory
+            Debug = CreateDebug | DownloadFFmpeg | OpenOutputDirectory
         }
 
         private static SetupJobs Job { get; set; } = SetupJobs.Release;
@@ -68,29 +62,20 @@ namespace ShareNot.Setup
         private static string WindowsKitsDir;
 
         private static string SolutionPath => Path.Combine(ParentDir, "ShareX.sln");
-        private static string BinDir => Path.Combine(ParentDir, "ShareX", "bin", Configuration);
-        private static string SteamLauncherDir => Path.Combine(ParentDir, "ShareX.Steam", "bin", Configuration);
-        private static string ExecutablePath => Path.Combine(BinDir, "ShareX.exe");
+        private static string BinDir => Path.Combine(ParentDir, "ShareNot", "bin", Configuration);
+        private static string ExecutablePath => Path.Combine(BinDir, "ShareNot.exe");
 
         private static string OutputDir => Path.Combine(ParentDir, "Output");
-        private static string PortableOutputDir => Path.Combine(OutputDir, "ShareX-portable");
-        private static string DebugOutputDir => Path.Combine(OutputDir, "ShareX-debug");
-        private static string SteamOutputDir => Path.Combine(OutputDir, "ShareX-Steam");
-        private static string MicrosoftStoreOutputDir => Path.Combine(OutputDir, "ShareX-MicrosoftStore");
-        private static string MicrosoftStoreDebugOutputDir => Path.Combine(OutputDir, "ShareX-MicrosoftStore-debug");
+        private static string PortableOutputDir => Path.Combine(OutputDir, "ShareNot-portable");
+        private static string DebugOutputDir => Path.Combine(OutputDir, "ShareNot-debug");
 
         private static string SetupDir => Path.Combine(ParentDir, "ShareX.Setup");
         private static string InnoSetupDir => Path.Combine(SetupDir, "InnoSetup");
-        private static string MicrosoftStorePackageFilesDir => Path.Combine(SetupDir, "MicrosoftStore");
 
-        private static string SetupPath => Path.Combine(OutputDir, $"ShareX-{AppVersion}-setup.exe");
+        private static string SetupPath => Path.Combine(OutputDir, $"ShareNot-{AppVersion}-setup.exe");
         private static string RecorderDevicesSetupPath => Path.Combine(OutputDir, "Recorder-devices-setup.exe");
-        private static string PortableZipPath => Path.Combine(OutputDir, $"ShareX-{AppVersion}-portable.zip");
-        private static string DebugZipPath => Path.Combine(OutputDir, $"ShareX-{AppVersion}-debug.zip");
-        private static string SteamUpdatesDir => Path.Combine(SteamOutputDir, "Updates");
-        private static string SteamZipPath => Path.Combine(OutputDir, $"ShareX-{AppVersion}-Steam.zip");
-        private static string MicrosoftStoreAppxPath => Path.Combine(OutputDir, $"ShareX-{AppVersion}.appx");
-        private static string MicrosoftStoreDebugAppxPath => Path.Combine(OutputDir, $"ShareX-{AppVersion}-debug.appx");
+        private static string PortableZipPath => Path.Combine(OutputDir, $"ShareNot-{AppVersion}-portable.zip");
+        private static string DebugZipPath => Path.Combine(OutputDir, $"ShareNot-{AppVersion}-debug.zip");
         private static string FFmpegPath => Path.Combine(OutputDir, "ffmpeg.exe");
         private static string MakeAppxPath => Path.Combine(WindowsKitsDir, "x64", "makeappx.exe");
 
@@ -99,7 +84,7 @@ namespace ShareNot.Setup
 
         private static void Main(string[] args)
         {
-            Console.WriteLine("ShareX setup started.");
+            Console.WriteLine("ShareNot setup started.");
 
             CheckArgs(args);
 
@@ -138,33 +123,6 @@ namespace ShareNot.Setup
                 CreateZipFile(DebugOutputDir, DebugZipPath);
             }
 
-            if (Job.HasFlag(SetupJobs.CreateSteamFolder))
-            {
-                CreateSteamFolder();
-
-                CreateZipFile(SteamOutputDir, SteamZipPath);
-            }
-
-            if (Job.HasFlag(SetupJobs.CreateMicrosoftStoreFolder))
-            {
-                CreateFolder(BinDir, MicrosoftStoreOutputDir, SetupJobs.CreateMicrosoftStoreFolder);
-
-                if (Job.HasFlag(SetupJobs.CompileAppx))
-                {
-                    CompileAppx(MicrosoftStoreOutputDir, MicrosoftStoreAppxPath);
-                }
-            }
-
-            if (Job.HasFlag(SetupJobs.CreateMicrosoftStoreDebugFolder))
-            {
-                CreateFolder(BinDir, MicrosoftStoreDebugOutputDir, SetupJobs.CreateMicrosoftStoreDebugFolder);
-
-                if (Job.HasFlag(SetupJobs.CompileAppx))
-                {
-                    CompileAppx(MicrosoftStoreDebugOutputDir, MicrosoftStoreDebugAppxPath);
-                }
-            }
-
             if (AppVeyor)
             {
                 FileHelpers.CopyAll(OutputDir, ParentDir);
@@ -175,7 +133,7 @@ namespace ShareNot.Setup
                 FileHelpers.OpenFolder(OutputDir, false);
             }
 
-            Console.WriteLine("ShareX setup successfully completed.");
+            Console.WriteLine("ShareNot setup successfully completed.");
         }
 
         private static void CheckArgs(string[] args)
@@ -233,18 +191,6 @@ namespace ShareNot.Setup
             if (Job.HasFlag(SetupJobs.CreateDebug))
             {
                 Configuration = "Debug";
-            }
-            else if (Job.HasFlag(SetupJobs.CreateSteamFolder))
-            {
-                Configuration = "Steam";
-            }
-            else if (Job.HasFlag(SetupJobs.CreateMicrosoftStoreFolder))
-            {
-                Configuration = "MicrosoftStore";
-            }
-            else if (Job.HasFlag(SetupJobs.CreateMicrosoftStoreDebugFolder))
-            {
-                Configuration = "MicrosoftStoreDebug";
             }
             else
             {
@@ -329,25 +275,6 @@ namespace ShareNot.Setup
             CreateChecksumFile(outputPackageName);
         }
 
-        private static void CreateSteamFolder()
-        {
-            Console.WriteLine("Creating Steam folder: " + SteamOutputDir);
-
-            if (Directory.Exists(SteamOutputDir))
-            {
-                Directory.Delete(SteamOutputDir, true);
-            }
-
-            Directory.CreateDirectory(SteamOutputDir);
-
-            FileHelpers.CopyFiles(Path.Combine(SteamLauncherDir, "ShareX_Launcher.exe"), SteamOutputDir);
-            FileHelpers.CopyFiles(Path.Combine(SteamLauncherDir, "steam_appid.txt"), SteamOutputDir);
-            FileHelpers.CopyFiles(Path.Combine(SteamLauncherDir, "installscript.vdf"), SteamOutputDir);
-            FileHelpers.CopyFiles(SteamLauncherDir, SteamOutputDir, "*.dll");
-
-            CreateFolder(BinDir, SteamUpdatesDir, SetupJobs.CreateSteamFolder);
-        }
-
         private static void CreateFolder(string source, string destination, SetupJobs job)
         {
             Console.WriteLine("Creating folder: " + destination);
@@ -359,30 +286,23 @@ namespace ShareNot.Setup
 
             Directory.CreateDirectory(destination);
 
-            FileHelpers.CopyFiles(Path.Combine(source, "ShareX.exe"), destination);
-            FileHelpers.CopyFiles(Path.Combine(source, "ShareX.exe.config"), destination);
+            FileHelpers.CopyFiles(Path.Combine(source, "ShareNot.exe"), destination);
+            FileHelpers.CopyFiles(Path.Combine(source, "ShareNot.exe.config"), destination);
             FileHelpers.CopyFiles(source, destination, "*.dll");
 
-            if (job == SetupJobs.CreateDebug || job == SetupJobs.CreateMicrosoftStoreDebugFolder)
+            if (job == SetupJobs.CreateDebug)
             {
                 FileHelpers.CopyFiles(source, destination, "*.pdb");
             }
 
             FileHelpers.CopyFiles(Path.Combine(ParentDir, "Licenses"), Path.Combine(destination, "Licenses"), "*.txt");
 
-            if (job != SetupJobs.CreateMicrosoftStoreFolder && job != SetupJobs.CreateMicrosoftStoreDebugFolder)
+            if (!File.Exists(RecorderDevicesSetupPath))
             {
-                if (!File.Exists(RecorderDevicesSetupPath))
-                {
-                    CompileISSFile("Recorder-devices-setup.iss");
-                }
-
-                FileHelpers.CopyFiles(RecorderDevicesSetupPath, destination);
-
-                FileHelpers.CopyFiles(Path.Combine(source, "ShareX_NativeMessagingHost.exe"), destination);
-                FileHelpers.CopyFiles(Path.Combine(source, "host-manifest-chrome.json"), destination);
-                FileHelpers.CopyFiles(Path.Combine(source, "host-manifest-firefox.json"), destination);
+                CompileISSFile("Recorder-devices-setup.iss");
             }
+
+            FileHelpers.CopyFiles(RecorderDevicesSetupPath, destination);
 
             foreach (string directory in Directory.GetDirectories(source))
             {
@@ -404,10 +324,6 @@ namespace ShareNot.Setup
             if (job == SetupJobs.CreatePortable)
             {
                 FileHelpers.CreateEmptyFile(Path.Combine(destination, "Portable"));
-            }
-            else if (job == SetupJobs.CreateMicrosoftStoreFolder || job == SetupJobs.CreateMicrosoftStoreDebugFolder)
-            {
-                FileHelpers.CopyAll(MicrosoftStorePackageFilesDir, destination);
             }
 
             Console.WriteLine("Folder created: " + destination);
