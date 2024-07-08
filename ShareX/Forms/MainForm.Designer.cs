@@ -186,8 +186,6 @@ namespace ShareNot.Forms
             this.tsmiDeleteSelectedFile = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiShortenSelectedURL = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiShareSelectedURL = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiGoogleLens = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiBingVisualSearch = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiShowQRCode = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiOCRImage = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCombineImages = new System.Windows.Forms.ToolStripMenuItem();
@@ -1078,8 +1076,6 @@ namespace ShareNot.Forms
             this.tsmiDeleteSelectedFile,
             this.tsmiShortenSelectedURL,
             this.tsmiShareSelectedURL,
-            this.tsmiGoogleLens,
-            this.tsmiBingVisualSearch,
             this.tsmiShowQRCode,
             this.tsmiOCRImage,
             this.tsmiCombineImages,
@@ -2527,7 +2523,6 @@ namespace ShareNot.Forms
         private System.Windows.Forms.ToolStripSeparator tssTrayTools4;
         private System.Windows.Forms.ToolStripMenuItem tsmiCombineImagesHorizontally;
         private System.Windows.Forms.ToolStripMenuItem tsmiCombineImagesVertically;
-        private System.Windows.Forms.ToolStripMenuItem tsmiBingVisualSearch;
         private System.Windows.Forms.ToolStripButton tsbDiscord;
         private System.Windows.Forms.ToolStripSeparator tssMain3;
         private System.Windows.Forms.ToolStripButton tsbDonate;
@@ -2550,6 +2545,5 @@ namespace ShareNot.Forms
         private System.Windows.Forms.DataGridView dgvHotkeys;
         internal System.Windows.Forms.Panel pHotkeys;
         private MyListView lvUploads;
-        private System.Windows.Forms.ToolStripMenuItem tsmiGoogleLens;
     }
 }
