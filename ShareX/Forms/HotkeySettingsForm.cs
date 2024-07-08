@@ -211,8 +211,6 @@ namespace ShareNot.Forms
             {
                 HotkeySettings hotkeySettings = new HotkeySettings();
                 hotkeySettings.TaskSettings = Selected.HotkeySettings.TaskSettings.Copy();
-                hotkeySettings.TaskSettings.WatchFolderEnabled = false;
-                hotkeySettings.TaskSettings.WatchFolderList = new List<WatchFolderSettings>();
                 manager.Hotkeys.Add(hotkeySettings);
                 HotkeySelectionControl control = AddHotkeySelectionControl(hotkeySettings);
                 control.Selected = true;

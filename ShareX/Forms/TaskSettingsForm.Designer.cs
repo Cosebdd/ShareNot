@@ -249,15 +249,6 @@ namespace ShareNot.Forms
             this.btnActionsEdit = new System.Windows.Forms.Button();
             this.btnActionsRemove = new System.Windows.Forms.Button();
             this.cbOverrideActions = new System.Windows.Forms.CheckBox();
-            this.tpWatchFolders = new System.Windows.Forms.TabPage();
-            this.btnWatchFolderEdit = new System.Windows.Forms.Button();
-            this.cbWatchFolderEnabled = new System.Windows.Forms.CheckBox();
-            this.lvWatchFolderList = new MyListView();
-            this.chWatchFolderFolderPath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chWatchFolderFilter = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chWatchFolderIncludeSubdirectories = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnWatchFolderRemove = new System.Windows.Forms.Button();
-            this.btnWatchFolderAdd = new System.Windows.Forms.Button();
             this.tpTools = new System.Windows.Forms.TabPage();
             this.pTools = new System.Windows.Forms.Panel();
             this.txtToolsScreenColorPickerFormatCtrl = new System.Windows.Forms.TextBox();
@@ -326,7 +317,6 @@ namespace ShareNot.Forms
             ((System.ComponentModel.ISupportInitialize)(this.nudAutoIncrementNumber)).BeginInit();
             this.tpActions.SuspendLayout();
             this.pActions.SuspendLayout();
-            this.tpWatchFolders.SuspendLayout();
             this.tpTools.SuspendLayout();
             this.pTools.SuspendLayout();
             this.tpAdvanced.SuspendLayout();
@@ -387,7 +377,6 @@ namespace ShareNot.Forms
             this.tcTaskSettings.Controls.Add(this.tpImage);
             this.tcTaskSettings.Controls.Add(this.tpCapture);
             this.tcTaskSettings.Controls.Add(this.tpActions);
-            this.tcTaskSettings.Controls.Add(this.tpWatchFolders);
             this.tcTaskSettings.Controls.Add(this.tpTools);
             this.tcTaskSettings.Controls.Add(this.tpAdvanced);
             resources.ApplyResources(this.tcTaskSettings, "tcTaskSettings");
@@ -2189,72 +2178,6 @@ namespace ShareNot.Forms
             this.cbOverrideActions.UseVisualStyleBackColor = true;
             this.cbOverrideActions.CheckedChanged += new System.EventHandler(this.cbUseDefaultActions_CheckedChanged);
             //
-            // tpWatchFolders
-            //
-            this.tpWatchFolders.BackColor = System.Drawing.SystemColors.Window;
-            this.tpWatchFolders.Controls.Add(this.btnWatchFolderEdit);
-            this.tpWatchFolders.Controls.Add(this.cbWatchFolderEnabled);
-            this.tpWatchFolders.Controls.Add(this.lvWatchFolderList);
-            this.tpWatchFolders.Controls.Add(this.btnWatchFolderRemove);
-            this.tpWatchFolders.Controls.Add(this.btnWatchFolderAdd);
-            resources.ApplyResources(this.tpWatchFolders, "tpWatchFolders");
-            this.tpWatchFolders.Name = "tpWatchFolders";
-            //
-            // btnWatchFolderEdit
-            //
-            resources.ApplyResources(this.btnWatchFolderEdit, "btnWatchFolderEdit");
-            this.btnWatchFolderEdit.Name = "btnWatchFolderEdit";
-            this.btnWatchFolderEdit.UseVisualStyleBackColor = true;
-            this.btnWatchFolderEdit.Click += new System.EventHandler(this.btnWatchFolderEdit_Click);
-            //
-            // cbWatchFolderEnabled
-            //
-            resources.ApplyResources(this.cbWatchFolderEnabled, "cbWatchFolderEnabled");
-            this.cbWatchFolderEnabled.Name = "cbWatchFolderEnabled";
-            this.cbWatchFolderEnabled.UseVisualStyleBackColor = true;
-            this.cbWatchFolderEnabled.CheckedChanged += new System.EventHandler(this.cbWatchFolderEnabled_CheckedChanged);
-            //
-            // lvWatchFolderList
-            //
-            resources.ApplyResources(this.lvWatchFolderList, "lvWatchFolderList");
-            this.lvWatchFolderList.AutoFillColumn = true;
-            this.lvWatchFolderList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.chWatchFolderFolderPath,
-            this.chWatchFolderFilter,
-            this.chWatchFolderIncludeSubdirectories});
-            this.lvWatchFolderList.FullRowSelect = true;
-            this.lvWatchFolderList.HideSelection = false;
-            this.lvWatchFolderList.Name = "lvWatchFolderList";
-            this.lvWatchFolderList.UseCompatibleStateImageBehavior = false;
-            this.lvWatchFolderList.View = System.Windows.Forms.View.Details;
-            this.lvWatchFolderList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvWatchFolderList_MouseDoubleClick);
-            //
-            // chWatchFolderFolderPath
-            //
-            resources.ApplyResources(this.chWatchFolderFolderPath, "chWatchFolderFolderPath");
-            //
-            // chWatchFolderFilter
-            //
-            resources.ApplyResources(this.chWatchFolderFilter, "chWatchFolderFilter");
-            //
-            // chWatchFolderIncludeSubdirectories
-            //
-            resources.ApplyResources(this.chWatchFolderIncludeSubdirectories, "chWatchFolderIncludeSubdirectories");
-            //
-            // btnWatchFolderRemove
-            //
-            resources.ApplyResources(this.btnWatchFolderRemove, "btnWatchFolderRemove");
-            this.btnWatchFolderRemove.Name = "btnWatchFolderRemove";
-            this.btnWatchFolderRemove.UseVisualStyleBackColor = true;
-            this.btnWatchFolderRemove.Click += new System.EventHandler(this.btnWatchFolderRemove_Click);
-            //
-            // btnWatchFolderAdd
-            //
-            resources.ApplyResources(this.btnWatchFolderAdd, "btnWatchFolderAdd");
-            this.btnWatchFolderAdd.Name = "btnWatchFolderAdd";
-            this.btnWatchFolderAdd.UseVisualStyleBackColor = true;
-            this.btnWatchFolderAdd.Click += new System.EventHandler(this.btnWatchFolderAdd_Click);
-            //
             // tpTools
             //
             this.tpTools.BackColor = System.Drawing.SystemColors.Window;
@@ -2453,8 +2376,6 @@ namespace ShareNot.Forms
             this.tpActions.PerformLayout();
             this.pActions.ResumeLayout(false);
             this.pActions.PerformLayout();
-            this.tpWatchFolders.ResumeLayout(false);
-            this.tpWatchFolders.PerformLayout();
             this.tpTools.ResumeLayout(false);
             this.tpTools.PerformLayout();
             this.pTools.ResumeLayout(false);
@@ -2533,14 +2454,6 @@ namespace ShareNot.Forms
         private System.Windows.Forms.NumericUpDown nudGIFFPS;
         private System.Windows.Forms.NumericUpDown nudScreenRecorderDuration;
         private System.Windows.Forms.Label lblGIFFPS;
-        private System.Windows.Forms.TabPage tpWatchFolders;
-        private System.Windows.Forms.CheckBox cbWatchFolderEnabled;
-        private MyListView lvWatchFolderList;
-        private System.Windows.Forms.ColumnHeader chWatchFolderFolderPath;
-        private System.Windows.Forms.ColumnHeader chWatchFolderFilter;
-        private System.Windows.Forms.ColumnHeader chWatchFolderIncludeSubdirectories;
-        private System.Windows.Forms.Button btnWatchFolderRemove;
-        private System.Windows.Forms.Button btnWatchFolderAdd;
         private System.Windows.Forms.TabPage tpGeneral;
         private System.Windows.Forms.CheckBox cbPlaySoundAfterCapture;
         private System.Windows.Forms.CheckBox cbPlaySoundAfterUpload;
@@ -2640,7 +2553,6 @@ namespace ShareNot.Forms
         private System.Windows.Forms.Label lblToolsScreenColorPickerFormat;
         private System.Windows.Forms.ComboBox cbImagePNGBitDepth;
         private System.Windows.Forms.Label lblImagePNGBitDepth;
-        private System.Windows.Forms.Button btnWatchFolderEdit;
         private System.Windows.Forms.CheckBox cbScreenRecordConfirmAbort;
         private System.Windows.Forms.CheckBox cbScreenRecordTwoPassEncoding;
         private System.Windows.Forms.TabPage tpOCR;

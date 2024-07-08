@@ -300,15 +300,6 @@ namespace ShareNot.Forms
 
             DebugHelper.WriteLine("HotkeyManager started.");
 
-            if (Program.WatchFolderManager == null)
-            {
-                Program.WatchFolderManager = new WatchFolderManager();
-            }
-
-            Program.WatchFolderManager.UpdateWatchFolders();
-
-            DebugHelper.WriteLine("WatchFolderManager started.");
-
             UpdateWorkflowsMenu();
 
             if (pHotkeys.Visible)

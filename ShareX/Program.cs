@@ -134,7 +134,6 @@ namespace ShareNot
         internal static MainForm MainForm { get; private set; }
         internal static Stopwatch StartTimer { get; private set; }
         internal static HotkeyManager HotkeyManager { get; set; }
-        internal static WatchFolderManager WatchFolderManager { get; set; }
         internal static ShareXUpdateManager UpdateManager { get; private set; }
         internal static ShareXCLIManager CLI { get; private set; }
 
@@ -379,7 +378,6 @@ namespace ShareNot
 
                 DebugHelper.WriteLine("ShareNot closing.");
 
-                WatchFolderManager?.Dispose();
                 SettingManager.SaveAllSettings();
 
                 DebugHelper.WriteLine("ShareNot closed.");

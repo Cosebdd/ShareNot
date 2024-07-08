@@ -416,24 +416,6 @@ namespace ShareNot.Forms
 
             #endregion Actions
 
-            #region Watch folders
-
-            cbWatchFolderEnabled.Checked = TaskSettings.WatchFolderEnabled;
-
-            if (TaskSettings.WatchFolderList == null)
-            {
-                TaskSettings.WatchFolderList = new List<WatchFolderSettings>();
-            }
-            else
-            {
-                foreach (WatchFolderSettings watchFolder in TaskSettings.WatchFolderList)
-                {
-                    WatchFolderAdd(watchFolder);
-                }
-            }
-
-            #endregion Watch folders
-
             #region Tools
 
             CodeMenu.Create<CodeMenuEntryPixelInfo>(txtToolsScreenColorPickerFormat);
@@ -1484,90 +1466,6 @@ namespace ShareNot.Forms
         }
 
         #endregion Actions
-
-        #region Watch folders
-
-        private void WatchFolderAdd(WatchFolderSettings watchFolderSetting)
-        {
-            if (Program.WatchFolderManager != null && watchFolderSetting != null)
-            {
-                Program.WatchFolderManager.AddWatchFolder(watchFolderSetting, TaskSettings);
-
-                ListViewItem lvi = new ListViewItem(watchFolderSetting.FolderPath ?? "");
-                lvi.Tag = watchFolderSetting;
-                lvi.SubItems.Add(watchFolderSetting.Filter ?? "");
-                lvi.SubItems.Add(watchFolderSetting.IncludeSubdirectories.ToString());
-                lvWatchFolderList.Items.Add(lvi);
-            }
-        }
-
-        private void WatchFolderEditSelected()
-        {
-            if (lvWatchFolderList.SelectedItems.Count > 0)
-            {
-                ListViewItem lvi = lvWatchFolderList.SelectedItems[0];
-                WatchFolderSettings watchFolder = lvi.Tag as WatchFolderSettings;
-
-                using (WatchFolderForm form = new WatchFolderForm(watchFolder))
-                {
-                    if (form.ShowDialog() == DialogResult.OK)
-                    {
-                        lvi.Text = watchFolder.FolderPath ?? "";
-                        lvi.SubItems[1].Text = watchFolder.Filter ?? "";
-                        lvi.SubItems[2].Text = watchFolder.IncludeSubdirectories.ToString();
-
-                        Program.WatchFolderManager.UpdateWatchFolderState(watchFolder);
-                    }
-                }
-            }
-        }
-
-        private void cbWatchFolderEnabled_CheckedChanged(object sender, EventArgs e)
-        {
-            if (loaded)
-            {
-                TaskSettings.WatchFolderEnabled = cbWatchFolderEnabled.Checked;
-
-                foreach (WatchFolderSettings watchFolderSetting in TaskSettings.WatchFolderList)
-                {
-                    Program.WatchFolderManager.UpdateWatchFolderState(watchFolderSetting);
-                }
-            }
-        }
-
-        private void btnWatchFolderAdd_Click(object sender, EventArgs e)
-        {
-            using (WatchFolderForm form = new WatchFolderForm())
-            {
-                if (form.ShowDialog() == DialogResult.OK)
-                {
-                    WatchFolderAdd(form.WatchFolder);
-                }
-            }
-        }
-
-        private void btnWatchFolderEdit_Click(object sender, EventArgs e)
-        {
-            WatchFolderEditSelected();
-        }
-
-        private void btnWatchFolderRemove_Click(object sender, EventArgs e)
-        {
-            if (lvWatchFolderList.SelectedItems.Count > 0)
-            {
-                ListViewItem lvi = lvWatchFolderList.SelectedItems[0];
-                WatchFolderSettings watchFolderSetting = lvi.Tag as WatchFolderSettings;
-                Program.WatchFolderManager.RemoveWatchFolder(watchFolderSetting);
-                lvWatchFolderList.Items.Remove(lvi);
-            }
-        }
-
-        private void lvWatchFolderList_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            WatchFolderEditSelected();
-        }
-
-        #endregion Watch folders
 
         #region Tools
 

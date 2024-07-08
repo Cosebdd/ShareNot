@@ -139,9 +139,6 @@ namespace ShareNot
         public bool UseDefaultAdvancedSettings = true;
         public TaskSettingsAdvanced AdvancedSettings = new TaskSettingsAdvanced();
 
-        public bool WatchFolderEnabled = false;
-        public List<WatchFolderSettings> WatchFolderList = new List<WatchFolderSettings>();
-
         public override string ToString()
         {
             return !string.IsNullOrEmpty(Description) ? Description : Job.GetLocalizedDescription();
@@ -153,7 +150,7 @@ namespace ShareNot
             {
                 return UseDefaultAfterCaptureJob && UseDefaultAfterUploadJob && UseDefaultDestinations && !OverrideCustomUploader &&
                     !OverrideScreenshotsFolder && UseDefaultGeneralSettings && UseDefaultImageSettings && UseDefaultCaptureSettings && UseDefaultUploadSettings &&
-                    UseDefaultActions && UseDefaultToolsSettings && UseDefaultAdvancedSettings && !WatchFolderEnabled;
+                    UseDefaultActions && UseDefaultToolsSettings && UseDefaultAdvancedSettings;
             }
         }
 
