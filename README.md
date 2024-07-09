@@ -4,7 +4,7 @@
 <div align="center">
   <a href="./LICENSE.txt"><img src="https://img.shields.io/github/license/Cosebdd/ShareNot?label=License&color=brightgreen&cacheSeconds=3600" alt="License"/></a>
   <a href="https://github.com/Cosebdd/ShareNot/releases/latest"><img src="https://img.shields.io/github/v/release/Cosebdd/ShareNot?label=Release&color=brightgreen&cacheSeconds=3600" alt="Release"/></a>
-  <a href="https://getsharex.com/downloads"><img src="https://img.shields.io/github/downloads/Cosebdd/ShareNot/total?label=Downloads&cacheSeconds=3600" alt="Downloads"/></a>
+  <a href="https://github.com/Cosebdd/ShareNot/releases"><img src="https://img.shields.io/github/downloads/Cosebdd/ShareNot/total?label=Downloads&cacheSeconds=3600" alt="Downloads"/></a>
 </div>
 
 ## Why ShareNot?
