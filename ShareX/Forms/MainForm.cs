@@ -104,37 +104,6 @@ namespace ShareNot.Forms
                 tsddbAfterCaptureTasks, tsmiTrayAfterCaptureTasks);
             tsddbAfterCaptureTasks.DropDownOpening += TsddbAfterCaptureTasks_DropDownOpening;
             tsmiTrayAfterCaptureTasks.DropDownOpening += TsmiTrayAfterCaptureTasks_DropDownOpening;
-            AddEnumItems<ImageDestination>(x =>
-            {
-                Program.DefaultTaskSettings.ImageDestination = x;
-
-                if (x == ImageDestination.FileUploader)
-                {
-                    SetEnumChecked(Program.DefaultTaskSettings.ImageFileDestination);
-                }
-            });
-            AddEnumItems<FileDestination>(x =>
-            {
-                Program.DefaultTaskSettings.ImageFileDestination = x;
-            });
-            AddEnumItems<TextDestination>(x =>
-            {
-                Program.DefaultTaskSettings.TextDestination = x;
-
-                if (x == TextDestination.FileUploader)
-                {
-                    SetEnumChecked(Program.DefaultTaskSettings.TextFileDestination);
-                }
-                else
-                {
-                    Uncheck();
-                }
-            });
-            AddEnumItems<FileDestination>(x =>
-            {
-                Program.DefaultTaskSettings.TextFileDestination = x;
-            });
-            AddEnumItems<FileDestination>(x => Program.DefaultTaskSettings.FileDestination = x);
 
             lvUploads.SupportCustomTheme();
 
@@ -520,18 +489,6 @@ namespace ShareNot.Forms
             }
         }
 
-        private void EnableDisableToolStripMenuItems<T>(params ToolStripDropDownItem[] parents)
-        {
-            foreach (ToolStripDropDownItem parent in parents)
-            {
-                for (int i = 0; i < parent.DropDownItems.Count; i++)
-                {
-                    parent.DropDownItems[i].ForeColor = UploadersConfigValidator.Validate<T>(i, Program.UploadersConfig) ?
-                        SystemColors.ControlText : Color.FromArgb(200, 0, 0);
-                }
-            }
-        }
-
         private void UpdateInfoManager()
         {
             cmsTaskInfo.SuspendLayout();
@@ -847,35 +804,6 @@ namespace ShareNot.Forms
         public void UpdateCheckStates()
         {
             SetMultiEnumChecked(Program.DefaultTaskSettings.AfterCaptureJob, tsddbAfterCaptureTasks, tsmiTrayAfterCaptureTasks);
-            SetEnumChecked(Program.DefaultTaskSettings.ImageDestination);
-            SetImageFileDestinationChecked(Program.DefaultTaskSettings.ImageDestination, Program.DefaultTaskSettings.ImageFileDestination);
-            SetEnumChecked(Program.DefaultTaskSettings.TextDestination);
-            SetTextFileDestinationChecked(Program.DefaultTaskSettings.TextDestination, Program.DefaultTaskSettings.TextFileDestination);
-            SetEnumChecked(Program.DefaultTaskSettings.FileDestination);
-        }
-
-        public static void SetTextFileDestinationChecked(TextDestination textDestination, FileDestination textFileDestination, params ToolStripDropDownItem[] lists)
-        {
-            if (textDestination == TextDestination.FileUploader)
-            {
-                SetEnumChecked(textFileDestination, lists);
-            }
-            else
-            {
-                Uncheck(lists);
-            }
-        }
-
-        public static void SetImageFileDestinationChecked(ImageDestination imageDestination, FileDestination imageFileDestination, params ToolStripDropDownItem[] lists)
-        {
-            if (imageDestination == ImageDestination.FileUploader)
-            {
-                SetEnumChecked(imageFileDestination, lists);
-            }
-            else
-            {
-                Uncheck(lists);
-            }
         }
 
         private WorkerTask[] GetSelectedTasks()

@@ -76,12 +76,6 @@ namespace ShareNot
         {
             get
             {
-                if ((DataType == EDataType.Image && TaskSettings.ImageDestination == ImageDestination.FileUploader) ||
-                    (DataType == EDataType.Text && TaskSettings.TextDestination == TextDestination.FileUploader))
-                {
-                    return EDataType.File;
-                }
-
                 return DataType;
             }
         }

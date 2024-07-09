@@ -31,8 +31,6 @@ namespace ShareNot.UploadersLib.Helpers
     {
         public EDataType DataType { get; set; }
         public bool StopRequested { get; set; }
-        public bool OverrideCustomUploader { get; set; }
-        public int CustomUploaderIndex { get; set; }
         public string TextFormat { get; set; }
     }
 }

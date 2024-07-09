@@ -50,9 +50,6 @@ namespace ShareNot.Forms
             imageList.Images.Add(Resources.checkbox_uncheck);
             imageList.Images.Add(Resources.checkbox_check);
             lvAfterCaptureTasks.SmallImageList = imageList;
-            lvAfterUploadTasks.SmallImageList = imageList;
-
-            ucBeforeUpload.InitCapture(TaskSettings);
 
             AddAfterCaptureItems(TaskSettings.AfterCaptureJob);
         }
@@ -153,24 +150,6 @@ namespace ShareNot.Forms
             if (e.Button == MouseButtons.Left)
             {
                 ListViewItem lvi = lvAfterCaptureTasks.GetItemAt(e.X, e.Y);
-
-                if (lvi != null)
-                {
-                    CheckItem(lvi, !IsChecked(lvi));
-                }
-            }
-        }
-
-        private void lvAfterUploadTasks_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
-        {
-            e.Item.Selected = false;
-        }
-
-        private void lvAfterUploadTasks_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                ListViewItem lvi = lvAfterUploadTasks.GetItemAt(e.X, e.Y);
 
                 if (lvi != null)
                 {

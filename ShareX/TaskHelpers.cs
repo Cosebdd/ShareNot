@@ -60,9 +60,6 @@ using ShareNot.ScreenCaptureLib.Forms;
 using ShareNot.Tools.BorderlessWindow;
 using ShareNot.Tools.OCR;
 using ShareNot.Tools.PinToScreen;
-using ShareNot.UploadersLib;
-using ShareNot.UploadersLib.CustomUploader;
-using ShareNot.UploadersLib.Forms;
 using ZXing;
 using ZXing.Common;
 using ZXing.QrCode;
@@ -1695,86 +1692,6 @@ namespace ShareNot
             };
 
             return screenshot;
-        }
-
-        public static void ImportCustomUploader(string filePath)
-        {
-            if (Program.UploadersConfig != null)
-            {
-                try
-                {
-                    CustomUploaderItem cui = JsonHelpers.DeserializeFromFile<CustomUploaderItem>(filePath);
-
-                    if (cui != null)
-                    {
-                        bool activate = false;
-
-                        if (cui.DestinationType == CustomUploaderDestinationType.None)
-                        {
-                            DialogResult result = MessageBox.Show($"Would you like to add \"{cui}\" custom uploader?",
-                                "ShareNot - Custom uploader confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-
-                            if (result == DialogResult.No)
-                            {
-                                return;
-                            }
-                        }
-                        else
-                        {
-                            List<string> destinations = new List<string>();
-                            if (cui.DestinationType.HasFlag(CustomUploaderDestinationType.ImageUploader)) destinations.Add("images");
-                            if (cui.DestinationType.HasFlag(CustomUploaderDestinationType.TextUploader)) destinations.Add("texts");
-                            if (cui.DestinationType.HasFlag(CustomUploaderDestinationType.FileUploader)) destinations.Add("files");
-
-                            string destinationsText = string.Join("/", destinations);
-
-                            DialogResult result = MessageBox.Show($"Would you like to set \"{cui}\" as the active custom uploader for {destinationsText}?",
-                                "ShareNot - Custom uploader confirmation", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-
-                            if (result == DialogResult.Yes)
-                            {
-                                activate = true;
-                            }
-                            else if (result == DialogResult.Cancel)
-                            {
-                                return;
-                            }
-                        }
-
-                        Program.UploadersConfig.CustomUploadersList.Add(cui);
-
-                        if (activate)
-                        {
-                            int index = Program.UploadersConfig.CustomUploadersList.Count - 1;
-
-                            if (cui.DestinationType.HasFlag(CustomUploaderDestinationType.ImageUploader))
-                            {
-                                Program.UploadersConfig.CustomImageUploaderSelected = index;
-                                Program.DefaultTaskSettings.ImageDestination = ImageDestination.CustomImageUploader;
-                            }
-
-                            if (cui.DestinationType.HasFlag(CustomUploaderDestinationType.TextUploader))
-                            {
-                                Program.UploadersConfig.CustomTextUploaderSelected = index;
-                                Program.DefaultTaskSettings.TextDestination = TextDestination.CustomTextUploader;
-                            }
-
-                            if (cui.DestinationType.HasFlag(CustomUploaderDestinationType.FileUploader))
-                            {
-                                Program.UploadersConfig.CustomFileUploaderSelected = index;
-                                Program.DefaultTaskSettings.FileDestination = FileDestination.CustomFileUploader;
-                            }
-
-                            Program.MainForm.UpdateCheckStates();
-                        }
-                    }
-                }
-                catch (Exception e)
-                {
-                    DebugHelper.WriteException(e);
-                    e.ShowError();
-                }
-            }
         }
 
         public static void ImportImageEffect(string filePath)

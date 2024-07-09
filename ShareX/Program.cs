@@ -38,8 +38,6 @@ using ShareNot.HelpersLib.Extensions;
 using ShareNot.HelpersLib.Forms;
 using ShareNot.HelpersLib.Helpers;
 using ShareNot.Properties;
-using ShareNot.UploadersLib;
-using ShareNot.UploadersLib.BaseUploaders;
 #if MicrosoftStore
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
@@ -128,7 +126,6 @@ namespace ShareNot
 
         internal static ApplicationConfig Settings { get; set; }
         internal static TaskSettings DefaultTaskSettings { get; set; }
-        internal static UploadersConfig UploadersConfig { get; set; }
         internal static HotkeysConfig HotkeysConfig { get; set; }
 
         internal static MainForm MainForm { get; private set; }
@@ -355,7 +352,6 @@ namespace ShareNot
 
             SettingManager.LoadInitialSettings();
 
-            Uploader.UpdateServicePointManager();
             UpdateManager = new ShareXUpdateManager();
             LanguageHelper.ChangeLanguage(Settings.Language);
             CleanupManager.CleanupAsync();

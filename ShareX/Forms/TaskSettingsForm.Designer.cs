@@ -33,9 +33,7 @@ namespace ShareNot.Forms
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaskSettingsForm));
             this.cmsAfterCapture = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.cmsAfterUpload = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cbOverrideAfterCaptureSettings = new System.Windows.Forms.CheckBox();
-            this.cbOverrideDestinationSettings = new System.Windows.Forms.CheckBox();
             this.lblDescription = new System.Windows.Forms.Label();
             this.tbDescription = new System.Windows.Forms.TextBox();
             this.cmsTask = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -45,14 +43,7 @@ namespace ShareNot.Forms
             this.btnScreenshotsFolderBrowse = new System.Windows.Forms.Button();
             this.txtScreenshotsFolder = new System.Windows.Forms.TextBox();
             this.cbOverrideScreenshotsFolder = new System.Windows.Forms.CheckBox();
-            this.cbCustomUploaders = new System.Windows.Forms.ComboBox();
-            this.cbOverrideCustomUploader = new System.Windows.Forms.CheckBox();
             this.btnAfterCapture = new MenuButton();
-            this.btnDestinations = new MenuButton();
-            this.cmsDestinations = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tsmiImageUploaders = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiTextUploaders = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiFileUploaders = new System.Windows.Forms.ToolStripMenuItem();
             this.btnTask = new MenuButton();
             this.tpGeneral = new System.Windows.Forms.TabPage();
             this.tcGeneral = new System.Windows.Forms.TabControl();
@@ -265,7 +256,6 @@ namespace ShareNot.Forms
             this.lblRegionCaptureBackgroundDimStrengthHint = new System.Windows.Forms.Label();
             this.tcTaskSettings.SuspendLayout();
             this.tpTask.SuspendLayout();
-            this.cmsDestinations.SuspendLayout();
             this.tpGeneral.SuspendLayout();
             this.tcGeneral.SuspendLayout();
             this.tpGeneralMain.SuspendLayout();
@@ -326,24 +316,12 @@ namespace ShareNot.Forms
             this.cmsAfterCapture.Name = "cmsAfterCapture";
             resources.ApplyResources(this.cmsAfterCapture, "cmsAfterCapture");
             //
-            // cmsAfterUpload
-            //
-            this.cmsAfterUpload.Name = "cmsAfterCapture";
-            resources.ApplyResources(this.cmsAfterUpload, "cmsAfterUpload");
-            //
             // cbOverrideAfterCaptureSettings
             //
             resources.ApplyResources(this.cbOverrideAfterCaptureSettings, "cbOverrideAfterCaptureSettings");
             this.cbOverrideAfterCaptureSettings.Name = "cbOverrideAfterCaptureSettings";
             this.cbOverrideAfterCaptureSettings.UseVisualStyleBackColor = true;
             this.cbOverrideAfterCaptureSettings.CheckedChanged += new System.EventHandler(this.cbUseDefaultAfterCaptureSettings_CheckedChanged);
-            //
-            // cbOverrideDestinationSettings
-            //
-            resources.ApplyResources(this.cbOverrideDestinationSettings, "cbOverrideDestinationSettings");
-            this.cbOverrideDestinationSettings.Name = "cbOverrideDestinationSettings";
-            this.cbOverrideDestinationSettings.UseVisualStyleBackColor = true;
-            this.cbOverrideDestinationSettings.CheckedChanged += new System.EventHandler(this.cbUseDefaultDestinationSettings_CheckedChanged);
             //
             // lblDescription
             //
@@ -381,14 +359,10 @@ namespace ShareNot.Forms
             this.tpTask.Controls.Add(this.btnScreenshotsFolderBrowse);
             this.tpTask.Controls.Add(this.txtScreenshotsFolder);
             this.tpTask.Controls.Add(this.cbOverrideScreenshotsFolder);
-            this.tpTask.Controls.Add(this.cbCustomUploaders);
-            this.tpTask.Controls.Add(this.cbOverrideCustomUploader);
             this.tpTask.Controls.Add(this.tbDescription);
             this.tpTask.Controls.Add(this.btnAfterCapture);
-            this.tpTask.Controls.Add(this.btnDestinations);
             this.tpTask.Controls.Add(this.cbOverrideAfterCaptureSettings);
             this.tpTask.Controls.Add(this.btnTask);
-            this.tpTask.Controls.Add(this.cbOverrideDestinationSettings);
             this.tpTask.Controls.Add(this.lblDescription);
             resources.ApplyResources(this.tpTask, "tpTask");
             this.tpTask.Name = "tpTask";
@@ -418,21 +392,6 @@ namespace ShareNot.Forms
             this.cbOverrideScreenshotsFolder.UseVisualStyleBackColor = true;
             this.cbOverrideScreenshotsFolder.CheckedChanged += new System.EventHandler(this.cbOverrideScreenshotsFolder_CheckedChanged);
             //
-            // cbCustomUploaders
-            //
-            this.cbCustomUploaders.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCustomUploaders.FormattingEnabled = true;
-            resources.ApplyResources(this.cbCustomUploaders, "cbCustomUploaders");
-            this.cbCustomUploaders.Name = "cbCustomUploaders";
-            this.cbCustomUploaders.SelectedIndexChanged += new System.EventHandler(this.cbCustomUploaders_SelectedIndexChanged);
-            //
-            // cbOverrideCustomUploader
-            //
-            resources.ApplyResources(this.cbOverrideCustomUploader, "cbOverrideCustomUploader");
-            this.cbOverrideCustomUploader.Name = "cbOverrideCustomUploader";
-            this.cbOverrideCustomUploader.UseVisualStyleBackColor = true;
-            this.cbOverrideCustomUploader.CheckedChanged += new System.EventHandler(this.cbOverrideCustomUploader_CheckedChanged);
-            //
             // btnAfterCapture
             //
             resources.ApplyResources(this.btnAfterCapture, "btnAfterCapture");
@@ -440,41 +399,6 @@ namespace ShareNot.Forms
             this.btnAfterCapture.Name = "btnAfterCapture";
             this.btnAfterCapture.UseMnemonic = false;
             this.btnAfterCapture.UseVisualStyleBackColor = true;
-            //
-            // btnDestinations
-            //
-            resources.ApplyResources(this.btnDestinations, "btnDestinations");
-            this.btnDestinations.Menu = this.cmsDestinations;
-            this.btnDestinations.Name = "btnDestinations";
-            this.btnDestinations.UseMnemonic = false;
-            this.btnDestinations.UseVisualStyleBackColor = true;
-            //
-            // cmsDestinations
-            //
-            this.cmsDestinations.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiImageUploaders,
-            this.tsmiTextUploaders,
-            this.tsmiFileUploaders});
-            this.cmsDestinations.Name = "cmsDestinations";
-            resources.ApplyResources(this.cmsDestinations, "cmsDestinations");
-            //
-            // tsmiImageUploaders
-            //
-            this.tsmiImageUploaders.Image = global::ShareNot.Properties.Resources.image;
-            this.tsmiImageUploaders.Name = "tsmiImageUploaders";
-            resources.ApplyResources(this.tsmiImageUploaders, "tsmiImageUploaders");
-            //
-            // tsmiTextUploaders
-            //
-            this.tsmiTextUploaders.Image = global::ShareNot.Properties.Resources.notebook;
-            this.tsmiTextUploaders.Name = "tsmiTextUploaders";
-            resources.ApplyResources(this.tsmiTextUploaders, "tsmiTextUploaders");
-            //
-            // tsmiFileUploaders
-            //
-            this.tsmiFileUploaders.Image = global::ShareNot.Properties.Resources.application_block;
-            this.tsmiFileUploaders.Name = "tsmiFileUploaders";
-            resources.ApplyResources(this.tsmiFileUploaders, "tsmiFileUploaders");
             //
             // btnTask
             //
@@ -2290,7 +2214,6 @@ namespace ShareNot.Forms
             this.tcTaskSettings.ResumeLayout(false);
             this.tpTask.ResumeLayout(false);
             this.tpTask.PerformLayout();
-            this.cmsDestinations.ResumeLayout(false);
             this.tpGeneral.ResumeLayout(false);
             this.tcGeneral.ResumeLayout(false);
             this.tpGeneralMain.ResumeLayout(false);
@@ -2372,10 +2295,7 @@ namespace ShareNot.Forms
 
         private MenuButton btnAfterCapture;
         private System.Windows.Forms.ContextMenuStrip cmsAfterCapture;
-        private MenuButton btnDestinations;
-        private System.Windows.Forms.ContextMenuStrip cmsAfterUpload;
         private System.Windows.Forms.CheckBox cbOverrideAfterCaptureSettings;
-        private System.Windows.Forms.CheckBox cbOverrideDestinationSettings;
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.TextBox tbDescription;
         private MenuButton btnTask;
@@ -2442,10 +2362,6 @@ namespace ShareNot.Forms
         private System.Windows.Forms.Button btnImageEffects;
         private System.Windows.Forms.CheckBox cbImageEffectOnlyRegionCapture;
         private System.Windows.Forms.CheckBox cbShowImageEffectsWindowAfterCapture;
-        private System.Windows.Forms.ContextMenuStrip cmsDestinations;
-        private System.Windows.Forms.ToolStripMenuItem tsmiImageUploaders;
-        private System.Windows.Forms.ToolStripMenuItem tsmiTextUploaders;
-        private System.Windows.Forms.ToolStripMenuItem tsmiFileUploaders;
         private System.Windows.Forms.ComboBox cbImageFileExist;
         private System.Windows.Forms.Label lblImageFileExist;
         private System.Windows.Forms.TabPage tpThumbnail;
@@ -2469,8 +2385,6 @@ namespace ShareNot.Forms
         private TabToTreeView tttvMain;
         private System.Windows.Forms.Panel pImage;
         private System.Windows.Forms.Panel pCapture;
-        private System.Windows.Forms.ComboBox cbCustomUploaders;
-        private System.Windows.Forms.CheckBox cbOverrideCustomUploader;
         private System.Windows.Forms.Button btnScreenRecorderFFmpegOptions;
         private System.Windows.Forms.ComboBox cbNameFormatTimeZone;
         private System.Windows.Forms.CheckBox cbNameFormatCustomTimeZone;

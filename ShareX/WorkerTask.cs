@@ -30,7 +30,6 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
 using ShareNot.Forms;
@@ -41,8 +40,6 @@ using ShareNot.HelpersLib.Helpers;
 using ShareNot.HelpersLib.Native;
 using ShareNot.Properties;
 using ShareNot.UploadersLib;
-using ShareNot.UploadersLib.BaseServices;
-using ShareNot.UploadersLib.BaseUploaders;
 using ShareNot.UploadersLib.Helpers;
 
 namespace ShareNot
@@ -51,9 +48,7 @@ namespace ShareNot
     {
         public delegate void TaskEventHandler(WorkerTask task);
         public delegate void TaskImageEventHandler(WorkerTask task, Bitmap image);
-        public delegate void UploaderServiceEventHandler(IUploaderService uploaderService);
-
-        public event TaskEventHandler StatusChanged, UploadStarted, UploadProgressChanged, UploadCompleted, TaskCompleted;
+        public event TaskEventHandler StatusChanged, TaskCompleted;
         public event TaskImageEventHandler ImageReady;
 
         public TaskInfo Info { get; private set; }
@@ -68,7 +63,6 @@ namespace ShareNot
         public string Text { get; private set; }
 
         private ThreadWorker threadWorker;
-        private GenericUploader uploader;
         private TaskReferenceHelper taskReferenceHelper;
 
         #region Constructors
@@ -172,7 +166,6 @@ namespace ShareNot
                     break;
                 case TaskStatus.Preparing:
                 case TaskStatus.Working:
-                    if (uploader != null) uploader.StopUpload();
                     Status = TaskStatus.Stopping;
                     Info.Status = Resources.UploadTask_Stop_Stopping;
                     OnStatusChanged();
@@ -219,8 +212,6 @@ namespace ShareNot
             taskReferenceHelper = new TaskReferenceHelper()
             {
                 DataType = Info.DataType,
-                OverrideCustomUploader = Info.TaskSettings.OverrideCustomUploader,
-                CustomUploaderIndex = Info.TaskSettings.CustomUploaderIndex,
                 TextFormat = Info.TaskSettings.AdvancedSettings.TextFormat
             };
         }
@@ -253,8 +244,6 @@ namespace ShareNot
 
             if (!StopRequested)
             {
-                SettingManager.WaitUploadersConfig();
-
                 Status = TaskStatus.Working;
                 Info.Status = Resources.UploadTask_DoUploadJob_Uploading;
 
@@ -264,8 +253,6 @@ namespace ShareNot
 
                 if (!cancelUpload)
                 {
-                    OnUploadStarted();
-
                     bool isError = DoUpload(Data, Info.FileName);
 
                     if (isError && Program.Settings.MaxUploadFailRetry > 0)
@@ -275,11 +262,6 @@ namespace ShareNot
                             DebugHelper.WriteLine("Upload failed. Retrying upload.");
                             isError = DoUpload(Data, Info.FileName, retry);
                         }
-                    }
-
-                    if (!isError)
-                    {
-                        OnUploadCompleted();
                     }
                 }
             }
@@ -326,25 +308,10 @@ namespace ShareNot
                     Info.Result = new UploadResult();
                 }
 
-                if (uploader != null)
-                {
-                    AddErrorMessage(uploader.Errors);
-                }
-
                 isError |= Info.Result.IsError;
             }
 
             return isError;
-        }
-
-        private void AddErrorMessage(UploaderErrorManager errors)
-        {
-            if (Info.Result == null)
-            {
-                Info.Result = new UploadResult();
-            }
-
-            Info.Result.Errors.Add(errors);
         }
 
         private void AddErrorMessage(string error)
@@ -606,68 +573,6 @@ namespace ShareNot
             Data = new MemoryStream(byteArray);
         }
 
-        public UploadResult UploadData(IGenericUploaderService service, Stream stream, string fileName)
-        {
-            if (!service.CheckConfig(Program.UploadersConfig))
-            {
-                return GetInvalidConfigResult(service);
-            }
-
-            uploader = service.CreateUploader(Program.UploadersConfig, taskReferenceHelper);
-
-            if (uploader != null)
-            {
-                uploader.Errors.DefaultTitle = service.ServiceName + " " + "error";
-                uploader.BufferSize = (int)Math.Pow(2, Program.Settings.BufferSizePower) * 1024;
-                uploader.ProgressChanged += uploader_ProgressChanged;
-
-                fileName = URLHelpers.RemoveBidiControlCharacters(fileName);
-
-                Info.UploadDuration = Stopwatch.StartNew();
-
-                UploadResult result = uploader.Upload(stream, fileName);
-
-                Info.UploadDuration.Stop();
-
-                return result;
-            }
-
-            return null;
-        }
-
-        public UploadResult UploadImage(Stream stream, string fileName)
-        {
-            ImageUploaderService service = UploaderFactory.ImageUploaderServices[Info.TaskSettings.ImageDestination];
-
-            return UploadData(service, stream, fileName);
-        }
-
-        public UploadResult UploadText(Stream stream, string fileName)
-        {
-            TextUploaderService service = UploaderFactory.TextUploaderServices[Info.TaskSettings.TextDestination];
-
-            return UploadData(service, stream, fileName);
-        }
-
-        public UploadResult UploadFile(Stream stream, string fileName)
-        {
-            FileUploaderService service = UploaderFactory.FileUploaderServices[Info.TaskSettings.GetFileDestinationByDataType(Info.DataType)];
-
-            return UploadData(service, stream, fileName);
-        }
-
-        private UploadResult GetInvalidConfigResult(IUploaderService uploaderService)
-        {
-            UploadResult ur = new UploadResult();
-
-            string message = string.Format(Resources.WorkerTask_GetInvalidConfigResult__0__configuration_is_invalid_or_missing__Please_check__Destination_settings__window_to_configure_it_,
-                uploaderService.ServiceName);
-            DebugHelper.WriteLine(message);
-            ur.Errors.Add(message);
-
-            return ur;
-        }
-
         private void DoOCR()
         {
             if (Image != null && Info.DataType == EDataType.Image)
@@ -696,16 +601,6 @@ namespace ShareNot
             OnTaskCompleted();
         }
 
-        private void uploader_ProgressChanged(ProgressManager progress)
-        {
-            if (progress != null)
-            {
-                Info.Progress = progress;
-
-                OnUploadProgressChanged();
-            }
-        }
-
         private void OnStatusChanged()
         {
             if (StatusChanged != null)
@@ -732,30 +627,6 @@ namespace ShareNot
                         ImageReady(this, image);
                     }
                 });
-            }
-        }
-
-        private void OnUploadStarted()
-        {
-            if (UploadStarted != null)
-            {
-                threadWorker.InvokeAsync(() => UploadStarted(this));
-            }
-        }
-
-        private void OnUploadCompleted()
-        {
-            if (UploadCompleted != null)
-            {
-                threadWorker.InvokeAsync(() => UploadCompleted(this));
-            }
-        }
-
-        private void OnUploadProgressChanged()
-        {
-            if (UploadProgressChanged != null)
-            {
-                threadWorker.InvokeAsync(() => UploadProgressChanged(this));
             }
         }
 

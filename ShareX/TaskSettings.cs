@@ -60,16 +60,6 @@ namespace ShareNot
         public bool UseDefaultAfterCaptureJob = true;
         public AfterCaptureTasks AfterCaptureJob = AfterCaptureTasks.CopyImageToClipboard | AfterCaptureTasks.SaveImageToFile;
 
-        public bool UseDefaultDestinations = true;
-        public ImageDestination ImageDestination = ImageDestination.CustomImageUploader;
-        public FileDestination ImageFileDestination = FileDestination.CustomFileUploader;
-        public TextDestination TextDestination = TextDestination.CustomTextUploader;
-        public FileDestination TextFileDestination = FileDestination.CustomFileUploader;
-        public FileDestination FileDestination = FileDestination.CustomFileUploader;
-
-        public bool OverrideCustomUploader = false;
-        public int CustomUploaderIndex = 0;
-
         public bool OverrideScreenshotsFolder = false;
         public string ScreenshotsFolder = "";
 
@@ -145,7 +135,7 @@ namespace ShareNot
         {
             get
             {
-                return UseDefaultAfterCaptureJob && UseDefaultDestinations && !OverrideCustomUploader &&
+                return UseDefaultAfterCaptureJob &&
                     !OverrideScreenshotsFolder && UseDefaultGeneralSettings && UseDefaultImageSettings && UseDefaultCaptureSettings && UseDefaultUploadSettings &&
                     UseDefaultActions && UseDefaultToolsSettings && UseDefaultAdvancedSettings;
             }
@@ -188,15 +178,6 @@ namespace ShareNot
                 if (UseDefaultAfterCaptureJob)
                 {
                     AfterCaptureJob = defaultTaskSettings.AfterCaptureJob;
-                }
-
-                if (UseDefaultDestinations)
-                {
-                    ImageDestination = defaultTaskSettings.ImageDestination;
-                    ImageFileDestination = defaultTaskSettings.ImageFileDestination;
-                    TextDestination = defaultTaskSettings.TextDestination;
-                    TextFileDestination = defaultTaskSettings.TextFileDestination;
-                    FileDestination = defaultTaskSettings.FileDestination;
                 }
 
                 if (UseDefaultGeneralSettings)
@@ -271,20 +252,6 @@ namespace ShareNot
             if (UseDefaultAdvancedSettings)
             {
                 AdvancedSettings = null;
-            }
-        }
-
-        public FileDestination GetFileDestinationByDataType(EDataType dataType)
-        {
-            switch (dataType)
-            {
-                case EDataType.Image:
-                    return ImageFileDestination;
-                case EDataType.Text:
-                    return TextFileDestination;
-                default:
-                case EDataType.File:
-                    return FileDestination;
             }
         }
     }

@@ -37,8 +37,6 @@ using ShareNot.HelpersLib.Zip;
 using ShareNot.HistoryLib;
 using ShareNot.Properties;
 using ShareNot.ScreenCaptureLib;
-using ShareNot.UploadersLib;
-using ShareNot.UploadersLib.CustomUploader;
 
 namespace ShareNot
 {
@@ -53,29 +51,6 @@ namespace ShareNot
                 if (Program.Sandbox) return null;
 
                 return Path.Combine(Program.PersonalFolder, ApplicationConfigFileName);
-            }
-        }
-
-        private const string UploadersConfigFileName = "UploadersConfig.json";
-
-        private static string UploadersConfigFilePath
-        {
-            get
-            {
-                if (Program.Sandbox) return null;
-
-                string uploadersConfigFolder;
-
-                if (Settings != null && !string.IsNullOrEmpty(Settings.CustomUploadersConfigPath))
-                {
-                    uploadersConfigFolder = FileHelpers.ExpandFolderVariables(Settings.CustomUploadersConfigPath);
-                }
-                else
-                {
-                    uploadersConfigFolder = Program.PersonalFolder;
-                }
-
-                return Path.Combine(uploadersConfigFolder, UploadersConfigFileName);
             }
         }
 
@@ -106,10 +81,8 @@ namespace ShareNot
 
         private static ApplicationConfig Settings { get => Program.Settings; set => Program.Settings = value; }
         private static TaskSettings DefaultTaskSettings { get => Program.DefaultTaskSettings; set => Program.DefaultTaskSettings = value; }
-        private static UploadersConfig UploadersConfig { get => Program.UploadersConfig; set => Program.UploadersConfig = value; }
         private static HotkeysConfig HotkeysConfig { get => Program.HotkeysConfig; set => Program.HotkeysConfig = value; }
 
-        private static ManualResetEvent uploadersConfigResetEvent = new ManualResetEvent(false);
         private static ManualResetEvent hotkeysConfigResetEvent = new ManualResetEvent(false);
 
         public static void LoadInitialSettings()
@@ -118,20 +91,9 @@ namespace ShareNot
 
             Task.Run(() =>
             {
-                LoadUploadersConfig();
-                uploadersConfigResetEvent.Set();
-
                 LoadHotkeysConfig();
                 hotkeysConfigResetEvent.Set();
             });
-        }
-
-        public static void WaitUploadersConfig()
-        {
-            if (UploadersConfig == null)
-            {
-                uploadersConfigResetEvent.WaitOne();
-            }
         }
 
         public static void WaitHotkeysConfig()
@@ -169,14 +131,6 @@ namespace ShareNot
             TaskHelpers.ShowNotificationTip(message, "ShareNot - " + Resources.FailedToSaveSettings, 5000);
         }
 
-        public static void LoadUploadersConfig(bool fallbackSupport = true)
-        {
-            UploadersConfig = UploadersConfig.Load(UploadersConfigFilePath, BackupFolder, fallbackSupport);
-            UploadersConfig.CreateBackup = true;
-            UploadersConfig.CreateWeeklyBackup = true;
-            UploadersConfig.SupportDPAPIEncryption = true;
-        }
-
         public static void LoadHotkeysConfig(bool fallbackSupport = true)
         {
             HotkeysConfig = HotkeysConfig.Load(HotkeysConfigFilePath, BackupFolder, fallbackSupport);
@@ -188,7 +142,6 @@ namespace ShareNot
         public static void LoadAllSettings()
         {
             LoadApplicationConfig();
-            LoadUploadersConfig();
             LoadHotkeysConfig();
         }
 
@@ -300,11 +253,6 @@ namespace ShareNot
                 Settings.Save(ApplicationConfigFilePath);
             }
 
-            if (UploadersConfig != null)
-            {
-                UploadersConfig.Save(UploadersConfigFilePath);
-            }
-
             if (HotkeysConfig != null)
             {
                 CleanupHotkeysConfig();
@@ -320,14 +268,6 @@ namespace ShareNot
             }
         }
 
-        public static void SaveUploadersConfigAsync()
-        {
-            if (UploadersConfig != null)
-            {
-                UploadersConfig.SaveAsync(UploadersConfigFilePath);
-            }
-        }
-
         public static void SaveHotkeysConfigAsync()
         {
             if (HotkeysConfig != null)
@@ -340,7 +280,6 @@ namespace ShareNot
         public static void SaveAllSettingsAsync()
         {
             SaveApplicationConfigAsync();
-            SaveUploadersConfigAsync();
             SaveHotkeysConfigAsync();
         }
 
@@ -349,16 +288,13 @@ namespace ShareNot
             if (File.Exists(ApplicationConfigFilePath)) File.Delete(ApplicationConfigFilePath);
             LoadApplicationConfig(false);
 
-            if (File.Exists(UploadersConfigFilePath)) File.Delete(UploadersConfigFilePath);
-            LoadUploadersConfig(false);
-
             if (File.Exists(HotkeysConfigFilePath)) File.Delete(HotkeysConfigFilePath);
             LoadHotkeysConfig(false);
         }
 
         public static bool Export(string archivePath, bool settings, bool history)
         {
-            MemoryStream msApplicationConfig = null, msUploadersConfig = null, msHotkeysConfig = null;
+            MemoryStream msApplicationConfig = null, msHotkeysConfig = null;
 
             try
             {
@@ -368,9 +304,6 @@ namespace ShareNot
                 {
                     msApplicationConfig = Settings.SaveToMemoryStream(false);
                     entries.Add(new ZipEntryInfo(msApplicationConfig, ApplicationConfigFileName));
-
-                    msUploadersConfig = UploadersConfig.SaveToMemoryStream(false);
-                    entries.Add(new ZipEntryInfo(msUploadersConfig, UploadersConfigFileName));
 
                     msHotkeysConfig = HotkeysConfig.SaveToMemoryStream(false);
                     entries.Add(new ZipEntryInfo(msHotkeysConfig, HotkeysConfigFileName));
@@ -392,7 +325,6 @@ namespace ShareNot
             finally
             {
                 msApplicationConfig?.Dispose();
-                msUploadersConfig?.Dispose();
                 msHotkeysConfig?.Dispose();
             }
 

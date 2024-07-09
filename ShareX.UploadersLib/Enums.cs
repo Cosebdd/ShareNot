@@ -28,26 +28,6 @@ using System.ComponentModel;
 
 namespace ShareNot.UploadersLib
 {
-    [Description("Image uploaders"), DefaultValue(CustomImageUploader)]
-    public enum ImageDestination
-    {
-        CustomImageUploader, // Localized
-        FileUploader // Localized
-    }
-
-    [Description("Text uploaders"), DefaultValue(CustomTextUploader)]
-    public enum TextDestination
-    {
-        CustomTextUploader, // Localized
-        FileUploader // Localized
-    }
-
-    [Description("File uploaders"), DefaultValue(CustomFileUploader)]
-    public enum FileDestination
-    {
-        CustomFileUploader // Localized
-    }
-
     public enum HttpMethod
     {
         GET,

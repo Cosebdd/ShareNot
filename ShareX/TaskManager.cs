@@ -62,9 +62,6 @@ namespace ShareNot
                 {
                     task.StatusChanged += Task_StatusChanged;
                     task.ImageReady += Task_ImageReady;
-                    task.UploadStarted += Task_UploadStarted;
-                    task.UploadProgressChanged += Task_UploadProgressChanged;
-                    task.UploadCompleted += Task_UploadCompleted;
                     task.TaskCompleted += Task_TaskCompleted;
                 }
 
@@ -164,83 +161,6 @@ namespace ShareNot
                 {
                     panel.UpdateThumbnail(image);
                 }
-            }
-        }
-
-        private static void Task_UploadStarted(WorkerTask task)
-        {
-            TaskInfo info = task.Info;
-
-            string status = string.Format("Upload started. File name: {0}", info.FileName);
-            if (!string.IsNullOrEmpty(info.FilePath)) status += ", File path: " + info.FilePath;
-            DebugHelper.WriteLine(status);
-
-            ListViewItem lvi = TaskListView.FindItem(task);
-
-            if (lvi != null)
-            {
-                lvi.Text = info.FileName;
-                lvi.SubItems[1].Text = info.Status;
-                lvi.ImageIndex = 0;
-            }
-
-            TaskThumbnailPanel panel = TaskThumbnailView.FindPanel(task);
-
-            if (panel != null)
-            {
-                panel.UpdateStatus();
-                panel.ProgressVisible = true;
-            }
-        }
-
-        private static void Task_UploadProgressChanged(WorkerTask task)
-        {
-            if (task.Status == TaskStatus.Working)
-            {
-                ListViewItem lvi = TaskListView.FindItem(task);
-
-                if (lvi != null)
-                {
-                    lvi.SubItems[1].Text = "";
-                }
-
-                TaskThumbnailPanel panel = TaskThumbnailView.FindPanel(task);
-
-                if (panel != null)
-                {
-                    panel.UpdateProgress();
-                }
-
-                UpdateProgressUI();
-            }
-        }
-
-        private static void Task_UploadCompleted(WorkerTask task)
-        {
-            TaskInfo info = task.Info;
-
-            if (info != null && info.Result != null && !info.Result.IsError)
-            {
-                string url = info.Result.ToString();
-
-                if (!string.IsNullOrEmpty(url))
-                {
-                    string text = $"Upload completed. URL: {url}";
-
-                    if (info.UploadDuration != null)
-                    {
-                        text += $", Duration: {info.UploadDuration.ElapsedMilliseconds} ms";
-                    }
-
-                    DebugHelper.WriteLine(text);
-                }
-            }
-
-            TaskThumbnailPanel panel = TaskThumbnailView.FindPanel(task);
-
-            if (panel != null)
-            {
-                panel.ProgressVisible = false;
             }
         }
 
