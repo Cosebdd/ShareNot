@@ -712,7 +712,6 @@ namespace ShareNot
             if (SteamFirstTimeConfig) flags.Add(nameof(SteamFirstTimeConfig));
             if (IgnoreHotkeyWarning) flags.Add(nameof(IgnoreHotkeyWarning));
             if (SystemOptions.DisableUpdateCheck) flags.Add(nameof(SystemOptions.DisableUpdateCheck));
-            if (SystemOptions.DisableUpload) flags.Add(nameof(SystemOptions.DisableUpload));
             if (SystemOptions.DisableLogging) flags.Add(nameof(SystemOptions.DisableLogging));
             if (PuushMode) flags.Add(nameof(PuushMode));
 

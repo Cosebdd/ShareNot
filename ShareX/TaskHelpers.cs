@@ -1897,24 +1897,5 @@ namespace ShareNot
                 }
             }
         }
-
-        public static bool IsUploadAllowed()
-        {
-            if (SystemOptions.DisableUpload)
-            {
-                MessageBox.Show(Resources.YourSystemAdminDisabledTheUploadFeature, "ShareNot", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                return false;
-            }
-
-            if (Program.Settings.DisableUpload)
-            {
-                MessageBox.Show(Resources.ThisFeatureWillNotWorkWhenDisableUploadOptionIsEnabled, "ShareNot", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                return false;
-            }
-
-            return true;
-        }
     }
 }
