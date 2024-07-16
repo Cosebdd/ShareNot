@@ -195,26 +195,6 @@ namespace ShareX
             tsmiTrayDNSChanger.Visible = false;
 #endif
 
-            if (SystemOptions.DisableUpload)
-            {
-                tsddbUpload.Visible = false;
-                tsddbAfterUploadTasks.Visible = false;
-                tsddbDestinations.Visible = false;
-                tsmiTestImageUpload.Visible = false;
-                tsmiTestTextUpload.Visible = false;
-                tsmiTestFileUpload.Visible = false;
-                tsmiTestURLShortener.Visible = false;
-                tsmiTestURLSharing.Visible = false;
-
-                tsmiTrayUpload.Visible = false;
-                tsmiTrayAfterUploadTasks.Visible = false;
-                tsmiTrayDestinations.Visible = false;
-
-                tsmiUploadSelectedFile.Visible = false;
-                tsmiShortenSelectedURL.Visible = false;
-                tsmiShareSelectedURL.Visible = false;
-            }
-
             HandleCreated += MainForm_HandleCreated;
         }
 
@@ -238,7 +218,7 @@ namespace ShareX
             }
 
             tsMain.Width = tsMain.PreferredSize.Width;
-            int height = Math.Max(Size.Height + tsMain.PreferredSize.Height - tsMain.Height, MinimumSize.Height);
+            int height = Size.Height + tsMain.PreferredSize.Height - tsMain.Height;
             MinimumSize = new Size(MinimumSize.Width, height);
 
             if (Program.Settings.RememberMainFormSize && !Program.Settings.MainFormSize.IsEmpty)
@@ -724,7 +704,7 @@ namespace ShareX
                         }
                     }
 
-                    tsmiUploadSelectedFile.Visible = !SystemOptions.DisableUpload && uim.SelectedItem.IsFileExist;
+                    tsmiUploadSelectedFile.Visible = uim.SelectedItem.IsFileExist;
                     tsmiDownloadSelectedURL.Visible = uim.SelectedItem.IsFileURL;
                     tsmiEditSelectedFile.Visible = uim.SelectedItem.IsImageFile;
                     tsmiBeautifyImage.Visible = uim.SelectedItem.IsImageFile;
@@ -733,8 +713,8 @@ namespace ShareX
                     UpdateActionsMenu(uim.SelectedItem.Info.FilePath);
                     tsmiDeleteSelectedItem.Visible = true;
                     tsmiDeleteSelectedFile.Visible = uim.SelectedItem.IsFileExist;
-                    tsmiShortenSelectedURL.Visible = !SystemOptions.DisableUpload && uim.SelectedItem.IsURLExist;
-                    tsmiShareSelectedURL.Visible = !SystemOptions.DisableUpload && uim.SelectedItem.IsURLExist;
+                    tsmiShortenSelectedURL.Visible = uim.SelectedItem.IsURLExist;
+                    tsmiShareSelectedURL.Visible = uim.SelectedItem.IsURLExist;
                     tsmiGoogleLens.Visible = uim.SelectedItem.IsURLExist;
                     tsmiBingVisualSearch.Visible = uim.SelectedItem.IsURLExist;
                     tsmiShowQRCode.Visible = uim.SelectedItem.IsURLExist;
