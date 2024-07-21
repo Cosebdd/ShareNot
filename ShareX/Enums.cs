@@ -375,4 +375,12 @@ namespace ShareNot
     {
         None
     }
+
+    public enum NotificationSound
+    {
+        Capture,
+        TaskCompleted,
+        ActionCompleted,
+        Error
+    }
 }

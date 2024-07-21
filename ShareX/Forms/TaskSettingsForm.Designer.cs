@@ -147,6 +147,9 @@ namespace ShareNot.Forms
             this.nudCaptureShadowOffset = new System.Windows.Forms.NumericUpDown();
             this.cbOverrideCaptureSettings = new System.Windows.Forms.CheckBox();
             this.tpRegionCapture = new System.Windows.Forms.TabPage();
+            this.lblRegionCaptureBackgroundDimStrengthHint = new System.Windows.Forms.Label();
+            this.nudRegionCaptureBackgroundDimStrength = new System.Windows.Forms.NumericUpDown();
+            this.lblRegionCaptureBackgroundDimStrength = new System.Windows.Forms.Label();
             this.cbRegionCaptureActiveMonitorMode = new System.Windows.Forms.CheckBox();
             this.nudRegionCaptureFPSLimit = new System.Windows.Forms.NumericUpDown();
             this.lblRegionCaptureFPSLimit = new System.Windows.Forms.Label();
@@ -250,10 +253,11 @@ namespace ShareNot.Forms
             this.tpAdvanced = new System.Windows.Forms.TabPage();
             this.pgTaskSettings = new System.Windows.Forms.PropertyGrid();
             this.cbOverrideAdvancedSettings = new System.Windows.Forms.CheckBox();
-            this.tttvMain = new TabToTreeView();
-            this.lblRegionCaptureBackgroundDimStrength = new System.Windows.Forms.Label();
-            this.nudRegionCaptureBackgroundDimStrength = new System.Windows.Forms.NumericUpDown();
-            this.lblRegionCaptureBackgroundDimStrengthHint = new System.Windows.Forms.Label();
+            this.tttvMain = new ShareNot.HelpersLib.TabToTreeView();
+            this.cbPlaySoundAfterAction = new System.Windows.Forms.CheckBox();
+            this.btnCustomActionCompletedSoundPath = new System.Windows.Forms.Button();
+            this.txtCustomActionCompletedSoundPath = new System.Windows.Forms.TextBox();
+            this.cbUseCustomActionCompletedSound = new System.Windows.Forms.CheckBox();
             this.tcTaskSettings.SuspendLayout();
             this.tpTask.SuspendLayout();
             this.tpGeneral.SuspendLayout();
@@ -286,6 +290,7 @@ namespace ShareNot.Forms
             ((System.ComponentModel.ISupportInitialize)(this.nudScreenshotDelay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCaptureShadowOffset)).BeginInit();
             this.tpRegionCapture.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudRegionCaptureBackgroundDimStrength)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudRegionCaptureFPSLimit)).BeginInit();
             this.flpRegionCaptureFixedSize.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudRegionCaptureFixedSizeWidth)).BeginInit();
@@ -308,7 +313,6 @@ namespace ShareNot.Forms
             this.tpTools.SuspendLayout();
             this.pTools.SuspendLayout();
             this.tpAdvanced.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudRegionCaptureBackgroundDimStrength)).BeginInit();
             this.SuspendLayout();
             //
             // cmsAfterCapture
@@ -442,6 +446,10 @@ namespace ShareNot.Forms
             //
             // tpNotifications
             //
+            this.tpNotifications.Controls.Add(this.btnCustomActionCompletedSoundPath);
+            this.tpNotifications.Controls.Add(this.txtCustomActionCompletedSoundPath);
+            this.tpNotifications.Controls.Add(this.cbUseCustomActionCompletedSound);
+            this.tpNotifications.Controls.Add(this.cbPlaySoundAfterAction);
             this.tpNotifications.Controls.Add(this.cbShowToastNotificationAfterTaskCompleted);
             this.tpNotifications.Controls.Add(this.btnCustomErrorSoundPath);
             this.tpNotifications.Controls.Add(this.btnCustomTaskCompletedSoundPath);
@@ -453,7 +461,6 @@ namespace ShareNot.Forms
             this.tpNotifications.Controls.Add(this.cbUseCustomTaskCompletedSound);
             this.tpNotifications.Controls.Add(this.cbUseCustomCaptureSound);
             this.tpNotifications.Controls.Add(this.gbToastWindow);
-            this.tpNotifications.Controls.Add(this.cbDisableNotificationsOnFullscreen);
             this.tpNotifications.Controls.Add(this.cbDisableNotifications);
             this.tpNotifications.Controls.Add(this.cbPlaySoundAfterCapture);
             this.tpNotifications.Controls.Add(this.cbPlaySoundAfterUpload);
@@ -541,6 +548,7 @@ namespace ShareNot.Forms
             this.gbToastWindow.Controls.Add(this.nudToastWindowSizeWidth);
             this.gbToastWindow.Controls.Add(this.cbToastWindowPlacement);
             this.gbToastWindow.Controls.Add(this.nudToastWindowFadeDuration);
+            this.gbToastWindow.Controls.Add(this.cbDisableNotificationsOnFullscreen);
             this.gbToastWindow.Controls.Add(this.nudToastWindowDuration);
             this.gbToastWindow.Controls.Add(this.lblToastWindowMiddleClickAction);
             this.gbToastWindow.Controls.Add(this.lblToastWindowRightClickAction);
@@ -1302,6 +1310,28 @@ namespace ShareNot.Forms
             this.tpRegionCapture.Controls.Add(this.nudRegionCaptureMagnifierPixelSize);
             resources.ApplyResources(this.tpRegionCapture, "tpRegionCapture");
             this.tpRegionCapture.Name = "tpRegionCapture";
+            //
+            //
+            // lblRegionCaptureBackgroundDimStrengthHint
+            //
+            resources.ApplyResources(this.lblRegionCaptureBackgroundDimStrengthHint, "lblRegionCaptureBackgroundDimStrengthHint");
+            this.lblRegionCaptureBackgroundDimStrengthHint.Name = "lblRegionCaptureBackgroundDimStrengthHint";
+            //
+            // nudRegionCaptureBackgroundDimStrength
+            //
+            resources.ApplyResources(this.nudRegionCaptureBackgroundDimStrength, "nudRegionCaptureBackgroundDimStrength");
+            this.nudRegionCaptureBackgroundDimStrength.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.nudRegionCaptureBackgroundDimStrength.Name = "nudRegionCaptureBackgroundDimStrength";
+            this.nudRegionCaptureBackgroundDimStrength.ValueChanged += new System.EventHandler(this.nudRegionCaptureBackgroundDimStrength_ValueChanged);
+            //
+            // lblRegionCaptureBackgroundDimStrength
+            //
+            resources.ApplyResources(this.lblRegionCaptureBackgroundDimStrength, "lblRegionCaptureBackgroundDimStrength");
+            this.lblRegionCaptureBackgroundDimStrength.Name = "lblRegionCaptureBackgroundDimStrength";
             //
             // cbRegionCaptureActiveMonitorMode
             //
@@ -2178,28 +2208,34 @@ namespace ShareNot.Forms
             this.tttvMain.SeparatorColor = System.Drawing.SystemColors.ControlDark;
             this.tttvMain.TreeViewFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tttvMain.TreeViewSize = 190;
-            this.tttvMain.TabChanged += new TabToTreeView.TabChangedEventHandler(this.tttvMain_TabChanged);
+            this.tttvMain.TabChanged += new ShareNot.HelpersLib.TabToTreeView.TabChangedEventHandler(this.tttvMain_TabChanged);
             //
-            // lblRegionCaptureBackgroundDimStrength
+            // cbPlaySoundAfterAction
             //
-            resources.ApplyResources(this.lblRegionCaptureBackgroundDimStrength, "lblRegionCaptureBackgroundDimStrength");
-            this.lblRegionCaptureBackgroundDimStrength.Name = "lblRegionCaptureBackgroundDimStrength";
+            resources.ApplyResources(this.cbPlaySoundAfterAction, "cbPlaySoundAfterAction");
+            this.cbPlaySoundAfterAction.Name = "cbPlaySoundAfterAction";
+            this.cbPlaySoundAfterAction.UseVisualStyleBackColor = true;
+            this.cbPlaySoundAfterAction.CheckedChanged += new System.EventHandler(this.cbPlaySoundAfterAction_CheckedChanged);
             //
-            // nudRegionCaptureBackgroundDimStrength
+            // btnCustomActionCompletedSoundPath
             //
-            resources.ApplyResources(this.nudRegionCaptureBackgroundDimStrength, "nudRegionCaptureBackgroundDimStrength");
-            this.nudRegionCaptureBackgroundDimStrength.Maximum = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.nudRegionCaptureBackgroundDimStrength.Name = "nudRegionCaptureBackgroundDimStrength";
-            this.nudRegionCaptureBackgroundDimStrength.ValueChanged += new System.EventHandler(this.nudRegionCaptureBackgroundDimStrength_ValueChanged);
+            resources.ApplyResources(this.btnCustomActionCompletedSoundPath, "btnCustomActionCompletedSoundPath");
+            this.btnCustomActionCompletedSoundPath.Name = "btnCustomActionCompletedSoundPath";
+            this.btnCustomActionCompletedSoundPath.UseVisualStyleBackColor = true;
+            this.btnCustomActionCompletedSoundPath.Click += new System.EventHandler(this.btnCustomActionCompletedSoundPath_Click);
             //
-            // lblRegionCaptureBackgroundDimStrengthHint
+            // txtCustomActionCompletedSoundPath
             //
-            resources.ApplyResources(this.lblRegionCaptureBackgroundDimStrengthHint, "lblRegionCaptureBackgroundDimStrengthHint");
-            this.lblRegionCaptureBackgroundDimStrengthHint.Name = "lblRegionCaptureBackgroundDimStrengthHint";
+            resources.ApplyResources(this.txtCustomActionCompletedSoundPath, "txtCustomActionCompletedSoundPath");
+            this.txtCustomActionCompletedSoundPath.Name = "txtCustomActionCompletedSoundPath";
+            this.txtCustomActionCompletedSoundPath.TextChanged += new System.EventHandler(this.txtCustomActionCompletedSoundPath_TextChanged);
+            //
+            // cbUseCustomActionCompletedSound
+            //
+            resources.ApplyResources(this.cbUseCustomActionCompletedSound, "cbUseCustomActionCompletedSound");
+            this.cbUseCustomActionCompletedSound.Name = "cbUseCustomActionCompletedSound";
+            this.cbUseCustomActionCompletedSound.UseVisualStyleBackColor = true;
+            this.cbUseCustomActionCompletedSound.CheckedChanged += new System.EventHandler(this.cbUseCustomActionCompletedSound_CheckedChanged);
             //
             // TaskSettingsForm
             //
@@ -2254,6 +2290,7 @@ namespace ShareNot.Forms
             ((System.ComponentModel.ISupportInitialize)(this.nudCaptureShadowOffset)).EndInit();
             this.tpRegionCapture.ResumeLayout(false);
             this.tpRegionCapture.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudRegionCaptureBackgroundDimStrength)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudRegionCaptureFPSLimit)).EndInit();
             this.flpRegionCaptureFixedSize.ResumeLayout(false);
             this.flpRegionCaptureFixedSize.PerformLayout();
@@ -2286,7 +2323,6 @@ namespace ShareNot.Forms
             this.pTools.PerformLayout();
             this.tpAdvanced.ResumeLayout(false);
             this.tpAdvanced.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudRegionCaptureBackgroundDimStrength)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2515,5 +2551,9 @@ namespace ShareNot.Forms
         private System.Windows.Forms.NumericUpDown nudRegionCaptureBackgroundDimStrength;
         private System.Windows.Forms.Label lblRegionCaptureBackgroundDimStrength;
         private System.Windows.Forms.Label lblRegionCaptureBackgroundDimStrengthHint;
+        private System.Windows.Forms.CheckBox cbPlaySoundAfterAction;
+        private System.Windows.Forms.Button btnCustomActionCompletedSoundPath;
+        private System.Windows.Forms.TextBox txtCustomActionCompletedSoundPath;
+        private System.Windows.Forms.CheckBox cbUseCustomActionCompletedSound;
     }
 }

@@ -127,7 +127,7 @@ namespace ShareNot.Tools.BorderlessWindow
 
                 if (result)
                 {
-                    TaskHelpers.PlayPopSound();
+                    TaskHelpers.PlayNotificationSoundAsync(NotificationSound.ActionCompleted);
 
                     if (Settings.AutoCloseWindow)
                     {

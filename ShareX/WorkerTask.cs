@@ -283,7 +283,7 @@ namespace ShareNot
             if (Info.TaskSettings.AfterCaptureJob.HasFlag(AfterCaptureTasks.PinToScreen))
             {
                 Image imageCopy = Image.CloneSafe();
-                TaskHelpers.PinToScreen(imageCopy, Info.TaskSettings.ToolsSettingsReference.PinToScreenOptions);
+                TaskHelpers.PinToScreen(imageCopy, Info.TaskSettings);
             }
 
             if (Info.TaskSettings.AfterCaptureJob.HasFlag(AfterCaptureTasks.SendImageToPrinter))

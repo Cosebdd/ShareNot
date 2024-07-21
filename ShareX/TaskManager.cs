@@ -216,10 +216,7 @@ namespace ShareNot
 
                             if (!info.TaskSettings.GeneralSettings.DisableNotifications)
                             {
-                                if (info.TaskSettings.GeneralSettings.PlaySoundAfterUpload)
-                                {
-                                    TaskHelpers.PlayErrorSound(info.TaskSettings);
-                                }
+                                TaskHelpers.PlayNotificationSoundAsync(NotificationSound.Error, info.TaskSettings);
 
                                 if (info.Result.Errors.Count > 0)
                                 {
@@ -267,10 +264,7 @@ namespace ShareNot
 
                                 if (!info.TaskSettings.GeneralSettings.DisableNotifications)
                                 {
-                                    if (info.TaskSettings.GeneralSettings.PlaySoundAfterUpload)
-                                    {
-                                        TaskHelpers.PlayTaskCompleteSound(info.TaskSettings);
-                                    }
+                                    TaskHelpers.PlayNotificationSoundAsync(NotificationSound.TaskCompleted, info.TaskSettings);
 
                                     if (!string.IsNullOrEmpty(info.TaskSettings.AdvancedSettings.BalloonTipContentFormat))
                                     {
