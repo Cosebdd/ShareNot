@@ -272,6 +272,7 @@ namespace ShareNot
         public ToastClickAction ToastWindowRightClickAction = ToastClickAction.CloseNotification;
         public ToastClickAction ToastWindowMiddleClickAction = ToastClickAction.AnnotateImage;
         public bool ToastWindowAutoHide = true;
+        public bool DisableNotificationsOnFullscreen = false;
         public bool UseCustomCaptureSound = false;
         public string CustomCaptureSoundPath = "";
         public bool UseCustomTaskCompletedSound = false;
@@ -280,8 +281,6 @@ namespace ShareNot
         public string CustomActionCompletedSoundPath = "";
         public bool UseCustomErrorSound = false;
         public string CustomErrorSoundPath = "";
-        public bool DisableNotifications = false;
-        public bool DisableNotificationsOnFullscreen = false;
 
         #endregion
     }

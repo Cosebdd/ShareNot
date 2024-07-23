@@ -214,25 +214,22 @@ namespace ShareNot
                                 lvi.ImageIndex = 1;
                             }
 
-                            if (!info.TaskSettings.GeneralSettings.DisableNotifications)
+                            TaskHelpers.PlayNotificationSoundAsync(NotificationSound.Error, info.TaskSettings);
+
+                            if (info.Result.Errors.Count > 0)
                             {
-                                TaskHelpers.PlayNotificationSoundAsync(NotificationSound.Error, info.TaskSettings);
+                                UploaderErrorInfo error = info.Result.Errors.Errors[0];
 
-                                if (info.Result.Errors.Count > 0)
+                                string title = error.Title;
+                                if (string.IsNullOrEmpty(title))
                                 {
-                                    UploaderErrorInfo error = info.Result.Errors.Errors[0];
+                                    title = Resources.TaskManager_task_UploadCompleted_Error;
+                                }
 
-                                    string title = error.Title;
-                                    if (string.IsNullOrEmpty(title))
-                                    {
-                                        title = Resources.TaskManager_task_UploadCompleted_Error;
-                                    }
-
-                                    if (info.TaskSettings.GeneralSettings.ShowToastNotificationAfterTaskCompleted && !string.IsNullOrEmpty(error.Text) &&
-                                        (!info.TaskSettings.GeneralSettings.DisableNotificationsOnFullscreen || !HelpersLib.Helpers.CaptureHelpers.IsActiveWindowFullscreen()))
-                                    {
-                                        TaskHelpers.ShowNotificationTip(error.Text, "ShareX - " + title, 5000);
-                                    }
+                                if (info.TaskSettings.GeneralSettings.ShowToastNotificationAfterTaskCompleted && !string.IsNullOrEmpty(error.Text) &&
+                                    (!info.TaskSettings.GeneralSettings.DisableNotificationsOnFullscreen || !HelpersLib.Helpers.CaptureHelpers.IsActiveWindowFullscreen()))
+                                {
+                                    TaskHelpers.ShowNotificationTip(error.Text, "ShareNot - " + title, 5000);
                                 }
                             }
                         }
@@ -262,7 +259,7 @@ namespace ShareNot
 
                                 RecentManager.Add(task);
 
-                                if (!info.TaskSettings.GeneralSettings.DisableNotifications)
+                                if (true)
                                 {
                                     TaskHelpers.PlayNotificationSoundAsync(NotificationSound.TaskCompleted, info.TaskSettings);
 
