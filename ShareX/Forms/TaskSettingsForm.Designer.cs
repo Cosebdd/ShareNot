@@ -2230,7 +2230,7 @@ namespace ShareNot.Forms
             this.tttvMain.SeparatorColor = System.Drawing.SystemColors.ControlDark;
             this.tttvMain.TreeViewFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tttvMain.TreeViewSize = 190;
-            this.tttvMain.TabChanged += new ShareNot.HelpersLib.TabToTreeView.TabChangedEventHandler(this.tttvMain_TabChanged);
+            this.tttvMain.TabChanged += new ShareNot.HelpersLib.Controls.TabToTreeView.TabChangedEventHandler(this.tttvMain_TabChanged);
             //
             // TaskSettingsForm
             //
