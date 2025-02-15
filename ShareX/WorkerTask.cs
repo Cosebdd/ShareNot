@@ -62,7 +62,7 @@ namespace ShareX
         public string Text { get; private set; }
 
         private ThreadWorker threadWorker;
-        private GenericUploader uploader;
+        private GenericUploader uploader = null;
         private TaskReferenceHelper taskReferenceHelper;
 
         #region Constructors
@@ -928,7 +928,7 @@ namespace ShareX
             {
                 return GetInvalidConfigResult(service);
             }
-
+/*
             uploader = service.CreateUploader(Program.UploadersConfig, taskReferenceHelper);
 
             if (uploader != null)
@@ -961,7 +961,7 @@ namespace ShareX
 
                 return result;
             }
-
+*/
             return null;
         }
 

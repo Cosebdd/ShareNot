@@ -189,6 +189,7 @@ namespace ShareX
     {
         None,
         // Upload
+        /*
         [Category(EnumExtensions.HotkeyType_Category_Upload)]
         FileUpload,
         [Category(EnumExtensions.HotkeyType_Category_Upload)]
@@ -207,6 +208,7 @@ namespace ShareX
         ShortenURL,
         [Category(EnumExtensions.HotkeyType_Category_Upload)]
         StopUploads,
+        */
         // Screen capture
         [Category(EnumExtensions.HotkeyType_Category_ScreenCapture)]
         PrintScreen,

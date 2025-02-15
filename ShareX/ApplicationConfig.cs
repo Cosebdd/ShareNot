@@ -70,7 +70,7 @@ namespace ShareX
 
         public HotkeyType TrayLeftClickAction = HotkeyType.RectangleRegion;
         public HotkeyType TrayLeftDoubleClickAction = HotkeyType.OpenMainWindow;
-        public HotkeyType TrayMiddleClickAction = HotkeyType.ClipboardUploadWithContentViewer;
+        public HotkeyType TrayMiddleClickAction = HotkeyType.OpenScreenshotsFolder;
 
         public bool AutoCheckUpdate = true;
         public UpdateChannel UpdateChannel = UpdateChannel.Release;
@@ -235,21 +235,27 @@ namespace ShareX
         [Category("Image"), DefaultValue(false), Description("Strip color space information chunks from PNG image.")]
         public bool PNGStripColorSpaceInformation { get; set; }
 
+        [Browsable(false)]
         [Category("Upload"), DefaultValue(false), Description("Can be used to disable uploading application wide.")]
-        public bool DisableUpload { get; set; }
+        public bool DisableUpload => true;
 
+        [Browsable(false)]
         [Category("Upload"), DefaultValue(true), Description("Ignore emojis while URL encoding upload results.")]
         public bool URLEncodeIgnoreEmoji { get; set; }
 
+        [Browsable(false)]
         [Category("Upload"), DefaultValue(true), Description("Show first time upload warning.")]
         public bool ShowUploadWarning { get; set; }
 
+        [Browsable(false)]
         [Category("Upload"), DefaultValue(true), Description("Show more than 10 files upload warning.")]
         public bool ShowMultiUploadWarning { get; set; }
 
+        [Browsable(false)]
         [Category("Upload"), DefaultValue(100), Description("Large file size defined in MB. ShareX will warn before uploading large files. 0 disables this feature.")]
         public int ShowLargeFileSizeWarning { get; set; }
 
+        [Browsable(false)]
         [Category("Paths"), Description("Custom uploaders configuration path. If you have already configured this setting in another device and you are attempting to use the same location, then backup the file before configuring this setting and restore after exiting ShareX.")]
         [Editor(typeof(DirectoryNameEditor), typeof(UITypeEditor))]
         public string CustomUploadersConfigPath { get; set; }
@@ -299,7 +305,7 @@ namespace ShareX
         #region Actions toolbar
 
         public List<HotkeyType> ActionsToolbarList = new List<HotkeyType>() { HotkeyType.RectangleRegion, HotkeyType.PrintScreen, HotkeyType.ScreenRecorder,
-            HotkeyType.None, HotkeyType.FileUpload, HotkeyType.ClipboardUploadWithContentViewer };
+            HotkeyType.None/*, HotkeyType.FileUpload, HotkeyType.ClipboardUploadWithContentViewer*/ };
 
         public bool ActionsToolbarRunAtStartup = false;
 
