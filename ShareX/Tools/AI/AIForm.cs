@@ -71,8 +71,10 @@ namespace ShareX
 
         private void UpdateControls()
         {
+            /*
             btnAnalyze.Enabled = IsAPIKeyAvailable() && (!string.IsNullOrEmpty(txtImage.Text) || pbImage.Image != null);
             btnResultCopy.Enabled = !string.IsNullOrEmpty(txtResult.Text);
+            */
         }
 
         private bool IsAPIKeyAvailable()

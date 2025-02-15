@@ -98,7 +98,7 @@ namespace ShareX
 
             if (SystemOptions.DisableUpload)
             {
-                ignoreAfterCaptureTasks = new AfterCaptureTasks[] { AfterCaptureTasks.ShowBeforeUploadWindow, AfterCaptureTasks.UploadImageToHost };
+                ignoreAfterCaptureTasks = new AfterCaptureTasks[] { AfterCaptureTasks.ShowBeforeUploadWindow, AfterCaptureTasks.UploadImageToHost, AfterCaptureTasks.AnalyzeImage };
             }
 
             AddMultiEnumItems<AfterCaptureTasks>(x => Program.DefaultTaskSettings.AfterCaptureJob = Program.DefaultTaskSettings.AfterCaptureJob.Swap(x),
@@ -207,8 +207,6 @@ namespace ShareX
                 tsddbUpload.Visible = false;
                 tsddbAfterUploadTasks.Visible = false;
                 tsddbDestinations.Visible = false;
-                tsbDestinationSettings.Visible = false;
-                tsbCustomUploaderSettings.Visible = false;
                 tsmiTestImageUpload.Visible = false;
                 tsmiTestTextUpload.Visible = false;
                 tsmiTestFileUpload.Visible = false;
@@ -857,10 +855,10 @@ namespace ShareX
             scMain.SplitterLineColor = ShareXResources.Theme.BorderColor;
             ShareXResources.ApplyCustomThemeToControl(dgvHotkeys);
             dgvHotkeys.BackgroundColor = ShareXResources.Theme.BackgroundColor;
-
+/*
             tsbX.Image = ShareXResources.IsDarkTheme ? Resources.X_white : Resources.X_black;
             tsbDiscord.Image = ShareXResources.IsDarkTheme ? Resources.Discord_white : Resources.Discord_black;
-
+*/
             tsmiQRCode.Image = TaskHelpers.FindMenuIcon(HotkeyType.QRCode);
             tsmiTrayQRCode.Image = TaskHelpers.FindMenuIcon(HotkeyType.QRCode);
             tsmiShowQRCode.Image = TaskHelpers.FindMenuIcon(HotkeyType.QRCode);
@@ -868,14 +866,14 @@ namespace ShareX
             tsmiOCR.Image = TaskHelpers.FindMenuIcon(HotkeyType.OCR);
             tsmiTrayOCR.Image = TaskHelpers.FindMenuIcon(HotkeyType.OCR);
             tsmiOCRImage.Image = TaskHelpers.FindMenuIcon(HotkeyType.OCR);
-
+/*
             tsmiShortenURL.Image = TaskHelpers.FindMenuIcon(HotkeyType.ShortenURL);
             tsmiTrayShortenURL.Image = TaskHelpers.FindMenuIcon(HotkeyType.ShortenURL);
             tsmiURLShorteners.Image = TaskHelpers.FindMenuIcon(HotkeyType.ShortenURL);
             tsmiTrayURLShorteners.Image = TaskHelpers.FindMenuIcon(HotkeyType.ShortenURL);
             tsmiTestURLShortener.Image = TaskHelpers.FindMenuIcon(HotkeyType.ShortenURL);
             tsmiShortenSelectedURL.Image = TaskHelpers.FindMenuIcon(HotkeyType.ShortenURL);
-
+*/
             pbPreview.UpdateTheme();
             pbPreview.UpdateCheckers(true);
             ucTaskThumbnailView.UpdateTheme();
