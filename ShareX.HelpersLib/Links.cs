@@ -40,7 +40,7 @@ namespace ShareX.HelpersLib
         public const string DocsOCR = Docs + "/ocr";
         public const string DocsScrollingScreenshot = Docs + "/scrolling-screenshot";
 
-        public const string GitHub = "https://github.com/ShareX/ShareX";
+        public const string GitHub = "https://github.com/Cosebdd/ShareNot";
         public const string GitHubIssues = GitHub + "/issues?q=is%3Aissue";
         public const string Jaex = "https://github.com/Jaex";
         public const string McoreD = "https://github.com/McoreD";
