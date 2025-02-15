@@ -73,6 +73,7 @@ namespace ShareX
             switch (job)
             {
                 // Upload
+                /*
                 case HotkeyType.FileUpload:
                     if (!string.IsNullOrEmpty(filePath))
                     {
@@ -107,6 +108,7 @@ namespace ShareX
                 case HotkeyType.StopUploads:
                     TaskManager.StopAllTasks();
                     break;
+                    */
                 // Screen capture
                 case HotkeyType.PrintScreen:
                     new CaptureFullscreen().Capture(safeTaskSettings);
@@ -282,9 +284,11 @@ namespace ShareX
                 case HotkeyType.VideoThumbnailer:
                     OpenVideoThumbnailer(safeTaskSettings);
                     break;
+                /*
                 case HotkeyType.AnalyzeImage:
                     AnalyzeImage(safeTaskSettings);
                     break;
+                    */
                 case HotkeyType.OCR:
                     if (!string.IsNullOrEmpty(filePath))
                     {
@@ -1911,6 +1915,7 @@ namespace ShareX
                     default: throw new Exception("Icon missing for hotkey type: " + hotkeyType);
                     case HotkeyType.None: return null;
                     // Upload
+                    /*
                     case HotkeyType.FileUpload: return Resources.folder_open_document;
                     case HotkeyType.FolderUpload: return Resources.folder;
                     case HotkeyType.ClipboardUpload: return Resources.clipboard;
@@ -1920,6 +1925,7 @@ namespace ShareX
                     case HotkeyType.DragDropUpload: return Resources.inbox;
                     case HotkeyType.ShortenURL: return ShareXResources.IsDarkTheme ? Resources.edit_scale_white : Resources.edit_scale;
                     case HotkeyType.StopUploads: return Resources.cross_button;
+                    */
                     // Screen capture
                     case HotkeyType.PrintScreen: return Resources.layer_fullscreen;
                     case HotkeyType.ActiveWindow: return Resources.application_blue;
@@ -1964,7 +1970,9 @@ namespace ShareX
                     case HotkeyType.ImageThumbnailer: return Resources.image_resize_actual;
                     case HotkeyType.VideoConverter: return Resources.camcorder_pencil;
                     case HotkeyType.VideoThumbnailer: return Resources.images_stack;
+                    /*
                     case HotkeyType.AnalyzeImage: return Resources.robot;
+                    */
                     case HotkeyType.OCR: return ShareXResources.IsDarkTheme ? Resources.edit_drop_cap_white : Resources.edit_drop_cap;
                     case HotkeyType.QRCode: return ShareXResources.IsDarkTheme ? Resources.barcode_2d_white : Resources.barcode_2d;
                     case HotkeyType.QRCodeDecodeFromScreen: return ShareXResources.IsDarkTheme ? Resources.barcode_2d_white : Resources.barcode_2d;

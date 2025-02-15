@@ -156,10 +156,10 @@ namespace ShareX.HistoryLib
                 tsmiDeleteFile,
                 tssMain2,
                 tsmiShowImagePreview,
-                tsmiUploadFile,
+                //tsmiUploadFile,
                 tsmiEditImage,
                 tsmiPinToScreen,
-                tsmiAnalyzeImage
+                //tsmiAnalyzeImage
             });
             cmsHistory.Name = "cmsHistory";
             cmsHistory.Size = new Size(128, 92);
