@@ -744,9 +744,11 @@ namespace ShareX.ScreenCaptureLib
                         case Keys.Control | Keys.C:
                             Form.OnCopyImageRequested();
                             break;
+/*
                         case Keys.Control | Keys.U:
                             Form.OnUploadImageRequested();
                             break;
+*/
                         case Keys.Control | Keys.P:
                             Form.OnPrintImageRequested();
                             break;
