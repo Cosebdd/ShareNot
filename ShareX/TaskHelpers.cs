@@ -85,6 +85,7 @@ namespace ShareX
             switch (job)
             {
                 // Upload
+                /*
                 case HotkeyType.FileUpload:
                     if (!string.IsNullOrEmpty(filePath))
                     {
@@ -119,6 +120,7 @@ namespace ShareX
                 case HotkeyType.StopUploads:
                     TaskManager.StopAllTasks();
                     break;
+                    */
                 // Screen capture
                 case HotkeyType.PrintScreen:
                     new CaptureFullscreen().Capture(safeTaskSettings);
@@ -312,9 +314,11 @@ namespace ShareX
                 case HotkeyType.VideoThumbnailer:
                     OpenVideoThumbnailer(safeTaskSettings);
                     break;
+                /*
                 case HotkeyType.AnalyzeImage:
                     AnalyzeImage(safeTaskSettings);
                     break;
+                    */
                 case HotkeyType.OCR:
                     if (!string.IsNullOrEmpty(filePath))
                     {
@@ -2282,7 +2286,7 @@ namespace ShareX
             return hotkeyType switch
             {
                 HotkeyType.None => LucideIcons.circle_dashed,
-
+/*
                 // Upload
                 HotkeyType.FileUpload => LucideIcons.file_up,
                 HotkeyType.FolderUpload => LucideIcons.folder_up,
@@ -2293,7 +2297,7 @@ namespace ShareX
                 HotkeyType.DragDropUpload => LucideIcons.mouse_pointer_2,
                 HotkeyType.ShortenURL => LucideIcons.link_2,
                 HotkeyType.StopUploads => LucideIcons.circle_stop,
-
+*/
                 // Screen capture
                 HotkeyType.PrintScreen => LucideIcons.monitor,
                 HotkeyType.ActiveWindow => LucideIcons.app_window,

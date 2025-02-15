@@ -1,0 +1,17 @@
+﻿{
+  "solution": {
+    "path": "ShareX.sln",
+    "projects": [
+      "ShareX.HelpersLib\\ShareX.HelpersLib.csproj",
+      "ShareX.HistoryLib\\ShareX.HistoryLib.csproj",
+      "ShareX.ImageEffectsLib\\ShareX.ImageEffectsLib.csproj",
+      "ShareX.IndexerLib\\ShareX.IndexerLib.csproj",
+      "ShareX.MediaLib\\ShareX.MediaLib.csproj",
+      "ShareX.NativeMessagingHost\\ShareX.NativeMessagingHost.csproj",
+      "ShareX.ScreenCaptureLib\\ShareX.ScreenCaptureLib.csproj",
+      "ShareX.Setup\\ShareX.Setup.csproj",
+      "ShareX.Steam\\ShareX.Steam.csproj",
+      "ShareX\\ShareX.csproj"
+    ]
+  }
+}

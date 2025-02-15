@@ -1,0 +1,8 @@
+﻿{
+  "solution": {
+    "path": "ShareX.sln",
+    "projects": [
+      "ShareX.UploadersLib\\ShareX.UploadersLib.csproj"
+    ]
+  }
+}

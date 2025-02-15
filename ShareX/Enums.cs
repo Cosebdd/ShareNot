@@ -200,6 +200,7 @@ namespace ShareX
     {
         None,
         // Upload
+        /*
         [Category(EnumExtensions.HotkeyType_Category_Upload)]
         FileUpload,
         [Category(EnumExtensions.HotkeyType_Category_Upload)]
@@ -218,6 +219,7 @@ namespace ShareX
         ShortenURL,
         [Category(EnumExtensions.HotkeyType_Category_Upload)]
         StopUploads,
+        */
         // Screen capture
         [Category(EnumExtensions.HotkeyType_Category_ScreenCapture)]
         PrintScreen,
@@ -315,8 +317,10 @@ namespace ShareX
         VideoTrimmer,
         [Category(EnumExtensions.HotkeyType_Category_Tools)]
         VideoThumbnailer,
+        /*
         [Category(EnumExtensions.HotkeyType_Category_Tools)]
         AnalyzeImage,
+        */
         [Category(EnumExtensions.HotkeyType_Category_Tools)]
         OCR,
         [Category(EnumExtensions.HotkeyType_Category_Tools)]
