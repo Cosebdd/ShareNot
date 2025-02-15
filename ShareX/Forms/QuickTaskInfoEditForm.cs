@@ -42,23 +42,37 @@ namespace ShareX
             ShareXResources.ApplyTheme(this, true);
 
             txtName.Text = TaskInfo.Name;
-            AddMultiEnumItemsContextMenu<AfterCaptureTasks>(x => TaskInfo.AfterCaptureTasks = TaskInfo.AfterCaptureTasks.Swap(x), cmsAfterCapture);
-            AddMultiEnumItemsContextMenu<AfterUploadTasks>(x => TaskInfo.AfterUploadTasks = TaskInfo.AfterUploadTasks.Swap(x), cmsAfterUpload);
+
+            AfterCaptureTasks[] ignoreAfterCaptureTasks = null;
+
+            if (SystemOptions.DisableUpload)
+            {
+                ignoreAfterCaptureTasks = new AfterCaptureTasks[] { AfterCaptureTasks.ShowBeforeUploadWindow, AfterCaptureTasks.UploadImageToHost, AfterCaptureTasks.AnalyzeImage };
+            }
+
+            AddMultiEnumItemsContextMenu<AfterCaptureTasks>(x => TaskInfo.AfterCaptureTasks = TaskInfo.AfterCaptureTasks.Swap(x), new []{cmsAfterCapture}, ignoreAfterCaptureTasks);
+            AddMultiEnumItemsContextMenu<AfterUploadTasks>(x => TaskInfo.AfterUploadTasks = TaskInfo.AfterUploadTasks.Swap(x), new []{cmsAfterUpload});
             SetMultiEnumCheckedContextMenu(TaskInfo.AfterCaptureTasks, cmsAfterCapture);
             SetMultiEnumCheckedContextMenu(TaskInfo.AfterUploadTasks, cmsAfterUpload);
             UpdateUploaderMenuNames();
         }
 
-        private void AddMultiEnumItemsContextMenu<T>(Action<T> selectedEnum, params ToolStripDropDown[] parents) where T : Enum
+        private void AddMultiEnumItemsContextMenu<T>(Action<T> selectedEnum, ToolStripDropDown[] parents, T[] ignoreEnums = null) where T : Enum
         {
-            string[] enums = Helpers.GetLocalizedEnumDescriptions<T>().Skip(1).Select(x => x.Replace("&", "&&")).ToArray();
+            if (ignoreEnums == null)
+            {
+                ignoreEnums = new T[0];
+            }
+
+            T[] enums = Helpers.GetEnums<T>().Skip(1).Except(ignoreEnums).ToArray();
 
             foreach (ToolStripDropDown parent in parents)
             {
                 for (int i = 0; i < enums.Length; i++)
                 {
-                    ToolStripMenuItem tsmi = new ToolStripMenuItem(enums[i]);
-                    tsmi.Image = TaskHelpers.FindMenuIcon<T>(i + 1);
+                    T currentEnum = enums[i];
+                    ToolStripMenuItem tsmi = new ToolStripMenuItem(currentEnum.GetLocalizedDescription());
+                    tsmi.Image = TaskHelpers.FindMenuIcon<T>(currentEnum);
 
                     int index = i;
 
