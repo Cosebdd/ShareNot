@@ -73,6 +73,7 @@ namespace ShareX
             switch (job)
             {
                 // Upload
+                /*
                 case HotkeyType.FileUpload:
                     UploadManager.UploadFile(safeTaskSettings);
                     break;
@@ -103,6 +104,7 @@ namespace ShareX
                 case HotkeyType.StopUploads:
                     TaskManager.StopAllTasks();
                     break;
+                    */
                 // Screen capture
                 case HotkeyType.PrintScreen:
                     new CaptureFullscreen().Capture(safeTaskSettings);
@@ -1768,6 +1770,7 @@ namespace ShareX
                     default: throw new Exception("Icon missing for hotkey type: " + hotkeyType);
                     case HotkeyType.None: return null;
                     // Upload
+                    /*
                     case HotkeyType.FileUpload: return Resources.folder_open_document;
                     case HotkeyType.FolderUpload: return Resources.folder;
                     case HotkeyType.ClipboardUpload: return Resources.clipboard;
@@ -1778,6 +1781,7 @@ namespace ShareX
                     case HotkeyType.ShortenURL: return ShareXResources.IsDarkTheme ? Resources.edit_scale_white : Resources.edit_scale;
                     case HotkeyType.TweetMessage: return ShareXResources.IsDarkTheme ? Resources.X_white : Resources.X_black;
                     case HotkeyType.StopUploads: return Resources.cross_button;
+                    */
                     // Screen capture
                     case HotkeyType.PrintScreen: return Resources.layer_fullscreen;
                     case HotkeyType.ActiveWindow: return Resources.application_blue;
