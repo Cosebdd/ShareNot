@@ -28,7 +28,7 @@ namespace ShareX.HelpersLib
     public static class Links
     {
         public const string Website = "https://getsharex.com";
-        public const string GitHub = "https://github.com/ShareX/ShareX";
+        public const string GitHub = "https://github.com/Cosebdd/ShareNot";
         public const string GitHubIssues = GitHub + "/issues?q=is%3Aissue";
         public const string Callback = Website + "/callback/";
         public const string Changelog = Website + "/changelog";
