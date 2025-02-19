@@ -9,6 +9,18 @@ namespace ShareX
         {
             tcSettings.TabPages.RemoveByKey(nameof(tpUpload));
             tttvMain.SetNewMainTabControl(tcSettings);
+
+            gbChrome.Visible = false;
+
+            gbFirefox.Visible = false;
+
+            cbShellContextMenu.Visible = false;
+            cbSendToMenu.Visible = false;
+
+            cbEditWithShareX.Location = cbShellContextMenu.Location;
+
+            gbWindows.Height = 75;
+
             base.OnCreateControl();
         }
     }
