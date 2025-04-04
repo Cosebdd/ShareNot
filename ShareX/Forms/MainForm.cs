@@ -202,11 +202,6 @@ namespace ShareX
 
             ExportImportControl.UploadRequested += json => UploadManager.UploadText(json);
 
-#if MicrosoftStore
-            tsmiDNSChanger.Visible = false;
-            tsmiTrayDNSChanger.Visible = false;
-#endif
-
             if (SystemOptions.DisableUpload)
             {
                 tsddbUpload.Visible = false;
@@ -1833,11 +1828,6 @@ namespace ShareX
         private void tsmiMonitorTest_Click(object sender, EventArgs e)
         {
             TaskHelpers.OpenMonitorTest();
-        }
-
-        private void tsmiDNSChanger_Click(object sender, EventArgs e)
-        {
-            TaskHelpers.OpenDNSChanger();
         }
 
         private void TsddbAfterCaptureTasks_DropDownOpening(object sender, EventArgs e)

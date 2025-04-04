@@ -315,8 +315,6 @@ namespace ShareX
         InspectWindow,
         [Category(EnumExtensions.HotkeyType_Category_Tools)]
         MonitorTest,
-        [Category(EnumExtensions.HotkeyType_Category_Tools)]
-        DNSChanger,
         // Other
         [Category(EnumExtensions.HotkeyType_Category_Other)]
         DisableHotkeys,
